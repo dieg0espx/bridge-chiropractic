@@ -1,0 +1,260 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="About" description="Meet Dr. Nathan Beyerl - San Diego chiropractor focused on education, autonomy, and sustainable improvement for adults 55+.">
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Meet Dr. Nathan Beyerl</h1>
+      <p class="page-hero__subtitle">Your partner in moving better and living fuller.</p>
+    </div>
+  </section>
+
+  <!-- About Intro -->
+  <section class="section about-intro">
+    <div class="container">
+      <div class="about-intro__grid">
+        <div class="about-intro__image">
+          <div class="about-intro__image-placeholder">
+            <span>Dr. Nathan Beyerl<br>Professional Photo</span>
+          </div>
+        </div>
+        <div class="about-intro__content">
+          <h2>A Different Kind of Chiropractor</h2>
+          <p>
+            I own and operate The Bridge Chiropractic, a movement-focused wellness clinic here in San Diego. My approach is simple: I believe healthcare should empower you, not create dependency.
+          </p>
+          <p>
+            Too many people experience rushed appointments, standardized treatment plans, and providers who don't take time to listen. I founded The Bridge to offer something different—calm, trust-based care that prioritizes your long-term function and independence.
+          </p>
+          <p>
+            When you visit my clinic, you'll notice the difference immediately. I take time to listen to your concerns, explain what's happening in your body, and collaborate with you on a plan that fits YOUR goals—not a one-size-fits-all protocol.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Philosophy -->
+  <section class="section section--cream philosophy">
+    <div class="container">
+      <div class="section__header">
+        <h2 class="section__title">My Philosophy</h2>
+      </div>
+      <div class="grid grid--3 philosophy__grid">
+        <div class="philosophy__item">
+          <h3>Education Over Dependency</h3>
+          <p>I want you to understand your body. When you know WHY something hurts and HOW to prevent it, you're empowered to take control of your own health.</p>
+        </div>
+        <div class="philosophy__item">
+          <h3>Sustainable Improvement</h3>
+          <p>Quick fixes rarely last. I focus on long-term solutions that help you stay active and pain-free for years to come, not just until your next appointment.</p>
+        </div>
+        <div class="philosophy__item">
+          <h3>Personalized Care</h3>
+          <p>What one patient needs might be completely different from another. I create individualized care plans designed around YOUR body and YOUR goals.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What to Expect -->
+  <section class="section what-to-expect">
+    <div class="container">
+      <div class="section__header">
+        <h2 class="section__title">What to Expect</h2>
+        <p class="section__subtitle">Your first visit is all about understanding you.</p>
+      </div>
+      <div class="grid grid--3 expect__grid">
+        <div class="expect__step">
+          <div class="expect__number">1</div>
+          <h3>We Listen</h3>
+          <p>Your appointment starts with a thorough conversation. I want to understand your health history, current concerns, and what you hope to achieve.</p>
+        </div>
+        <div class="expect__step">
+          <div class="expect__number">2</div>
+          <h3>We Assess</h3>
+          <p>A comprehensive evaluation helps us understand what's happening in your body. I'll explain my findings in clear, simple terms.</p>
+        </div>
+        <div class="expect__step">
+          <div class="expect__number">3</div>
+          <h3>We Plan Together</h3>
+          <p>We'll create a personalized care plan together—one that fits your lifestyle, respects your preferences, and works toward your goals.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Credentials -->
+  <section class="section section--cream credentials">
+    <div class="container">
+      <div class="section__header">
+        <h2 class="section__title">Credentials & Training</h2>
+      </div>
+      <div class="credentials__content">
+        <ul class="credentials__list">
+          <li>Doctor of Chiropractic (D.C.)</li>
+          <li>Licensed in California</li>
+          <li>Specialized training in neuro/brain rehabilitation</li>
+          <li>Certified in movement and mobility assessment</li>
+          <li>Continuing education in geriatric care</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2 class="cta-banner__title">Ready to Experience the Difference?</h2>
+      <p class="cta-banner__text">Schedule your first visit and see what calm, personalized care feels like.</p>
+      <div class="cta-banner__buttons">
+        <a href="/contact" class="btn btn--white">Book Your Visit</a>
+        <a href="tel:8582777500" class="btn btn--secondary" style="border-color: white; color: white;">Call (858) 277-7500</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-hero {
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-secondary-light) 100%);
+    padding: var(--space-4xl) 0;
+    text-align: center;
+  }
+
+  .page-hero h1 {
+    margin-bottom: var(--space-md);
+  }
+
+  .page-hero__subtitle {
+    font-size: 1.25rem;
+    color: var(--color-gray-dark);
+    margin-bottom: 0;
+  }
+
+  .about-intro__grid {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: var(--space-3xl);
+    align-items: start;
+  }
+
+  .about-intro__image-placeholder {
+    width: 100%;
+    aspect-ratio: 3/4;
+    background: var(--color-accent);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-gray-medium);
+    text-align: center;
+    font-size: 1.25rem;
+  }
+
+  .about-intro__content h2 {
+    margin-bottom: var(--space-lg);
+  }
+
+  .philosophy__item {
+    text-align: center;
+    padding: var(--space-lg);
+  }
+
+  .philosophy__item h3 {
+    color: var(--color-primary);
+    margin-bottom: var(--space-md);
+  }
+
+  .philosophy__item p {
+    color: var(--color-gray-dark);
+    margin-bottom: 0;
+  }
+
+  .expect__step {
+    text-align: center;
+    padding: var(--space-lg);
+  }
+
+  .expect__number {
+    width: 60px;
+    height: 60px;
+    background: var(--color-primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 auto var(--space-md);
+  }
+
+  .expect__step h3 {
+    margin-bottom: var(--space-sm);
+  }
+
+  .expect__step p {
+    color: var(--color-gray-dark);
+    margin-bottom: 0;
+  }
+
+  .credentials__content {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .credentials__list {
+    list-style: none;
+    text-align: center;
+  }
+
+  .credentials__list li {
+    padding: var(--space-md) 0;
+    border-bottom: 1px solid var(--color-gray-light);
+    font-size: 1.125rem;
+  }
+
+  .credentials__list li:last-child {
+    border-bottom: none;
+  }
+
+  .cta-banner {
+    background: var(--color-primary);
+    color: var(--color-white);
+    padding: var(--space-4xl) 0;
+    text-align: center;
+  }
+
+  .cta-banner__title {
+    color: var(--color-white);
+    margin-bottom: var(--space-md);
+  }
+
+  .cta-banner__text {
+    font-size: 1.125rem;
+    margin-bottom: var(--space-xl);
+    opacity: 0.9;
+  }
+
+  .cta-banner__buttons {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 1024px) {
+    .about-intro__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .about-intro__image-placeholder {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  }
+</style>
