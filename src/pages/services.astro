@@ -3,160 +3,70 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Services" description="Comprehensive chiropractic services including gentle adjustments, soft tissue therapy, movement training, and specialized neuro rehabilitation for fall prevention.">
-  <!-- Premium Page Hero -->
+  <!-- Page Hero -->
   <section class="page-hero">
-    <div class="page-hero__bg">
-      <img src="/images/hero-wellness.jpg" alt="" class="page-hero__bg-img" />
-      <div class="page-hero__gradient"></div>
-    </div>
-    <div class="page-hero__particles">
-      <div class="particle particle--1"></div>
-      <div class="particle particle--2"></div>
-      <div class="particle particle--3"></div>
-    </div>
-    <div class="container page-hero__container">
-      <div class="page-hero__content reveal">
-        <span class="page-hero__eyebrow">
-          <span class="page-hero__eyebrow-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
-          </span>
-          Comprehensive Care
-        </span>
-        <h1 class="page-hero__title">Our <span class="text-gradient">Services</span></h1>
-        <p class="page-hero__subtitle">Tailored treatments designed for your unique needs and goals.</p>
-      </div>
-    </div>
-    <div class="page-hero__scroll-indicator">
-      <span>Explore</span>
-      <div class="scroll-line"></div>
+    <div class="container">
+      <span class="section__eyebrow">Comprehensive Care</span>
+      <h1>Our Services</h1>
+      <p>Tailored treatments designed for your unique needs and goals.</p>
     </div>
   </section>
 
   <!-- Services Overview -->
-  <section class="section services-overview">
+  <section class="section">
     <div class="container">
-      <div class="services-overview__content text-center reveal">
-        <p class="services-overview__intro">
-          At The Bridge Chiropractic, we offer more than just adjustments. Our comprehensive approach addresses your whole body, combining multiple techniques to help you move better and live pain-free.
-        </p>
-      </div>
+      <p class="intro-text text-center">At The Bridge Chiropractic, we offer more than just adjustments. Our comprehensive approach addresses your whole body, combining multiple techniques to help you move better and live pain-free.</p>
 
-      <!-- Premium Quick Navigation -->
-      <nav class="services-nav reveal">
-        <a href="#chiropractic" class="services-nav__item">
-          <div class="services-nav__glow"></div>
-          <span class="services-nav__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V6a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v14"></path><path d="M2 20h20"></path><path d="M14 12v.01"></path></svg>
-          </span>
-          <span class="services-nav__label">Chiropractic Care</span>
-          <span class="services-nav__arrow">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </span>
+      <div class="grid grid--4 services-nav">
+        <a href="#chiropractic" class="service-nav-item">
+          <div class="service-nav-item__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 20V6a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v14"></path><path d="M2 20h20"></path></svg>
+          </div>
+          <span>Chiropractic Care</span>
         </a>
-        <a href="#soft-tissue" class="services-nav__item">
-          <div class="services-nav__glow"></div>
-          <span class="services-nav__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11V7a5 5 0 0 1 10 0v4"></path><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect></svg>
-          </span>
-          <span class="services-nav__label">Soft Tissue</span>
-          <span class="services-nav__arrow">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </span>
+        <a href="#soft-tissue" class="service-nav-item">
+          <div class="service-nav-item__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 11V7a5 5 0 0 1 10 0v4"></path><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect></svg>
+          </div>
+          <span>Soft Tissue Therapy</span>
         </a>
-        <a href="#movement" class="services-nav__item">
-          <div class="services-nav__glow"></div>
-          <span class="services-nav__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="3"></circle><line x1="12" y1="22" x2="12" y2="8"></line><path d="M5 12H2a10 10 0 0 0 20 0h-3"></path></svg>
-          </span>
-          <span class="services-nav__label">Movement Training</span>
-          <span class="services-nav__arrow">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </span>
+        <a href="#movement" class="service-nav-item">
+          <div class="service-nav-item__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="5" r="3"></circle><line x1="12" y1="22" x2="12" y2="8"></line><path d="M5 12H2a10 10 0 0 0 20 0h-3"></path></svg>
+          </div>
+          <span>Movement Training</span>
         </a>
-        <a href="#neuro" class="services-nav__item services-nav__item--featured">
-          <div class="services-nav__glow services-nav__glow--featured"></div>
-          <span class="services-nav__badge">Specialty</span>
-          <span class="services-nav__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10H12V2z"></path><path d="M12 2a10 10 0 0 1 10 10"></path><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-          </span>
-          <span class="services-nav__label">Neuro Rehab</span>
-          <span class="services-nav__arrow">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </span>
+        <a href="#neuro" class="service-nav-item service-nav-item--featured">
+          <div class="service-nav-item__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          </div>
+          <span>Neuro Rehabilitation</span>
         </a>
-      </nav>
+      </div>
     </div>
   </section>
 
   <!-- Chiropractic Care -->
-  <section class="section section--cream service-detail" id="chiropractic">
+  <section class="section section--gray service-detail" id="chiropractic">
     <div class="container">
-      <div class="service-detail__grid">
-        <div class="service-detail__content reveal-left">
-          <span class="service-detail__number">01</span>
-          <h2 class="service-detail__title">Chiropractic <span class="text-gradient">Care</span></h2>
-          <p class="service-detail__lead">
-            Our chiropractic care includes both gentle and traditional adjustment techniques. We tailor our approach to your comfort level and specific needs.
-          </p>
+      <div class="service-grid">
+        <div class="service-content">
+          <span class="section__eyebrow">Core Service</span>
+          <h2>Chiropractic Care</h2>
+          <p class="lead">Our chiropractic care includes both gentle and traditional adjustment techniques. We tailor our approach to your comfort level and specific needs.</p>
+          <p>Whether you prefer a gentle, low-force approach or traditional manual adjustments, we customize each session to what works best for your body. The goal is always the same: restore proper function and reduce pain.</p>
 
-          <div class="service-detail__lists">
-            <div class="service-detail__list-group">
-              <h3>What We Offer</h3>
-              <ul class="premium-list">
-                <li>
-                  <span class="premium-list__icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-                  <span>Gentle, low-force adjustments for sensitive patients</span>
-                </li>
-                <li>
-                  <span class="premium-list__icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-                  <span>Traditional spinal adjustments</span>
-                </li>
-                <li>
-                  <span class="premium-list__icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-                  <span>Extremity adjustments (shoulders, hips, knees, ankles)</span>
-                </li>
-                <li>
-                  <span class="premium-list__icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-                  <span>Postural correction techniques</span>
-                </li>
-              </ul>
-            </div>
-            <div class="service-detail__list-group">
-              <h3>Conditions We Address</h3>
-              <ul class="premium-list">
-                <li>
-                  <span class="premium-list__icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-                  <span>Back pain and stiffness</span>
-                </li>
-                <li>
-                  <span class="premium-list__icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-                  <span>Neck pain and tension</span>
-                </li>
-                <li>
-                  <span class="premium-list__icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-                  <span>Headaches and migraines</span>
-                </li>
-                <li>
-                  <span class="premium-list__icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-                  <span>Sciatica and joint dysfunction</span>
-                </li>
-              </ul>
-            </div>
-          </div>
+          <h3>What We Treat</h3>
+          <ul class="check-list">
+            <li>Back and neck pain</li>
+            <li>Headaches and migraines</li>
+            <li>Sciatica</li>
+            <li>Joint stiffness and reduced mobility</li>
+            <li>Posture-related issues</li>
+          </ul>
         </div>
-        <div class="service-detail__visual reveal-right">
-          <div class="service-detail__image-wrapper">
-            <div class="service-detail__image-frame">
-              <img src="/images/chiropractic-care.jpg" alt="Gentle chiropractic adjustment for spine alignment" loading="lazy" />
-            </div>
-            <div class="service-detail__accent"></div>
-            <div class="service-detail__floating-badge">
-              <span class="service-detail__floating-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-              </span>
-              <span>Personalized Care</span>
-            </div>
-          </div>
+        <div class="service-image">
+          <img src="/images/chiropractic-care.jpg" alt="Chiropractic adjustment" />
         </div>
       </div>
     </div>
@@ -165,1257 +75,270 @@ import Layout from '../layouts/Layout.astro';
   <!-- Soft Tissue Therapy -->
   <section class="section service-detail" id="soft-tissue">
     <div class="container">
-      <div class="service-detail__grid service-detail__grid--reverse">
-        <div class="service-detail__content reveal-right">
-          <span class="service-detail__number">02</span>
-          <h2 class="service-detail__title">Soft Tissue <span class="text-gradient">Therapy</span></h2>
-          <p class="service-detail__lead">
-            Muscles, tendons, and ligaments play a crucial role in how you move and feel. Our soft tissue therapy targets these areas to release tension and enhance healing.
-          </p>
+      <div class="service-grid service-grid--reverse">
+        <div class="service-content">
+          <span class="section__eyebrow">Complementary Care</span>
+          <h2>Soft Tissue Therapy</h2>
+          <p class="lead">Muscles, tendons, and fascia play a crucial role in how you move. Our soft tissue work complements chiropractic adjustments to address the full picture.</p>
+          <p>Using techniques like myofascial release, trigger point therapy, and instrument-assisted therapy, we target tension and adhesions that limit your mobility and cause pain.</p>
 
-          <div class="service-detail__lists">
-            <div class="service-detail__list-group">
-              <h3>Techniques Include</h3>
-              <ul class="premium-list">
-                <li>
-                  <span class="premium-list__icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-                  <span>Myofascial release</span>
-                </li>
-                <li>
-                  <span class="premium-list__icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-                  <span>Trigger point therapy</span>
-                </li>
-                <li>
-                  <span class="premium-list__icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-                  <span>Instrument-assisted soft tissue mobilization</span>
-                </li>
-                <li>
-                  <span class="premium-list__icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-                  <span>Stretching and flexibility work</span>
-                </li>
-              </ul>
-            </div>
-            <div class="service-detail__list-group">
-              <h3>Benefits</h3>
-              <ul class="premium-list">
-                <li>
-                  <span class="premium-list__icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-                  <span>Reduced muscle tension and pain</span>
-                </li>
-                <li>
-                  <span class="premium-list__icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-                  <span>Improved range of motion</span>
-                </li>
-                <li>
-                  <span class="premium-list__icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-                  <span>Faster recovery from activity</span>
-                </li>
-                <li>
-                  <span class="premium-list__icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-                  <span>Better circulation and healing</span>
-                </li>
-              </ul>
-            </div>
-          </div>
+          <h3>Benefits Include</h3>
+          <ul class="check-list">
+            <li>Reduced muscle tension</li>
+            <li>Improved flexibility</li>
+            <li>Faster recovery from injuries</li>
+            <li>Better circulation</li>
+            <li>Enhanced range of motion</li>
+          </ul>
         </div>
-        <div class="service-detail__visual reveal-left">
-          <div class="service-detail__image-wrapper">
-            <div class="service-detail__image-frame">
-              <img src="/images/soft-tissue.jpg" alt="Soft tissue therapy and muscle work" loading="lazy" />
-            </div>
-            <div class="service-detail__accent service-detail__accent--alt"></div>
-          </div>
+        <div class="service-image">
+          <img src="/images/soft-tissue.jpg" alt="Soft tissue therapy" />
         </div>
       </div>
     </div>
   </section>
 
   <!-- Movement Training -->
-  <section class="section section--cream service-detail" id="movement">
+  <section class="section section--gray service-detail" id="movement">
     <div class="container">
-      <div class="service-detail__grid">
-        <div class="service-detail__content reveal-left">
-          <span class="service-detail__number">03</span>
-          <h2 class="service-detail__title">Movement & <span class="text-gradient">Mobility</span> Training</h2>
-          <p class="service-detail__lead">
-            True healing goes beyond the treatment table. We provide guidance on exercises and movements that help you maintain progress and prevent future problems.
-          </p>
+      <div class="service-grid">
+        <div class="service-content">
+          <span class="section__eyebrow">Long-Term Success</span>
+          <h2>Movement Training</h2>
+          <p class="lead">What you do between visits matters. We provide personalized movement guidance to help you maintain progress and prevent future problems.</p>
+          <p>Rather than generic exercises, you'll receive specific movements tailored to your body and goals. The focus is on building strength, stability, and awareness that carries into your daily life.</p>
 
-          <div class="service-detail__lists">
-            <div class="service-detail__list-group">
-              <h3>What's Included</h3>
-              <ul class="premium-list">
-                <li>
-                  <span class="premium-list__icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-                  <span>Personalized exercise programs</span>
-                </li>
-                <li>
-                  <span class="premium-list__icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-                  <span>Mobility and flexibility routines</span>
-                </li>
-                <li>
-                  <span class="premium-list__icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-                  <span>Strength training guidance</span>
-                </li>
-                <li>
-                  <span class="premium-list__icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-                  <span>Daily movement recommendations</span>
-                </li>
-              </ul>
-            </div>
-            <div class="service-detail__list-group">
-              <h3>Our Goal</h3>
-              <p class="service-detail__text">
-                We want to give you the tools to take care of yourself between visits. When you understand how to move properly, you stay healthier longer.
-              </p>
-            </div>
-          </div>
+          <h3>Our Approach Includes</h3>
+          <ul class="check-list">
+            <li>Personalized exercise programs</li>
+            <li>Postural correction strategies</li>
+            <li>Daily movement recommendations</li>
+            <li>Strength and stability training</li>
+            <li>Ergonomic guidance for work and home</li>
+          </ul>
         </div>
-        <div class="service-detail__visual reveal-right">
-          <div class="service-detail__image-wrapper">
-            <div class="service-detail__image-frame">
-              <img src="/images/movement-training.jpg" alt="Movement and mobility training exercises" loading="lazy" />
-            </div>
-            <div class="service-detail__accent"></div>
-          </div>
+        <div class="service-image">
+          <img src="/images/movement-training.jpg" alt="Movement training" />
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Posture & Ergonomics -->
-  <section class="section service-detail" id="posture">
+  <!-- Neuro Rehabilitation -->
+  <section class="section service-detail" id="neuro">
     <div class="container">
-      <div class="service-detail__grid service-detail__grid--reverse">
-        <div class="service-detail__content reveal-right">
-          <span class="service-detail__number">04</span>
-          <h2 class="service-detail__title">Posture & <span class="text-gradient">Ergonomic</span> Support</h2>
-          <p class="service-detail__lead">
-            How you sit, stand, and work has a profound impact on your health. We help you identify and correct postural issues contributing to your pain.
-          </p>
+      <div class="service-grid service-grid--reverse">
+        <div class="service-content">
+          <span class="section__eyebrow">Specialty Service</span>
+          <h2>Neuro Rehabilitation</h2>
+          <p class="lead">Our specialized neuro rehabilitation program is designed specifically for adults 55 and older who want to maintain independence, prevent falls, and improve balance.</p>
+          <p>Using evidence-based approaches, we address the neurological factors that contribute to balance issues, dizziness, and increased fall risk. This is more than physical therapy—it's about retraining your brain-body connection.</p>
 
-          <div class="service-detail__lists">
-            <div class="service-detail__list-group">
-              <h3>Services Include</h3>
-              <ul class="premium-list">
-                <li>
-                  <span class="premium-list__icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-                  <span>Postural assessment and analysis</span>
-                </li>
-                <li>
-                  <span class="premium-list__icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-                  <span>Workstation ergonomic evaluation</span>
-                </li>
-                <li>
-                  <span class="premium-list__icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-                  <span>Recommendations for desk setup</span>
-                </li>
-                <li>
-                  <span class="premium-list__icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-                  <span>Tips for healthy sitting and standing</span>
-                </li>
-              </ul>
-            </div>
-            <div class="service-detail__list-group">
-              <h3>Who Benefits</h3>
-              <ul class="premium-list">
-                <li>
-                  <span class="premium-list__icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-                  <span>Office workers with desk-related pain</span>
-                </li>
-                <li>
-                  <span class="premium-list__icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-                  <span>Remote workers setting up home offices</span>
-                </li>
-                <li>
-                  <span class="premium-list__icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-                  <span>Anyone with chronic postural issues</span>
-                </li>
-              </ul>
-            </div>
-          </div>
+          <h3>Program Benefits</h3>
+          <ul class="check-list">
+            <li>Fall prevention strategies</li>
+            <li>Balance and coordination training</li>
+            <li>Vestibular rehabilitation</li>
+            <li>Gait analysis and improvement</li>
+            <li>Confidence building for daily activities</li>
+          </ul>
         </div>
-        <div class="service-detail__visual reveal-left">
-          <div class="service-detail__image-wrapper">
-            <div class="service-detail__image-frame">
-              <img src="/images/posture-ergonomics.jpg" alt="Posture assessment and ergonomic evaluation" loading="lazy" />
-            </div>
-            <div class="service-detail__accent service-detail__accent--alt"></div>
-          </div>
+        <div class="service-image">
+          <img src="/images/neuro-rehab.jpg" alt="Neuro rehabilitation" />
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Neuro Rehabilitation (Featured) -->
-  <section class="section service-detail service-detail--featured" id="neuro">
-    <div class="container">
-      <div class="service-detail__featured-bg">
-        <div class="service-detail__featured-glow"></div>
-      </div>
-      <div class="service-detail__featured-header reveal">
-        <span class="badge badge--glow">Specialty Service</span>
-        <span class="service-detail__number service-detail__number--light">05</span>
-      </div>
-
-      <div class="service-detail__grid">
-        <div class="service-detail__content reveal-left">
-          <h2 class="service-detail__title service-detail__title--light">Neuro/Brain <span class="text-gradient">Rehabilitation</span></h2>
-          <p class="service-detail__lead service-detail__lead--highlight">
-            Our specialized neuro rehabilitation program is designed specifically for adults 55+ who want to reduce fall risk and maintain their independence.
-          </p>
-          <p class="service-detail__text--light">
-            Falls are a leading cause of injury in older adults, but they're not inevitable. Through brain-based exercises and assessments, we help improve balance, coordination, and confidence.
-          </p>
-
-          <div class="service-detail__lists">
-            <div class="service-detail__list-group">
-              <h3 class="service-detail__list-title--light">How It Works</h3>
-              <ul class="premium-list premium-list--light">
-                <li>
-                  <span class="premium-list__icon premium-list__icon--light"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-                  <span>Comprehensive balance and gait assessment</span>
-                </li>
-                <li>
-                  <span class="premium-list__icon premium-list__icon--light"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-                  <span>Vestibular (inner ear) function evaluation</span>
-                </li>
-                <li>
-                  <span class="premium-list__icon premium-list__icon--light"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-                  <span>Brain-based rehabilitation exercises</span>
-                </li>
-                <li>
-                  <span class="premium-list__icon premium-list__icon--light"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-                  <span>Progressive balance training</span>
-                </li>
-                <li>
-                  <span class="premium-list__icon premium-list__icon--light"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-                  <span>Home exercise programs</span>
-                </li>
-              </ul>
-            </div>
-            <div class="service-detail__list-group">
-              <h3 class="service-detail__list-title--light">Results You Can Expect</h3>
-              <ul class="premium-list premium-list--light">
-                <li>
-                  <span class="premium-list__icon premium-list__icon--light"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-                  <span>Improved balance and stability</span>
-                </li>
-                <li>
-                  <span class="premium-list__icon premium-list__icon--light"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-                  <span>Reduced risk of falls</span>
-                </li>
-                <li>
-                  <span class="premium-list__icon premium-list__icon--light"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-                  <span>Greater confidence when walking</span>
-                </li>
-                <li>
-                  <span class="premium-list__icon premium-list__icon--light"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-                  <span>Maintained independence</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="service-detail__visual reveal-right">
-          <div class="service-detail__image-wrapper">
-            <div class="service-detail__image-frame service-detail__image-frame--featured">
-              <img src="/images/neuro-rehab.jpg" alt="Neuro rehabilitation for balance and fall prevention" loading="lazy" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Personalized Care Plans -->
-  <section class="section service-detail" id="care-plans">
-    <div class="container">
-      <div class="service-detail__grid service-detail__grid--reverse">
-        <div class="service-detail__content reveal-right">
-          <span class="service-detail__number">06</span>
-          <h2 class="service-detail__title">Personalized <span class="text-gradient">Care Plans</span></h2>
-          <p class="service-detail__lead">
-            No two patients are alike, which is why we don't believe in one-size-fits-all treatment. Every care plan is designed specifically for YOU.
-          </p>
-
-          <div class="service-detail__lists">
-            <div class="service-detail__list-group">
-              <h3>Our Process</h3>
-              <ul class="premium-list">
-                <li>
-                  <span class="premium-list__icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-                  <span>Thorough initial consultation and assessment</span>
-                </li>
-                <li>
-                  <span class="premium-list__icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-                  <span>Discussion of your goals and preferences</span>
-                </li>
-                <li>
-                  <span class="premium-list__icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-                  <span>Custom treatment plan development</span>
-                </li>
-                <li>
-                  <span class="premium-list__icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-                  <span>Regular progress evaluations</span>
-                </li>
-              </ul>
-            </div>
-            <div class="service-detail__list-group">
-              <h3>What Makes Us Different</h3>
-              <p class="service-detail__text">
-                I often hear patients say "I didn't know you did that!" Your care plan will include exactly what YOU need—nothing more, nothing less.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="service-detail__visual reveal-left">
-          <div class="service-detail__image-wrapper">
-            <div class="service-detail__image-frame">
-              <img src="/images/care-plan.jpg" alt="Personalized care plan consultation" loading="lazy" />
-            </div>
-            <div class="service-detail__accent service-detail__accent--alt"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Premium CTA -->
-  <section class="premium-cta">
-    <div class="premium-cta__bg">
-      <div class="premium-cta__gradient"></div>
-    </div>
-    <div class="container">
-      <div class="premium-cta__content reveal">
-        <span class="premium-cta__eyebrow">Ready to Begin?</span>
-        <h2 class="premium-cta__title">Not Sure Which Service You Need?</h2>
-        <p class="premium-cta__text">Schedule a consultation and we'll create a personalized plan together.</p>
-        <div class="premium-cta__actions">
-          <a href="/contact" class="btn btn--white btn--lg">
-            <span>Book Your Visit</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </a>
-          <a href="tel:8582777500" class="btn btn--ghost btn--lg">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-            <span>Call (858) 277-7500</span>
-          </a>
-        </div>
+  <!-- CTA -->
+  <section class="section section--dark cta-section">
+    <div class="container text-center">
+      <h2>Ready to Get Started?</h2>
+      <p>Schedule your appointment today and let's create a personalized care plan together.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn--primary btn--lg">Book Your Appointment</a>
+        <a href="tel:8582777500" class="btn btn--secondary btn--lg" style="border-color: white; color: white;">Call (858) 277-7500</a>
       </div>
     </div>
   </section>
 </Layout>
 
 <style>
-  /* Premium Page Hero */
+  /* Page Hero */
   .page-hero {
-    position: relative;
-    min-height: 70vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: var(--color-off-white);
+    padding: 140px 0 80px;
     text-align: center;
-    overflow: hidden;
   }
 
-  .page-hero__bg {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
+  .page-hero h1 {
+    margin-bottom: var(--space-md);
   }
 
-  .page-hero__bg-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transform: scale(1.1);
-    animation: slowZoom 20s ease-in-out infinite alternate;
-  }
-
-  @keyframes slowZoom {
-    from { transform: scale(1.1); }
-    to { transform: scale(1.15); }
-  }
-
-  .page-hero__gradient {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      135deg,
-      rgba(42, 54, 63, 0.95) 0%,
-      rgba(42, 54, 63, 0.85) 50%,
-      rgba(113, 196, 233, 0.3) 100%
-    );
-  }
-
-  .page-hero__particles {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    overflow: hidden;
-  }
-
-  .particle {
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(113, 196, 233, 0.15) 0%, transparent 70%);
-    animation: float 15s ease-in-out infinite;
-  }
-
-  .particle--1 {
-    top: 10%;
-    left: 10%;
-    animation-delay: 0s;
-  }
-
-  .particle--2 {
-    top: 60%;
-    right: 10%;
-    animation-delay: -5s;
-  }
-
-  .particle--3 {
-    bottom: 10%;
-    left: 50%;
-    animation-delay: -10s;
-  }
-
-  @keyframes float {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    33% { transform: translate(30px, -30px) scale(1.1); }
-    66% { transform: translate(-20px, 20px) scale(0.9); }
-  }
-
-  .page-hero__container {
-    position: relative;
-    z-index: 1;
-    padding: var(--space-5xl) var(--space-xl);
-  }
-
-  .page-hero__content {
-    max-width: 700px;
+  .page-hero p {
+    font-size: 1.25rem;
+    color: var(--color-gray-dark);
+    max-width: 600px;
     margin: 0 auto;
   }
 
-  .page-hero__eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-sm);
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--color-primary);
-    margin-bottom: var(--space-xl);
-    padding: var(--space-sm) var(--space-lg);
-    background: rgba(113, 196, 233, 0.15);
-    border: 1px solid rgba(113, 196, 233, 0.3);
-    border-radius: var(--radius-full);
-    backdrop-filter: blur(10px);
-  }
-
-  .page-hero__eyebrow-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .page-hero__title {
-    color: var(--color-white);
-    margin-bottom: var(--space-lg);
-    font-size: clamp(3rem, 7vw, 5rem);
-    font-weight: 700;
-    line-height: 1.1;
-  }
-
-  .page-hero__subtitle {
-    font-size: clamp(1.1rem, 2vw, 1.35rem);
-    color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 0;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.7;
-  }
-
-  .page-hero__scroll-indicator {
-    position: absolute;
-    bottom: var(--space-2xl);
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--space-sm);
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-  }
-
-  .scroll-line {
-    width: 1px;
-    height: 40px;
-    background: linear-gradient(to bottom, rgba(255,255,255,0.5), transparent);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .scroll-line::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 10px;
-    background: var(--color-primary);
-    animation: scrollDot 2s ease-in-out infinite;
-  }
-
-  @keyframes scrollDot {
-    0% { transform: translateY(-10px); opacity: 0; }
-    50% { opacity: 1; }
-    100% { transform: translateY(40px); opacity: 0; }
-  }
-
-  /* Services Overview */
-  .services-overview {
-    padding-top: var(--space-5xl);
-    padding-bottom: var(--space-4xl);
-  }
-
-  .services-overview__intro {
-    font-size: clamp(1.1rem, 2vw, 1.35rem);
-    color: var(--color-gray-dark);
+  /* Intro Text */
+  .intro-text {
+    font-size: 1.15rem;
     max-width: 800px;
-    margin: 0 auto var(--space-4xl);
+    margin: 0 auto var(--space-3xl);
     line-height: 1.8;
   }
 
-  /* Premium Services Navigation */
+  /* Services Nav */
   .services-nav {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: var(--space-lg);
+    margin-bottom: var(--space-xl);
   }
 
-  .services-nav__item {
+  .service-nav-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: var(--space-md);
-    padding: var(--space-2xl) var(--space-lg);
-    background: var(--color-white);
-    border-radius: var(--radius-xl);
-    box-shadow: var(--shadow-md);
+    padding: var(--space-xl);
+    background: var(--color-off-white);
+    border-radius: var(--radius-lg);
     text-decoration: none;
     color: var(--color-charcoal);
-    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-    position: relative;
-    overflow: hidden;
-    border: 1px solid rgba(0, 0, 0, 0.04);
+    font-weight: 600;
+    text-align: center;
+    transition: all var(--transition-normal);
+    border: 1px solid var(--color-gray-light);
   }
 
-  .services-nav__glow {
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(113, 196, 233, 0.15) 0%, transparent 50%);
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    pointer-events: none;
+  .service-nav-item:hover {
+    background: var(--color-white);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
   }
 
-  .services-nav__item:hover .services-nav__glow {
-    opacity: 1;
+  .service-nav-item__icon {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-primary-light);
+    border-radius: var(--radius-lg);
+    color: var(--color-primary);
   }
 
-  .services-nav__item:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-xl), 0 20px 60px rgba(113, 196, 233, 0.15);
-    border-color: rgba(113, 196, 233, 0.3);
-  }
-
-  .services-nav__item--featured {
-    background: linear-gradient(135deg, var(--color-charcoal) 0%, #1a2530 100%);
-    color: var(--color-white);
-  }
-
-  .services-nav__glow--featured {
-    background: radial-gradient(circle, rgba(113, 196, 233, 0.25) 0%, transparent 50%);
-  }
-
-  .services-nav__badge {
-    position: absolute;
-    top: var(--space-md);
-    right: var(--space-md);
-    font-size: 0.65rem;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    padding: 4px 12px;
+  .service-nav-item--featured {
     background: var(--color-primary);
     color: var(--color-white);
-    border-radius: var(--radius-full);
+    border-color: var(--color-primary);
   }
 
-  .services-nav__icon {
-    width: 72px;
-    height: 72px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, rgba(113, 196, 233, 0.15) 0%, rgba(113, 196, 233, 0.05) 100%);
-    border-radius: var(--radius-xl);
-    color: var(--color-primary);
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-
-  .services-nav__item--featured .services-nav__icon {
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
-    color: var(--color-white);
-    box-shadow: 0 8px 30px rgba(113, 196, 233, 0.4);
-  }
-
-  .services-nav__item:hover .services-nav__icon {
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
-    color: var(--color-white);
-    transform: scale(1.1);
-    box-shadow: 0 8px 30px rgba(113, 196, 233, 0.4);
-  }
-
-  .services-nav__label {
-    font-weight: 700;
-    font-size: 1rem;
-    text-align: center;
-  }
-
-  .services-nav__arrow {
-    position: absolute;
-    bottom: var(--space-lg);
-    right: var(--space-lg);
-    width: 36px;
-    height: 36px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(113, 196, 233, 0.1);
-    border-radius: var(--radius-full);
-    color: var(--color-primary);
-    opacity: 0;
-    transform: translateX(-10px);
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-
-  .services-nav__item--featured .services-nav__arrow {
-    background: rgba(255, 255, 255, 0.1);
+  .service-nav-item--featured .service-nav-item__icon {
+    background: rgba(255, 255, 255, 0.2);
     color: var(--color-white);
   }
 
-  .services-nav__item:hover .services-nav__arrow {
-    opacity: 1;
-    transform: translateX(0);
+  .service-nav-item--featured:hover {
+    background: var(--color-primary-dark);
   }
 
-  /* Service Detail Sections */
-  .service-detail {
-    padding: var(--space-5xl) 0;
-  }
-
-  .service-detail__grid {
+  /* Service Grid */
+  .service-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: var(--space-5xl);
+    gap: var(--space-4xl);
     align-items: center;
   }
 
-  .service-detail__grid--reverse {
-    direction: rtl;
+  .service-grid--reverse .service-content {
+    order: 2;
   }
 
-  .service-detail__grid--reverse > * {
-    direction: ltr;
+  .service-grid--reverse .service-image {
+    order: 1;
   }
 
-  .service-detail__number {
-    display: inline-block;
-    font-family: var(--font-heading);
-    font-size: clamp(4rem, 8vw, 6rem);
-    font-weight: 700;
-    background: linear-gradient(135deg, rgba(113, 196, 233, 0.3) 0%, rgba(113, 196, 233, 0.1) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    line-height: 1;
-    margin-bottom: var(--space-md);
-  }
-
-  .service-detail__number--light {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  .service-detail__title {
-    margin-bottom: var(--space-xl);
-    font-size: clamp(2rem, 4vw, 3rem);
-  }
-
-  .service-detail__title--light {
-    color: var(--color-white);
-  }
-
-  .service-detail__lead {
-    font-size: clamp(1.05rem, 1.5vw, 1.2rem);
-    color: var(--color-gray-dark);
-    margin-bottom: var(--space-2xl);
-    line-height: 1.8;
-  }
-
-  .service-detail__lead--highlight {
-    color: var(--color-white);
-    font-weight: 500;
-  }
-
-  .service-detail__text {
-    color: var(--color-gray-dark);
-    margin-bottom: 0;
-    line-height: 1.7;
-  }
-
-  .service-detail__text--light {
-    color: rgba(255, 255, 255, 0.75);
-    margin-bottom: var(--space-2xl);
-    line-height: 1.7;
-  }
-
-  .service-detail__lists {
-    display: grid;
-    gap: var(--space-2xl);
-  }
-
-  .service-detail__list-group h3 {
-    font-size: 0.85rem;
-    font-family: var(--font-body);
-    font-weight: 700;
-    color: var(--color-primary-dark);
+  .service-content h2 {
     margin-bottom: var(--space-lg);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    position: relative;
-    display: inline-block;
   }
 
-  .service-detail__list-group h3::after {
-    content: '';
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    width: 24px;
-    height: 2px;
-    background: var(--color-primary);
-    border-radius: 2px;
+  .service-content .lead {
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.7;
   }
 
-  .service-detail__list-title--light {
-    color: var(--color-primary) !important;
+  .service-content h3 {
+    margin: var(--space-xl) 0 var(--space-md);
+    font-size: 1.25rem;
   }
 
-  /* Premium List */
-  .premium-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-md);
-  }
-
-  .premium-list li {
-    display: flex;
-    align-items: flex-start;
-    gap: var(--space-md);
-    color: var(--color-gray-dark);
-    line-height: 1.6;
-  }
-
-  .premium-list__icon {
-    flex-shrink: 0;
-    width: 24px;
-    height: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, rgba(113, 196, 233, 0.2) 0%, rgba(113, 196, 233, 0.1) 100%);
-    border-radius: var(--radius-md);
-    color: var(--color-primary);
-  }
-
-  .premium-list--light li {
-    color: rgba(255, 255, 255, 0.85);
-  }
-
-  .premium-list__icon--light {
-    background: linear-gradient(135deg, rgba(113, 196, 233, 0.3) 0%, rgba(113, 196, 233, 0.15) 100%);
-    color: var(--color-primary);
-  }
-
-  /* Image Frame with Effects */
-  .service-detail__visual {
-    position: relative;
-  }
-
-  .service-detail__image-wrapper {
-    position: relative;
-  }
-
-  .service-detail__image-frame {
-    position: relative;
-    border-radius: var(--radius-2xl);
-    overflow: hidden;
-    box-shadow: var(--shadow-xl);
-  }
-
-  .service-detail__image-frame img {
+  .service-image img {
     width: 100%;
-    aspect-ratio: 4/3;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-
-  .service-detail__image-frame:hover img {
-    transform: scale(1.05);
-  }
-
-  .service-detail__accent {
-    position: absolute;
-    width: 140px;
-    height: 140px;
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
-    border-radius: var(--radius-xl);
-    z-index: -1;
-    bottom: -24px;
-    right: -24px;
-    opacity: 0.9;
-  }
-
-  .service-detail__accent--alt {
-    background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-secondary-dark) 100%);
-    bottom: auto;
-    right: auto;
-    top: -24px;
-    left: -24px;
-  }
-
-  .service-detail__floating-badge {
-    position: absolute;
-    bottom: var(--space-xl);
-    left: var(--space-xl);
-    display: flex;
-    align-items: center;
-    gap: var(--space-sm);
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    padding: var(--space-md) var(--space-lg);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-lg);
-    font-weight: 600;
-    font-size: 0.9rem;
-    color: var(--color-charcoal);
   }
 
-  .service-detail__floating-icon {
-    width: 32px;
-    height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, rgba(113, 196, 233, 0.2) 0%, rgba(113, 196, 233, 0.1) 100%);
-    border-radius: var(--radius-md);
-    color: var(--color-primary);
-  }
-
-  /* Featured Service (Neuro) */
-  .service-detail--featured {
-    background: linear-gradient(135deg, var(--color-charcoal) 0%, #1a2530 100%);
-    padding: var(--space-5xl) 0;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .service-detail__featured-bg {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-  }
-
-  .service-detail__featured-glow {
-    position: absolute;
-    top: -200px;
-    right: -200px;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(113, 196, 233, 0.2) 0%, transparent 70%);
-    animation: float 15s ease-in-out infinite;
-  }
-
-  .service-detail__featured-header {
-    display: flex;
-    align-items: center;
-    gap: var(--space-lg);
-    margin-bottom: var(--space-2xl);
-    position: relative;
-    z-index: 1;
-  }
-
-  .badge--glow {
-    box-shadow: 0 0 30px rgba(113, 196, 233, 0.4);
-  }
-
-  .service-detail__image-frame--featured {
-    border: 3px solid rgba(113, 196, 233, 0.4);
-    box-shadow: var(--shadow-2xl), 0 0 60px rgba(113, 196, 233, 0.2);
-  }
-
-  /* Premium CTA */
-  .premium-cta {
-    position: relative;
-    padding: var(--space-5xl) 0;
-    overflow: hidden;
-  }
-
-  .premium-cta__bg {
-    position: absolute;
-    inset: 0;
-  }
-
-  .premium-cta__gradient {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 50%, var(--color-charcoal) 100%);
-  }
-
-  .premium-cta__content {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto;
-  }
-
-  .premium-cta__eyebrow {
-    display: inline-block;
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.7);
-    margin-bottom: var(--space-lg);
-  }
-
-  .premium-cta__title {
-    color: var(--color-white);
+  /* CTA Section */
+  .cta-section h2 {
     margin-bottom: var(--space-md);
-    font-size: clamp(2rem, 4vw, 3rem);
   }
 
-  .premium-cta__text {
-    color: rgba(255, 255, 255, 0.85);
-    font-size: 1.2rem;
-    margin-bottom: var(--space-2xl);
-    line-height: 1.7;
+  .cta-section p {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-xl);
   }
 
-  .premium-cta__actions {
+  .cta-actions {
     display: flex;
-    justify-content: center;
     gap: var(--space-md);
+    justify-content: center;
     flex-wrap: wrap;
-  }
-
-  /* Reveal animations */
-  .reveal, .reveal-left, .reveal-right {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-
-  .reveal-left {
-    transform: translateX(-40px) translateY(20px);
-  }
-
-  .reveal-right {
-    transform: translateX(40px) translateY(20px);
-  }
-
-  .reveal.visible, .reveal-left.visible, .reveal-right.visible {
-    opacity: 1;
-    transform: translateY(0) translateX(0);
   }
 
   /* Responsive */
   @media (max-width: 1024px) {
+    .service-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-2xl);
+    }
+
+    .service-grid--reverse .service-content {
+      order: 1;
+    }
+
+    .service-grid--reverse .service-image {
+      order: 2;
+    }
+
+    .service-image {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
     .services-nav {
       grid-template-columns: repeat(2, 1fr);
-    }
-
-    .service-detail__grid,
-    .service-detail__grid--reverse {
-      grid-template-columns: 1fr;
-      gap: var(--space-3xl);
-      direction: ltr;
-    }
-
-    .service-detail__visual {
-      order: -1;
-    }
-
-    .service-detail__accent {
-      width: 100px;
-      height: 100px;
-      bottom: -16px;
-      right: -16px;
-    }
-
-    .service-detail__accent--alt {
-      top: -16px;
-      left: -16px;
     }
   }
 
   @media (max-width: 768px) {
     .page-hero {
-      min-height: 60vh;
-    }
-
-    .services-nav {
-      grid-template-columns: 1fr;
-      gap: var(--space-md);
-    }
-
-    .services-nav__item {
-      flex-direction: row;
-      justify-content: flex-start;
-      padding: var(--space-lg);
-      gap: var(--space-lg);
-    }
-
-    .services-nav__icon {
-      width: 56px;
-      height: 56px;
-    }
-
-    .services-nav__arrow {
-      bottom: 50%;
-      transform: translateY(50%);
-      right: var(--space-lg);
-    }
-
-    .services-nav__item:hover .services-nav__arrow {
-      transform: translateY(50%);
-    }
-
-    .service-detail__number {
-      font-size: 4rem;
-    }
-
-    .page-hero__scroll-indicator {
-      display: none;
-    }
-
-    .premium-cta__actions {
-      flex-direction: column;
-    }
-
-    .premium-cta__actions .btn {
-      width: 100%;
-    }
-
-    .service-detail__content h2 {
-      font-size: 1.75rem;
-    }
-
-    .benefit-list li {
-      font-size: 0.95rem;
+      padding: 120px 0 60px;
     }
   }
 
   @media (max-width: 640px) {
-    .page-hero {
-      min-height: 50vh;
+    .services-nav {
+      grid-template-columns: 1fr;
     }
 
-    .page-hero__container {
-      padding: var(--space-3xl) var(--space-md);
+    .cta-actions {
+      flex-direction: column;
     }
 
-    .page-hero__title {
-      font-size: clamp(2rem, 8vw, 2.75rem);
-    }
-
-    .page-hero__subtitle {
-      font-size: 1rem;
-    }
-
-    .services-nav__item {
-      padding: var(--space-md);
-      gap: var(--space-md);
-    }
-
-    .services-nav__icon {
-      width: 48px;
-      height: 48px;
-    }
-
-    .services-nav__label {
-      font-size: 1rem;
-    }
-
-    .service-detail__number {
-      font-size: 3.5rem;
-    }
-
-    .service-detail__content h2 {
-      font-size: 1.5rem;
-    }
-
-    .service-detail__content p {
-      font-size: 0.95rem;
-    }
-
-    .benefit-list li {
-      font-size: 0.9rem;
-      padding-left: var(--space-lg);
-    }
-
-    .service-detail__accent {
-      width: 80px;
-      height: 80px;
-    }
-
-    .premium-cta h2 {
-      font-size: 1.75rem;
-    }
-
-    .premium-cta p {
-      font-size: 1rem;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .page-hero {
-      min-height: 45vh;
-    }
-
-    .page-hero__eyebrow {
-      font-size: 0.65rem;
-      padding: 4px var(--space-sm);
-    }
-
-    .page-hero__title {
-      font-size: clamp(1.75rem, 9vw, 2.25rem);
-    }
-
-    .page-hero__subtitle {
-      font-size: 0.95rem;
-    }
-
-    .services-nav__item {
-      padding: var(--space-sm) var(--space-md);
-    }
-
-    .services-nav__icon {
-      width: 44px;
-      height: 44px;
-    }
-
-    .services-nav__label {
-      font-size: 0.95rem;
-    }
-
-    .service-detail {
-      padding: var(--space-3xl) 0;
-    }
-
-    .service-detail__number {
-      font-size: 3rem;
-      top: 0;
-      right: 0;
-    }
-
-    .service-detail__content h2 {
-      font-size: 1.35rem;
-    }
-
-    .service-detail__content > p {
-      font-size: 0.9rem;
-    }
-
-    .benefit-list li {
-      font-size: 0.85rem;
-    }
-
-    .service-detail__accent {
-      width: 60px;
-      height: 60px;
-      bottom: -10px;
-      right: -10px;
-    }
-
-    .premium-cta {
-      padding: var(--space-3xl) 0;
-    }
-
-    .premium-cta h2 {
-      font-size: 1.5rem;
-    }
-
-    .premium-cta p {
-      font-size: 0.9rem;
+    .cta-actions .btn {
+      width: 100%;
     }
   }
 </style>
-
-<script>
-  // Reveal on scroll
-  const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.1
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, observerOptions);
-
-  document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => {
-    observer.observe(el);
-  });
-
-  // Smooth scroll for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        const headerOffset = 100;
-        const elementPosition = target.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth'
-        });
-      }
-    });
-  });
-</script>

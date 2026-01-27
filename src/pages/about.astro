@@ -3,72 +3,40 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="About" description="Meet Dr. Nathan Beyerl - San Diego chiropractor focused on education, autonomy, and sustainable improvement for adults 55+.">
-  <!-- Premium Page Hero -->
+  <!-- Page Hero -->
   <section class="page-hero">
-    <div class="page-hero__bg">
-      <img src="/images/hero-wellness.jpg" alt="" class="page-hero__bg-img" />
-      <div class="page-hero__gradient"></div>
-    </div>
-    <div class="page-hero__particles">
-      <div class="particle particle--1"></div>
-      <div class="particle particle--2"></div>
-    </div>
-    <div class="container page-hero__container">
-      <div class="page-hero__content reveal">
-        <span class="page-hero__eyebrow">
-          <span class="page-hero__eyebrow-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          </span>
-          About The Bridge
-        </span>
-        <h1 class="page-hero__title">Meet Dr. <span class="text-gradient">Nathan Beyerl</span></h1>
-        <p class="page-hero__subtitle">Your partner in moving better and living fuller.</p>
-      </div>
+    <div class="container">
+      <span class="section__eyebrow">About The Bridge</span>
+      <h1>Meet Dr. Nathan Beyerl</h1>
+      <p>Your partner in moving better and living fuller.</p>
     </div>
   </section>
 
   <!-- About Intro -->
-  <section class="section about-intro">
+  <section class="section">
     <div class="container">
-      <div class="about-intro__grid">
-        <div class="about-intro__visual reveal-left">
-          <div class="about-intro__image-wrapper">
-            <div class="about-intro__image-frame">
-              <img src="/images/dr-portrait.jpg" alt="Dr. Nathan Beyerl - San Diego Chiropractor" />
-            </div>
-            <div class="about-intro__accent"></div>
-            <div class="about-intro__badge">
-              <span class="about-intro__badge-years" data-count="15">0</span>
-              <span class="about-intro__badge-plus">+</span>
-              <span class="about-intro__badge-text">Years of Experience</span>
-            </div>
-          </div>
+      <div class="about-grid">
+        <div class="about-image">
+          <img src="/images/dr-portrait.jpg" alt="Dr. Nathan Beyerl - San Diego Chiropractor" />
         </div>
-        <div class="about-intro__content reveal-right">
-          <span class="section__eyebrow">A Different Kind of Chiropractor</span>
-          <h2>Healthcare That <span class="text-gradient">Empowers</span>, Not Creates Dependency</h2>
-          <p class="about-intro__lead">
-            I own and operate The Bridge Chiropractic, a movement-focused wellness clinic here in San Diego. My approach is simple: healthcare should give you control over your own health.
-          </p>
-          <p>
-            Too many people experience rushed appointments, standardized treatment plans, and providers who don't take time to listen. I founded The Bridge to offer something different—calm, trust-based care that prioritizes your long-term function and independence.
-          </p>
-          <p>
-            When you visit my clinic, you'll notice the difference immediately. I take time to listen to your concerns, explain what's happening in your body, and collaborate with you on a plan that fits YOUR goals—not a one-size-fits-all protocol.
-          </p>
+        <div class="about-content">
+          <h2>Healthcare That Empowers</h2>
+          <p class="lead">I own and operate The Bridge Chiropractic, a movement-focused wellness clinic here in San Diego. My approach is simple: healthcare should give you control over your own health.</p>
+          <p>Too many people experience rushed appointments, standardized treatment plans, and providers who don't take time to listen. I founded The Bridge to offer something different—calm, trust-based care that prioritizes your long-term function and independence.</p>
+          <p>When you visit my clinic, you'll notice the difference immediately. I take time to listen to your concerns, explain what's happening in your body, and collaborate with you on a plan that fits YOUR goals—not a one-size-fits-all protocol.</p>
 
-          <div class="about-intro__stats">
-            <div class="about-intro__stat">
-              <span class="about-intro__stat-number" data-count="500">0</span>
-              <span class="about-intro__stat-plus">+</span>
-              <span class="about-intro__stat-label">Patients Helped</span>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat__number">15+</span>
+              <span class="stat__label">Years Experience</span>
             </div>
-            <div class="about-intro__stat">
-              <span class="about-intro__stat-number" data-count="5" data-decimals="1">0</span>
-              <span class="about-intro__stat-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              </span>
-              <span class="about-intro__stat-label">Google Rating</span>
+            <div class="stat">
+              <span class="stat__number">500+</span>
+              <span class="stat__label">Patients Helped</span>
+            </div>
+            <div class="stat">
+              <span class="stat__number">5.0</span>
+              <span class="stat__label">Google Rating</span>
             </div>
           </div>
         </div>
@@ -77,40 +45,34 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- Philosophy -->
-  <section class="section section--cream philosophy">
+  <section class="section section--gray">
     <div class="container">
-      <div class="section__header text-center reveal">
+      <div class="section__header">
         <span class="section__eyebrow">My Approach</span>
-        <h2 class="section__title">Philosophy of <span class="text-gradient">Care</span></h2>
+        <h2 class="section__title">Philosophy of Care</h2>
         <p class="section__subtitle">Three pillars that guide every patient interaction.</p>
       </div>
 
-      <div class="philosophy__grid stagger-children">
-        <div class="philosophy__card reveal">
-          <div class="philosophy__number">01</div>
-          <div class="philosophy__glow"></div>
-          <div class="philosophy__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+      <div class="grid grid--3">
+        <div class="philosophy-card">
+          <div class="philosophy-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
           </div>
           <h3>Education Over Dependency</h3>
           <p>I want you to understand your body. When you know WHY something hurts and HOW to prevent it, you're empowered to take control of your own health.</p>
         </div>
 
-        <div class="philosophy__card philosophy__card--featured reveal">
-          <div class="philosophy__number">02</div>
-          <div class="philosophy__glow philosophy__glow--featured"></div>
-          <div class="philosophy__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        <div class="philosophy-card">
+          <div class="philosophy-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
           </div>
           <h3>Sustainable Improvement</h3>
           <p>Quick fixes rarely last. I focus on long-term solutions that help you stay active and pain-free for years to come, not just until your next appointment.</p>
         </div>
 
-        <div class="philosophy__card reveal">
-          <div class="philosophy__number">03</div>
-          <div class="philosophy__glow"></div>
-          <div class="philosophy__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        <div class="philosophy-card">
+          <div class="philosophy-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
           </div>
           <h3>Personalized Care</h3>
           <p>What one patient needs might be completely different from another. I create individualized care plans designed around YOUR body and YOUR goals.</p>
@@ -120,43 +82,35 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- What to Expect -->
-  <section class="section what-to-expect">
+  <section class="section">
     <div class="container">
-      <div class="expect__layout">
-        <div class="expect__content reveal-left">
+      <div class="expect-grid">
+        <div class="expect-content">
           <span class="section__eyebrow">Your First Visit</span>
-          <h2>What to <span class="text-gradient">Expect</span></h2>
-          <p class="expect__intro">Your first visit is all about understanding you. Here's what happens when you walk through our doors.</p>
+          <h2>What to Expect</h2>
+          <p>Your first visit is all about understanding you. Here's what happens when you walk through our doors.</p>
         </div>
 
-        <div class="expect__steps">
-          <div class="expect__step reveal-right" style="--i: 1">
-            <div class="expect__step-number">
-              <span>1</span>
-            </div>
-            <div class="expect__step-content">
+        <div class="expect-steps">
+          <div class="expect-step">
+            <div class="expect-step__number">1</div>
+            <div class="expect-step__content">
               <h3>We Listen</h3>
               <p>Your appointment starts with a thorough conversation. I want to understand your health history, current concerns, and what you hope to achieve.</p>
             </div>
-            <div class="expect__step-line"></div>
           </div>
 
-          <div class="expect__step reveal-right" style="--i: 2">
-            <div class="expect__step-number">
-              <span>2</span>
-            </div>
-            <div class="expect__step-content">
+          <div class="expect-step">
+            <div class="expect-step__number">2</div>
+            <div class="expect-step__content">
               <h3>We Assess</h3>
               <p>A comprehensive evaluation helps us understand what's happening in your body. I'll explain my findings in clear, simple terms.</p>
             </div>
-            <div class="expect__step-line"></div>
           </div>
 
-          <div class="expect__step reveal-right" style="--i: 3">
-            <div class="expect__step-number">
-              <span>3</span>
-            </div>
-            <div class="expect__step-content">
+          <div class="expect-step">
+            <div class="expect-step__number">3</div>
+            <div class="expect-step__content">
               <h3>We Plan Together</h3>
               <p>We'll create a personalized care plan together—one that fits your lifestyle, respects your preferences, and works toward your goals.</p>
             </div>
@@ -167,1204 +121,286 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- Credentials -->
-  <section class="section credentials">
-    <div class="credentials__bg">
-      <div class="credentials__glow"></div>
-    </div>
+  <section class="section section--dark">
     <div class="container">
-      <div class="credentials__grid">
-        <div class="credentials__content reveal-left">
-          <span class="section__eyebrow section__eyebrow--light">Qualifications</span>
-          <h2>Credentials & <span class="text-gradient">Training</span></h2>
+      <div class="credentials-grid">
+        <div class="credentials-content">
+          <span class="section__eyebrow">Qualifications</span>
+          <h2>Credentials & Training</h2>
           <p>Committed to continuous learning and the highest standards of care.</p>
         </div>
 
-        <div class="credentials__list-wrapper reveal-right">
-          <ul class="credentials__list">
-            <li>
-              <span class="credentials__icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-              </span>
-              <span>Doctor of Chiropractic (D.C.)</span>
-            </li>
-            <li>
-              <span class="credentials__icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-              </span>
-              <span>Licensed in California</span>
-            </li>
-            <li>
-              <span class="credentials__icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-              </span>
-              <span>Specialized training in neuro/brain rehabilitation</span>
-            </li>
-            <li>
-              <span class="credentials__icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-              </span>
-              <span>Certified in movement and mobility assessment</span>
-            </li>
-            <li>
-              <span class="credentials__icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-              </span>
-              <span>Continuing education in geriatric care</span>
-            </li>
-          </ul>
-        </div>
+        <ul class="check-list credentials-list">
+          <li>Doctor of Chiropractic (D.C.)</li>
+          <li>Licensed in California</li>
+          <li>Specialized training in neuro/brain rehabilitation</li>
+          <li>Certified in movement and mobility assessment</li>
+          <li>Continuing education in geriatric care</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- Why The Bridge -->
-  <section class="section why-bridge">
-    <div class="container">
-      <div class="section__header text-center reveal">
-        <span class="section__eyebrow">The Difference</span>
-        <h2 class="section__title">Why Patients Choose <span class="text-gradient">The Bridge</span></h2>
-      </div>
-
-      <div class="why-bridge__grid stagger-children">
-        <div class="why-bridge__item reveal">
-          <div class="why-bridge__glow"></div>
-          <div class="why-bridge__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-          </div>
-          <h3>Unhurried Appointments</h3>
-          <p>No rushed visits. Every appointment gives you time to be heard and understood.</p>
-        </div>
-
-        <div class="why-bridge__item reveal">
-          <div class="why-bridge__glow"></div>
-          <div class="why-bridge__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-          </div>
-          <h3>One-on-One Care</h3>
-          <p>Direct access to Dr. Beyerl. No assistants handling your treatment.</p>
-        </div>
-
-        <div class="why-bridge__item reveal">
-          <div class="why-bridge__glow"></div>
-          <div class="why-bridge__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
-          </div>
-          <h3>Results-Focused</h3>
-          <p>The goal is getting you better, not keeping you coming back forever.</p>
-        </div>
-
-        <div class="why-bridge__item reveal">
-          <div class="why-bridge__glow"></div>
-          <div class="why-bridge__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          </div>
-          <h3>Clear Communication</h3>
-          <p>No jargon. I explain what's happening and why in plain language.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Premium CTA -->
-  <section class="premium-cta">
-    <div class="premium-cta__bg">
-      <div class="premium-cta__gradient"></div>
-    </div>
-    <div class="container">
-      <div class="premium-cta__content reveal">
-        <span class="premium-cta__eyebrow">Let's Connect</span>
-        <h2 class="premium-cta__title">Ready to Experience the Difference?</h2>
-        <p class="premium-cta__text">Schedule your first visit and see what calm, personalized care feels like.</p>
-        <div class="premium-cta__actions">
-          <a href="/contact" class="btn btn--white btn--lg">
-            <span>Book Your Visit</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </a>
-          <a href="tel:8582777500" class="btn btn--ghost btn--lg">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-            <span>Call (858) 277-7500</span>
-          </a>
-        </div>
+  <!-- CTA -->
+  <section class="section cta-section">
+    <div class="container text-center">
+      <h2>Ready to Experience the Difference?</h2>
+      <p>Schedule your first visit and see what calm, personalized care feels like.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn--primary btn--lg">Book Your Visit</a>
+        <a href="tel:8582777500" class="btn btn--secondary btn--lg">Call (858) 277-7500</a>
       </div>
     </div>
   </section>
 </Layout>
 
 <style>
-  /* Premium Page Hero */
+  /* Page Hero */
   .page-hero {
-    position: relative;
-    min-height: 70vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: var(--color-off-white);
+    padding: 140px 0 80px;
     text-align: center;
-    overflow: hidden;
   }
 
-  .page-hero__bg {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
+  .page-hero h1 {
+    margin-bottom: var(--space-md);
   }
 
-  .page-hero__bg-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transform: scale(1.1);
-    animation: slowZoom 20s ease-in-out infinite alternate;
-  }
-
-  @keyframes slowZoom {
-    from { transform: scale(1.1); }
-    to { transform: scale(1.15); }
-  }
-
-  .page-hero__gradient {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      135deg,
-      rgba(42, 54, 63, 0.95) 0%,
-      rgba(42, 54, 63, 0.85) 50%,
-      rgba(113, 196, 233, 0.3) 100%
-    );
-  }
-
-  .page-hero__particles {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    overflow: hidden;
-  }
-
-  .particle {
-    position: absolute;
-    width: 400px;
-    height: 400px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(113, 196, 233, 0.15) 0%, transparent 70%);
-    animation: float 15s ease-in-out infinite;
-  }
-
-  .particle--1 {
-    top: -100px;
-    right: -100px;
-    animation-delay: 0s;
-  }
-
-  .particle--2 {
-    bottom: -150px;
-    left: -150px;
-    animation-delay: -7s;
-  }
-
-  @keyframes float {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    33% { transform: translate(30px, -30px) scale(1.1); }
-    66% { transform: translate(-20px, 20px) scale(0.9); }
-  }
-
-  .page-hero__container {
-    position: relative;
-    z-index: 1;
-    padding: var(--space-5xl) var(--space-xl);
-  }
-
-  .page-hero__content {
-    max-width: 700px;
+  .page-hero p {
+    font-size: 1.25rem;
+    color: var(--color-gray-dark);
+    max-width: 600px;
     margin: 0 auto;
   }
 
-  .page-hero__eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-sm);
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--color-primary);
-    margin-bottom: var(--space-xl);
-    padding: var(--space-sm) var(--space-lg);
-    background: rgba(113, 196, 233, 0.15);
-    border: 1px solid rgba(113, 196, 233, 0.3);
-    border-radius: var(--radius-full);
-    backdrop-filter: blur(10px);
-  }
-
-  .page-hero__eyebrow-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .page-hero__title {
-    color: var(--color-white);
-    margin-bottom: var(--space-lg);
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
-    font-weight: 700;
-    line-height: 1.1;
-  }
-
-  .page-hero__subtitle {
-    font-size: clamp(1.1rem, 2vw, 1.35rem);
-    color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 0;
-    line-height: 1.7;
-  }
-
-  /* About Intro */
-  .about-intro {
-    padding-top: var(--space-5xl);
-    padding-bottom: var(--space-5xl);
-  }
-
-  .about-intro__grid {
-    display: grid;
-    grid-template-columns: 450px 1fr;
-    gap: var(--space-5xl);
-    align-items: start;
-  }
-
-  .about-intro__visual {
-    position: relative;
-  }
-
-  .about-intro__image-wrapper {
-    position: relative;
-  }
-
-  .about-intro__image-frame {
-    position: relative;
-    border-radius: var(--radius-2xl);
-    overflow: hidden;
-    box-shadow: var(--shadow-2xl);
-  }
-
-  .about-intro__image-frame img {
-    width: 100%;
-    aspect-ratio: 3/4;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-
-  .about-intro__image-frame:hover img {
-    transform: scale(1.03);
-  }
-
-  .about-intro__accent {
-    position: absolute;
-    width: 160px;
-    height: 160px;
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
-    border-radius: var(--radius-xl);
-    z-index: -1;
-    bottom: -30px;
-    right: -30px;
-    opacity: 0.9;
-  }
-
-  .about-intro__badge {
-    position: absolute;
-    bottom: var(--space-2xl);
-    left: var(--space-xl);
-    background: linear-gradient(135deg, var(--color-charcoal) 0%, #1a2530 100%);
-    color: var(--color-white);
-    padding: var(--space-xl) var(--space-2xl);
-    border-radius: var(--radius-xl);
-    text-align: center;
-    box-shadow: var(--shadow-2xl);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-  }
-
-  .about-intro__badge-years {
-    display: inline;
-    font-family: var(--font-heading);
-    font-size: 3rem;
-    font-weight: 700;
-    line-height: 1;
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  .about-intro__badge-plus {
-    font-family: var(--font-heading);
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--color-primary);
-  }
-
-  .about-intro__badge-text {
-    display: block;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    opacity: 0.8;
-    margin-top: var(--space-xs);
-  }
-
-  .about-intro__content h2 {
-    margin-bottom: var(--space-xl);
-    font-size: clamp(1.75rem, 3vw, 2.5rem);
-  }
-
-  .about-intro__lead {
-    font-size: 1.15rem;
-    color: var(--color-charcoal);
-    font-weight: 500;
-    line-height: 1.8;
-    margin-bottom: var(--space-lg);
-  }
-
-  .about-intro__content p {
-    margin-bottom: var(--space-lg);
-    line-height: 1.8;
-  }
-
-  .about-intro__stats {
-    display: flex;
-    gap: var(--space-4xl);
-    margin-top: var(--space-3xl);
-    padding-top: var(--space-2xl);
-    border-top: 1px solid rgba(0, 0, 0, 0.08);
-  }
-
-  .about-intro__stat {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-  }
-
-  .about-intro__stat-number {
-    font-family: var(--font-heading);
-    font-size: clamp(2.5rem, 4vw, 3.5rem);
-    font-weight: 700;
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    line-height: 1;
-  }
-
-  .about-intro__stat-plus {
-    font-family: var(--font-heading);
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--color-primary);
-  }
-
-  .about-intro__stat-icon {
-    color: var(--color-accent);
-    margin-left: var(--space-xs);
-  }
-
-  .about-intro__stat-label {
-    width: 100%;
-    font-size: 0.9rem;
-    color: var(--color-gray-dark);
-    margin-top: var(--space-xs);
-  }
-
-  /* Philosophy */
-  .philosophy {
-    padding: var(--space-5xl) 0;
-  }
-
-  .philosophy__grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-xl);
-  }
-
-  .philosophy__card {
-    position: relative;
-    background: var(--color-white);
-    padding: var(--space-2xl);
-    border-radius: var(--radius-2xl);
-    box-shadow: var(--shadow-md);
-    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-    border: 1px solid rgba(0, 0, 0, 0.04);
-    overflow: hidden;
-  }
-
-  .philosophy__glow {
-    position: absolute;
-    top: -100%;
-    left: -100%;
-    width: 300%;
-    height: 300%;
-    background: radial-gradient(circle, rgba(113, 196, 233, 0.1) 0%, transparent 50%);
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    pointer-events: none;
-  }
-
-  .philosophy__card:hover .philosophy__glow {
-    opacity: 1;
-  }
-
-  .philosophy__card:hover {
-    transform: translateY(-12px);
-    box-shadow: var(--shadow-2xl), 0 25px 80px rgba(113, 196, 233, 0.15);
-    border-color: rgba(113, 196, 233, 0.3);
-  }
-
-  .philosophy__card--featured {
-    background: linear-gradient(135deg, var(--color-charcoal) 0%, #1a2530 100%);
-    color: var(--color-white);
-  }
-
-  .philosophy__glow--featured {
-    background: radial-gradient(circle, rgba(113, 196, 233, 0.2) 0%, transparent 50%);
-  }
-
-  .philosophy__number {
-    position: absolute;
-    top: var(--space-lg);
-    right: var(--space-lg);
-    font-family: var(--font-heading);
-    font-size: 4rem;
-    font-weight: 700;
-    background: linear-gradient(135deg, rgba(113, 196, 233, 0.2) 0%, rgba(113, 196, 233, 0.05) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    line-height: 1;
-  }
-
-  .philosophy__card--featured .philosophy__number {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  .philosophy__icon {
-    width: 72px;
-    height: 72px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, rgba(113, 196, 233, 0.15) 0%, rgba(113, 196, 233, 0.05) 100%);
-    border-radius: var(--radius-xl);
-    color: var(--color-primary);
-    margin-bottom: var(--space-xl);
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    position: relative;
-    z-index: 1;
-  }
-
-  .philosophy__card:hover .philosophy__icon {
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
-    color: var(--color-white);
-    transform: scale(1.1);
-    box-shadow: 0 10px 40px rgba(113, 196, 233, 0.4);
-  }
-
-  .philosophy__card--featured .philosophy__icon {
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
-    color: var(--color-white);
-    box-shadow: 0 8px 30px rgba(113, 196, 233, 0.4);
-  }
-
-  .philosophy__card h3 {
-    margin-bottom: var(--space-md);
-    font-size: 1.35rem;
-    position: relative;
-    z-index: 1;
-  }
-
-  .philosophy__card--featured h3 {
-    color: var(--color-white);
-  }
-
-  .philosophy__card p {
-    margin-bottom: 0;
-    color: var(--color-gray-dark);
-    line-height: 1.7;
-    position: relative;
-    z-index: 1;
-  }
-
-  .philosophy__card--featured p {
-    color: rgba(255, 255, 255, 0.8);
-  }
-
-  /* What to Expect */
-  .what-to-expect {
-    padding: var(--space-5xl) 0;
-  }
-
-  .expect__layout {
-    display: grid;
-    grid-template-columns: 400px 1fr;
-    gap: var(--space-5xl);
-    align-items: start;
-  }
-
-  .expect__content h2 {
-    margin-bottom: var(--space-lg);
-    font-size: clamp(2rem, 4vw, 2.75rem);
-  }
-
-  .expect__intro {
-    font-size: 1.1rem;
-    color: var(--color-gray-dark);
-    margin-bottom: 0;
-    line-height: 1.7;
-  }
-
-  .expect__steps {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-xl);
-  }
-
-  .expect__step {
-    display: flex;
-    gap: var(--space-xl);
-    align-items: flex-start;
-    padding: var(--space-xl) var(--space-2xl);
-    background: var(--color-white);
-    border-radius: var(--radius-xl);
-    box-shadow: var(--shadow-md);
-    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-    border: 1px solid rgba(0, 0, 0, 0.04);
-    position: relative;
-  }
-
-  .expect__step:hover {
-    background: var(--color-white);
-    box-shadow: var(--shadow-xl), 0 20px 60px rgba(113, 196, 233, 0.1);
-    transform: translateX(12px);
-    border-color: rgba(113, 196, 233, 0.3);
-  }
-
-  .expect__step-number {
-    flex-shrink: 0;
-    width: 64px;
-    height: 64px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
-    color: var(--color-white);
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    font-weight: 700;
-    border-radius: var(--radius-lg);
-    box-shadow: 0 8px 30px rgba(113, 196, 233, 0.4);
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-
-  .expect__step:hover .expect__step-number {
-    transform: scale(1.1) rotate(-5deg);
-  }
-
-  .expect__step-content h3 {
-    margin-bottom: var(--space-sm);
-    font-size: 1.25rem;
-  }
-
-  .expect__step-content p {
-    margin-bottom: 0;
-    color: var(--color-gray-dark);
-    line-height: 1.7;
-  }
-
-  /* Credentials */
-  .credentials {
-    background: linear-gradient(135deg, var(--color-charcoal) 0%, #1a2530 100%);
-    padding: var(--space-5xl) 0;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .credentials__bg {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-  }
-
-  .credentials__glow {
-    position: absolute;
-    top: -200px;
-    right: -200px;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(113, 196, 233, 0.15) 0%, transparent 70%);
-    animation: float 15s ease-in-out infinite;
-  }
-
-  .credentials__grid {
+  /* About Grid */
+  .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: var(--space-5xl);
+    gap: var(--space-4xl);
     align-items: center;
-    position: relative;
-    z-index: 1;
   }
 
-  .credentials__content h2 {
-    color: var(--color-white);
-    margin-bottom: var(--space-md);
-    font-size: clamp(2rem, 4vw, 2.5rem);
-  }
-
-  .credentials__content p {
-    color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 0;
-    font-size: 1.15rem;
-    line-height: 1.7;
-  }
-
-  .section__eyebrow--light {
-    background: rgba(113, 196, 233, 0.2);
-    border-color: rgba(113, 196, 233, 0.3);
-  }
-
-  .credentials__list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-md);
-  }
-
-  .credentials__list li {
-    display: flex;
-    align-items: center;
-    gap: var(--space-lg);
-    color: var(--color-white);
-    font-size: 1.1rem;
-    padding: var(--space-lg) var(--space-xl);
-    background: rgba(255, 255, 255, 0.05);
+  .about-image img {
+    width: 100%;
     border-radius: var(--radius-lg);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: var(--shadow-lg);
   }
 
-  .credentials__list li:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(113, 196, 233, 0.4);
-    transform: translateX(8px);
-  }
-
-  .credentials__icon {
-    flex-shrink: 0;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, rgba(113, 196, 233, 0.2) 0%, rgba(113, 196, 233, 0.1) 100%);
-    border-radius: var(--radius-md);
-    color: var(--color-primary);
-  }
-
-  /* Why Bridge */
-  .why-bridge {
-    background: linear-gradient(180deg, var(--color-off-white) 0%, var(--color-white) 100%);
-    padding: var(--space-5xl) 0;
-  }
-
-  .why-bridge__grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: var(--space-xl);
-  }
-
-  .why-bridge__item {
-    text-align: center;
-    padding: var(--space-2xl) var(--space-lg);
-    background: var(--color-white);
-    border-radius: var(--radius-xl);
-    box-shadow: var(--shadow-md);
-    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-    border: 1px solid rgba(0, 0, 0, 0.04);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .why-bridge__glow {
-    position: absolute;
-    top: -100%;
-    left: -100%;
-    width: 300%;
-    height: 300%;
-    background: radial-gradient(circle, rgba(113, 196, 233, 0.1) 0%, transparent 50%);
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    pointer-events: none;
-  }
-
-  .why-bridge__item:hover .why-bridge__glow {
-    opacity: 1;
-  }
-
-  .why-bridge__item:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-xl), 0 20px 60px rgba(113, 196, 233, 0.15);
-    border-color: rgba(113, 196, 233, 0.3);
-  }
-
-  .why-bridge__icon {
-    width: 72px;
-    height: 72px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, rgba(113, 196, 233, 0.15) 0%, rgba(113, 196, 233, 0.05) 100%);
-    border-radius: var(--radius-full);
-    color: var(--color-primary);
-    margin: 0 auto var(--space-lg);
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    position: relative;
-    z-index: 1;
-  }
-
-  .why-bridge__item:hover .why-bridge__icon {
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
-    color: var(--color-white);
-    transform: scale(1.1);
-    box-shadow: 0 10px 40px rgba(113, 196, 233, 0.4);
-  }
-
-  .why-bridge__item h3 {
-    font-size: 1.15rem;
-    margin-bottom: var(--space-sm);
-    position: relative;
-    z-index: 1;
-  }
-
-  .why-bridge__item p {
-    margin-bottom: 0;
-    color: var(--color-gray-dark);
-    font-size: 0.95rem;
-    line-height: 1.7;
-    position: relative;
-    z-index: 1;
-  }
-
-  /* Premium CTA */
-  .premium-cta {
-    position: relative;
-    padding: var(--space-5xl) 0;
-    overflow: hidden;
-  }
-
-  .premium-cta__bg {
-    position: absolute;
-    inset: 0;
-  }
-
-  .premium-cta__gradient {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 50%, var(--color-charcoal) 100%);
-  }
-
-  .premium-cta__content {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto;
-  }
-
-  .premium-cta__eyebrow {
-    display: inline-block;
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.7);
+  .about-content h2 {
     margin-bottom: var(--space-lg);
   }
 
-  .premium-cta__title {
-    color: var(--color-white);
-    margin-bottom: var(--space-md);
-    font-size: clamp(2rem, 4vw, 3rem);
-  }
-
-  .premium-cta__text {
-    color: rgba(255, 255, 255, 0.85);
-    font-size: 1.2rem;
-    margin-bottom: var(--space-2xl);
+  .about-content .lead {
+    font-size: 1.1rem;
+    color: var(--color-charcoal);
+    font-weight: 500;
     line-height: 1.7;
   }
 
-  .premium-cta__actions {
+  .about-stats {
     display: flex;
+    gap: var(--space-2xl);
+    margin-top: var(--space-2xl);
+    padding-top: var(--space-xl);
+    border-top: 1px solid var(--color-gray-light);
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat__number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    line-height: 1;
+  }
+
+  .stat__label {
+    font-size: 0.875rem;
+    color: var(--color-gray-dark);
+    margin-top: var(--space-xs);
+  }
+
+  /* Philosophy Cards */
+  .philosophy-card {
+    background: var(--color-white);
+    padding: var(--space-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-gray-light);
+    text-align: center;
+  }
+
+  .philosophy-card__icon {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
     justify-content: center;
+    background: var(--color-primary-light);
+    border-radius: var(--radius-lg);
+    color: var(--color-primary);
+    margin: 0 auto var(--space-lg);
+  }
+
+  .philosophy-card h3 {
+    margin-bottom: var(--space-sm);
+  }
+
+  .philosophy-card p {
+    margin: 0;
+    color: var(--color-gray-dark);
+  }
+
+  /* Expect Grid */
+  .expect-grid {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: var(--space-4xl);
+    align-items: start;
+  }
+
+  .expect-content h2 {
+    margin-bottom: var(--space-md);
+  }
+
+  .expect-content p {
+    color: var(--color-gray-dark);
+    margin: 0;
+  }
+
+  .expect-steps {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+  }
+
+  .expect-step {
+    display: flex;
+    gap: var(--space-lg);
+    padding: var(--space-xl);
+    background: var(--color-off-white);
+    border-radius: var(--radius-lg);
+  }
+
+  .expect-step__number {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-primary);
+    color: var(--color-white);
+    font-weight: 700;
+    font-size: 1.25rem;
+    border-radius: var(--radius-md);
+  }
+
+  .expect-step__content h3 {
+    margin-bottom: var(--space-xs);
+  }
+
+  .expect-step__content p {
+    margin: 0;
+    color: var(--color-gray-dark);
+  }
+
+  /* Credentials Grid */
+  .credentials-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4xl);
+    align-items: center;
+  }
+
+  .credentials-content h2 {
+    margin-bottom: var(--space-md);
+  }
+
+  .credentials-content p {
+    font-size: 1.1rem;
+  }
+
+  .credentials-list li::before {
+    background: var(--color-success);
+  }
+
+  /* CTA Section */
+  .cta-section {
+    background: var(--color-off-white);
+  }
+
+  .cta-section h2 {
+    margin-bottom: var(--space-md);
+  }
+
+  .cta-section p {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-xl);
+  }
+
+  .cta-actions {
+    display: flex;
     gap: var(--space-md);
+    justify-content: center;
     flex-wrap: wrap;
-  }
-
-  /* Reveal animations */
-  .reveal, .reveal-left, .reveal-right {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-
-  .reveal-left {
-    transform: translateX(-40px) translateY(20px);
-  }
-
-  .reveal-right {
-    transform: translateX(40px) translateY(20px);
-  }
-
-  .reveal.visible, .reveal-left.visible, .reveal-right.visible {
-    opacity: 1;
-    transform: translateY(0) translateX(0);
   }
 
   /* Responsive */
   @media (max-width: 1024px) {
-    .about-intro__grid {
-      grid-template-columns: 1fr;
-      gap: var(--space-3xl);
-    }
-
-    .about-intro__visual {
-      max-width: 450px;
-      margin: 0 auto;
-    }
-
-    .philosophy__grid {
-      grid-template-columns: 1fr;
-      gap: var(--space-lg);
-    }
-
-    .philosophy__card--featured {
-      order: -1;
-    }
-
-    .expect__layout {
+    .about-grid,
+    .credentials-grid {
       grid-template-columns: 1fr;
       gap: var(--space-2xl);
     }
 
-    .credentials__grid {
-      grid-template-columns: 1fr;
-      gap: var(--space-3xl);
-      text-align: center;
+    .about-image {
+      order: -1;
+      max-width: 500px;
+      margin: 0 auto;
     }
 
-    .why-bridge__grid {
-      grid-template-columns: repeat(2, 1fr);
+    .expect-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-xl);
     }
   }
 
   @media (max-width: 768px) {
     .page-hero {
-      min-height: 60vh;
+      padding: 120px 0 60px;
     }
 
-    .about-intro__stats {
-      flex-direction: column;
-      gap: var(--space-xl);
-    }
-
-    .why-bridge__grid {
-      grid-template-columns: 1fr;
-    }
-
-    .expect__step {
-      flex-direction: column;
-      text-align: center;
-      gap: var(--space-md);
-    }
-
-    .expect__step-number {
-      margin: 0 auto;
-    }
-
-    .about-intro__accent {
-      width: 120px;
-      height: 120px;
-      bottom: -20px;
-      right: -20px;
-    }
-
-    .premium-cta__actions {
-      flex-direction: column;
-    }
-
-    .premium-cta__actions .btn {
-      width: 100%;
-    }
-
-    .philosophy__card {
-      padding: var(--space-xl);
-    }
-
-    .philosophy__card h3 {
-      font-size: 1.25rem;
-    }
-  }
-
-  @media (max-width: 640px) {
-    .page-hero {
-      min-height: 50vh;
-    }
-
-    .page-hero__container {
-      padding: var(--space-3xl) var(--space-md);
-    }
-
-    .page-hero__title {
-      font-size: clamp(2rem, 8vw, 2.75rem);
-    }
-
-    .page-hero__subtitle {
-      font-size: 1rem;
-    }
-
-    .about-intro__content h2 {
-      font-size: 1.75rem;
-    }
-
-    .about-intro__stats {
-      gap: var(--space-lg);
-    }
-
-    .stat__number {
-      font-size: 2.5rem;
-    }
-
-    .stat__label {
-      font-size: 0.8rem;
-    }
-
-    .philosophy__card {
-      padding: var(--space-lg);
-    }
-
-    .philosophy__icon {
-      width: 56px;
-      height: 56px;
-    }
-
-    .philosophy__card h3 {
-      font-size: 1.15rem;
-    }
-
-    .expect__step-number {
-      width: 48px;
-      height: 48px;
-      font-size: 1rem;
-    }
-
-    .expect__step h4 {
-      font-size: 1.1rem;
-    }
-
-    .why-bridge__card {
-      padding: var(--space-lg);
-    }
-
-    .why-bridge__icon {
-      width: 48px;
-      height: 48px;
-    }
-
-    .why-bridge__card h4 {
-      font-size: 1.1rem;
-    }
-
-    .credentials__avatar {
-      width: 100px;
-      height: 100px;
-    }
-
-    .premium-cta h2 {
-      font-size: 1.75rem;
-    }
-
-    .premium-cta p {
-      font-size: 1rem;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .page-hero {
-      min-height: 45vh;
-    }
-
-    .page-hero__eyebrow {
-      font-size: 0.65rem;
-      padding: 4px var(--space-sm);
-    }
-
-    .page-hero__title {
-      font-size: clamp(1.75rem, 9vw, 2.25rem);
-    }
-
-    .about-intro__content h2 {
-      font-size: 1.5rem;
-    }
-
-    .about-intro__content p {
-      font-size: 0.9rem;
-    }
-
-    .about-intro__accent {
-      width: 80px;
-      height: 80px;
-      bottom: -10px;
-      right: -10px;
+    .about-stats {
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     .stat__number {
       font-size: 2rem;
     }
+  }
 
-    .stat__label {
-      font-size: 0.75rem;
+  @media (max-width: 640px) {
+    .expect-step {
+      flex-direction: column;
+      text-align: center;
     }
 
-    .philosophy__card {
-      padding: var(--space-md);
+    .expect-step__number {
+      margin: 0 auto;
     }
 
-    .philosophy__icon {
-      width: 48px;
-      height: 48px;
-      margin-bottom: var(--space-md);
+    .cta-actions {
+      flex-direction: column;
     }
 
-    .philosophy__card h3 {
-      font-size: 1.05rem;
-    }
-
-    .philosophy__card p {
-      font-size: 0.85rem;
-    }
-
-    .expect__step-number {
-      width: 44px;
-      height: 44px;
-      font-size: 0.9rem;
-    }
-
-    .expect__step h4 {
-      font-size: 1rem;
-    }
-
-    .expect__step p {
-      font-size: 0.85rem;
-    }
-
-    .why-bridge__card {
-      padding: var(--space-md);
-    }
-
-    .why-bridge__icon {
-      width: 44px;
-      height: 44px;
-    }
-
-    .why-bridge__card h4 {
-      font-size: 1rem;
-    }
-
-    .why-bridge__card p {
-      font-size: 0.85rem;
-    }
-
-    .credentials__name {
-      font-size: 1.25rem;
-    }
-
-    .credentials__title {
-      font-size: 0.9rem;
-    }
-
-    .credentials__list li {
-      font-size: 0.85rem;
-    }
-
-    .premium-cta {
-      padding: var(--space-3xl) 0;
-    }
-
-    .premium-cta h2 {
-      font-size: 1.5rem;
-    }
-
-    .premium-cta p {
-      font-size: 0.9rem;
+    .cta-actions .btn {
+      width: 100%;
     }
   }
 </style>
-
-<script>
-  // Reveal on scroll
-  const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.1
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, observerOptions);
-
-  document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => {
-    observer.observe(el);
-  });
-
-  // Animated counters
-  function animateCounter(element: Element) {
-    const target = parseInt(element.getAttribute('data-count') || '0');
-    const decimals = parseInt(element.getAttribute('data-decimals') || '0');
-    const duration = 2000;
-    const start = performance.now();
-
-    function update(currentTime: number) {
-      const elapsed = currentTime - start;
-      const progress = Math.min(elapsed / duration, 1);
-      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-      const current = target * easeOutQuart;
-
-      if (decimals > 0) {
-        element.textContent = current.toFixed(decimals);
-      } else {
-        element.textContent = Math.floor(current).toString();
-      }
-
-      if (progress < 1) {
-        requestAnimationFrame(update);
-      }
-    }
-
-    requestAnimationFrame(update);
-  }
-
-  // Observe counters
-  const counterObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        animateCounter(entry.target);
-        counterObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.5 });
-
-  document.querySelectorAll('[data-count]').forEach(el => {
-    counterObserver.observe(el);
-  });
-</script>

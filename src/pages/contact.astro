@@ -3,36 +3,23 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Contact" description="Schedule your appointment at The Bridge Chiropractic in San Diego. Call (858) 277-7500 or book online. Located at 4340 Genesee Ave, Suite 201.">
-  <!-- Premium Page Hero -->
+  <!-- Page Hero -->
   <section class="page-hero">
-    <div class="page-hero__bg">
-      <img src="/images/hero-wellness.jpg" alt="" class="page-hero__bg-img" />
-      <div class="page-hero__overlay"></div>
-    </div>
-    <div class="page-hero__particles">
-      <span></span><span></span><span></span><span></span><span></span>
-    </div>
-    <div class="container page-hero__container">
-      <span class="page-hero__eyebrow reveal-fade">Let's Connect</span>
-      <h1 class="page-hero__title reveal-fade">Get in <span class="text-gradient">Touch</span></h1>
-      <p class="page-hero__subtitle reveal-fade">Ready to start your journey to better movement and less pain?</p>
-      <div class="page-hero__scroll-indicator">
-        <span class="scroll-dot"></span>
-      </div>
+    <div class="container">
+      <span class="section__eyebrow">Let's Connect</span>
+      <h1>Get in Touch</h1>
+      <p>Ready to start your journey to better movement and less pain?</p>
     </div>
   </section>
 
   <!-- Contact Content -->
-  <section class="section contact-section">
+  <section class="section">
     <div class="container">
       <div class="contact-grid">
         <!-- Contact Form -->
-        <div class="contact-form-wrapper reveal-slide-up">
-          <div class="contact-form-header">
-            <span class="section__eyebrow">Book Now</span>
-            <h2>Schedule Your <span class="text-gradient">Visit</span></h2>
-            <p>Fill out the form below and we'll get back to you within 24 hours to confirm your appointment.</p>
-          </div>
+        <div class="contact-form-wrapper">
+          <h2>Schedule Your Visit</h2>
+          <p>Fill out the form below and we'll get back to you within 24 hours to confirm your appointment.</p>
 
           <form class="contact-form" id="contact-form" action="https://formsubmit.co/bridgechiropracticsd@gmail.com" method="POST">
             <!-- FormSubmit Configuration -->
@@ -40,529 +27,155 @@ import Layout from '../layouts/Layout.astro';
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_template" value="table">
             <input type="hidden" name="_next" value="https://bridgechiropracticsd.com/contact?success=true">
-
-            <!-- Honeypot for spam prevention -->
             <input type="text" name="_honey" style="display:none">
 
             <div class="form-row">
               <div class="form-group">
                 <label for="firstName" class="form-label">First Name *</label>
-                <div class="form-input-wrapper">
-                  <svg class="form-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                  <input type="text" id="firstName" name="firstName" class="form-input" placeholder="John" required>
-                </div>
+                <input type="text" id="firstName" name="firstName" class="form-input" placeholder="John" required>
               </div>
               <div class="form-group">
                 <label for="lastName" class="form-label">Last Name *</label>
-                <div class="form-input-wrapper">
-                  <svg class="form-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                  <input type="text" id="lastName" name="lastName" class="form-input" placeholder="Doe" required>
-                </div>
+                <input type="text" id="lastName" name="lastName" class="form-input" placeholder="Doe" required>
               </div>
             </div>
 
             <div class="form-row">
               <div class="form-group">
                 <label for="email" class="form-label">Email *</label>
-                <div class="form-input-wrapper">
-                  <svg class="form-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                  <input type="email" id="email" name="email" class="form-input" placeholder="john@example.com" required>
-                </div>
+                <input type="email" id="email" name="email" class="form-input" placeholder="john@example.com" required>
               </div>
               <div class="form-group">
                 <label for="phone" class="form-label">Phone *</label>
-                <div class="form-input-wrapper">
-                  <svg class="form-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                  <input type="tel" id="phone" name="phone" class="form-input" placeholder="(858) 555-1234" required>
-                </div>
+                <input type="tel" id="phone" name="phone" class="form-input" placeholder="(858) 555-1234" required>
               </div>
             </div>
 
             <div class="form-group">
               <label for="visitType" class="form-label">Type of Visit</label>
-              <div class="form-input-wrapper form-input-wrapper--select">
-                <svg class="form-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-                <select id="visitType" name="visitType" class="form-select">
-                  <option value="">Select an option</option>
-                  <option value="new-patient">New Patient Consultation</option>
-                  <option value="follow-up">Follow-Up Appointment</option>
-                  <option value="neuro-rehab">Neuro Rehabilitation Assessment</option>
-                  <option value="question">General Question</option>
-                </select>
-                <svg class="form-select-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </div>
+              <select id="visitType" name="visitType" class="form-select">
+                <option value="">Select an option</option>
+                <option value="new-patient">New Patient Consultation</option>
+                <option value="follow-up">Follow-Up Appointment</option>
+                <option value="neuro-rehab">Neuro Rehabilitation Assessment</option>
+                <option value="question">General Question</option>
+              </select>
             </div>
 
             <div class="form-group">
               <label for="preferredTime" class="form-label">Preferred Time</label>
-              <div class="form-input-wrapper form-input-wrapper--select">
-                <svg class="form-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                <select id="preferredTime" name="preferredTime" class="form-select">
-                  <option value="">Select an option</option>
-                  <option value="morning">Morning (8am - 12pm)</option>
-                  <option value="afternoon">Afternoon (12pm - 5pm)</option>
-                  <option value="flexible">I'm Flexible</option>
-                </select>
-                <svg class="form-select-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </div>
+              <select id="preferredTime" name="preferredTime" class="form-select">
+                <option value="">No preference</option>
+                <option value="morning">Morning (9am - 12pm)</option>
+                <option value="afternoon">Afternoon (12pm - 5pm)</option>
+              </select>
             </div>
 
             <div class="form-group">
               <label for="message" class="form-label">Tell us about your concerns</label>
-              <div class="form-input-wrapper form-input-wrapper--textarea">
-                <svg class="form-icon form-icon--textarea" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="17" y1="10" x2="3" y2="10"></line><line x1="21" y1="6" x2="3" y2="6"></line><line x1="21" y1="14" x2="3" y2="14"></line><line x1="17" y1="18" x2="3" y2="18"></line></svg>
-                <textarea id="message" name="message" class="form-textarea" placeholder="What brings you to The Bridge? Any specific pain, mobility issues, or goals you'd like to address?"></textarea>
-              </div>
+              <textarea id="message" name="message" class="form-textarea" placeholder="What brings you in? Any specific issues or goals you'd like to address?"></textarea>
             </div>
 
-            <div class="form-group form-checkbox">
-              <input type="checkbox" id="consent" name="consent" required>
-              <label for="consent">I agree to be contacted regarding my appointment request.</label>
-            </div>
-
-            <button type="submit" class="btn btn--primary btn--full">
-              <span>Request Appointment</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            <button type="submit" class="btn btn--primary btn--lg form-submit">
+              Send Message
             </button>
           </form>
-
-          <!-- Success Message (shown via URL parameter) -->
-          <div class="form-success" id="form-success" style="display: none;">
-            <div class="form-success__icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-            </div>
-            <h3>Thank You!</h3>
-            <p>Your appointment request has been received. We'll contact you within 24 hours to confirm your visit.</p>
-            <a href="/contact" class="btn btn--secondary">Submit Another Request</a>
-          </div>
         </div>
 
         <!-- Contact Info -->
         <div class="contact-info">
-          <!-- Quick Contact CTA -->
-          <div class="contact-card contact-card--cta reveal-slide-up" style="--delay: 0.1s">
-            <div class="contact-card__glow"></div>
-            <h3>Prefer to Call?</h3>
-            <p>Speak directly with our office.</p>
-            <a href="tel:8582777500" class="contact-card__phone">
-              <span class="phone-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-              </span>
-              (858) 277-7500
-            </a>
-          </div>
-
-          <!-- Contact Details -->
-          <div class="contact-card reveal-slide-up" style="--delay: 0.2s">
-            <h3>Contact Information</h3>
-
-            <div class="contact-item">
-              <div class="contact-item__icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-              </div>
-              <div class="contact-item__content">
-                <h4>Address</h4>
-                <address>
-                  4340 Genesee Ave, Suite 201<br>
-                  San Diego, CA 92117
-                </address>
-                <a href="https://maps.google.com/?q=4340+Genesee+Ave+Suite+201+San+Diego+CA+92117" target="_blank" rel="noopener" class="contact-item__link">
-                  Get Directions
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-                </a>
-              </div>
+          <div class="contact-card">
+            <div class="contact-card__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
             </div>
-
-            <div class="contact-item">
-              <div class="contact-item__icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-              </div>
-              <div class="contact-item__content">
-                <h4>Email</h4>
-                <p><a href="mailto:bridgechiropracticsd@gmail.com">bridgechiropracticsd@gmail.com</a></p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Hours -->
-          <div class="contact-card reveal-slide-up" style="--delay: 0.3s">
-            <h3>Office Hours</h3>
-            <ul class="hours-list">
-              <li><span>Monday</span><span class="hours-dots"></span><span>9:00 AM - 6:00 PM</span></li>
-              <li><span>Tuesday</span><span class="hours-dots"></span><span>9:00 AM - 6:00 PM</span></li>
-              <li><span>Wednesday</span><span class="hours-dots"></span><span>9:00 AM - 6:00 PM</span></li>
-              <li><span>Thursday</span><span class="hours-dots"></span><span>9:00 AM - 6:00 PM</span></li>
-              <li><span>Friday</span><span class="hours-dots"></span><span>9:00 AM - 5:00 PM</span></li>
-              <li class="hours-closed"><span>Saturday</span><span class="hours-dots"></span><span>Closed</span></li>
-              <li class="hours-closed"><span>Sunday</span><span class="hours-dots"></span><span>Closed</span></li>
-            </ul>
-          </div>
-
-          <!-- Quick Actions -->
-          <div class="quick-actions reveal-slide-up" style="--delay: 0.4s">
-            <a href="https://maps.google.com/?q=4340+Genesee+Ave+Suite+201+San+Diego+CA+92117" target="_blank" rel="noopener" class="quick-action">
-              <span class="quick-action__icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
-              </span>
-              <span class="quick-action__label">Navigate</span>
-            </a>
-            <a href="tel:8582777500" class="quick-action">
-              <span class="quick-action__icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-              </span>
-              <span class="quick-action__label">Call</span>
-            </a>
-            <a href="mailto:bridgechiropracticsd@gmail.com" class="quick-action">
-              <span class="quick-action__icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-              </span>
-              <span class="quick-action__label">Email</span>
-            </a>
-          </div>
-
-          <!-- Social -->
-          <div class="contact-card contact-card--social reveal-slide-up" style="--delay: 0.5s">
-            <h3>Follow Us</h3>
-            <div class="social-links">
-              <a href="https://instagram.com/bridgechiropracticsd" target="_blank" rel="noopener" aria-label="Instagram">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-              </a>
-              <a href="https://facebook.com/bridgechiropracticsd" target="_blank" rel="noopener" aria-label="Facebook">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            <div class="contact-card__content">
+              <h3>Visit Us</h3>
+              <address>
+                4340 Genesee Ave, Suite 201<br>
+                San Diego, CA 92117
+              </address>
+              <a href="https://maps.google.com/?q=4340+Genesee+Ave+Suite+201+San+Diego+CA+92117" target="_blank" rel="noopener" class="contact-card__link">
+                Get Directions
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </a>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Map Section -->
-  <section class="map-section reveal-slide-up">
-    <div class="container">
-      <div class="map-wrapper">
-        <div class="map-content">
-          <div class="map-info-card">
-            <span class="map-info-card__badge">Visit Us</span>
-            <h3>The Bridge Chiropractic</h3>
-            <address>
-              4340 Genesee Ave, Suite 201<br>
-              San Diego, CA 92117
-            </address>
-            <p class="map-info-card__note">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-              Free parking available
-            </p>
-            <a href="https://maps.google.com/?q=4340+Genesee+Ave+Suite+201+San+Diego+CA+92117" target="_blank" rel="noopener" class="btn btn--secondary btn--sm">
-              Open in Maps
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-            </a>
+          <div class="contact-card">
+            <div class="contact-card__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </div>
+            <div class="contact-card__content">
+              <h3>Call Us</h3>
+              <a href="tel:8582777500" class="contact-card__phone">(858) 277-7500</a>
+              <p>Mon - Fri: 9am - 5pm</p>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-card__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </div>
+            <div class="contact-card__content">
+              <h3>Email Us</h3>
+              <a href="mailto:bridgechiropracticsd@gmail.com">bridgechiropracticsd@gmail.com</a>
+              <p>We respond within 24 hours</p>
+            </div>
+          </div>
+
+          <!-- Map -->
+          <div class="contact-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3350.9424!2d-117.2073!3d32.8183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc01d4b9c27d8d%3A0x4e7e6e4b14d4c123!2s4340%20Genesee%20Ave%20%23201%2C%20San%20Diego%2C%20CA%2092117!5e0!3m2!1sen!2sus!4v1640000000000!5m2!1sen!2sus"
+              width="100%"
+              height="200"
+              style="border:0; border-radius: 12px;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
           </div>
         </div>
-        <div class="map-container">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3351.8!2d-117.2!3d32.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzLCsDQ4JzAwLjAiTiAxMTfCsDEyJzAwLjAiVw!5e0!3m2!1sen!2sus!4v1234567890"
-            width="100%"
-            height="100%"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="The Bridge Chiropractic Location"
-          ></iframe>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ Section -->
-  <section class="section faq-section">
-    <div class="container">
-      <div class="section__header reveal-slide-up">
-        <span class="section__eyebrow">Questions?</span>
-        <h2 class="section__title">Common <span class="text-gradient">Questions</span></h2>
-        <p class="section__subtitle">Everything you need to know before your first visit.</p>
-      </div>
-
-      <div class="faq-grid">
-        <div class="faq-list">
-          <details class="faq-item reveal-slide-up" style="--delay: 0.1s">
-            <summary class="faq-question">
-              <span>What should I bring to my first appointment?</span>
-              <span class="faq-icon"></span>
-            </summary>
-            <div class="faq-answer">
-              <p>Please bring a valid ID, your insurance card (if applicable), and any relevant medical records or imaging (X-rays, MRIs). Wear comfortable clothing that allows for movement assessment.</p>
-            </div>
-          </details>
-
-          <details class="faq-item reveal-slide-up" style="--delay: 0.15s">
-            <summary class="faq-question">
-              <span>Do you accept insurance?</span>
-              <span class="faq-icon"></span>
-            </summary>
-            <div class="faq-answer">
-              <p>We accept most major insurance plans. Please call our office to verify your specific coverage before your visit. We also offer affordable self-pay options.</p>
-            </div>
-          </details>
-
-          <details class="faq-item reveal-slide-up" style="--delay: 0.2s">
-            <summary class="faq-question">
-              <span>How long is a typical appointment?</span>
-              <span class="faq-icon"></span>
-            </summary>
-            <div class="faq-answer">
-              <p>Initial consultations typically last 45-60 minutes to allow for a thorough evaluation. Follow-up appointments are usually 20-30 minutes, depending on your treatment plan.</p>
-            </div>
-          </details>
-        </div>
-
-        <div class="faq-list">
-          <details class="faq-item reveal-slide-up" style="--delay: 0.25s">
-            <summary class="faq-question">
-              <span>Is parking available?</span>
-              <span class="faq-icon"></span>
-            </summary>
-            <div class="faq-answer">
-              <p>Yes! Free parking is available in the building's parking lot. The entrance is on Genesee Ave, and our office is located in Suite 201 on the second floor.</p>
-            </div>
-          </details>
-
-          <details class="faq-item reveal-slide-up" style="--delay: 0.3s">
-            <summary class="faq-question">
-              <span>What if I need to cancel or reschedule?</span>
-              <span class="faq-icon"></span>
-            </summary>
-            <div class="faq-answer">
-              <p>We understand that schedules change. Please give us at least 24 hours notice if you need to cancel or reschedule. You can call us at (858) 277-7500 or email bridgechiropracticsd@gmail.com.</p>
-            </div>
-          </details>
-
-          <details class="faq-item reveal-slide-up" style="--delay: 0.35s">
-            <summary class="faq-question">
-              <span>What payment methods do you accept?</span>
-              <span class="faq-icon"></span>
-            </summary>
-            <div class="faq-answer">
-              <p>We accept all major credit cards, debit cards, cash, and HSA/FSA cards. Payment is due at the time of service.</p>
-            </div>
-          </details>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Section -->
-  <section class="cta-section">
-    <div class="cta-section__bg">
-      <div class="cta-section__gradient"></div>
-    </div>
-    <div class="container">
-      <div class="cta-content reveal-slide-up">
-        <span class="cta-eyebrow">Ready to Get Started?</span>
-        <h2>Take the First Step Toward <span class="text-gradient">Better Health</span></h2>
-        <p>Your journey to optimal wellness begins with a single step. Let us help you move better, feel better, and live better.</p>
-        <a href="tel:8582777500" class="btn btn--primary btn--lg">
-          <span>Call Now: (858) 277-7500</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-        </a>
       </div>
     </div>
   </section>
 </Layout>
 
 <style>
-  /* ============================================
-     PAGE HERO - Premium Design
-     ============================================ */
+  /* Page Hero */
   .page-hero {
-    position: relative;
-    min-height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: var(--color-off-white);
+    padding: 140px 0 80px;
     text-align: center;
-    overflow: hidden;
-    margin-bottom: var(--space-3xl);
   }
 
-  .page-hero__bg {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
+  .page-hero h1 {
+    margin-bottom: var(--space-md);
   }
 
-  .page-hero__bg-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    animation: slowZoom 20s ease-in-out infinite alternate;
+  .page-hero p {
+    font-size: 1.25rem;
+    color: var(--color-gray-dark);
+    max-width: 600px;
+    margin: 0 auto;
   }
 
-  @keyframes slowZoom {
-    from { transform: scale(1); }
-    to { transform: scale(1.1); }
-  }
-
-  .page-hero__overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      135deg,
-      rgba(30, 41, 59, 0.9) 0%,
-      rgba(30, 41, 59, 0.7) 50%,
-      rgba(113, 196, 233, 0.3) 100%
-    );
-  }
-
-  .page-hero__particles {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    overflow: hidden;
-    pointer-events: none;
-  }
-
-  .page-hero__particles span {
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    background: rgba(113, 196, 233, 0.4);
-    border-radius: 50%;
-    animation: float 8s ease-in-out infinite;
-  }
-
-  .page-hero__particles span:nth-child(1) { left: 10%; top: 20%; animation-delay: 0s; }
-  .page-hero__particles span:nth-child(2) { left: 30%; top: 70%; animation-delay: 1.5s; }
-  .page-hero__particles span:nth-child(3) { left: 60%; top: 30%; animation-delay: 3s; }
-  .page-hero__particles span:nth-child(4) { left: 80%; top: 60%; animation-delay: 4.5s; }
-  .page-hero__particles span:nth-child(5) { left: 90%; top: 20%; animation-delay: 6s; }
-
-  @keyframes float {
-    0%, 100% { transform: translateY(0) scale(1); opacity: 0.4; }
-    50% { transform: translateY(-30px) scale(1.2); opacity: 0.8; }
-  }
-
-  .page-hero__container {
-    position: relative;
-    z-index: 2;
-    padding: var(--space-5xl) var(--space-xl);
-  }
-
-  .page-hero__eyebrow {
-    display: inline-block;
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--color-primary);
-    margin-bottom: var(--space-lg);
-    padding: var(--space-sm) var(--space-xl);
-    background: rgba(113, 196, 233, 0.15);
-    border: 1px solid rgba(113, 196, 233, 0.3);
-    border-radius: var(--radius-full);
-    backdrop-filter: blur(10px);
-  }
-
-  .page-hero__title {
-    color: var(--color-white);
-    margin-bottom: var(--space-lg);
-    font-size: clamp(2.75rem, 6vw, 4.5rem);
-    font-weight: 700;
-    line-height: 1.1;
-  }
-
-  .page-hero__subtitle {
-    font-size: clamp(1.1rem, 2vw, 1.35rem);
-    color: rgba(255, 255, 255, 0.85);
-    margin-bottom: 0;
-    max-width: 550px;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.6;
-  }
-
-  .page-hero__scroll-indicator {
-    position: absolute;
-    bottom: var(--space-2xl);
-    left: 50%;
-    transform: translateX(-50%);
-    width: 30px;
-    height: 50px;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    border-radius: var(--radius-full);
-    display: flex;
-    justify-content: center;
-    padding-top: 10px;
-  }
-
-  .scroll-dot {
-    width: 4px;
-    height: 10px;
-    background: var(--color-primary);
-    border-radius: var(--radius-full);
-    animation: scrollDot 2s ease-in-out infinite;
-  }
-
-  @keyframes scrollDot {
-    0%, 100% { transform: translateY(0); opacity: 1; }
-    50% { transform: translateY(15px); opacity: 0.3; }
-  }
-
-  /* ============================================
-     CONTACT SECTION
-     ============================================ */
-  .contact-section {
-    padding-top: var(--space-6xl);
-    padding-bottom: var(--space-5xl);
-    background: linear-gradient(180deg, var(--color-off-white) 0%, var(--color-white) 100%);
-  }
-
+  /* Contact Grid */
   .contact-grid {
     display: grid;
-    grid-template-columns: 1.3fr 1fr;
+    grid-template-columns: 1fr 400px;
     gap: var(--space-4xl);
     align-items: start;
   }
 
   /* Contact Form */
-  .contact-form-header {
-    margin-top: var(--space-xl);
-    margin-bottom: var(--space-2xl);
-  }
-
-  .contact-form-header h2 {
-    font-size: clamp(1.75rem, 3vw, 2.25rem);
+  .contact-form-wrapper h2 {
     margin-bottom: var(--space-sm);
   }
 
-  .contact-form-header > p {
+  .contact-form-wrapper > p {
     color: var(--color-gray-dark);
-    margin-bottom: 0;
-    font-size: 1.05rem;
-  }
-
-  .contact-form {
-    background: var(--color-white);
-    padding: var(--space-3xl);
-    border-radius: var(--radius-2xl);
-    box-shadow:
-      0 4px 6px rgba(0, 0, 0, 0.02),
-      0 12px 24px rgba(0, 0, 0, 0.04),
-      0 24px 48px rgba(0, 0, 0, 0.06);
-    border: 1px solid rgba(0, 0, 0, 0.04);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .contact-form::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, var(--color-primary), var(--color-primary-dark));
+    margin-bottom: var(--space-xl);
   }
 
   .form-row {
@@ -571,182 +184,12 @@ import Layout from '../layouts/Layout.astro';
     gap: var(--space-lg);
   }
 
-  .form-group {
-    margin-bottom: var(--space-lg);
-  }
-
-  .form-label {
-    display: block;
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--color-charcoal);
-    margin-bottom: var(--space-sm);
-  }
-
-  .form-input-wrapper {
-    position: relative;
-  }
-
-  .form-icon {
-    position: absolute;
-    left: var(--space-md);
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--color-gray-medium);
-    transition: color var(--transition-fast);
-    pointer-events: none;
-    z-index: 1;
-  }
-
-  .form-icon--textarea {
-    top: var(--space-md);
-    transform: none;
-  }
-
-  .form-input,
-  .form-select,
-  .form-textarea {
+  .form-submit {
     width: 100%;
-    padding: var(--space-md) var(--space-md) var(--space-md) calc(var(--space-md) + 30px);
-    border: 2px solid var(--color-gray-light);
-    border-radius: var(--radius-lg);
-    font-size: 1rem;
-    font-family: inherit;
-    color: var(--color-charcoal);
-    background: var(--color-off-white);
-    transition: all var(--transition-fast);
+    margin-top: var(--space-md);
   }
 
-  .form-input:focus,
-  .form-select:focus,
-  .form-textarea:focus {
-    outline: none;
-    border-color: var(--color-primary);
-    background: var(--color-white);
-    box-shadow: 0 0 0 4px rgba(113, 196, 233, 0.15);
-  }
-
-  .form-input:focus + .form-icon,
-  .form-select:focus ~ .form-icon,
-  .form-textarea:focus ~ .form-icon {
-    color: var(--color-primary);
-  }
-
-  .form-input::placeholder,
-  .form-textarea::placeholder {
-    color: var(--color-gray-medium);
-  }
-
-  .form-input-wrapper--select {
-    position: relative;
-  }
-
-  .form-select {
-    appearance: none;
-    cursor: pointer;
-    padding-right: var(--space-3xl);
-  }
-
-  .form-select-arrow {
-    position: absolute;
-    right: var(--space-md);
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--color-gray-medium);
-    pointer-events: none;
-    transition: transform var(--transition-fast);
-  }
-
-  .form-input-wrapper--textarea {
-    display: block;
-  }
-
-  .form-textarea {
-    min-height: 140px;
-    resize: vertical;
-    padding-top: var(--space-md);
-    line-height: 1.6;
-  }
-
-  .form-checkbox {
-    display: flex;
-    align-items: flex-start;
-    gap: var(--space-sm);
-    margin-bottom: 0;
-  }
-
-  .form-checkbox input {
-    margin-top: 4px;
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    accent-color: var(--color-primary);
-  }
-
-  .form-checkbox label {
-    font-size: 0.9rem;
-    color: var(--color-gray-dark);
-    cursor: pointer;
-    line-height: 1.5;
-  }
-
-  .btn--full {
-    width: 100%;
-    margin-top: var(--space-xl);
-    padding: var(--space-lg) var(--space-2xl);
-    font-size: 1.05rem;
-  }
-
-  .btn--full svg {
-    transition: transform var(--transition-fast);
-  }
-
-  .btn--full:hover svg {
-    transform: translateX(4px);
-  }
-
-  /* Form Success */
-  .form-success {
-    text-align: center;
-    padding: var(--space-5xl) var(--space-2xl);
-    background: var(--color-white);
-    border-radius: var(--radius-2xl);
-    box-shadow:
-      0 4px 6px rgba(0, 0, 0, 0.02),
-      0 12px 24px rgba(0, 0, 0, 0.04),
-      0 24px 48px rgba(0, 0, 0, 0.06);
-  }
-
-  .form-success__icon {
-    color: var(--color-success);
-    margin-bottom: var(--space-xl);
-    animation: successPulse 2s ease-in-out infinite;
-  }
-
-  @keyframes successPulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-  }
-
-  .form-success h3 {
-    color: var(--color-charcoal);
-    margin-bottom: var(--space-md);
-    font-size: 2rem;
-  }
-
-  .form-success p {
-    color: var(--color-gray-dark);
-    margin-bottom: var(--space-xl);
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 1.1rem;
-    line-height: 1.6;
-  }
-
-  /* ============================================
-     CONTACT INFO CARDS
-     ============================================ */
+  /* Contact Info */
   .contact-info {
     display: flex;
     flex-direction: column;
@@ -754,608 +197,70 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .contact-card {
-    background: var(--color-white);
+    display: flex;
+    gap: var(--space-lg);
     padding: var(--space-xl);
-    border-radius: var(--radius-xl);
-    box-shadow:
-      0 2px 4px rgba(0, 0, 0, 0.02),
-      0 8px 16px rgba(0, 0, 0, 0.04);
-    transition: all var(--transition-normal);
-    border: 1px solid rgba(0, 0, 0, 0.04);
-    position: relative;
-    overflow: hidden;
+    background: var(--color-off-white);
+    border-radius: var(--radius-lg);
   }
 
-  .contact-card:hover {
-    transform: translateY(-4px);
-    box-shadow:
-      0 4px 8px rgba(0, 0, 0, 0.04),
-      0 16px 32px rgba(0, 0, 0, 0.08);
-    border-color: rgba(113, 196, 233, 0.2);
-  }
-
-  .contact-card h3 {
-    font-size: 1.15rem;
-    margin-bottom: var(--space-lg);
-    color: var(--color-charcoal);
-  }
-
-  /* CTA Card */
-  .contact-card--cta {
-    background: linear-gradient(135deg, var(--color-charcoal) 0%, #1a1f2e 100%);
-    text-align: center;
-    padding: var(--space-2xl);
-  }
-
-  .contact-card__glow {
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(113, 196, 233, 0.15) 0%, transparent 50%);
-    pointer-events: none;
-  }
-
-  .contact-card--cta h3 {
+  .contact-card__icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-primary);
     color: var(--color-white);
-    margin-bottom: var(--space-xs);
-    position: relative;
+    border-radius: var(--radius-md);
   }
 
-  .contact-card--cta p {
-    color: rgba(255, 255, 255, 0.7);
-    margin-bottom: var(--space-lg);
+  .contact-card__content h3 {
+    font-size: 1rem;
+    margin-bottom: var(--space-xs);
+  }
+
+  .contact-card__content address,
+  .contact-card__content p {
+    font-style: normal;
+    color: var(--color-gray-dark);
     font-size: 0.95rem;
-    position: relative;
+    margin: 0;
+  }
+
+  .contact-card__content a {
+    color: var(--color-charcoal);
+    text-decoration: none;
+  }
+
+  .contact-card__content a:hover {
+    color: var(--color-primary);
   }
 
   .contact-card__phone {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-md);
-    font-family: var(--font-heading);
-    font-size: 1.75rem;
-    font-weight: 700;
-    color: var(--color-primary);
-    text-decoration: none;
-    transition: all var(--transition-normal);
-    position: relative;
-  }
-
-  .phone-icon {
-    width: 48px;
-    height: 48px;
-    background: rgba(113, 196, 233, 0.2);
-    border-radius: var(--radius-full);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all var(--transition-normal);
-  }
-
-  .contact-card__phone:hover {
-    color: var(--color-white);
-  }
-
-  .contact-card__phone:hover .phone-icon {
-    background: var(--color-primary);
-    transform: scale(1.1);
-  }
-
-  /* Contact Items */
-  .contact-item {
-    display: flex;
-    gap: var(--space-md);
-    margin-bottom: var(--space-lg);
-  }
-
-  .contact-item:last-child {
-    margin-bottom: 0;
-  }
-
-  .contact-item__icon {
-    width: 48px;
-    height: 48px;
-    background: linear-gradient(135deg, rgba(113, 196, 233, 0.15) 0%, rgba(113, 196, 233, 0.05) 100%);
-    border-radius: var(--radius-lg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    color: var(--color-primary);
-    transition: all var(--transition-normal);
-  }
-
-  .contact-card:hover .contact-item__icon {
-    background: var(--color-primary);
-    color: var(--color-white);
-  }
-
-  .contact-item__content h4 {
-    font-size: 0.85rem;
-    font-weight: 700;
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 600;
     margin-bottom: var(--space-xs);
-    color: var(--color-charcoal);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
   }
 
-  .contact-item__content address,
-  .contact-item__content p {
-    font-style: normal;
-    color: var(--color-gray-dark);
-    margin-bottom: var(--space-xs);
-    font-size: 0.95rem;
-    line-height: 1.6;
-  }
-
-  .contact-item__content a {
-    color: var(--color-gray-dark);
-    text-decoration: none;
-    transition: color var(--transition-fast);
-  }
-
-  .contact-item__content a:hover {
-    color: var(--color-primary);
-  }
-
-  .contact-item__link {
+  .contact-card__link {
     display: inline-flex;
     align-items: center;
     gap: var(--space-xs);
-    font-size: 0.9rem;
     font-weight: 600;
-    color: var(--color-primary-dark);
-    text-decoration: none;
-    transition: all var(--transition-fast);
-    margin-top: var(--space-xs);
+    color: var(--color-primary) !important;
+    margin-top: var(--space-sm);
   }
 
-  .contact-item__link:hover {
-    color: var(--color-charcoal);
-  }
-
-  .contact-item__link svg {
-    transition: transform var(--transition-fast);
-  }
-
-  .contact-item__link:hover svg {
-    transform: translate(2px, -2px);
-  }
-
-  /* Hours List */
-  .hours-list {
-    list-style: none;
-  }
-
-  .hours-list li {
-    display: flex;
-    align-items: center;
-    padding: var(--space-sm) 0;
-    font-size: 0.95rem;
-  }
-
-  .hours-list li span:first-child {
-    font-weight: 600;
-    color: var(--color-charcoal);
-    min-width: 100px;
-  }
-
-  .hours-dots {
-    flex: 1;
-    height: 1px;
-    background: repeating-linear-gradient(
-      90deg,
-      var(--color-gray-light) 0,
-      var(--color-gray-light) 4px,
-      transparent 4px,
-      transparent 8px
-    );
-    margin: 0 var(--space-md);
-  }
-
-  .hours-list li span:last-child {
-    color: var(--color-gray-dark);
-    font-weight: 500;
-  }
-
-  .hours-closed span:first-child,
-  .hours-closed span:last-child {
-    color: var(--color-gray-medium) !important;
-  }
-
-  /* Quick Actions */
-  .quick-actions {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-md);
-  }
-
-  .quick-action {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--space-sm);
-    padding: var(--space-lg);
-    background: var(--color-white);
-    border-radius: var(--radius-xl);
-    text-decoration: none;
-    transition: all var(--transition-normal);
-    box-shadow:
-      0 2px 4px rgba(0, 0, 0, 0.02),
-      0 4px 8px rgba(0, 0, 0, 0.04);
-    border: 1px solid rgba(0, 0, 0, 0.04);
-  }
-
-  .quick-action:hover {
-    transform: translateY(-4px);
-    box-shadow:
-      0 8px 16px rgba(113, 196, 233, 0.2);
-    border-color: var(--color-primary);
-  }
-
-  .quick-action__icon {
-    width: 44px;
-    height: 44px;
-    background: linear-gradient(135deg, rgba(113, 196, 233, 0.15) 0%, rgba(113, 196, 233, 0.05) 100%);
-    border-radius: var(--radius-full);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-primary);
-    transition: all var(--transition-normal);
-  }
-
-  .quick-action:hover .quick-action__icon {
-    background: var(--color-primary);
-    color: var(--color-white);
-    transform: scale(1.1);
-  }
-
-  .quick-action__label {
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--color-charcoal);
-  }
-
-  /* Social Links */
-  .contact-card--social h3 {
-    margin-bottom: var(--space-md);
-  }
-
-  .social-links {
-    display: flex;
-    gap: var(--space-md);
-  }
-
-  .social-links a {
-    width: 52px;
-    height: 52px;
-    background: linear-gradient(135deg, rgba(113, 196, 233, 0.15) 0%, rgba(113, 196, 233, 0.05) 100%);
+  .contact-map {
     border-radius: var(--radius-lg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-primary);
-    transition: all var(--transition-normal);
-  }
-
-  .social-links a:hover {
-    background: var(--color-primary);
-    color: var(--color-white);
-    transform: translateY(-4px) scale(1.05);
-    box-shadow: 0 8px 20px rgba(113, 196, 233, 0.4);
-  }
-
-  /* ============================================
-     MAP SECTION
-     ============================================ */
-  .map-section {
-    padding: var(--space-5xl) 0;
-    background: var(--color-off-white);
-  }
-
-  .map-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    background: var(--color-white);
-    border-radius: var(--radius-2xl);
     overflow: hidden;
-    box-shadow:
-      0 4px 6px rgba(0, 0, 0, 0.02),
-      0 12px 24px rgba(0, 0, 0, 0.04),
-      0 24px 48px rgba(0, 0, 0, 0.06);
+    box-shadow: var(--shadow-sm);
   }
 
-  .map-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: var(--space-3xl);
-    background: linear-gradient(135deg, var(--color-charcoal) 0%, #1a1f2e 100%);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .map-content::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    right: -50%;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle, rgba(113, 196, 233, 0.1) 0%, transparent 50%);
-    pointer-events: none;
-  }
-
-  .map-info-card {
-    position: relative;
-    text-align: center;
-    color: var(--color-white);
-  }
-
-  .map-info-card__badge {
-    display: inline-block;
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--color-primary);
-    margin-bottom: var(--space-lg);
-    padding: var(--space-xs) var(--space-lg);
-    background: rgba(113, 196, 233, 0.15);
-    border: 1px solid rgba(113, 196, 233, 0.3);
-    border-radius: var(--radius-full);
-  }
-
-  .map-info-card h3 {
-    font-size: 1.75rem;
-    margin-bottom: var(--space-md);
-    color: var(--color-white);
-  }
-
-  .map-info-card address {
-    font-style: normal;
-    color: rgba(255, 255, 255, 0.8);
-    line-height: 1.7;
-    margin-bottom: var(--space-lg);
-  }
-
-  .map-info-card__note {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-sm);
-    color: var(--color-primary);
-    font-size: 0.9rem;
-    font-weight: 500;
-    margin-bottom: var(--space-xl);
-  }
-
-  .map-info-card .btn {
-    margin-top: var(--space-md);
-  }
-
-  .map-container {
-    width: 100%;
-    min-height: 400px;
-  }
-
-  .map-container iframe {
-    display: block;
-    width: 100%;
-    height: 100%;
-    min-height: 400px;
-  }
-
-  /* ============================================
-     FAQ SECTION
-     ============================================ */
-  .faq-section {
-    padding-top: var(--space-5xl);
-    padding-bottom: var(--space-5xl);
-    background: var(--color-white);
-  }
-
-  .faq-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-xl);
-  }
-
-  .faq-list {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-md);
-  }
-
-  .faq-item {
-    background: var(--color-off-white);
-    border-radius: var(--radius-xl);
-    overflow: hidden;
-    transition: all var(--transition-normal);
-    border: 2px solid transparent;
-  }
-
-  .faq-item:hover {
-    border-color: rgba(113, 196, 233, 0.2);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-  }
-
-  .faq-item[open] {
-    background: var(--color-white);
-    border-color: var(--color-primary);
-    box-shadow:
-      0 4px 6px rgba(0, 0, 0, 0.02),
-      0 12px 24px rgba(113, 196, 233, 0.15);
-  }
-
-  .faq-question {
-    padding: var(--space-lg) var(--space-xl);
-    font-weight: 600;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
-    gap: var(--space-md);
-    color: var(--color-charcoal);
-    transition: all var(--transition-fast);
-  }
-
-  .faq-question::-webkit-details-marker {
-    display: none;
-  }
-
-  .faq-question:hover {
-    color: var(--color-primary-dark);
-  }
-
-  .faq-question span:first-child {
-    flex: 1;
-    line-height: 1.4;
-  }
-
-  .faq-icon {
-    flex-shrink: 0;
-    width: 32px;
-    height: 32px;
-    background: linear-gradient(135deg, rgba(113, 196, 233, 0.15) 0%, rgba(113, 196, 233, 0.05) 100%);
-    border-radius: var(--radius-full);
-    position: relative;
-    transition: all var(--transition-normal);
-  }
-
-  .faq-icon::before,
-  .faq-icon::after {
-    content: '';
-    position: absolute;
-    background: var(--color-primary);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: all var(--transition-normal);
-  }
-
-  .faq-icon::before {
-    width: 12px;
-    height: 2px;
-  }
-
-  .faq-icon::after {
-    width: 2px;
-    height: 12px;
-  }
-
-  details[open] .faq-icon {
-    background: var(--color-primary);
-    transform: rotate(180deg);
-  }
-
-  details[open] .faq-icon::before,
-  details[open] .faq-icon::after {
-    background: var(--color-white);
-  }
-
-  details[open] .faq-icon::after {
-    opacity: 0;
-  }
-
-  .faq-answer {
-    padding: 0 var(--space-xl) var(--space-xl);
-  }
-
-  .faq-answer p {
-    color: var(--color-gray-dark);
-    margin-bottom: 0;
-    line-height: 1.8;
-    font-size: 1rem;
-  }
-
-  /* ============================================
-     CTA SECTION
-     ============================================ */
-  .cta-section {
-    position: relative;
-    padding: 120px 0;
-    overflow: hidden;
-  }
-
-  .cta-section__bg {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, var(--color-charcoal) 0%, #1a1f2e 100%);
-  }
-
-  .cta-section__gradient {
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(ellipse at 30% 50%, rgba(113, 196, 233, 0.15) 0%, transparent 60%);
-  }
-
-  .cta-content {
-    position: relative;
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto;
-  }
-
-  .cta-eyebrow {
-    display: inline-block;
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--color-primary);
-    margin-bottom: var(--space-lg);
-  }
-
-  .cta-content h2 {
-    color: var(--color-white);
-    font-size: clamp(2rem, 4vw, 2.75rem);
-    margin-bottom: var(--space-lg);
-    line-height: 1.2;
-  }
-
-  .cta-content p {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 1.15rem;
-    line-height: 1.7;
-    margin-bottom: var(--space-2xl);
-  }
-
-  .btn--lg {
-    padding: var(--space-lg) var(--space-3xl);
-    font-size: 1.1rem;
-  }
-
-  /* ============================================
-     ANIMATIONS
-     ============================================ */
-  .reveal-fade,
-  .reveal-slide-up {
-    opacity: 0;
-    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-    transition-delay: var(--delay, 0s);
-  }
-
-  .reveal-fade {
-    transform: translateY(20px);
-  }
-
-  .reveal-slide-up {
-    transform: translateY(40px);
-  }
-
-  .reveal-fade.revealed,
-  .reveal-slide-up.revealed {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* ============================================
-     RESPONSIVE
-     ============================================ */
+  /* Responsive */
   @media (max-width: 1024px) {
     .contact-grid {
       grid-template-columns: 1fr;
@@ -1363,458 +268,29 @@ import Layout from '../layouts/Layout.astro';
     }
 
     .contact-info {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: var(--space-lg);
-    }
-
-    .contact-card--cta {
-      grid-column: 1 / -1;
-    }
-
-    .quick-actions {
-      grid-column: 1 / -1;
-    }
-
-    .map-wrapper {
-      grid-template-columns: 1fr;
-    }
-
-    .map-content {
-      padding: var(--space-2xl);
-    }
-
-    .faq-grid {
-      grid-template-columns: 1fr;
-      gap: var(--space-md);
+      order: -1;
     }
   }
 
   @media (max-width: 768px) {
     .page-hero {
-      min-height: 50vh;
-    }
-
-    .page-hero__container {
-      padding: var(--space-4xl) var(--space-lg);
-    }
-
-    .form-row {
-      grid-template-columns: 1fr;
-      gap: 0;
-    }
-
-    .contact-form {
-      padding: var(--space-xl);
-    }
-
-    .contact-info {
-      grid-template-columns: 1fr;
-    }
-
-    .quick-actions {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    .map-container {
-      min-height: 300px;
-    }
-
-    .map-container iframe {
-      min-height: 300px;
-    }
-
-    .cta-content h2 {
-      font-size: 1.75rem;
-    }
-
-    .faq-question {
-      padding: var(--space-md) var(--space-lg);
-      font-size: 0.95rem;
-    }
-
-    .faq-answer {
-      padding: 0 var(--space-lg) var(--space-lg);
+      padding: 120px 0 60px;
     }
   }
 
   @media (max-width: 640px) {
-    .page-hero {
-      min-height: 45vh;
-    }
-
-    .page-hero__container {
-      padding: var(--space-3xl) var(--space-md);
-    }
-
-    .page-hero__title {
-      font-size: clamp(2rem, 8vw, 2.75rem);
-    }
-
-    .page-hero__subtitle {
-      font-size: 1rem;
-    }
-
-    .contact-section {
-      padding-top: var(--space-3xl);
-      padding-bottom: var(--space-3xl);
-    }
-
-    .contact-form-header h2 {
-      font-size: 1.5rem;
-    }
-
-    .contact-form-header > p {
-      font-size: 0.95rem;
-    }
-
-    .contact-form {
-      padding: var(--space-lg);
-    }
-
-    .form-label {
-      font-size: 0.85rem;
-    }
-
-    .form-input,
-    .form-select,
-    .form-textarea {
-      padding: var(--space-sm) var(--space-md) var(--space-sm) calc(var(--space-md) + 26px);
-      font-size: 16px;
-    }
-
-    .form-icon {
-      left: var(--space-sm);
-    }
-
-    .form-icon svg {
-      width: 16px;
-      height: 16px;
-    }
-
-    .form-checkbox label {
-      font-size: 0.85rem;
-    }
-
-    .btn--full {
-      padding: var(--space-md) var(--space-xl);
-      font-size: 1rem;
-    }
-
-    .contact-card {
-      padding: var(--space-lg);
-    }
-
-    .contact-card h3 {
-      font-size: 1.05rem;
-    }
-
-    .contact-item__icon {
-      width: 44px;
-      height: 44px;
-    }
-
-    .hours-list li {
-      font-size: 0.9rem;
-    }
-
-    .hours-list li span:first-child {
-      min-width: 85px;
-    }
-
-    .map-section {
-      padding: var(--space-3xl) 0;
-    }
-
-    .map-info-card h3 {
-      font-size: 1.5rem;
-    }
-
-    .faq-section {
-      padding-top: var(--space-3xl);
-      padding-bottom: var(--space-3xl);
-    }
-
-    .cta-section {
-      padding: var(--space-4xl) 0;
-    }
-
-    .cta-content p {
-      font-size: 1rem;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .page-hero {
-      min-height: 40vh;
-    }
-
-    .page-hero__eyebrow {
-      font-size: 0.65rem;
-      padding: 4px var(--space-sm);
-    }
-
-    .page-hero__title {
-      font-size: clamp(1.75rem, 9vw, 2.25rem);
-    }
-
-    .page-hero__subtitle {
-      font-size: 0.95rem;
-    }
-
-    .contact-section {
-      padding-top: var(--space-2xl);
-      padding-bottom: var(--space-2xl);
-    }
-
-    .contact-form-header {
-      margin-bottom: var(--space-xl);
-    }
-
-    .contact-form-header h2 {
-      font-size: 1.35rem;
-    }
-
-    .contact-form {
-      padding: var(--space-md);
-    }
-
-    .form-group {
-      margin-bottom: var(--space-md);
-    }
-
-    .form-label {
-      font-size: 0.8rem;
-      margin-bottom: var(--space-xs);
-    }
-
-    .form-input,
-    .form-select,
-    .form-textarea {
-      padding: var(--space-sm) var(--space-sm) var(--space-sm) calc(var(--space-sm) + 24px);
-      border-radius: var(--radius-md);
-    }
-
-    .form-textarea {
-      min-height: 120px;
-    }
-
-    .form-checkbox input {
-      width: 18px;
-      height: 18px;
-    }
-
-    .form-checkbox label {
-      font-size: 0.8rem;
-    }
-
-    .btn--full {
-      padding: var(--space-sm) var(--space-lg);
-      font-size: 0.95rem;
-      margin-top: var(--space-lg);
-    }
-
-    .contact-card {
-      padding: var(--space-md);
-    }
-
-    .contact-card h3 {
-      font-size: 1rem;
-      margin-bottom: var(--space-md);
-    }
-
-    .contact-card--cta {
-      padding: var(--space-lg);
-    }
-
-    .contact-card__phone {
-      font-size: 1.35rem;
-      flex-direction: column;
-      gap: var(--space-sm);
-    }
-
-    .phone-icon {
-      width: 48px;
-      height: 48px;
-    }
-
-    .contact-item {
-      gap: var(--space-sm);
-    }
-
-    .contact-item__icon {
-      width: 40px;
-      height: 40px;
-    }
-
-    .contact-item__content h4 {
-      font-size: 0.8rem;
-    }
-
-    .contact-item__content address,
-    .contact-item__content p {
-      font-size: 0.9rem;
-    }
-
-    .hours-list li {
-      font-size: 0.85rem;
-      padding: var(--space-xs) 0;
-    }
-
-    .hours-list li span:first-child {
-      min-width: 75px;
-      font-size: 0.85rem;
-    }
-
-    .quick-actions {
+    .form-row {
       grid-template-columns: 1fr;
-      gap: var(--space-sm);
-    }
-
-    .quick-action {
-      flex-direction: row;
-      justify-content: flex-start;
-      padding: var(--space-md);
-      gap: var(--space-md);
-    }
-
-    .quick-action__icon {
-      width: 40px;
-      height: 40px;
-    }
-
-    .quick-action__label {
-      font-size: 0.9rem;
-    }
-
-    .social-links a {
-      width: 44px;
-      height: 44px;
-    }
-
-    .map-section {
-      padding: var(--space-2xl) 0;
-    }
-
-    .map-content {
-      padding: var(--space-lg);
-    }
-
-    .map-info-card__badge {
-      font-size: 0.65rem;
-      padding: var(--space-2xs) var(--space-sm);
-    }
-
-    .map-info-card h3 {
-      font-size: 1.35rem;
-    }
-
-    .map-info-card address {
-      font-size: 0.9rem;
-    }
-
-    .map-info-card__note {
-      font-size: 0.85rem;
-    }
-
-    .map-container {
-      min-height: 250px;
-    }
-
-    .map-container iframe {
-      min-height: 250px;
-    }
-
-    .faq-section {
-      padding-top: var(--space-2xl);
-      padding-bottom: var(--space-2xl);
-    }
-
-    .faq-item {
-      border-radius: var(--radius-lg);
-    }
-
-    .faq-question {
-      padding: var(--space-md);
-      font-size: 0.9rem;
-    }
-
-    .faq-icon {
-      width: 28px;
-      height: 28px;
-    }
-
-    .faq-answer {
-      padding: 0 var(--space-md) var(--space-md);
-    }
-
-    .faq-answer p {
-      font-size: 0.9rem;
-    }
-
-    .cta-section {
-      padding: var(--space-3xl) 0;
-    }
-
-    .cta-content h2 {
-      font-size: 1.5rem;
-    }
-
-    .cta-content p {
-      font-size: 0.9rem;
-      margin-bottom: var(--space-xl);
-    }
-
-    .btn--lg {
-      padding: var(--space-md) var(--space-xl);
-      font-size: 0.95rem;
     }
   }
 </style>
 
 <script>
-  // Check for success parameter in URL
-  if (typeof window !== 'undefined') {
-    const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.get('success') === 'true') {
-      const form = document.getElementById('contact-form');
-      const successMessage = document.getElementById('form-success');
-      if (form && successMessage) {
-        form.style.display = 'none';
-        successMessage.style.display = 'block';
-      }
-    }
+  // Check for success parameter
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('success') === 'true') {
+    alert('Thank you for your message! We\'ll get back to you within 24 hours.');
+    // Clean URL
+    window.history.replaceState({}, document.title, window.location.pathname);
   }
-
-  // Reveal animations on scroll
-  document.addEventListener('DOMContentLoaded', () => {
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('revealed');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, observerOptions);
-
-    document.querySelectorAll('.reveal-fade, .reveal-slide-up').forEach(el => {
-      observer.observe(el);
-    });
-
-    // Form input focus effects
-    const formInputs = document.querySelectorAll('.form-input, .form-select, .form-textarea');
-    formInputs.forEach(input => {
-      input.addEventListener('focus', () => {
-        input.closest('.form-input-wrapper')?.classList.add('focused');
-      });
-      input.addEventListener('blur', () => {
-        input.closest('.form-input-wrapper')?.classList.remove('focused');
-      });
-    });
-  });
 </script>
