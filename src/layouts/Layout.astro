@@ -28,10 +28,30 @@ const { title, description = "Personalized chiropractic care for San Diego adult
   <body>
     <a href="#main" class="skip-link">Skip to main content</a>
 
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <div class="container top-bar__container">
+        <div class="top-bar__item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <span>4340 Genesee Ave, Suite 201, San Diego, CA 92117</span>
+        </div>
+        <div class="top-bar__item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <a href="tel:8582777500">(858) 277-7500</a>
+        </div>
+        <div class="top-bar__item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          <a href="mailto:bridgechiropracticsd@gmail.com">bridgechiropracticsd@gmail.com</a>
+        </div>
+      </div>
+    </div>
+
     <header class="header" id="header">
       <div class="container header__container">
         <a href="/" class="header__logo">
-          <img src="/images/logo.svg" alt="The Bridge Chiropractic" class="header__logo-img" />
+          <div class="header__logo-card">
+            <img src="/images/logo.svg" alt="The Bridge Chiropractic" class="header__logo-img" />
+          </div>
         </a>
 
         <nav class="header__nav" id="main-nav">
@@ -44,11 +64,7 @@ const { title, description = "Personalized chiropractic care for San Diego adult
         </nav>
 
         <div class="header__actions">
-          <a href="tel:8582777500" class="header__phone">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-            <span>(858) 277-7500</span>
-          </a>
-          <a href="/contact" class="btn btn--primary header__cta">Book Now</a>
+          <a href="/contact" class="header__cta">Book Appointment</a>
         </div>
 
         <button class="header__menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
@@ -156,19 +172,64 @@ const { title, description = "Personalized chiropractic care for San Diego adult
         top: 0;
       }
 
+      /* Top Bar */
+      .top-bar {
+        background: var(--color-charcoal);
+        padding: 10px 0;
+      }
+
+      .top-bar__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: var(--space-xl);
+        flex-wrap: wrap;
+      }
+
+      .top-bar__item {
+        display: flex;
+        align-items: center;
+        gap: var(--space-sm);
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 0.875rem;
+      }
+
+      .top-bar__item svg {
+        color: var(--color-primary);
+        flex-shrink: 0;
+      }
+
+      .top-bar__item a {
+        color: rgba(255, 255, 255, 0.9);
+        text-decoration: none;
+        transition: color var(--transition-fast);
+      }
+
+      .top-bar__item a:hover {
+        color: var(--color-primary);
+      }
+
+      .top-bar__item:not(:last-child)::after {
+        content: '|';
+        margin-left: var(--space-xl);
+        color: rgba(255, 255, 255, 0.3);
+      }
+
       /* Header */
       .header {
         position: fixed;
-        top: 0;
+        top: 42px;
         left: 0;
         right: 0;
         z-index: 1000;
         background: var(--color-white);
         box-shadow: var(--shadow-sm);
-        transition: box-shadow var(--transition-normal);
+        transition: all var(--transition-normal);
+        overflow: visible;
       }
 
       .header.scrolled {
+        top: 0;
         box-shadow: var(--shadow-md);
       }
 
@@ -176,9 +237,11 @@ const { title, description = "Personalized chiropractic care for San Diego adult
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding-top: var(--space-md);
-        padding-bottom: var(--space-md);
+        padding-top: var(--space-sm);
+        padding-bottom: var(--space-sm);
         position: relative;
+        height: 70px;
+        overflow: visible;
       }
 
       .header__nav {
@@ -191,11 +254,25 @@ const { title, description = "Personalized chiropractic care for San Diego adult
         display: flex;
         align-items: center;
         text-decoration: none;
+        position: relative;
+        z-index: 10;
+      }
+
+      .header__logo-card {
+        background: var(--color-white);
+        padding: 10px var(--space-sm);
+        border-radius: var(--radius-xl);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        position: relative;
+        top: 20px;
+        display: flex;
+        align-items: center;
       }
 
       .header__logo-img {
-        height: 50px;
+        height: 80px;
         width: auto;
+        display: block;
       }
 
       .header__nav-list {
@@ -223,21 +300,20 @@ const { title, description = "Personalized chiropractic care for San Diego adult
         gap: var(--space-lg);
       }
 
-      .header__phone {
-        display: flex;
-        align-items: center;
-        gap: var(--space-sm);
-        color: var(--color-charcoal);
-        font-weight: 500;
+      .header__cta {
+        padding: 12px 24px;
+        background: var(--color-primary);
+        color: var(--color-white);
+        border-radius: var(--radius-full);
+        font-weight: 600;
+        transition: all var(--transition-normal);
         text-decoration: none;
       }
 
-      .header__phone:hover {
-        color: var(--color-primary);
-      }
-
-      .header__cta {
-        padding: 10px 24px;
+      .header__cta:hover {
+        background: var(--color-primary-dark);
+        transform: translateY(-1px);
+        box-shadow: var(--shadow-md);
       }
 
       /* Menu Toggle */
@@ -276,7 +352,7 @@ const { title, description = "Personalized chiropractic care for San Diego adult
       .mobile-nav {
         display: none;
         position: fixed;
-        top: 70px;
+        top: 145px;
         left: 0;
         right: 0;
         background: var(--color-white);
@@ -334,11 +410,15 @@ const { title, description = "Personalized chiropractic care for San Diego adult
       }
 
       @media (max-width: 1024px) {
-        .header__nav {
-          display: none;
+        .top-bar__container {
+          gap: var(--space-md);
         }
 
-        .header__phone span {
+        .top-bar__item:not(:last-child)::after {
+          margin-left: var(--space-md);
+        }
+
+        .header__nav {
           display: none;
         }
 
@@ -355,9 +435,40 @@ const { title, description = "Personalized chiropractic care for San Diego adult
         }
       }
 
-      @media (max-width: 640px) {
+      @media (max-width: 768px) {
+        .top-bar {
+          display: none;
+        }
+
+        .header {
+          top: 0;
+        }
+
+        .mobile-nav {
+          top: 100px;
+        }
+
+        .header__logo-card {
+          padding: var(--space-xs) var(--space-sm);
+          top: -5px;
+        }
+
         .header__logo-img {
-          height: 40px;
+          height: 70px;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .header__logo-card {
+          padding: var(--space-xs) var(--space-sm);
+        }
+
+        .header__logo-img {
+          height: 55px;
+        }
+
+        .mobile-nav {
+          top: 90px;
         }
       }
 
@@ -365,7 +476,7 @@ const { title, description = "Personalized chiropractic care for San Diego adult
       .footer {
         background: var(--color-charcoal);
         color: var(--color-white);
-        padding: var(--space-4xl) 0 var(--space-xl);
+        padding: var(--space-3xl) 0 var(--space-xl);
       }
 
       .footer__top {
@@ -520,12 +631,15 @@ const { title, description = "Personalized chiropractic care for San Diego adult
     <script>
       // Header scroll effect
       const header = document.getElementById('header');
+      const topBar = document.querySelector('.top-bar') as HTMLElement;
 
       window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
           header?.classList.add('scrolled');
+          if (topBar) topBar.style.display = 'none';
         } else {
           header?.classList.remove('scrolled');
+          if (topBar && window.innerWidth > 768) topBar.style.display = 'block';
         }
       });
 

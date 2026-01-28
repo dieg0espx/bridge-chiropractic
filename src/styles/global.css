@@ -2,22 +2,22 @@
 
 /* CSS Variables */
 :root {
-  /* Brand Colors - Original Bridge Chiropractic */
-  --color-primary: #71C4E9;
-  --color-primary-dark: #5BA8CC;
-  --color-primary-light: #E8F6FC;
-  --color-secondary: #5BA8CC;
-  --color-secondary-light: #E8F6FC;
-  --color-accent: #D4A574;
-  --color-charcoal: #2A363F;
-  --color-gray-dark: #4A5568;
+  /* Brand Colors - Teal Theme (Salt Creek Style) */
+  --color-primary: #0D9488;
+  --color-primary-dark: #0F766E;
+  --color-primary-light: #CCFBF1;
+  --color-secondary: #14B8A6;
+  --color-secondary-light: #F0FDFA;
+  --color-accent: #F59E0B;
+  --color-charcoal: #1E293B;
+  --color-gray-dark: #475569;
   --color-gray-medium: #94A3B8;
-  --color-gray-light: #E8E6E3;
+  --color-gray-light: #E2E8F0;
   --color-white: #FFFFFF;
-  --color-off-white: #F7F4EF;
-  --color-cream: #FDF8F3;
-  --color-success: #68B984;
-  --color-error: #E57373;
+  --color-off-white: #F8FAFC;
+  --color-cream: #F1F5F9;
+  --color-success: #10B981;
+  --color-error: #EF4444;
 
   /* Typography */
   --font-heading: 'Playfair Display', Georgia, serif;

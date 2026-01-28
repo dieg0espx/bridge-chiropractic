@@ -3,76 +3,84 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Home">
-  <!-- Hero Section -->
+  <!-- Hero Section - Split Layout -->
   <section class="hero">
-    <div class="hero__bg">
-      <img src="/images/hero-wellness.jpg" alt="" class="hero__bg-img" />
-      <div class="hero__overlay"></div>
-    </div>
-    <div class="container hero__container">
-      <div class="hero__content">
-        <h1>Chiropractic Care in San Diego</h1>
-        <p>Personalized care for adults who want to stay active, independent, and pain-free. Dr. Nathan Beyerl offers gentle adjustments, movement therapy, and neuro rehabilitation.</p>
-        <div class="hero__actions">
-          <a href="/contact" class="btn btn--primary btn--lg">Book Appointment</a>
-          <a href="tel:8582777500" class="btn btn--white btn--lg">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-            (858) 277-7500
-          </a>
+    <div class="container">
+      <div class="hero__grid">
+        <div class="hero__content">
+          <h1>Welcome to <span class="text-primary">The Bridge</span> Chiropractic</h1>
+          <p>Experience personalized chiropractic care designed for San Diego adults who want to stay active, independent, and pain-free. Dr. Nathan Beyerl offers gentle adjustments, movement therapy, and neuro rehabilitation.</p>
+          <div class="hero__actions">
+            <a href="/contact" class="btn btn--primary">Request an Appointment</a>
+            <a href="tel:8582777500" class="btn btn--outline">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              (858) 277-7500
+            </a>
+          </div>
+        </div>
+        <div class="hero__image">
+          <img src="/images/hero-wellness.jpg" alt="Chiropractic care in San Diego" />
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Services Section -->
+  <!-- Featured Services Section -->
   <section class="section">
     <div class="container">
       <div class="section__header">
-        <span class="section__eyebrow">Our Services</span>
-        <h2 class="section__title">Comprehensive Chiropractic Care</h2>
-        <p class="section__subtitle">More than just adjustments—a full spectrum of services tailored to your needs.</p>
+        <h2 class="section__title">Featured Chiropractic Treatments</h2>
+        <p class="section__subtitle">Comprehensive care tailored to your needs and wellness goals.</p>
       </div>
 
-      <div class="grid grid--3">
-        <a href="/services#chiropractic" class="card">
-          <img src="/images/chiropractic-care.jpg" alt="Chiropractic adjustments" class="card__image" />
-          <div class="card__content">
-            <h3 class="card__title">Chiropractic Care</h3>
-            <p class="card__text">Gentle and traditional adjustments tailored to your comfort and needs.</p>
-            <span class="card__link">
-              Learn more
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </span>
+      <div class="services-grid">
+        <a href="/services#chiropractic" class="service-card">
+          <div class="service-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 20V10M18 10l-6-6-6 6M18 10h-6v10h6V10zM6 20V10M6 10h6"/><circle cx="12" cy="17" r="1"/></svg>
           </div>
+          <h3 class="service-card__title">Chiropractic Adjustments</h3>
+          <p class="service-card__text">Gentle and traditional spinal adjustments to restore proper alignment and reduce pain.</p>
         </a>
 
-        <a href="/services#soft-tissue" class="card">
-          <img src="/images/soft-tissue.jpg" alt="Soft tissue therapy" class="card__image" />
-          <div class="card__content">
-            <h3 class="card__title">Soft Tissue Therapy</h3>
-            <p class="card__text">Release tension, improve flexibility, and enhance your body's natural healing.</p>
-            <span class="card__link">
-              Learn more
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </span>
+        <a href="/services#soft-tissue" class="service-card">
+          <div class="service-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 11V7a5 5 0 0 1 10 0v4"/><rect x="3" y="11" width="18" height="11" rx="2"/><circle cx="12" cy="16" r="1"/></svg>
           </div>
+          <h3 class="service-card__title">Soft Tissue Therapy</h3>
+          <p class="service-card__text">Release tension, improve flexibility, and enhance your body's natural healing process.</p>
         </a>
 
-        <a href="/services#movement" class="card">
-          <img src="/images/movement-training.jpg" alt="Movement training" class="card__image" />
-          <div class="card__content">
-            <h3 class="card__title">Movement Training</h3>
-            <p class="card__text">Personalized exercises and routines to maintain progress between visits.</p>
-            <span class="card__link">
-              Learn more
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </span>
+        <a href="/services#movement" class="service-card">
+          <div class="service-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 4v4h4M20 8l-6-6-9 9 9 9 6-6"/><path d="M4 20l4-4"/></svg>
           </div>
+          <h3 class="service-card__title">Movement Training</h3>
+          <p class="service-card__text">Personalized exercises and routines to maintain progress between visits.</p>
         </a>
-      </div>
 
-      <div class="text-center" style="margin-top: var(--space-2xl);">
-        <a href="/services" class="btn btn--secondary">View All Services</a>
+        <a href="/services#neuro" class="service-card">
+          <div class="service-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+          </div>
+          <h3 class="service-card__title">Neuro Rehabilitation</h3>
+          <p class="service-card__text">Specialized care for balance, coordination, and neurological function improvement.</p>
+        </a>
+
+        <a href="/services#pain" class="service-card">
+          <div class="service-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <h3 class="service-card__title">Pain Management</h3>
+          <p class="service-card__text">Comprehensive approach to managing chronic and acute pain without medications.</p>
+        </a>
+
+        <a href="/services#wellness" class="service-card">
+          <div class="service-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <h3 class="service-card__title">Wellness Care</h3>
+          <p class="service-card__text">Ongoing maintenance care to keep you feeling your best and prevent future issues.</p>
+        </a>
       </div>
     </div>
   </section>
@@ -81,9 +89,11 @@ import Layout from '../layouts/Layout.astro';
   <section class="section section--gray">
     <div class="container">
       <div class="about-grid">
+        <div class="about-image">
+          <img src="/images/dr-portrait.jpg" alt="Dr. Nathan Beyerl" />
+        </div>
         <div class="about-content">
-          <span class="section__eyebrow">About Dr. Beyerl</span>
-          <h2>15+ Years of Experience</h2>
+          <h2>Your Trusted Chiropractic Care Experts</h2>
           <p>Dr. Nathan Beyerl brings over 15 years of experience to every patient interaction. With a focus on movement-based care, he helps adults in San Diego stay active and independent.</p>
 
           <ul class="check-list">
@@ -91,188 +101,198 @@ import Layout from '../layouts/Layout.astro';
             <li>Education-first approach to lasting results</li>
             <li>Specializing in adults 40-70 years old</li>
             <li>Fall prevention & balance training for seniors</li>
+            <li>Gentle techniques for all comfort levels</li>
           </ul>
 
-          <a href="/about" class="btn btn--primary">Learn More About Us</a>
-        </div>
-        <div class="about-image">
-          <img src="/images/dr-portrait.jpg" alt="Dr. Nathan Beyerl" />
+          <a href="/about" class="btn btn--primary">Meet Dr. Beyerl</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Why Choose Us -->
+  <!-- Reviews Section -->
   <section class="section">
     <div class="container">
       <div class="section__header">
-        <span class="section__eyebrow">Why Choose Us</span>
-        <h2 class="section__title">A Different Kind of Care</h2>
-        <p class="section__subtitle">Experience healthcare that puts you first.</p>
+        <h2 class="section__title">Reviews From Satisfied Patients</h2>
+        <div class="google-rating">
+          <div class="google-rating__stars">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <span class="google-rating__text">5.0 Rating on Google</span>
+        </div>
       </div>
 
-      <div class="grid grid--3">
-        <div class="benefit">
-          <div class="benefit__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-card__stars">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           </div>
-          <h3>Unhurried Appointments</h3>
-          <p>Take time to listen, understand your concerns, and explain what's happening—no rushed 5-minute visits.</p>
+          <p class="review-card__text">"Dr. Beyerl takes the time to truly understand what's going on. He explained everything clearly and helped me get back to running pain-free."</p>
+          <p class="review-card__author">Sarah M.</p>
         </div>
 
-        <div class="benefit">
-          <div class="benefit__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+        <div class="review-card">
+          <div class="review-card__stars">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           </div>
-          <h3>Education First</h3>
-          <p>Understand your body and why you're experiencing pain. Knowledge empowers you to take control.</p>
+          <p class="review-card__text">"After years of back pain, I finally found someone who could help. The neuro rehabilitation has been life-changing for my balance."</p>
+          <p class="review-card__author">Robert K.</p>
         </div>
 
-        <div class="benefit">
-          <div class="benefit__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        <div class="review-card">
+          <div class="review-card__stars">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           </div>
-          <h3>Lasting Results</h3>
-          <p>No quick fixes or dependency-based care. We focus on sustainable improvement and long-term independence.</p>
-        </div>
-
-        <div class="benefit">
-          <div class="benefit__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          </div>
-          <h3>Personalized Care</h3>
-          <p>Every treatment plan is tailored to your specific needs, goals, and lifestyle requirements.</p>
-        </div>
-
-        <div class="benefit">
-          <div class="benefit__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          </div>
-          <h3>Proven Results</h3>
-          <p>Over 500 patients helped with a 5-star Google rating. Real results from real patients.</p>
-        </div>
-
-        <div class="benefit">
-          <div class="benefit__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-          </div>
-          <h3>Convenient Location</h3>
-          <p>Located in the heart of San Diego, easily accessible with ample parking available.</p>
+          <p class="review-card__text">"I appreciate that I'm not just a number here. Dr. Beyerl genuinely cares about my wellbeing and takes the time to educate me."</p>
+          <p class="review-card__author">Jennifer L.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Testimonials -->
-  <section class="section section--gray">
+  <!-- Why Choose Us Section -->
+  <section class="section section--primary">
     <div class="container">
-      <div class="section__header">
-        <span class="section__eyebrow">Testimonials</span>
-        <h2 class="section__title">What Our Patients Say</h2>
+      <h2 class="section__title text-white text-center">Top Reasons to Choose The Bridge Chiropractic</h2>
+
+      <div class="reasons-grid">
+        <div class="reason-card">
+          <div class="reason-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
+          <h3 class="reason-card__title">Unhurried Appointments</h3>
+          <p class="reason-card__text">We take time to listen, understand your concerns, and explain what's happening—no rushed 5-minute visits.</p>
+        </div>
+
+        <div class="reason-card">
+          <div class="reason-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+          </div>
+          <h3 class="reason-card__title">Education First</h3>
+          <p class="reason-card__text">Understand your body and why you're experiencing pain. Knowledge empowers you to take control.</p>
+        </div>
+
+        <div class="reason-card">
+          <div class="reason-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+          </div>
+          <h3 class="reason-card__title">Proven Results</h3>
+          <p class="reason-card__text">Over 500 patients helped with a 5-star Google rating. Real results from real patients you can trust.</p>
+        </div>
       </div>
+    </div>
+  </section>
 
-      <div class="grid grid--3">
-        <div class="testimonial">
-          <div class="testimonial__stars">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          </div>
-          <p class="testimonial__text">"Dr. Beyerl takes the time to truly understand what's going on. He explained everything clearly and helped me get back to running pain-free."</p>
-          <p class="testimonial__author">— Sarah M.</p>
+  <!-- FAQ Section -->
+  <section class="section">
+    <div class="container">
+      <div class="faq-layout">
+        <div class="faq-header">
+          <h2>Frequently Asked Questions</h2>
+          <p>Have questions about chiropractic care? We've got answers.</p>
+          <a href="/contact" class="btn btn--primary">Ask a Question</a>
         </div>
 
-        <div class="testimonial">
-          <div class="testimonial__stars">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-item__question" aria-expanded="false">
+              <span>What should I expect during my first visit?</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__answer">
+              <p>Your first visit includes a comprehensive consultation, examination, and discussion of your health history. We'll take the time to understand your concerns and create a personalized treatment plan. Expect to spend about 45-60 minutes with us.</p>
+            </div>
           </div>
-          <p class="testimonial__text">"After years of back pain, I finally found someone who could help. The neuro rehabilitation has been life-changing for my balance."</p>
-          <p class="testimonial__author">— Robert K.</p>
-        </div>
 
-        <div class="testimonial">
-          <div class="testimonial__stars">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <div class="faq-item">
+            <button class="faq-item__question" aria-expanded="false">
+              <span>Is chiropractic care safe?</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__answer">
+              <p>Yes, chiropractic care is very safe when performed by a licensed professional. Dr. Beyerl uses gentle techniques and adjusts his approach based on each patient's comfort level and health needs.</p>
+            </div>
           </div>
-          <p class="testimonial__text">"I appreciate that I'm not just a number here. Dr. Beyerl genuinely cares about my wellbeing and takes the time to educate me."</p>
-          <p class="testimonial__author">— Jennifer L.</p>
+
+          <div class="faq-item">
+            <button class="faq-item__question" aria-expanded="false">
+              <span>How many visits will I need?</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__answer">
+              <p>The number of visits varies based on your condition and goals. Some patients feel relief after just a few visits, while others benefit from ongoing wellness care. We'll discuss a recommended treatment plan during your first visit.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__question" aria-expanded="false">
+              <span>Do you accept insurance?</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__answer">
+              <p>We accept most major insurance plans and can help you understand your coverage. Contact our office for specific information about your insurance plan.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- CTA Section -->
-  <section class="section section--dark cta-section">
-    <div class="container text-center">
-      <h2>Ready to Start Feeling Better?</h2>
-      <p>Schedule your appointment today and take the first step toward a pain-free, active life.</p>
-      <div class="cta-actions">
-        <a href="/contact" class="btn btn--primary btn--lg">Book Your Appointment</a>
-        <a href="tel:8582777500" class="btn btn--secondary btn--lg" style="border-color: white; color: white;">Call (858) 277-7500</a>
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Book Your Appointment Now</h2>
+        <p>Take the first step toward a pain-free, active life. Schedule your consultation today.</p>
+        <div class="cta-actions">
+          <a href="/contact" class="btn btn--white btn--lg">Request Appointment</a>
+          <a href="tel:8582777500" class="btn btn--outline-white btn--lg">Call (858) 277-7500</a>
+        </div>
       </div>
     </div>
   </section>
 </Layout>
 
 <style>
-  /* Hero */
+  /* Hero Section - Split Layout */
   .hero {
-    position: relative;
-    min-height: 600px;
-    display: flex;
+    padding: 180px 0 80px;
+    background: linear-gradient(135deg, var(--color-off-white) 0%, var(--color-white) 100%);
+  }
+
+  .hero__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4xl);
     align-items: center;
-    padding: 120px 0 80px;
-    margin-top: 70px;
-  }
-
-  .hero__bg {
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-  }
-
-  .hero__bg-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .hero__overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, rgba(30, 41, 59, 0.85) 0%, rgba(30, 41, 59, 0.6) 100%);
-  }
-
-  .hero__container {
-    position: relative;
-    z-index: 1;
-  }
-
-  .hero__content {
-    max-width: 700px;
-    color: white;
   }
 
   .hero__content h1 {
-    color: white;
     margin-bottom: var(--space-lg);
+    line-height: 1.1;
   }
 
   .hero__content p {
-    font-size: 1.25rem;
-    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.125rem;
     margin-bottom: var(--space-xl);
-    line-height: 1.7;
+    color: var(--color-gray-dark);
   }
 
   .hero__actions {
@@ -281,12 +301,71 @@ import Layout from '../layouts/Layout.astro';
     flex-wrap: wrap;
   }
 
-  /* About Grid */
+  .hero__image img {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl);
+  }
+
+  /* Services Grid */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+  }
+
+  .service-card {
+    background: var(--color-white);
+    border: 1px solid var(--color-gray-light);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    text-align: center;
+    text-decoration: none;
+    transition: all var(--transition-normal);
+  }
+
+  .service-card:hover {
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+  }
+
+  .service-card__icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto var(--space-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-primary-light);
+    border-radius: var(--radius-lg);
+    color: var(--color-primary);
+  }
+
+  .service-card__title {
+    font-size: 1.125rem;
+    margin-bottom: var(--space-sm);
+    color: var(--color-charcoal);
+  }
+
+  .service-card__text {
+    font-size: 0.9375rem;
+    color: var(--color-gray-dark);
+    margin: 0;
+  }
+
+  /* About Section */
   .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--space-4xl);
     align-items: center;
+  }
+
+  .about-image img {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
   }
 
   .about-content h2 {
@@ -301,51 +380,194 @@ import Layout from '../layouts/Layout.astro';
     margin-bottom: var(--space-xl);
   }
 
-  .about-image img {
-    width: 100%;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-lg);
-  }
-
-  /* Benefits */
-  .benefit {
-    text-align: center;
-    padding: var(--space-xl);
-  }
-
-  .benefit__icon {
-    width: 64px;
-    height: 64px;
-    margin: 0 auto var(--space-lg);
+  /* Google Rating */
+  .google-rating {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--color-primary-light);
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+  }
+
+  .google-rating__stars {
+    display: flex;
+    gap: 2px;
+  }
+
+  .google-rating__text {
+    font-weight: 600;
+    color: var(--color-charcoal);
+  }
+
+  /* Reviews Grid */
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+  }
+
+  .review-card {
+    background: var(--color-white);
+    border: 1px solid var(--color-gray-light);
     border-radius: var(--radius-lg);
-    color: var(--color-primary);
+    padding: var(--space-xl);
   }
 
-  .benefit h3 {
-    margin-bottom: var(--space-sm);
-    font-size: 1.25rem;
+  .review-card__stars {
+    display: flex;
+    gap: 2px;
+    margin-bottom: var(--space-md);
   }
 
-  .benefit p {
+  .review-card__text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-md);
+  }
+
+  .review-card__author {
+    font-weight: 600;
     color: var(--color-gray-dark);
     margin: 0;
   }
 
-  /* CTA Section */
-  .cta-section h2 {
+  /* Why Choose Us Section */
+  .section--primary {
+    background: var(--color-primary);
+    padding: var(--space-4xl) 0;
+  }
+
+  .reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+    margin-top: var(--space-3xl);
+  }
+
+  .reason-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    text-align: center;
+  }
+
+  .reason-card__icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto var(--space-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    color: var(--color-white);
+  }
+
+  .reason-card__title {
+    font-size: 1.25rem;
+    color: var(--color-white);
+    margin-bottom: var(--space-sm);
+  }
+
+  .reason-card__text {
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+  }
+
+  /* FAQ Section */
+  .faq-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--space-4xl);
+    align-items: start;
+  }
+
+  .faq-header h2 {
     margin-bottom: var(--space-md);
   }
 
-  .cta-section p {
-    font-size: 1.25rem;
+  .faq-header p {
     margin-bottom: var(--space-xl);
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+  }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .faq-item {
+    border: 1px solid var(--color-gray-light);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+  }
+
+  .faq-item__question {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-lg);
+    background: var(--color-white);
+    border: none;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-charcoal);
+    cursor: pointer;
+    text-align: left;
+    transition: background var(--transition-fast);
+  }
+
+  .faq-item__question:hover {
+    background: var(--color-off-white);
+  }
+
+  .faq-item__question svg {
+    flex-shrink: 0;
+    transition: transform var(--transition-normal);
+  }
+
+  .faq-item__question[aria-expanded="true"] svg {
+    transform: rotate(180deg);
+  }
+
+  .faq-item__answer {
+    display: none;
+    padding: 0 var(--space-lg) var(--space-lg);
+    background: var(--color-white);
+  }
+
+  .faq-item__answer p {
+    margin: 0;
+  }
+
+  .faq-item.active .faq-item__answer {
+    display: block;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    background: var(--color-charcoal);
+    padding: var(--space-4xl) 0;
+  }
+
+  .cta-content {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .cta-content h2 {
+    color: var(--color-white);
+    margin-bottom: var(--space-md);
+  }
+
+  .cta-content p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.125rem;
+    margin-bottom: var(--space-xl);
   }
 
   .cta-actions {
@@ -355,44 +577,116 @@ import Layout from '../layouts/Layout.astro';
     flex-wrap: wrap;
   }
 
+  /* Button Variants */
+  .btn--outline {
+    background: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+  }
+
+  .btn--outline:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
+  }
+
+  .btn--white {
+    background: var(--color-white);
+    color: var(--color-charcoal);
+  }
+
+  .btn--white:hover {
+    background: var(--color-off-white);
+  }
+
+  .btn--outline-white {
+    background: transparent;
+    color: var(--color-white);
+    border: 2px solid var(--color-white);
+  }
+
+  .btn--outline-white:hover {
+    background: var(--color-white);
+    color: var(--color-charcoal);
+  }
+
+  /* Utilities */
+  .text-primary {
+    color: var(--color-primary);
+  }
+
+  .text-white {
+    color: var(--color-white);
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
   /* Responsive */
   @media (max-width: 1024px) {
-    .about-grid {
+    .hero__grid,
+    .about-grid,
+    .faq-layout {
       grid-template-columns: 1fr;
       gap: var(--space-2xl);
     }
 
-    .about-image {
+    .hero__image {
       order: -1;
+    }
+
+    .services-grid,
+    .reviews-grid,
+    .reasons-grid {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 
   @media (max-width: 768px) {
     .hero {
-      min-height: 500px;
-      padding: 100px 0 60px;
+      padding: 140px 0 60px;
     }
 
-    .hero__content p {
-      font-size: 1.1rem;
+    .services-grid,
+    .reviews-grid,
+    .reasons-grid {
+      grid-template-columns: 1fr;
     }
 
-    .hero__actions {
-      flex-direction: column;
-    }
-
-    .hero__actions .btn {
-      width: 100%;
-    }
-  }
-
-  @media (max-width: 640px) {
+    .hero__actions,
     .cta-actions {
       flex-direction: column;
     }
 
+    .hero__actions .btn,
     .cta-actions .btn {
       width: 100%;
     }
   }
 </style>
+
+<script>
+  // FAQ Accordion
+  const faqItems = document.querySelectorAll('.faq-item');
+
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-item__question');
+
+    question?.addEventListener('click', () => {
+      const isExpanded = question.getAttribute('aria-expanded') === 'true';
+
+      // Close all other items
+      faqItems.forEach(otherItem => {
+        const otherQuestion = otherItem.querySelector('.faq-item__question');
+        otherQuestion?.setAttribute('aria-expanded', 'false');
+        otherItem.classList.remove('active');
+      });
+
+      // Toggle current item
+      if (!isExpanded) {
+        question.setAttribute('aria-expanded', 'true');
+        item.classList.add('active');
+      }
+    });
+  });
+</script>
