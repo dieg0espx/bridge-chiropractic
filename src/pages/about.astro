@@ -385,6 +385,20 @@ import Layout from '../layouts/Layout.astro';
     }
   }
 
+  @media (max-width: 480px) {
+    .page-hero {
+      padding: 100px 0 40px;
+    }
+
+    .about-stats {
+      gap: var(--space-lg);
+    }
+
+    .philosophy-card {
+      padding: var(--space-lg);
+    }
+  }
+
   @media (max-width: 640px) {
     .expect-step {
       flex-direction: column;

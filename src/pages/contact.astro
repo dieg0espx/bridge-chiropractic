@@ -278,6 +278,20 @@ import Layout from '../layouts/Layout.astro';
     }
   }
 
+  @media (max-width: 480px) {
+    .page-hero {
+      padding: 100px 0 40px;
+    }
+
+    .contact-card {
+      padding: var(--space-lg);
+    }
+
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+  }
+
   @media (max-width: 640px) {
     .form-row {
       grid-template-columns: 1fr;

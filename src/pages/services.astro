@@ -328,6 +328,28 @@ import Layout from '../layouts/Layout.astro';
     }
   }
 
+  @media (max-width: 480px) {
+    .page-hero {
+      padding: 100px 0 40px;
+    }
+
+    .service-nav-item {
+      padding: var(--space-lg);
+    }
+
+    .service-content h2 {
+      font-size: 1.5rem;
+    }
+
+    .cta-actions {
+      flex-direction: column;
+    }
+
+    .cta-actions .btn {
+      width: 100%;
+    }
+  }
+
   @media (max-width: 640px) {
     .services-nav {
       grid-template-columns: 1fr;

@@ -352,7 +352,7 @@ const { title, description = "Personalized chiropractic care for San Diego adult
       .mobile-nav {
         display: none;
         position: fixed;
-        top: 145px;
+        top: 112px;
         left: 0;
         right: 0;
         background: var(--color-white);
@@ -432,6 +432,7 @@ const { title, description = "Personalized chiropractic care for San Diego adult
 
         .mobile-nav {
           display: block;
+          top: 112px; /* 42px top-bar + 70px header */
         }
       }
 
@@ -444,31 +445,40 @@ const { title, description = "Personalized chiropractic care for San Diego adult
           top: 0;
         }
 
-        .mobile-nav {
-          top: 100px;
+        .header__container {
+          height: 60px;
         }
 
         .header__logo-card {
-          padding: var(--space-xs) var(--space-sm);
-          top: -5px;
+          padding: 8px var(--space-sm);
+          top: 12px;
         }
 
         .header__logo-img {
-          height: 70px;
+          height: 60px;
+        }
+
+        .mobile-nav {
+          top: 60px;
         }
       }
 
-      @media (max-width: 640px) {
+      @media (max-width: 480px) {
+        .header__container {
+          height: 56px;
+        }
+
         .header__logo-card {
-          padding: var(--space-xs) var(--space-sm);
+          padding: 6px var(--space-xs);
+          top: 8px;
         }
 
         .header__logo-img {
-          height: 55px;
+          height: 48px;
         }
 
         .mobile-nav {
-          top: 90px;
+          top: 56px;
         }
       }
 

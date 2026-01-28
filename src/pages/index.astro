@@ -644,7 +644,7 @@ import Layout from '../layouts/Layout.astro';
 
   @media (max-width: 768px) {
     .hero {
-      padding: 140px 0 60px;
+      padding: 130px 0 60px;
     }
 
     .services-grid,
@@ -661,6 +661,40 @@ import Layout from '../layouts/Layout.astro';
     .hero__actions .btn,
     .cta-actions .btn {
       width: 100%;
+    }
+
+    .faq-header {
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero {
+      padding: 110px 0 40px;
+    }
+
+    .hero__content h1 {
+      font-size: 1.75rem;
+    }
+
+    .section--primary {
+      padding: var(--space-3xl) 0;
+    }
+
+    .cta-section {
+      padding: var(--space-3xl) 0;
+    }
+
+    .service-card {
+      padding: var(--space-lg);
+    }
+
+    .review-card {
+      padding: var(--space-lg);
+    }
+
+    .reason-card {
+      padding: var(--space-lg);
     }
   }
 </style>
