@@ -17,7 +17,7 @@ import Layout from '../layouts/Layout.astro';
     <div class="container">
       <div class="about-grid">
         <div class="about-image">
-          <img src="/images/dr-portrait.jpg" alt="Dr. Nathan Beyerl - San Diego Chiropractor" />
+          <img src="/images/IMG_0954.JPG" alt="Dr. Nathan Beyerl - San Diego Chiropractor" />
         </div>
         <div class="about-content">
           <h2>Healthcare That Empowers</h2>
@@ -130,25 +130,50 @@ import Layout from '../layouts/Layout.astro';
           <p>Committed to continuous learning and the highest standards of care.</p>
         </div>
 
-        <ul class="check-list credentials-list">
-          <li>Doctor of Chiropractic (D.C.)</li>
-          <li>Licensed in California</li>
-          <li>Specialized training in neuro/brain rehabilitation</li>
-          <li>Certified in movement and mobility assessment</li>
-          <li>Continuing education in geriatric care</li>
-        </ul>
+        <div class="credentials-list">
+          <div class="credential-item">
+            <div class="credential-item__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            </div>
+            <span>Doctor of Chiropractic (D.C.)</span>
+          </div>
+          <div class="credential-item">
+            <div class="credential-item__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M9 15l2 2 4-4"/></svg>
+            </div>
+            <span>Licensed in California</span>
+          </div>
+          <div class="credential-item">
+            <div class="credential-item__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+            </div>
+            <span>Specialized training in neuro/brain rehabilitation</span>
+          </div>
+          <div class="credential-item">
+            <div class="credential-item__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+            </div>
+            <span>Certified in movement and mobility assessment</span>
+          </div>
+          <div class="credential-item">
+            <div class="credential-item__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            </div>
+            <span>Continuing education in geriatric care</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="section cta-section">
+  <section class="cta-section">
     <div class="container text-center">
       <h2>Ready to Experience the Difference?</h2>
       <p>Schedule your first visit and see what calm, personalized care feels like.</p>
       <div class="cta-actions">
-        <a href="/contact" class="btn btn--primary btn--lg">Book Your Visit</a>
-        <a href="tel:8582777500" class="btn btn--secondary btn--lg">Call (858) 277-7500</a>
+        <a href="/contact" class="btn btn--white btn--lg">Book Your Visit</a>
+        <a href="tel:8582777500" class="btn btn--outline-white btn--lg">Call (858) 277-7500</a>
       </div>
     </div>
   </section>
@@ -325,13 +350,49 @@ import Layout from '../layouts/Layout.astro';
     font-size: 1.1rem;
   }
 
-  .credentials-list li::before {
-    background: var(--color-success);
+  .credentials-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .credential-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+  }
+
+  .credential-item__icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(113, 196, 233, 0.2);
+    border-radius: var(--radius-md);
+    color: var(--color-primary);
+  }
+
+  .credential-item span {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    line-height: 1.5;
   }
 
   /* CTA Section */
   .cta-section {
-    background: var(--color-off-white);
+    background: var(--color-primary);
+    padding: var(--space-4xl) 0;
+  }
+
+  .cta-section h2,
+  .cta-section p {
+    color: var(--color-white);
+  }
+
+  .cta-section p {
+    color: rgba(255, 255, 255, 0.9);
   }
 
   .cta-section h2 {

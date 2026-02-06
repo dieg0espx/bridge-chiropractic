@@ -18,7 +18,7 @@ const { title, description = "Personalized chiropractic care for San Diego adult
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -59,6 +59,8 @@ const { title, description = "Personalized chiropractic care for San Diego adult
             <li><a href="/">Home</a></li>
             <li><a href="/about">About</a></li>
             <li><a href="/services">Services</a></li>
+            <li><a href="/conditions">Conditions</a></li>
+            <li><a href="/testimonials">Testimonials</a></li>
             <li><a href="/contact">Contact</a></li>
           </ul>
         </nav>
@@ -80,6 +82,9 @@ const { title, description = "Personalized chiropractic care for San Diego adult
           <li><a href="/">Home</a></li>
           <li><a href="/about">About</a></li>
           <li><a href="/services">Services</a></li>
+          <li><a href="/conditions">Conditions</a></li>
+          <li><a href="/testimonials">Testimonials</a></li>
+          <li><a href="/faq">FAQ</a></li>
           <li><a href="/contact">Contact</a></li>
         </ul>
         <div class="mobile-nav__actions">
@@ -97,34 +102,40 @@ const { title, description = "Personalized chiropractic care for San Diego adult
     </main>
 
     <footer class="footer">
-      <div class="container">
-        <div class="footer__top">
-          <div class="footer__brand">
-            <a href="/" class="footer__logo">
-              <img src="/images/logo.svg" alt="The Bridge Chiropractic" class="footer__logo-img" />
-            </a>
-            <p class="footer__tagline">Move Better. Live Fuller.</p>
-            <div class="footer__social">
-              <a href="https://instagram.com/bridgechiropracticsd" aria-label="Instagram" target="_blank" rel="noopener">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+      <!-- Main Footer -->
+      <div class="footer__main">
+        <div class="container">
+          <div class="footer__grid">
+            <!-- Brand Column -->
+            <div class="footer__brand">
+              <a href="/" class="footer__logo">
+                <img src="/images/logo.svg" alt="The Bridge Chiropractic" class="footer__logo-img" />
               </a>
-              <a href="https://facebook.com/bridgechiropracticsd" aria-label="Facebook" target="_blank" rel="noopener">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-              </a>
+              <p class="footer__tagline">Move Better. Live Fuller.</p>
+              <p class="footer__description">Personalized chiropractic care for San Diego adults who want to stay active, independent, and pain-free.</p>
+              <div class="footer__social">
+                <a href="https://instagram.com/bridgechiropracticsd" aria-label="Instagram" target="_blank" rel="noopener">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </a>
+                <a href="https://facebook.com/bridgechiropracticsd" aria-label="Facebook" target="_blank" rel="noopener">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                </a>
+              </div>
             </div>
-          </div>
 
-          <div class="footer__nav">
+            <!-- Quick Links -->
             <div class="footer__col">
-              <h4>Navigation</h4>
+              <h4>Quick Links</h4>
               <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/services">Services</a></li>
-                <li><a href="/contact">Contact</a></li>
+                <li><a href="/about">About Dr. Beyerl</a></li>
+                <li><a href="/services">Our Services</a></li>
+                <li><a href="/conditions">Conditions We Treat</a></li>
+                <li><a href="/testimonials">Patient Stories</a></li>
+                <li><a href="/faq">FAQ</a></li>
               </ul>
             </div>
 
+            <!-- Services -->
             <div class="footer__col">
               <h4>Services</h4>
               <ul>
@@ -135,22 +146,43 @@ const { title, description = "Personalized chiropractic care for San Diego adult
               </ul>
             </div>
 
-            <div class="footer__col">
-              <h4>Contact</h4>
-              <address>
-                <p>4340 Genesee Ave, Suite 201<br>San Diego, CA 92117</p>
-                <p><a href="tel:8582777500">(858) 277-7500</a></p>
-                <p><a href="mailto:bridgechiropracticsd@gmail.com">bridgechiropracticsd@gmail.com</a></p>
-              </address>
+            <!-- Contact Info -->
+            <div class="footer__col footer__contact">
+              <h4>Visit Us</h4>
+              <div class="footer__contact-item">
+                <div class="footer__contact-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                </div>
+                <address>
+                  4340 Genesee Ave, Suite 201<br>
+                  San Diego, CA 92117
+                </address>
+              </div>
+              <div class="footer__contact-item">
+                <div class="footer__contact-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                </div>
+                <span>Mon - Fri: 9am - 5pm</span>
+              </div>
+              <a href="https://maps.google.com/?q=4340+Genesee+Ave+Suite+201+San+Diego+CA+92117" target="_blank" rel="noopener" class="footer__directions">
+                Get Directions
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="footer__bottom">
-          <p>&copy; {new Date().getFullYear()} The Bridge Chiropractic. All rights reserved.</p>
-          <div class="footer__legal">
-            <a href="/privacy">Privacy</a>
-            <a href="/terms">Terms</a>
+      <!-- Footer Bottom -->
+      <div class="footer__bottom">
+        <div class="container">
+          <div class="footer__bottom-content">
+            <p>&copy; {new Date().getFullYear()} The Bridge Chiropractic. All rights reserved.</p>
+            <div class="footer__legal">
+              <a href="/privacy">Privacy Policy</a>
+              <span class="footer__divider">|</span>
+              <a href="/terms">Terms of Service</a>
+            </div>
           </div>
         </div>
       </div>
@@ -486,19 +518,85 @@ const { title, description = "Personalized chiropractic care for San Diego adult
       .footer {
         background: var(--color-charcoal);
         color: var(--color-white);
-        padding: var(--space-3xl) 0 var(--space-xl);
       }
 
-      .footer__top {
+      /* Footer CTA Banner */
+      .footer__cta {
+        background: var(--color-primary);
+        padding: var(--space-xl) 0;
+      }
+
+      .footer__cta-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--space-xl);
+      }
+
+      .footer__cta-text h3 {
+        color: var(--color-white);
+        font-size: 1.5rem;
+        margin-bottom: var(--space-xs);
+      }
+
+      .footer__cta-text p {
+        color: rgba(255, 255, 255, 0.9);
+        margin: 0;
+      }
+
+      .footer__cta-actions {
+        display: flex;
+        align-items: center;
+        gap: var(--space-lg);
+      }
+
+      .footer__cta-phone {
+        display: flex;
+        align-items: center;
+        gap: var(--space-sm);
+        color: var(--color-white);
+        font-weight: 600;
+        text-decoration: none;
+        transition: opacity var(--transition-fast);
+      }
+
+      .footer__cta-phone:hover {
+        opacity: 0.8;
+      }
+
+      .btn--white {
+        background: var(--color-white);
+        color: var(--color-charcoal);
+        padding: 12px 28px;
+        border-radius: var(--radius-full);
+        font-weight: 600;
+        text-decoration: none;
+        transition: all var(--transition-normal);
+      }
+
+      .btn--white:hover {
+        background: var(--color-off-white);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Footer Main */
+      .footer__main {
+        padding: var(--space-4xl) 0 var(--space-3xl);
+      }
+
+      .footer__grid {
         display: grid;
-        grid-template-columns: 1fr 2fr;
-        gap: var(--space-4xl);
-        padding-bottom: var(--space-3xl);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+        gap: var(--space-3xl);
+      }
+
+      .footer__brand {
+        padding-right: var(--space-xl);
       }
 
       .footer__logo {
-        display: flex;
+        display: inline-flex;
         align-items: center;
         text-decoration: none;
         margin-bottom: var(--space-md);
@@ -511,7 +609,16 @@ const { title, description = "Personalized chiropractic care for San Diego adult
       }
 
       .footer__tagline {
+        color: var(--color-primary);
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: var(--space-md);
+      }
+
+      .footer__description {
         color: rgba(255, 255, 255, 0.6);
+        font-size: 0.95rem;
+        line-height: 1.7;
         margin-bottom: var(--space-lg);
       }
 
@@ -521,12 +628,13 @@ const { title, description = "Personalized chiropractic care for San Diego adult
       }
 
       .footer__social a {
-        width: 40px;
-        height: 40px;
+        width: 44px;
+        height: 44px;
         display: flex;
         align-items: center;
         justify-content: center;
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.1);
         border-radius: var(--radius-md);
         color: rgba(255, 255, 255, 0.7);
         transition: all var(--transition-fast);
@@ -534,22 +642,30 @@ const { title, description = "Personalized chiropractic care for San Diego adult
 
       .footer__social a:hover {
         background: var(--color-primary);
+        border-color: var(--color-primary);
         color: var(--color-white);
-      }
-
-      .footer__nav {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: var(--space-xl);
+        transform: translateY(-2px);
       }
 
       .footer__col h4 {
         color: var(--color-white);
-        font-size: 0.875rem;
-        font-weight: 600;
+        font-size: 0.8rem;
+        font-weight: 700;
         margin-bottom: var(--space-lg);
         text-transform: uppercase;
-        letter-spacing: 0.05em;
+        letter-spacing: 0.1em;
+        position: relative;
+        padding-bottom: var(--space-sm);
+      }
+
+      .footer__col h4::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 30px;
+        height: 2px;
+        background: var(--color-primary);
       }
 
       .footer__col ul {
@@ -563,46 +679,91 @@ const { title, description = "Personalized chiropractic care for San Diego adult
       .footer__col a {
         color: rgba(255, 255, 255, 0.6);
         text-decoration: none;
-        transition: color var(--transition-fast);
+        font-size: 0.95rem;
+        transition: all var(--transition-fast);
+        display: inline-block;
       }
 
       .footer__col a:hover {
         color: var(--color-primary);
+        transform: translateX(4px);
       }
 
-      .footer__col address {
+      /* Footer Contact */
+      .footer__contact-item {
+        display: flex;
+        gap: var(--space-md);
+        margin-bottom: var(--space-md);
+      }
+
+      .footer__contact-icon {
+        flex-shrink: 0;
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: var(--radius-sm);
+        color: var(--color-primary);
+      }
+
+      .footer__contact-item address,
+      .footer__contact-item span {
         font-style: normal;
         color: rgba(255, 255, 255, 0.6);
-        line-height: 1.7;
+        font-size: 0.95rem;
+        line-height: 1.6;
       }
 
-      .footer__col address p {
-        margin-bottom: var(--space-sm);
-        color: rgba(255, 255, 255, 0.6);
+      .footer__directions {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--space-xs);
+        color: var(--color-primary);
+        font-weight: 600;
+        font-size: 0.9rem;
+        text-decoration: none;
+        margin-top: var(--space-sm);
+        transition: gap var(--transition-fast);
       }
 
+      .footer__directions:hover {
+        gap: var(--space-sm);
+      }
+
+      /* Footer Bottom */
       .footer__bottom {
+        background: rgba(0, 0, 0, 0.2);
+        padding: var(--space-lg) 0;
+      }
+
+      .footer__bottom-content {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-top: var(--space-xl);
         font-size: 0.875rem;
-        color: rgba(255, 255, 255, 0.5);
+        color: rgba(255, 255, 255, 0.4);
       }
 
       .footer__bottom p {
         margin: 0;
-        color: rgba(255, 255, 255, 0.5);
       }
 
       .footer__legal {
         display: flex;
-        gap: var(--space-lg);
+        align-items: center;
+        gap: var(--space-md);
+      }
+
+      .footer__divider {
+        color: rgba(255, 255, 255, 0.2);
       }
 
       .footer__legal a {
-        color: rgba(255, 255, 255, 0.5);
+        color: rgba(255, 255, 255, 0.4);
         text-decoration: none;
+        transition: color var(--transition-fast);
       }
 
       .footer__legal a:hover {
@@ -610,27 +771,71 @@ const { title, description = "Personalized chiropractic care for San Diego adult
       }
 
       @media (max-width: 1024px) {
-        .footer__top {
-          grid-template-columns: 1fr;
+        .footer__grid {
+          grid-template-columns: 1fr 1fr;
           gap: var(--space-2xl);
         }
 
-        .footer__nav {
-          grid-template-columns: repeat(2, 1fr);
+        .footer__brand {
+          grid-column: span 2;
+          padding-right: 0;
+          text-align: center;
+        }
+
+        .footer__social {
+          justify-content: center;
+        }
+
+        .footer__col h4::after {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+
+        .footer__col {
+          text-align: center;
+        }
+
+        .footer__col a:hover {
+          transform: none;
+        }
+
+        .footer__contact-item {
+          justify-content: center;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .footer__cta-content {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .footer__cta-actions {
+          flex-direction: column;
+          width: 100%;
+        }
+
+        .btn--white {
+          width: 100%;
+          text-align: center;
         }
       }
 
       @media (max-width: 640px) {
-        .footer {
-          padding: var(--space-2xl) 0 var(--space-lg);
+        .footer__main {
+          padding: var(--space-2xl) 0;
         }
 
-        .footer__nav {
+        .footer__grid {
           grid-template-columns: 1fr;
           gap: var(--space-xl);
         }
 
-        .footer__bottom {
+        .footer__brand {
+          grid-column: span 1;
+        }
+
+        .footer__bottom-content {
           flex-direction: column;
           gap: var(--space-md);
           text-align: center;
@@ -683,6 +888,171 @@ const { title, description = "Personalized chiropractic care for San Diego adult
         if (link.getAttribute('href') === currentPath) {
           link.classList.add('active');
         }
+      });
+
+      // ========================================
+      // SCROLL ANIMATIONS
+      // ========================================
+
+      // Intersection Observer for scroll-triggered animations
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px 0px -100px 0px',
+        threshold: 0.1
+      };
+
+      const animationObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animated');
+            // Optionally unobserve after animation
+            // animationObserver.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      // Observe all elements with data-animate attribute
+      document.querySelectorAll('[data-animate]').forEach(el => {
+        animationObserver.observe(el);
+      });
+
+      // Observe stagger-children containers
+      document.querySelectorAll('.stagger-children').forEach(el => {
+        animationObserver.observe(el);
+      });
+
+      // Auto-add animations to common elements
+      const autoAnimateSelectors = [
+        '.section__header',
+        '.section__eyebrow',
+        '.service-card',
+        '.condition-card',
+        '.review-card',
+        '.highlight-card',
+        '.reason-card',
+        '.about-grid > *',
+        '.hero__content',
+        '.hero__image',
+        '.intro-card',
+        '.note-box',
+        '.faq-item',
+        '.stat',
+        '.credential-item'
+      ];
+
+      autoAnimateSelectors.forEach(selector => {
+        document.querySelectorAll(selector).forEach((el, index) => {
+          if (!el.hasAttribute('data-animate')) {
+            el.setAttribute('data-animate', 'fade-up');
+            el.setAttribute('data-animate-delay', String(Math.min(index * 100, 600)));
+            animationObserver.observe(el);
+          }
+        });
+      });
+
+      // ========================================
+      // SCROLL PROGRESS BAR
+      // ========================================
+
+      // Create scroll progress bar
+      const scrollProgress = document.createElement('div');
+      scrollProgress.className = 'scroll-progress';
+      document.body.prepend(scrollProgress);
+
+      window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollPercent = scrollTop / docHeight;
+        scrollProgress.style.transform = `scaleX(${scrollPercent})`;
+      });
+
+      // ========================================
+      // COUNTER ANIMATION
+      // ========================================
+
+      function animateCounter(el: Element) {
+        const target = parseInt(el.getAttribute('data-count') || el.textContent || '0');
+        const duration = 2000;
+        const start = 0;
+        const startTime = performance.now();
+
+        function update(currentTime: number) {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+
+          // Easing function
+          const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+          const current = Math.floor(start + (target - start) * easeOutQuart);
+
+          el.textContent = current.toLocaleString() + (el.getAttribute('data-suffix') || '');
+
+          if (progress < 1) {
+            requestAnimationFrame(update);
+          }
+        }
+
+        requestAnimationFrame(update);
+      }
+
+      // Observe counters
+      const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            animateCounter(entry.target);
+            counterObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+
+      document.querySelectorAll('[data-count]').forEach(el => {
+        counterObserver.observe(el);
+      });
+
+      // ========================================
+      // SMOOTH REVEAL FOR IMAGES
+      // ========================================
+
+      document.querySelectorAll('.img-reveal').forEach(el => {
+        animationObserver.observe(el);
+      });
+
+      // ========================================
+      // PARALLAX EFFECT (subtle)
+      // ========================================
+
+      const parallaxElements = document.querySelectorAll('[data-parallax]');
+
+      if (parallaxElements.length > 0) {
+        window.addEventListener('scroll', () => {
+          const scrollY = window.scrollY;
+
+          parallaxElements.forEach(el => {
+            const speed = parseFloat(el.getAttribute('data-parallax') || '0.5');
+            const rect = (el as HTMLElement).getBoundingClientRect();
+            const offsetTop = rect.top + scrollY;
+            const yPos = (scrollY - offsetTop) * speed;
+
+            (el as HTMLElement).style.transform = `translateY(${yPos}px)`;
+          });
+        });
+      }
+
+      // ========================================
+      // MAGNETIC BUTTONS (optional hover effect)
+      // ========================================
+
+      document.querySelectorAll('.btn--primary, .header__cta').forEach(btn => {
+        btn.addEventListener('mousemove', (e) => {
+          const rect = (btn as HTMLElement).getBoundingClientRect();
+          const x = (e as MouseEvent).clientX - rect.left - rect.width / 2;
+          const y = (e as MouseEvent).clientY - rect.top - rect.height / 2;
+
+          (btn as HTMLElement).style.transform = `translate(${x * 0.1}px, ${y * 0.1}px)`;
+        });
+
+        btn.addEventListener('mouseleave', () => {
+          (btn as HTMLElement).style.transform = '';
+        });
       });
     </script>
   </body>
