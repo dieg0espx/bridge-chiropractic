@@ -14,7 +14,7 @@ import Layout from '../layouts/Layout.astro';
   <!-- Content -->
   <section class="section">
     <div class="container">
-      <div class="legal-content">
+      <div class="legal-content glass-card reveal">
         <h2>Agreement to Terms</h2>
         <p>By accessing and using this website (bridgechiropracticsd.com), you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our website.</p>
 
@@ -80,29 +80,36 @@ import Layout from '../layouts/Layout.astro';
 <style>
   /* Page Hero */
   .page-hero {
-    background: var(--color-off-white);
-    padding: 140px 0 60px;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+    padding: 160px 0 80px;
     text-align: center;
   }
 
   .page-hero h1 {
-    margin-bottom: var(--space-sm);
+    color: var(--color-white);
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    margin-bottom: var(--space-md);
   }
 
   .page-hero p {
-    color: var(--color-gray-dark);
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.125rem;
   }
 
   /* Legal Content */
   .legal-content {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
+    padding: var(--space-4xl);
   }
 
   .legal-content h2 {
-    margin-top: var(--space-3xl);
+    font-family: var(--font-heading);
+    font-size: 1.875rem;
+    margin-top: var(--space-4xl);
     margin-bottom: var(--space-lg);
-    color: var(--color-charcoal);
+    color: var(--color-primary);
   }
 
   .legal-content h2:first-child {
@@ -110,53 +117,106 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .legal-content h3 {
-    margin-top: var(--space-xl);
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    margin-top: var(--space-2xl);
     margin-bottom: var(--space-md);
-    font-size: 1.1rem;
+    color: var(--color-charcoal);
   }
 
   .legal-content p {
-    margin-bottom: var(--space-md);
+    margin-bottom: var(--space-lg);
     line-height: 1.8;
+    color: var(--color-gray-dark);
   }
 
   .legal-content ul {
-    margin-bottom: var(--space-md);
-    padding-left: var(--space-xl);
+    margin-bottom: var(--space-lg);
+    padding-left: var(--space-2xl);
   }
 
   .legal-content li {
     margin-bottom: var(--space-sm);
-    line-height: 1.7;
+    line-height: 1.8;
+    color: var(--color-gray-dark);
   }
 
   .legal-content address {
     font-style: normal;
-    line-height: 1.8;
+    line-height: 1.9;
+    color: var(--color-gray-dark);
   }
 
   .legal-content a {
-    color: var(--color-primary);
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color var(--transition-fast);
   }
 
   .legal-content a:hover {
+    color: var(--color-primary);
     text-decoration: underline;
   }
 
   /* Responsive */
   @media (max-width: 768px) {
     .page-hero {
-      padding: 120px 0 40px;
+      padding: 140px 0 60px;
+    }
+
+    .page-hero h1 {
+      font-size: 2.25rem;
+    }
+
+    .legal-content {
+      padding: var(--space-3xl);
+    }
+
+    .legal-content h2 {
+      font-size: 1.625rem;
     }
   }
 
   @media (max-width: 480px) {
     .page-hero {
-      padding: 100px 0 30px;
+      padding: 120px 0 50px;
+    }
+
+    .page-hero h1 {
+      font-size: 1.875rem;
+    }
+
+    .legal-content {
+      padding: var(--space-2xl);
     }
 
     .legal-content h2 {
-      margin-top: var(--space-2xl);
+      margin-top: var(--space-3xl);
+      font-size: 1.5rem;
+    }
+
+    .legal-content ul {
+      padding-left: var(--space-xl);
     }
   }
 </style>
+
+<script>
+  // Scroll-triggered reveal animations
+  const revealElements = document.querySelectorAll('.reveal');
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  });
+
+  revealElements.forEach(el => revealObserver.observe(el));
+</script>
+</Layout>

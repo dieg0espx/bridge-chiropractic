@@ -3,74 +3,84 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Gallery" description="Take a virtual tour of The Bridge Chiropractic in San Diego. See our calm, welcoming clinic space and treatment rooms.">
-  <!-- Page Hero -->
-  <section class="page-hero">
-    <div class="container">
-      <span class="section__eyebrow">Our Space</span>
-      <h1>Photo Gallery</h1>
-      <p>Take a look at our calm, welcoming clinic environment.</p>
+  <!-- Hero Section -->
+  <section class="hero-fullbleed">
+    <div class="hero-fullbleed__image">
+      <img
+        src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=2400&q=80"
+        alt="Modern chiropractic clinic"
+      />
+    </div>
+    <div class="hero-fullbleed__overlay"></div>
+    <div class="hero-fullbleed__content">
+      <div class="container">
+        <span class="section__eyebrow" style="color: var(--color-off-white);">Our Space</span>
+        <h1 style="color: var(--color-white);">Photo Gallery</h1>
+        <p class="hero-fullbleed__subtitle">Take a look at our calm, welcoming clinic environment.</p>
+      </div>
     </div>
   </section>
 
-  <!-- Gallery -->
+  <!-- Gallery Intro -->
   <section class="section">
     <div class="container">
-      <div class="gallery-intro text-center">
+      <div class="gallery-intro reveal">
         <p>At The Bridge Chiropractic, we've created a space that reflects our approach to care: calm, comfortable, and focused on your wellbeing. Here's a glimpse of what you'll experience when you visit us.</p>
       </div>
 
+      <!-- Gallery Grid -->
       <div class="gallery-grid">
-        <div class="gallery-item gallery-item--large">
-          <img src="/images/gallery/clinic-exterior.jpg" alt="The Bridge Chiropractic clinic exterior" />
+        <div class="gallery-item gallery-item--large reveal">
+          <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80" alt="The Bridge Chiropractic clinic exterior" />
           <div class="gallery-item__overlay">
             <span>Our Clinic</span>
           </div>
         </div>
 
-        <div class="gallery-item">
-          <img src="/images/gallery/reception.jpg" alt="Welcoming reception area" />
+        <div class="gallery-item reveal">
+          <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80" alt="Welcoming reception area" />
           <div class="gallery-item__overlay">
             <span>Reception Area</span>
           </div>
         </div>
 
-        <div class="gallery-item">
-          <img src="/images/gallery/treatment-room.jpg" alt="Treatment room" />
+        <div class="gallery-item reveal">
+          <img src="https://images.unsplash.com/photo-1519494140681-8f17d830d3c9?auto=format&fit=crop&w=800&q=80" alt="Treatment room" />
           <div class="gallery-item__overlay">
             <span>Treatment Room</span>
           </div>
         </div>
 
-        <div class="gallery-item">
-          <img src="/images/gallery/adjustment-table.jpg" alt="Chiropractic adjustment table" />
+        <div class="gallery-item reveal">
+          <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80" alt="Chiropractic adjustment table" />
           <div class="gallery-item__overlay">
             <span>Adjustment Table</span>
           </div>
         </div>
 
-        <div class="gallery-item">
-          <img src="/images/gallery/exercise-area.jpg" alt="Movement and exercise area" />
+        <div class="gallery-item reveal">
+          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80" alt="Movement and exercise area" />
           <div class="gallery-item__overlay">
             <span>Exercise Area</span>
           </div>
         </div>
 
-        <div class="gallery-item gallery-item--large">
-          <img src="/images/gallery/dr-beyerl.jpg" alt="Dr. Nathan Beyerl" />
+        <div class="gallery-item gallery-item--large reveal">
+          <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=1200&q=80" alt="Dr. Nathan Beyerl" />
           <div class="gallery-item__overlay">
             <span>Dr. Nathan Beyerl</span>
           </div>
         </div>
 
-        <div class="gallery-item">
-          <img src="/images/gallery/waiting-area.jpg" alt="Comfortable waiting area" />
+        <div class="gallery-item reveal">
+          <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=800&q=80" alt="Comfortable waiting area" />
           <div class="gallery-item__overlay">
             <span>Waiting Area</span>
           </div>
         </div>
 
-        <div class="gallery-item">
-          <img src="/images/gallery/consultation.jpg" alt="Patient consultation" />
+        <div class="gallery-item reveal">
+          <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80" alt="Patient consultation" />
           <div class="gallery-item__overlay">
             <span>Consultation</span>
           </div>
@@ -79,21 +89,21 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- Note about images -->
-  <section class="section section--gray">
+  <!-- Note Section -->
+  <section class="section section--gray reveal">
     <div class="container">
-      <div class="gallery-note">
+      <div class="gallery-note glass-card">
         <h2>A Space Designed for Healing</h2>
         <p>Our clinic was designed with your comfort in mind. From the moment you walk in, you'll notice the difference—a calm, unhurried environment where healing begins. No crowded waiting rooms, no rushed appointments. Just focused, personalized care in a space that supports your wellbeing.</p>
-        <a href="/contact" class="btn btn--primary">Schedule Your Visit</a>
+        <a href="/contact" class="btn btn--primary btn--lg">Schedule Your Visit</a>
       </div>
     </div>
   </section>
 
-  <!-- Social -->
-  <section class="section">
+  <!-- Social Section -->
+  <section class="section reveal">
     <div class="container">
-      <div class="social-cta">
+      <div class="social-cta glass-card">
         <div class="social-cta__content">
           <h2>Follow Us on Social Media</h2>
           <p>Stay connected and see more of what we do at The Bridge Chiropractic.</p>
@@ -114,40 +124,24 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <style>
-  /* Page Hero */
-  .page-hero {
-    background: var(--color-off-white);
-    padding: 140px 0 80px;
+  /* Gallery Intro */
+  .gallery-intro {
+    max-width: 800px;
+    margin: 0 auto var(--space-4xl);
     text-align: center;
   }
 
-  .page-hero h1 {
-    margin-bottom: var(--space-md);
-  }
-
-  .page-hero p {
-    font-size: 1.25rem;
-    color: var(--color-gray-dark);
-    max-width: 600px;
-    margin: 0 auto;
-  }
-
-  /* Gallery Intro */
-  .gallery-intro {
-    max-width: 700px;
-    margin: 0 auto var(--space-3xl);
-  }
-
   .gallery-intro p {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     line-height: 1.8;
+    color: var(--color-gray-dark);
   }
 
   /* Gallery Grid */
   .gallery-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: var(--space-md);
+    gap: var(--space-lg);
   }
 
   .gallery-item {
@@ -156,6 +150,13 @@ import Layout from '../layouts/Layout.astro';
     border-radius: var(--radius-lg);
     aspect-ratio: 1;
     background: var(--color-gray-light);
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-normal);
+  }
+
+  .gallery-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
   }
 
   .gallery-item--large {
@@ -167,11 +168,11 @@ import Layout from '../layouts/Layout.astro';
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform var(--transition-normal);
+    transition: transform var(--transition-slow);
   }
 
   .gallery-item:hover img {
-    transform: scale(1.05);
+    transform: scale(1.08);
   }
 
   .gallery-item__overlay {
@@ -179,8 +180,8 @@ import Layout from '../layouts/Layout.astro';
     bottom: 0;
     left: 0;
     right: 0;
-    padding: var(--space-lg);
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    padding: var(--space-xl);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
     opacity: 0;
     transition: opacity var(--transition-normal);
   }
@@ -191,24 +192,31 @@ import Layout from '../layouts/Layout.astro';
 
   .gallery-item__overlay span {
     color: var(--color-white);
+    font-size: 1.125rem;
     font-weight: 600;
+    font-family: var(--font-heading);
   }
 
   /* Gallery Note */
   .gallery-note {
     text-align: center;
-    max-width: 700px;
+    max-width: 800px;
     margin: 0 auto;
+    padding: var(--space-4xl);
   }
 
   .gallery-note h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--color-primary);
     margin-bottom: var(--space-lg);
   }
 
   .gallery-note p {
-    font-size: 1.1rem;
+    font-size: 1.125rem;
     line-height: 1.8;
-    margin-bottom: var(--space-xl);
+    color: var(--color-gray-dark);
+    margin-bottom: var(--space-2xl);
   }
 
   /* Social CTA */
@@ -216,44 +224,50 @@ import Layout from '../layouts/Layout.astro';
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: var(--space-xl);
-    padding: var(--space-2xl);
-    background: var(--color-off-white);
-    border-radius: var(--radius-lg);
+    gap: var(--space-2xl);
+    padding: var(--space-3xl);
   }
 
   .social-cta__content h2 {
-    margin-bottom: var(--space-sm);
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin-bottom: var(--space-md);
   }
 
   .social-cta__content p {
     margin: 0;
     color: var(--color-gray-dark);
+    font-size: 1.125rem;
   }
 
   .social-cta__links {
     display: flex;
     gap: var(--space-lg);
+    flex-shrink: 0;
   }
 
   .social-link {
     display: flex;
     align-items: center;
-    gap: var(--space-sm);
-    padding: var(--space-md) var(--space-lg);
-    background: var(--color-white);
+    gap: var(--space-md);
+    padding: var(--space-lg) var(--space-xl);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
     border-radius: var(--radius-md);
     color: var(--color-charcoal);
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
     transition: all var(--transition-fast);
-    border: 1px solid var(--color-gray-light);
+    border: 1px solid rgba(0, 0, 0, 0.08);
   }
 
   .social-link:hover {
-    background: var(--color-primary);
+    background: var(--color-accent);
     color: var(--color-white);
-    border-color: var(--color-primary);
+    border-color: var(--color-accent);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
   }
 
   .social-link svg {
@@ -265,15 +279,26 @@ import Layout from '../layouts/Layout.astro';
     .gallery-grid {
       grid-template-columns: repeat(2, 1fr);
     }
+
+    .social-cta {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .social-cta__links {
+      width: 100%;
+      justify-content: center;
+    }
   }
 
   @media (max-width: 768px) {
-    .page-hero {
-      padding: 120px 0 60px;
+    .gallery-intro p {
+      font-size: 1.125rem;
     }
 
     .gallery-grid {
       grid-template-columns: 1fr;
+      gap: var(--space-md);
     }
 
     .gallery-item--large {
@@ -285,28 +310,64 @@ import Layout from '../layouts/Layout.astro';
       aspect-ratio: 4/3;
     }
 
+    .gallery-note {
+      padding: var(--space-3xl);
+    }
+
+    .gallery-note h2 {
+      font-size: 2rem;
+    }
+
     .social-cta {
-      flex-direction: column;
-      text-align: center;
+      padding: var(--space-2xl);
+    }
+
+    .social-cta__content h2 {
+      font-size: 1.75rem;
     }
 
     .social-cta__links {
       flex-direction: column;
-      width: 100%;
     }
 
     .social-link {
       justify-content: center;
+      width: 100%;
     }
   }
 
   @media (max-width: 480px) {
-    .page-hero {
-      padding: 100px 0 40px;
+    .gallery-note {
+      padding: var(--space-2xl);
+    }
+
+    .gallery-note h2 {
+      font-size: 1.75rem;
     }
 
     .gallery-item__overlay {
       opacity: 1;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
     }
   }
 </style>
+
+<script>
+  // Scroll-triggered reveal animations
+  const revealElements = document.querySelectorAll('.reveal');
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  });
+
+  revealElements.forEach(el => revealObserver.observe(el));
+</script>
+</Layout>

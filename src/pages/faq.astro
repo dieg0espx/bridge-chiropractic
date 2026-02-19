@@ -3,12 +3,21 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="FAQ" description="Frequently asked questions about chiropractic care at The Bridge Chiropractic. Learn about first visits, treatment approaches, insurance, and more.">
-  <!-- Page Hero -->
-  <section class="page-hero">
-    <div class="container">
-      <span class="section__eyebrow">Questions & Answers</span>
-      <h1>Frequently Asked Questions</h1>
-      <p>Everything you need to know before your visit.</p>
+  <!-- Hero Section -->
+  <section class="hero-fullbleed">
+    <div class="hero-fullbleed__image">
+      <img
+        src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=2400&q=80"
+        alt="Chiropractic consultation"
+      />
+    </div>
+    <div class="hero-fullbleed__overlay"></div>
+    <div class="hero-fullbleed__content">
+      <div class="container">
+        <span class="section__eyebrow" style="color: var(--color-off-white);">Questions & Answers</span>
+        <h1 style="color: var(--color-white);">Frequently Asked Questions</h1>
+        <p class="hero-fullbleed__subtitle">Everything you need to know before your visit.</p>
+      </div>
     </div>
   </section>
 
@@ -16,44 +25,44 @@ import Layout from '../layouts/Layout.astro';
   <section class="section">
     <div class="container">
       <!-- First Visit -->
-      <div class="faq-section">
+      <div class="faq-section reveal">
         <h2 class="faq-section__title">Your First Visit</h2>
 
         <div class="faq-list">
-          <div class="faq-item">
+          <div class="faq-item glass-card">
             <button class="faq-item__question" aria-expanded="false">
               <span>What should I expect during my first visit?</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
             </button>
             <div class="faq-item__answer">
               <p>Your first visit includes a comprehensive consultation, examination, and discussion of your health history. We take time to understand your concerns, explain what's happening in your body, and discuss treatment options. Expect to spend about 45-60 minutes with us. You won't be rushed through a standardized protocol—your care plan will be created based on YOUR specific needs and goals.</p>
             </div>
           </div>
 
-          <div class="faq-item">
+          <div class="faq-item glass-card">
             <button class="faq-item__question" aria-expanded="false">
               <span>What should I wear to my appointment?</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
             </button>
             <div class="faq-item__answer">
               <p>Wear comfortable, loose-fitting clothing that allows for movement. Athletic wear is ideal, but anything you can move comfortably in works fine. For women, it's helpful to wear or bring a sports bra for your initial examination.</p>
             </div>
           </div>
 
-          <div class="faq-item">
+          <div class="faq-item glass-card">
             <button class="faq-item__question" aria-expanded="false">
               <span>Do I need to bring anything to my first appointment?</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
             </button>
             <div class="faq-item__answer">
               <p>Please bring your insurance card (if using insurance), a photo ID, and any relevant medical records or imaging (X-rays, MRIs) if you have them. If another doctor referred you, bring the referral documentation. Most importantly, come prepared to discuss your health history and current concerns in detail.</p>
             </div>
           </div>
 
-          <div class="faq-item">
+          <div class="faq-item glass-card">
             <button class="faq-item__question" aria-expanded="false">
               <span>Will I receive treatment on my first visit?</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
             </button>
             <div class="faq-item__answer">
               <p>In most cases, yes. After your consultation and examination, if we determine chiropractic care is appropriate for your condition, we'll typically begin gentle treatment during your first visit. However, we never pressure patients—we'll only proceed when you're comfortable and understand the treatment plan.</p>
@@ -63,54 +72,54 @@ import Layout from '../layouts/Layout.astro';
       </div>
 
       <!-- Treatment -->
-      <div class="faq-section">
+      <div class="faq-section reveal">
         <h2 class="faq-section__title">About Treatment</h2>
 
         <div class="faq-list">
-          <div class="faq-item">
+          <div class="faq-item glass-card">
             <button class="faq-item__question" aria-expanded="false">
               <span>Is chiropractic care safe?</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
             </button>
             <div class="faq-item__answer">
               <p>Yes, chiropractic care is very safe when performed by a licensed professional. Dr. Beyerl uses gentle techniques and adjusts his approach based on each patient's comfort level, age, and health needs. We offer both traditional and low-force adjustment options, so even patients who are nervous about "cracking" can receive effective care.</p>
             </div>
           </div>
 
-          <div class="faq-item">
+          <div class="faq-item glass-card">
             <button class="faq-item__question" aria-expanded="false">
               <span>Does chiropractic treatment hurt?</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
             </button>
             <div class="faq-item__answer">
               <p>Most patients find chiropractic treatment comfortable or even relaxing. You may feel some pressure during adjustments, but it shouldn't be painful. If you're sensitive or nervous, we use gentler techniques. Some patients experience mild soreness after their first few visits, similar to what you might feel after starting a new exercise routine—this typically resolves within 24-48 hours.</p>
             </div>
           </div>
 
-          <div class="faq-item">
+          <div class="faq-item glass-card">
             <button class="faq-item__question" aria-expanded="false">
               <span>How many visits will I need?</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
             </button>
             <div class="faq-item__answer">
               <p>This varies significantly based on your condition, goals, and how your body responds. Some patients feel significant relief after just a few visits, while others benefit from ongoing wellness care. We'll discuss a recommended treatment plan during your first visit, but we don't believe in creating unnecessary dependency. Our goal is to give you the tools to manage your own health long-term.</p>
             </div>
           </div>
 
-          <div class="faq-item">
+          <div class="faq-item glass-card">
             <button class="faq-item__question" aria-expanded="false">
               <span>What conditions do you treat?</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
             </button>
             <div class="faq-item__answer">
               <p>We treat a wide range of musculoskeletal conditions including back pain, neck pain, headaches, sciatica, joint pain, and postural issues. We also specialize in neuro rehabilitation for balance issues and fall prevention in adults 55 and older. Patients often tell us "I didn't know you did that!"—because what one patient needs is different from another. <a href="/conditions">View our full list of conditions we treat</a>.</p>
             </div>
           </div>
 
-          <div class="faq-item">
+          <div class="faq-item glass-card">
             <button class="faq-item__question" aria-expanded="false">
               <span>What makes your approach different?</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
             </button>
             <div class="faq-item__answer">
               <p>We focus on calm, trust-based care that prioritizes your long-term function and independence. Unlike rushed, high-volume practices, we take time to listen, explain, and educate. We emphasize sustainable improvement rather than quick fixes or creating dependency on ongoing adjustments. We want to empower you to understand your body and take control of your own health.</p>
@@ -120,34 +129,34 @@ import Layout from '../layouts/Layout.astro';
       </div>
 
       <!-- Neuro Rehab -->
-      <div class="faq-section">
+      <div class="faq-section reveal">
         <h2 class="faq-section__title">Neuro Rehabilitation</h2>
 
         <div class="faq-list">
-          <div class="faq-item">
+          <div class="faq-item glass-card">
             <button class="faq-item__question" aria-expanded="false">
               <span>What is neuro rehabilitation?</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
             </button>
             <div class="faq-item__answer">
               <p>Neuro rehabilitation (also called brain rehabilitation) focuses on improving the connection between your brain and body. It's particularly effective for balance issues, coordination problems, and fall prevention. Using specific exercises and techniques, we help retrain your nervous system to improve stability, reaction time, and overall motor function.</p>
             </div>
           </div>
 
-          <div class="faq-item">
+          <div class="faq-item glass-card">
             <button class="faq-item__question" aria-expanded="false">
               <span>Who benefits from neuro rehabilitation?</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
             </button>
             <div class="faq-item__answer">
               <p>Our neuro rehabilitation program is especially beneficial for adults 55 and older who want to maintain independence and reduce fall risk. It's also helpful for anyone experiencing balance issues, dizziness, coordination problems, or concerns about stability. Falls are a leading cause of injury in older adults—our program helps you stay confident and active.</p>
             </div>
           </div>
 
-          <div class="faq-item">
+          <div class="faq-item glass-card">
             <button class="faq-item__question" aria-expanded="false">
               <span>How does it reduce fall risk?</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
             </button>
             <div class="faq-item__answer">
               <p>Falls often result from a combination of factors: decreased balance, slower reaction times, reduced strength, and poor coordination. Our program addresses all of these through targeted exercises that challenge your vestibular system (inner ear balance), improve proprioception (body awareness), strengthen key muscle groups, and enhance your brain's ability to process movement information quickly.</p>
@@ -157,44 +166,44 @@ import Layout from '../layouts/Layout.astro';
       </div>
 
       <!-- Practical Questions -->
-      <div class="faq-section">
+      <div class="faq-section reveal">
         <h2 class="faq-section__title">Practical Questions</h2>
 
         <div class="faq-list">
-          <div class="faq-item">
+          <div class="faq-item glass-card">
             <button class="faq-item__question" aria-expanded="false">
               <span>Do you accept insurance?</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
             </button>
             <div class="faq-item__answer">
               <p>We accept most major insurance plans. Coverage varies by plan, so we recommend calling our office or contacting your insurance company to verify your chiropractic benefits. We're happy to help you understand your coverage and can provide documentation for out-of-network reimbursement if needed.</p>
             </div>
           </div>
 
-          <div class="faq-item">
+          <div class="faq-item glass-card">
             <button class="faq-item__question" aria-expanded="false">
               <span>What are your hours?</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
             </button>
             <div class="faq-item__answer">
               <p>We're open Monday through Friday, 9am to 5pm. We try to accommodate different schedules, so if these hours don't work for you, please contact us—we may be able to arrange an alternative time.</p>
             </div>
           </div>
 
-          <div class="faq-item">
+          <div class="faq-item glass-card">
             <button class="faq-item__question" aria-expanded="false">
               <span>Where are you located?</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
             </button>
             <div class="faq-item__answer">
               <p>We're located at 4340 Genesee Ave, Suite 201, San Diego, CA 92117. The office is easily accessible with parking available. <a href="https://maps.google.com/?q=4340+Genesee+Ave+Suite+201+San+Diego+CA+92117" target="_blank" rel="noopener">Get directions on Google Maps</a>.</p>
             </div>
           </div>
 
-          <div class="faq-item">
+          <div class="faq-item glass-card">
             <button class="faq-item__question" aria-expanded="false">
               <span>How do I schedule an appointment?</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
             </button>
             <div class="faq-item__answer">
               <p>You can schedule an appointment by calling us at <a href="tel:8582777500">(858) 277-7500</a>, emailing <a href="mailto:bridgechiropracticsd@gmail.com">bridgechiropracticsd@gmail.com</a>, or using our <a href="/contact">online contact form</a>. We'll get back to you within 24 hours to confirm your appointment.</p>
@@ -205,15 +214,15 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- Still Have Questions -->
-  <section class="section section--gray">
+  <!-- CTA Section -->
+  <section class="section section--dark reveal">
     <div class="container">
-      <div class="question-cta">
-        <div class="question-cta__content">
+      <div class="cta-premium">
+        <div class="cta-premium__content">
           <h2>Still Have Questions?</h2>
           <p>We're happy to answer any questions you have about our practice, your condition, or whether chiropractic care might be right for you.</p>
         </div>
-        <div class="question-cta__actions">
+        <div class="cta-premium__actions">
           <a href="/contact" class="btn btn--primary btn--lg">Contact Us</a>
           <a href="tel:8582777500" class="btn btn--secondary btn--lg">Call (858) 277-7500</a>
         </div>
@@ -223,24 +232,6 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <style>
-  /* Page Hero */
-  .page-hero {
-    background: var(--color-off-white);
-    padding: 140px 0 80px;
-    text-align: center;
-  }
-
-  .page-hero h1 {
-    margin-bottom: var(--space-md);
-  }
-
-  .page-hero p {
-    font-size: 1.25rem;
-    color: var(--color-gray-dark);
-    max-width: 600px;
-    margin: 0 auto;
-  }
-
   /* FAQ Sections */
   .faq-section {
     margin-bottom: var(--space-4xl);
@@ -251,23 +242,27 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .faq-section__title {
+    font-family: var(--font-heading);
+    font-size: 2rem;
     color: var(--color-primary);
-    margin-bottom: var(--space-xl);
-    padding-bottom: var(--space-md);
+    margin-bottom: var(--space-2xl);
+    padding-bottom: var(--space-lg);
     border-bottom: 2px solid var(--color-gray-light);
   }
 
   .faq-list {
     display: flex;
     flex-direction: column;
-    gap: var(--space-md);
+    gap: var(--space-lg);
   }
 
   .faq-item {
-    border: 1px solid var(--color-gray-light);
-    border-radius: var(--radius-md);
     overflow: hidden;
-    background: var(--color-white);
+    transition: all var(--transition-normal);
+  }
+
+  .faq-item:hover {
+    transform: translateY(-2px);
   }
 
   .faq-item__question {
@@ -275,41 +270,52 @@ import Layout from '../layouts/Layout.astro';
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: var(--space-lg);
-    background: var(--color-white);
+    gap: var(--space-lg);
+    padding: var(--space-xl);
+    background: transparent;
     border: none;
     font-family: var(--font-body);
-    font-size: 1rem;
+    font-size: 1.125rem;
     font-weight: 600;
     color: var(--color-charcoal);
     cursor: pointer;
     text-align: left;
-    transition: background var(--transition-fast);
+    transition: all var(--transition-fast);
   }
 
-  .faq-item__question:hover {
-    background: var(--color-off-white);
+  .faq-item__question span {
+    flex: 1;
   }
 
-  .faq-item__question svg {
+  .faq-icon {
     flex-shrink: 0;
     transition: transform var(--transition-normal);
-    color: var(--color-primary);
+    color: var(--color-accent);
   }
 
-  .faq-item__question[aria-expanded="true"] svg {
+  .faq-item__question[aria-expanded="true"] .faq-icon {
     transform: rotate(180deg);
   }
 
   .faq-item__answer {
-    display: none;
-    padding: 0 var(--space-lg) var(--space-lg);
-    background: var(--color-white);
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 var(--space-xl);
+    background: transparent;
+    transition: all var(--transition-normal);
+    opacity: 0;
+  }
+
+  .faq-item.active .faq-item__answer {
+    max-height: 500px;
+    padding: 0 var(--space-xl) var(--space-xl);
+    opacity: 1;
   }
 
   .faq-item__answer p {
     margin: 0 0 var(--space-md);
-    line-height: 1.7;
+    line-height: 1.8;
+    color: var(--color-gray-dark);
   }
 
   .faq-item__answer p:last-child {
@@ -317,78 +323,107 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .faq-item__answer a {
-    color: var(--color-primary);
+    color: var(--color-accent);
     font-weight: 500;
+    text-decoration: none;
+    transition: color var(--transition-fast);
   }
 
   .faq-item__answer a:hover {
+    color: var(--color-primary);
     text-decoration: underline;
   }
 
-  .faq-item.active .faq-item__answer {
-    display: block;
-  }
-
-  /* Question CTA */
-  .question-cta {
+  /* CTA Section */
+  .cta-premium {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: var(--space-xl);
-    padding: var(--space-3xl);
-    background: var(--color-white);
+    gap: var(--space-2xl);
+    padding: var(--space-4xl);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
     border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
-  .question-cta__content h2 {
-    margin-bottom: var(--space-sm);
+  .cta-premium__content h2 {
+    color: var(--color-white);
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    margin-bottom: var(--space-md);
   }
 
-  .question-cta__content p {
+  .cta-premium__content p {
     margin: 0;
-    color: var(--color-gray-dark);
-    max-width: 500px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.125rem;
+    max-width: 600px;
+    line-height: 1.7;
   }
 
-  .question-cta__actions {
+  .cta-premium__actions {
     display: flex;
     gap: var(--space-md);
+    flex-shrink: 0;
   }
 
   /* Responsive */
-  @media (max-width: 768px) {
-    .page-hero {
-      padding: 120px 0 60px;
-    }
-
-    .question-cta {
+  @media (max-width: 1024px) {
+    .cta-premium {
       flex-direction: column;
       text-align: center;
+      padding: var(--space-3xl);
+    }
+
+    .cta-premium__content p {
+      max-width: 100%;
+    }
+
+    .cta-premium__actions {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .faq-section__title {
+      font-size: 1.75rem;
+    }
+
+    .faq-item__question {
+      padding: var(--space-lg);
+      font-size: 1rem;
+    }
+
+    .faq-item.active .faq-item__answer {
+      padding: 0 var(--space-lg) var(--space-lg);
+    }
+
+    .cta-premium {
       padding: var(--space-2xl);
     }
 
-    .question-cta__actions {
-      flex-direction: column;
-      width: 100%;
+    .cta-premium__content h2 {
+      font-size: 1.75rem;
     }
 
-    .question-cta__actions .btn {
+    .cta-premium__actions {
+      flex-direction: column;
+    }
+
+    .cta-premium__actions .btn {
       width: 100%;
     }
   }
 
   @media (max-width: 480px) {
-    .page-hero {
-      padding: 100px 0 40px;
-    }
-
     .faq-item__question {
       padding: var(--space-md);
       font-size: 0.95rem;
     }
 
-    .faq-item__answer {
+    .faq-item.active .faq-item__answer {
       padding: 0 var(--space-md) var(--space-md);
     }
   }
@@ -409,4 +444,22 @@ import Layout from '../layouts/Layout.astro';
       item.classList.toggle('active');
     });
   });
+
+  // Scroll-triggered reveal animations
+  const revealElements = document.querySelectorAll('.reveal');
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  });
+
+  revealElements.forEach(el => revealObserver.observe(el));
 </script>
+</Layout>
