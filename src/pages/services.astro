@@ -2,372 +2,286 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Services" description="Comprehensive chiropractic services including gentle adjustments, soft tissue therapy, movement training, and specialized neuro rehabilitation for fall prevention.">
-  <!-- Page Hero -->
-  <section class="page-hero">
-    <div class="container">
-      <span class="section__eyebrow">Comprehensive Care</span>
-      <h1>Our Services</h1>
-      <p>Tailored treatments designed for your unique needs and goals.</p>
+<Layout title="Services" description="Comprehensive chiropractic services including gentle adjustments, soft tissue therapy, movement training, and specialized neuro rehabilitation.">
+  <!-- Hero -->
+  <section class="hero-fullbleed" style="height: 75vh; min-height: 600px;">
+    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1920&h=1080&fit=crop" alt="Chiropractic care" class="hero-fullbleed__image" />
+    <div class="hero-fullbleed__overlay"></div>
+    <div class="hero-fullbleed__content" data-animate="fade-up">
+      <span style="display: inline-block; padding: 8px 20px; background: rgba(255,255,255,0.2); backdrop-filter: blur(10px); border-radius: 30px; font-size: 0.875rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 24px;">Comprehensive Care</span>
+      <h1 class="hero-fullbleed__title" style="font-size: clamp(2.5rem, 6vw, 4.5rem);">Our Services</h1>
+      <p class="hero-fullbleed__subtitle">Tailored treatments designed for your unique needs and wellness goals.</p>
     </div>
   </section>
 
   <!-- Services Overview -->
-  <section class="section">
-    <div class="container">
-      <p class="intro-text text-center">At The Bridge Chiropractic, we offer more than just adjustments. Our comprehensive approach addresses your whole body, combining multiple techniques to help you move better and live pain-free.</p>
+  <section class="section section-hero">
+    <div class="container container-narrow" style="text-align: center;">
+      <p class="text-large" style="color: var(--color-gray-dark); line-height: 1.8;" data-animate="fade-up">At The Bridge Chiropractic, we offer more than just adjustments. Our comprehensive approach addresses your whole body, combining multiple techniques to help you move better and live pain-free.</p>
+    </div>
+  </section>
 
-      <div class="grid grid--4 services-nav">
-        <a href="#chiropractic" class="service-nav-item">
-          <div class="service-nav-item__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 20V6a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v14"></path><path d="M2 20h20"></path></svg>
+  <!-- Service Navigation Cards -->
+  <section class="section" style="background: var(--color-off-white); padding-top: 0;">
+    <div class="container">
+      <div class="grid grid--4" style="gap: 24px;">
+        <a href="#chiropractic" class="glass hover-lift" style="padding: 40px 32px; text-align: center; text-decoration: none; border-radius: 16px; transition: all 0.3s ease;" data-animate="scale" data-animate-delay="100">
+          <div style="width: 64px; height: 64px; background: var(--color-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M18 20V6a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v14"></path><path d="M2 20h20"></path></svg>
           </div>
-          <span>Chiropractic Care</span>
+          <h4 style="font-size: 1.125rem; font-weight: 600; color: var(--color-charcoal);">Chiropractic Care</h4>
         </a>
-        <a href="#soft-tissue" class="service-nav-item">
-          <div class="service-nav-item__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 11V7a5 5 0 0 1 10 0v4"></path><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect></svg>
+
+        <a href="#soft-tissue" class="glass hover-lift" style="padding: 40px 32px; text-align: center; text-decoration: none; border-radius: 16px; transition: all 0.3s ease;" data-animate="scale" data-animate-delay="200">
+          <div style="width: 64px; height: 64px; background: var(--color-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M7 11V7a5 5 0 0 1 10 0v4"></path><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect></svg>
           </div>
-          <span>Soft Tissue Therapy</span>
+          <h4 style="font-size: 1.125rem; font-weight: 600; color: var(--color-charcoal);">Soft Tissue Therapy</h4>
         </a>
-        <a href="#movement" class="service-nav-item">
-          <div class="service-nav-item__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="5" r="3"></circle><line x1="12" y1="22" x2="12" y2="8"></line><path d="M5 12H2a10 10 0 0 0 20 0h-3"></path></svg>
+
+        <a href="#movement" class="glass hover-lift" style="padding: 40px 32px; text-align: center; text-decoration: none; border-radius: 16px; transition: all 0.3s ease;" data-animate="scale" data-animate-delay="300">
+          <div style="width: 64px; height: 64px; background: var(--color-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="5" r="3"></circle><line x1="12" y1="22" x2="12" y2="8"></line><path d="M5 12H2a10 10 0 0 0 20 0h-3"></path></svg>
           </div>
-          <span>Movement Training</span>
+          <h4 style="font-size: 1.125rem; font-weight: 600; color: var(--color-charcoal);">Movement Training</h4>
         </a>
-        <a href="#neuro" class="service-nav-item service-nav-item--featured">
-          <div class="service-nav-item__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+
+        <a href="#neuro" class="glass hover-lift" style="padding: 40px 32px; text-align: center; text-decoration: none; border-radius: 16px; transition: all 0.3s ease; border: 2px solid var(--color-accent);" data-animate="scale" data-animate-delay="400">
+          <div style="width: 64px; height: 64px; background: var(--color-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
           </div>
-          <span>Neuro Rehabilitation</span>
+          <h4 style="font-size: 1.125rem; font-weight: 600; color: var(--color-charcoal);">Neuro Rehabilitation</h4>
         </a>
       </div>
     </div>
   </section>
 
   <!-- Chiropractic Care -->
-  <section class="section section--gray service-detail" id="chiropractic">
+  <section class="section section-hero" id="chiropractic">
     <div class="container">
-      <div class="service-grid">
-        <div class="service-content">
-          <span class="section__eyebrow">Core Service</span>
-          <h2>Chiropractic Care</h2>
-          <p class="lead">Our chiropractic care includes both gentle and traditional adjustment techniques. We tailor our approach to your comfort level and specific needs.</p>
-          <p>Whether you prefer a gentle, low-force approach or traditional manual adjustments, we customize each session to what works best for your body. The goal is always the same: restore proper function and reduce pain.</p>
+      <div class="grid" style="grid-template-columns: 1.1fr 1fr; gap: 80px; align-items: center;">
+        <div data-animate="fade-right">
+          <span class="section__eyebrow" style="color: var(--color-accent);">Core Service</span>
+          <h2 class="display-2" style="margin-bottom: 24px;">Chiropractic Care</h2>
+          <p class="text-large" style="color: var(--color-gray-dark); margin-bottom: 24px; line-height: 1.8;">Our chiropractic care includes both gentle and traditional adjustment techniques. We tailor our approach to your comfort level and specific needs.</p>
+          <p style="color: var(--color-gray-dark); margin-bottom: 32px; line-height: 1.8;">Whether you prefer a gentle, low-force approach or traditional manual adjustments, we customize each session to what works best for your body. The goal is always the same: restore proper function and reduce pain.</p>
 
-          <h3>What We Treat</h3>
-          <ul class="check-list">
-            <li>Back and neck pain</li>
-            <li>Headaches and migraines</li>
-            <li>Sciatica</li>
-            <li>Joint stiffness and reduced mobility</li>
-            <li>Posture-related issues</li>
+          <h3 style="font-size: 1.5rem; margin-bottom: 20px; font-weight: 600;">What We Treat</h3>
+          <ul style="list-style: none; padding: 0;">
+            <li style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px; color: var(--color-gray-dark); font-size: 1.0625rem;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Back and neck pain
+            </li>
+            <li style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px; color: var(--color-gray-dark); font-size: 1.0625rem;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Headaches and migraines
+            </li>
+            <li style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px; color: var(--color-gray-dark); font-size: 1.0625rem;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Sciatica
+            </li>
+            <li style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px; color: var(--color-gray-dark); font-size: 1.0625rem;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Joint stiffness and reduced mobility
+            </li>
+            <li style="display: flex; align-items: center; gap: 12px; color: var(--color-gray-dark); font-size: 1.0625rem;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Posture-related issues
+            </li>
           </ul>
         </div>
-        <div class="service-image">
-          <img src="/images/chiropractic-care.jpg" alt="Chiropractic adjustment" />
+
+        <div data-animate="fade-left" data-animate-delay="200">
+          <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&h=1000&fit=crop" alt="Chiropractic adjustment" style="border-radius: 16px; box-shadow: var(--shadow-xl); width: 100%; height: 600px; object-fit: cover;" />
         </div>
       </div>
     </div>
   </section>
 
   <!-- Soft Tissue Therapy -->
-  <section class="section service-detail" id="soft-tissue">
+  <section class="section" style="background: var(--color-off-white);" id="soft-tissue">
     <div class="container">
-      <div class="service-grid service-grid--reverse">
-        <div class="service-content">
-          <span class="section__eyebrow">Complementary Care</span>
-          <h2>Soft Tissue Therapy</h2>
-          <p class="lead">Muscles, tendons, and fascia play a crucial role in how you move. Our soft tissue work complements chiropractic adjustments to address the full picture.</p>
-          <p>Using techniques like myofascial release, trigger point therapy, and instrument-assisted therapy, we target tension and adhesions that limit your mobility and cause pain.</p>
-
-          <h3>Benefits Include</h3>
-          <ul class="check-list">
-            <li>Reduced muscle tension</li>
-            <li>Improved flexibility</li>
-            <li>Faster recovery from injuries</li>
-            <li>Better circulation</li>
-            <li>Enhanced range of motion</li>
-          </ul>
+      <div class="grid" style="grid-template-columns: 1fr 1.1fr; gap: 80px; align-items: center;">
+        <div data-animate="fade-right">
+          <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&h=1000&fit=crop" alt="Soft tissue therapy" style="border-radius: 16px; box-shadow: var(--shadow-xl); width: 100%; height: 600px; object-fit: cover;" />
         </div>
-        <div class="service-image">
-          <img src="/images/soft-tissue.jpg" alt="Soft tissue therapy" />
+
+        <div data-animate="fade-left" data-animate-delay="200">
+          <span class="section__eyebrow" style="color: var(--color-accent);">Complementary Care</span>
+          <h2 class="display-2" style="margin-bottom: 24px;">Soft Tissue Therapy</h2>
+          <p class="text-large" style="color: var(--color-gray-dark); margin-bottom: 24px; line-height: 1.8;">Muscles, tendons, and fascia play a crucial role in how you move. Our soft tissue work complements chiropractic adjustments to address the full picture.</p>
+          <p style="color: var(--color-gray-dark); margin-bottom: 32px; line-height: 1.8;">Using techniques like myofascial release, trigger point therapy, and instrument-assisted therapy, we target tension and adhesions that limit your mobility and cause pain.</p>
+
+          <h3 style="font-size: 1.5rem; margin-bottom: 20px; font-weight: 600;">Benefits Include</h3>
+          <ul style="list-style: none; padding: 0;">
+            <li style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px; color: var(--color-gray-dark); font-size: 1.0625rem;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Reduced muscle tension
+            </li>
+            <li style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px; color: var(--color-gray-dark); font-size: 1.0625rem;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Improved flexibility
+            </li>
+            <li style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px; color: var(--color-gray-dark); font-size: 1.0625rem;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Faster recovery from injuries
+            </li>
+            <li style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px; color: var(--color-gray-dark); font-size: 1.0625rem;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Better circulation
+            </li>
+            <li style="display: flex; align-items: center; gap: 12px; color: var(--color-gray-dark); font-size: 1.0625rem;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Enhanced range of motion
+            </li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Movement Training -->
-  <section class="section section--gray service-detail" id="movement">
+  <section class="section section-hero" id="movement">
     <div class="container">
-      <div class="service-grid">
-        <div class="service-content">
-          <span class="section__eyebrow">Long-Term Success</span>
-          <h2>Movement Training</h2>
-          <p class="lead">What you do between visits matters. We provide personalized movement guidance to help you maintain progress and prevent future problems.</p>
-          <p>Rather than generic exercises, you'll receive specific movements tailored to your body and goals. The focus is on building strength, stability, and awareness that carries into your daily life.</p>
+      <div class="grid" style="grid-template-columns: 1.1fr 1fr; gap: 80px; align-items: center;">
+        <div data-animate="fade-right">
+          <span class="section__eyebrow" style="color: var(--color-accent);">Active Care</span>
+          <h2 class="display-2" style="margin-bottom: 24px;">Movement Training</h2>
+          <p class="text-large" style="color: var(--color-gray-dark); margin-bottom: 24px; line-height: 1.8;">Movement is medicine. We teach you exercises and stretches designed to reinforce the improvements we make during treatment.</p>
+          <p style="color: var(--color-gray-dark); margin-bottom: 32px; line-height: 1.8;">These aren't generic exercises from a handout. Each movement is selected specifically for your body and your goals, ensuring you know exactly how to maintain your progress between visits.</p>
 
-          <h3>Our Approach Includes</h3>
-          <ul class="check-list">
-            <li>Personalized exercise programs</li>
-            <li>Postural correction strategies</li>
-            <li>Daily movement recommendations</li>
-            <li>Strength and stability training</li>
-            <li>Ergonomic guidance for work and home</li>
+          <h3 style="font-size: 1.5rem; margin-bottom: 20px; font-weight: 600;">You'll Learn</h3>
+          <ul style="list-style: none; padding: 0;">
+            <li style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px; color: var(--color-gray-dark); font-size: 1.0625rem;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Targeted strengthening exercises
+            </li>
+            <li style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px; color: var(--color-gray-dark); font-size: 1.0625rem;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Functional movement patterns
+            </li>
+            <li style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px; color: var(--color-gray-dark); font-size: 1.0625rem;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Proper posture and ergonomics
+            </li>
+            <li style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px; color: var(--color-gray-dark); font-size: 1.0625rem;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Injury prevention strategies
+            </li>
+            <li style="display: flex; align-items: center; gap: 12px; color: var(--color-gray-dark); font-size: 1.0625rem;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Self-care techniques for home
+            </li>
           </ul>
         </div>
-        <div class="service-image">
-          <img src="/images/movement-training.jpg" alt="Movement training" />
+
+        <div data-animate="fade-left" data-animate-delay="200">
+          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=1000&fit=crop" alt="Movement training" style="border-radius: 16px; box-shadow: var(--shadow-xl); width: 100%; height: 600px; object-fit: cover;" />
         </div>
       </div>
     </div>
   </section>
 
   <!-- Neuro Rehabilitation -->
-  <section class="section service-detail" id="neuro">
+  <section class="section" style="background: var(--color-off-white);" id="neuro">
     <div class="container">
-      <div class="service-grid service-grid--reverse">
-        <div class="service-content">
-          <span class="section__eyebrow">Specialty Service</span>
-          <h2>Neuro Rehabilitation</h2>
-          <p class="lead">Our specialized neuro rehabilitation program is designed specifically for adults 55 and older who want to maintain independence, prevent falls, and improve balance.</p>
-          <p>Using evidence-based approaches, we address the neurological factors that contribute to balance issues, dizziness, and increased fall risk. This is more than physical therapy—it's about retraining your brain-body connection.</p>
-
-          <h3>Program Benefits</h3>
-          <ul class="check-list">
-            <li>Fall prevention strategies</li>
-            <li>Balance and coordination training</li>
-            <li>Vestibular rehabilitation</li>
-            <li>Gait analysis and improvement</li>
-            <li>Confidence building for daily activities</li>
-          </ul>
+      <div class="grid" style="grid-template-columns: 1fr 1.1fr; gap: 80px; align-items: center;">
+        <div data-animate="fade-right">
+          <img src="https://images.unsplash.com/photo-1559329007-40df8a9345d8?w=800&h=1000&fit=crop" alt="Neuro rehabilitation" style="border-radius: 16px; box-shadow: var(--shadow-xl); width: 100%; height: 600px; object-fit: cover;" />
         </div>
-        <div class="service-image">
-          <img src="/images/neuro-rehab.jpg" alt="Neuro rehabilitation" />
+
+        <div data-animate="fade-left" data-animate-delay="200">
+          <span class="section__eyebrow" style="color: var(--color-accent);">Specialized Care</span>
+          <h2 class="display-2" style="margin-bottom: 24px;">Neuro Rehabilitation</h2>
+          <p class="text-large" style="color: var(--color-gray-dark); margin-bottom: 24px; line-height: 1.8;">Our specialized neurological rehabilitation focuses on improving balance, coordination, and proprioception—your body's ability to sense where it is in space.</p>
+          <p style="color: var(--color-gray-dark); margin-bottom: 32px; line-height: 1.8;">This service is particularly valuable for those concerned about falls, experiencing dizziness, or dealing with age-related balance changes. We use evidence-based protocols to retrain your nervous system.</p>
+
+          <h3 style="font-size: 1.5rem; margin-bottom: 20px; font-weight: 600;">Ideal For</h3>
+          <ul style="list-style: none; padding: 0;">
+            <li style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px; color: var(--color-gray-dark); font-size: 1.0625rem;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Fall prevention and balance training
+            </li>
+            <li style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px; color: var(--color-gray-dark); font-size: 1.0625rem;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Dizziness and vertigo management
+            </li>
+            <li style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px; color: var(--color-gray-dark); font-size: 1.0625rem;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Coordination and gait improvement
+            </li>
+            <li style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px; color: var(--color-gray-dark); font-size: 1.0625rem;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Post-concussion recovery
+            </li>
+            <li style="display: flex; align-items: center; gap: 12px; color: var(--color-gray-dark); font-size: 1.0625rem;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Age-related neurological changes
+            </li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="cta-section">
-    <div class="container text-center">
-      <h2>Ready to Get Started?</h2>
-      <p>Schedule your appointment today and let's create a personalized care plan together.</p>
-      <div class="cta-actions">
-        <a href="/contact" class="btn btn--white btn--lg">Book Your Appointment</a>
-        <a href="tel:8582777500" class="btn btn--outline-white btn--lg">Call (858) 277-7500</a>
+  <!-- CTA Section -->
+  <section class="cta-premium">
+    <div class="container container-narrow" data-animate="fade-up">
+      <h2>Ready to Experience Personalized Care?</h2>
+      <p>Schedule your consultation and discover which services are right for you.</p>
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+        <a href="/contact" class="btn btn--white btn--lg">Book Appointment</a>
+        <a href="tel:8582777500" class="btn btn--secondary btn--lg" style="background: transparent; border: 2px solid white; color: white;">Call (858) 277-7500</a>
       </div>
     </div>
   </section>
 </Layout>
 
 <style>
-  /* Page Hero */
-  .page-hero {
-    background: var(--color-off-white);
-    padding: 140px 0 80px;
-    text-align: center;
-  }
-
-  .page-hero h1 {
-    margin-bottom: var(--space-md);
-  }
-
-  .page-hero p {
-    font-size: 1.25rem;
-    color: var(--color-gray-dark);
-    max-width: 600px;
-    margin: 0 auto;
-  }
-
-  /* Intro Text */
-  .intro-text {
-    font-size: 1.15rem;
-    max-width: 800px;
-    margin: 0 auto var(--space-3xl);
-    line-height: 1.8;
-  }
-
-  /* Services Nav */
-  .services-nav {
-    margin-bottom: var(--space-xl);
-  }
-
-  .service-nav-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--space-md);
-    padding: var(--space-xl);
-    background: var(--color-off-white);
-    border-radius: var(--radius-lg);
-    text-decoration: none;
-    color: var(--color-charcoal);
-    font-weight: 600;
-    text-align: center;
-    transition: all var(--transition-normal);
-    border: 1px solid var(--color-gray-light);
-  }
-
-  .service-nav-item:hover {
-    background: var(--color-white);
-    box-shadow: var(--shadow-lg);
-    transform: translateY(-4px);
-  }
-
-  .service-nav-item__icon {
-    width: 56px;
-    height: 56px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--color-primary-light);
-    border-radius: var(--radius-lg);
-    color: var(--color-primary);
-  }
-
-  .service-nav-item--featured {
-    background: var(--color-primary);
-    color: var(--color-white);
-    border-color: var(--color-primary);
-  }
-
-  .service-nav-item--featured .service-nav-item__icon {
-    background: rgba(255, 255, 255, 0.2);
-    color: var(--color-white);
-  }
-
-  .service-nav-item--featured:hover {
-    background: var(--color-primary-dark);
-  }
-
-  /* Service Grid */
-  .service-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-4xl);
-    align-items: center;
-  }
-
-  .service-grid--reverse .service-content {
-    order: 2;
-  }
-
-  .service-grid--reverse .service-image {
-    order: 1;
-  }
-
-  .service-content h2 {
-    margin-bottom: var(--space-lg);
-  }
-
-  .service-content .lead {
-    font-size: 1.1rem;
-    font-weight: 500;
-    line-height: 1.7;
-  }
-
-  .service-content h3 {
-    margin: var(--space-xl) 0 var(--space-md);
-    font-size: 1.25rem;
-  }
-
-  .service-image img {
-    width: 100%;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-lg);
-  }
-
-  /* CTA Section */
-  .cta-section {
-    background: var(--color-primary);
-    padding: var(--space-4xl) 0;
-  }
-
-  .cta-section h2 {
-    margin-bottom: var(--space-md);
-    color: var(--color-white);
-  }
-
-  .cta-section p {
-    font-size: 1.25rem;
-    margin-bottom: var(--space-xl);
-    color: rgba(255, 255, 255, 0.9);
-  }
-
-  .cta-actions {
-    display: flex;
-    gap: var(--space-md);
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  /* Responsive */
-  @media (max-width: 1024px) {
-    .service-grid {
-      grid-template-columns: 1fr;
-      gap: var(--space-2xl);
+  @media (max-width: 768px) {
+    .grid[style*="grid-template-columns: 1.1fr 1fr"],
+    .grid[style*="grid-template-columns: 1fr 1.1fr"] {
+      grid-template-columns: 1fr !important;
+      gap: var(--space-2xl) !important;
     }
 
-    .service-grid--reverse .service-content {
-      order: 1;
-    }
-
-    .service-grid--reverse .service-image {
+    .grid[style*="grid-template-columns: 1fr 1.1fr"] > *:first-child {
       order: 2;
     }
 
-    .service-image {
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .services-nav {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  @media (max-width: 768px) {
-    .page-hero {
-      padding: 120px 0 60px;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .page-hero {
-      padding: 100px 0 40px;
-    }
-
-    .service-nav-item {
-      padding: var(--space-lg);
-    }
-
-    .service-content h2 {
-      font-size: 1.5rem;
-    }
-
-    .cta-actions {
-      flex-direction: column;
-    }
-
-    .cta-actions .btn {
-      width: 100%;
-    }
-  }
-
-  @media (max-width: 640px) {
-    .services-nav {
-      grid-template-columns: 1fr;
-    }
-
-    .cta-actions {
-      flex-direction: column;
-    }
-
-    .cta-actions .btn {
-      width: 100%;
+    .grid[style*="grid-template-columns: 1fr 1.1fr"] > *:last-child {
+      order: 1;
     }
   }
 </style>
+
+<script>
+  // Scroll-triggered animations
+  const observerOptions = {
+    root: null,
+    rootMargin: '-100px',
+    threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animated');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
