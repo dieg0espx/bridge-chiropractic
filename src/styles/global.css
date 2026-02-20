@@ -1,14 +1,22 @@
 /* Bridge Chiropractic - Premium Wellness Design (lifetime.life inspired) */
 
+/* Global Override - Sharp 90° Angles on All Elements */
+* {
+  border-radius: 0 !important;
+}
+
 /* CSS Variables */
 :root {
-  /* Brand Colors - Neutral Premium Palette */
+  /* Brand Colors - Neutral Premium Palette with Light Blue Accent */
   --color-primary: #2C2C2C;
   --color-primary-dark: #1A1A1A;
   --color-primary-light: #F5F5F5;
   --color-secondary: #4A4A4A;
   --color-secondary-light: #FAFAFA;
-  --color-accent: #8B7355;
+  --color-accent: #60A5FA;
+  --color-accent-hover: #3B82F6;
+  --color-accent-light: #DBEAFE;
+  --color-accent-dark: #2563EB;
   --color-charcoal: #2C2C2C;
   --color-gray-dark: #5A5A5A;
   --color-gray-medium: #999999;
@@ -25,10 +33,10 @@
   --color-primary-800: #1F1F1F;
   --color-primary-900: #121212;
 
-  /* Warm Wellness Tones */
-  --color-warm-50: #FBF8F5;
-  --color-warm-100: #F5EDE4;
-  --color-warm-500: #D4B5A0;
+  /* Cool Blue Tones (complementing light blue accent) */
+  --color-warm-50: #F0F9FF;
+  --color-warm-100: #E0F2FE;
+  --color-warm-500: #60A5FA;
 
   /* Enhanced Gray Scale */
   --color-gray-50: #FAFAFA;
@@ -42,9 +50,9 @@
   --color-gray-800: #262626;
   --color-gray-900: #171717;
 
-  /* Typography - Premium Serif + Modern Sans */
-  --font-heading: 'Playfair Display', Georgia, serif;
-  --font-body: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  /* Typography - Inter (LT Sans alternative) */
+  --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
   /* Spacing */
   --space-xs: 4px;
@@ -66,14 +74,14 @@
   --section-padding-lg: clamp(120px, 15vh, 160px);
   --section-padding-xl: clamp(160px, 20vh, 240px);
 
-  /* Border Radius */
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
-  --radius-xl: 16px;
-  --radius-2xl: 24px;
-  --radius-3xl: 32px;
-  --radius-full: 9999px;
+  /* Border Radius - Sharp 90° Angles */
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+  --radius-xl: 0;
+  --radius-2xl: 0;
+  --radius-3xl: 0;
+  --radius-full: 0;
 
   /* Shadows - Subtle Premium */
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.03);
@@ -83,8 +91,10 @@
   --shadow-2xl: 0 12px 48px rgba(0, 0, 0, 0.12);
 
   /* Colored Shadow Variants */
-  --shadow-warm: 0 4px 20px rgba(139, 115, 85, 0.15);
-  --shadow-warm-lg: 0 8px 32px rgba(139, 115, 85, 0.2);
+  --shadow-warm: 0 4px 20px rgba(96, 165, 250, 0.15);
+  --shadow-warm-lg: 0 8px 32px rgba(96, 165, 250, 0.2);
+  --shadow-accent: 0 4px 20px rgba(96, 165, 250, 0.15);
+  --shadow-accent-lg: 0 8px 32px rgba(96, 165, 250, 0.2);
   --shadow-primary: 0 4px 20px rgba(44, 44, 44, 0.15);
   --shadow-primary-lg: 0 8px 32px rgba(44, 44, 44, 0.2);
 
@@ -438,8 +448,8 @@ img {
 .form-textarea:focus,
 .form-select:focus {
   outline: none;
-  border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.1);
 }
 
 .form-textarea {
@@ -781,7 +791,7 @@ img {
 }
 
 .hover-glow:hover {
-  box-shadow: 0 0 30px rgba(13, 148, 136, 0.3);
+  box-shadow: 0 0 30px rgba(96, 165, 250, 0.3);
 }
 
 /* Link Underline Animation */
@@ -1112,6 +1122,7 @@ main {
   font-size: clamp(3rem, 7vw, 5.5rem);
   font-weight: 400;
   letter-spacing: -0.02em;
+  color: var(--color-white);
   margin-bottom: var(--space-lg);
   line-height: 1.1;
 }
@@ -1120,8 +1131,32 @@ main {
   font-size: clamp(1.125rem, 2vw, 1.5rem);
   font-weight: 300;
   letter-spacing: 0.01em;
-  opacity: 0.95;
+  color: rgba(255, 255, 255, 0.95);
   margin-bottom: var(--space-2xl);
+}
+
+/* Hero Badge - Blue Accent */
+.hero-badge {
+  display: inline-block;
+  padding: var(--space-xs) var(--space-lg);
+  background: var(--color-accent);
+  color: var(--color-white);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-lg);
+  box-shadow: 0 4px 16px rgba(96, 165, 250, 0.3);
+}
+
+/* Section eyebrow in hero - Blue Accent */
+.hero-fullbleed .section__eyebrow {
+  background: var(--color-accent);
+  color: var(--color-white);
+  padding: var(--space-xs) var(--space-lg);
+  border-radius: var(--radius-full);
+  box-shadow: 0 4px 16px rgba(96, 165, 250, 0.3);
 }
 
 /* Glassmorphism */
@@ -1532,7 +1567,7 @@ main {
   width: 100%;
   height: 100%;
   background-image:
-    radial-gradient(circle at 20% 50%, rgba(139, 115, 85, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 20% 50%, rgba(96, 165, 250, 0.05) 0%, transparent 50%),
     radial-gradient(circle at 80% 80%, rgba(44, 44, 44, 0.03) 0%, transparent 50%);
   pointer-events: none;
 }
@@ -1585,7 +1620,7 @@ main {
 }
 
 .card-hover-glow:hover {
-  box-shadow: 0 12px 48px rgba(139, 115, 85, 0.2);
+  box-shadow: 0 12px 48px rgba(96, 165, 250, 0.2);
 }
 
 /* Premium Badge */
@@ -1603,8 +1638,8 @@ main {
 }
 
 .badge--accent {
-  background: var(--color-warm-100);
-  color: var(--color-accent);
+  background: var(--color-accent-light);
+  color: var(--color-accent-dark);
 }
 
 .badge--outline {
@@ -1617,7 +1652,7 @@ main {
 .quote-block {
   padding: var(--space-2xl);
   border-left: 4px solid var(--color-accent);
-  background: var(--color-warm-50);
+  background: var(--color-accent-light);
   border-radius: var(--radius-md);
   margin: var(--space-2xl) 0;
 }
@@ -1660,12 +1695,12 @@ main {
 }
 
 .icon-container--accent {
-  background: var(--color-warm-100);
-  color: var(--color-accent);
+  background: var(--color-accent-light);
+  color: var(--color-accent-dark);
 }
 
 .icon-container--warm {
-  background: var(--color-warm-500);
+  background: var(--color-accent);
   color: var(--color-white);
 }
 
