@@ -1,0 +1,205 @@
+---
+interface Props {
+  image: string;
+  title: string;
+  description: string;
+  link: string;
+  badge?: string;
+  glass?: boolean;
+}
+
+const { image, title, description, link, badge, glass = false } = Astro.props;
+---
+
+<article class={`offering-card ${glass ? 'offering-card--glass' : ''}`} data-animate="fade-up">
+  <a href={link} class="offering-card__link">
+    <div class="offering-card__image-wrapper">
+      <img src={image} alt={title} class="offering-card__image" />
+      {badge && (
+        <span class="offering-card__badge">{badge}</span>
+      )}
+    </div>
+    <div class="offering-card__content">
+      <h3 class="offering-card__title">{title}</h3>
+      <p class="offering-card__description">{description}</p>
+      <span class="offering-card__cta">
+        Learn More
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </span>
+    </div>
+  </a>
+</article>
+
+<style>
+  .offering-card {
+    position: relative;
+    background: var(--color-white);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+  }
+
+  .offering-card:hover {
+    box-shadow: var(--shadow-xl);
+    transform: translateY(-8px);
+  }
+
+  .offering-card--glass {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  }
+
+  .offering-card__link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .offering-card__image-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    background: var(--color-gray-light);
+  }
+
+  .offering-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .offering-card:hover .offering-card__image {
+    transform: scale(1.08);
+  }
+
+  .offering-card__badge {
+    position: absolute;
+    top: var(--space-lg);
+    right: var(--space-lg);
+    padding: var(--space-xs) var(--space-md);
+    background: var(--color-white);
+    color: var(--color-charcoal);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: var(--radius-full);
+    box-shadow: var(--shadow-md);
+    z-index: 2;
+  }
+
+  .offering-card__content {
+    padding: var(--space-xl);
+  }
+
+  .offering-card__title {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-md);
+    line-height: 1.3;
+    transition: color var(--transition-normal);
+  }
+
+  .offering-card:hover .offering-card__title {
+    color: var(--color-primary);
+  }
+
+  .offering-card__description {
+    color: var(--color-gray-dark);
+    line-height: 1.7;
+    margin-bottom: var(--space-lg);
+    font-size: 0.95rem;
+  }
+
+  .offering-card__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    font-weight: 600;
+    color: var(--color-primary);
+    font-size: 0.95rem;
+    position: relative;
+    transition: gap var(--transition-normal);
+  }
+
+  .offering-card__cta::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--color-primary);
+    transition: width var(--transition-normal);
+  }
+
+  .offering-card:hover .offering-card__cta {
+    gap: var(--space-sm);
+  }
+
+  .offering-card:hover .offering-card__cta::after {
+    width: calc(100% - var(--space-lg));
+  }
+
+  .offering-card__cta svg {
+    flex-shrink: 0;
+    transition: transform var(--transition-normal);
+  }
+
+  .offering-card:hover .offering-card__cta svg {
+    transform: translateX(4px);
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .offering-card__content {
+      padding: var(--space-lg);
+    }
+
+    .offering-card__title {
+      font-size: 1.25rem;
+    }
+
+    .offering-card__badge {
+      top: var(--space-md);
+      right: var(--space-md);
+      font-size: 0.7rem;
+      padding: 6px var(--space-sm);
+    }
+  }
+
+  /* Accessibility */
+  .offering-card__link:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 4px;
+    border-radius: var(--radius-xl);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .offering-card,
+    .offering-card__image,
+    .offering-card__cta,
+    .offering-card__cta svg {
+      transition: none;
+    }
+
+    .offering-card:hover {
+      transform: none;
+    }
+
+    .offering-card:hover .offering-card__image {
+      transform: none;
+    }
+  }
+</style>

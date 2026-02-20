@@ -1,225 +1,682 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import SectionWrapper from '../components/SectionWrapper.astro';
+import ContentGrid from '../components/ContentGrid.astro';
+import FeatureSection from '../components/FeatureSection.astro';
 ---
 
 <Layout title="About" description="Meet Dr. Nathan Beyerl - San Diego chiropractor focused on education, autonomy, and sustainable improvement for adults seeking lasting wellness.">
   <!-- Hero with Image Background -->
   <section class="hero-fullbleed" style="height: 80vh; min-height: 600px;">
-    <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=1920&h=1080&fit=crop" alt="Healthcare professional" class="hero-fullbleed__image" />
+    <img
+      src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=1920&h=1080&fit=crop"
+      alt="Healthcare professional"
+      class="hero-fullbleed__image"
+    />
     <div class="hero-fullbleed__overlay"></div>
     <div class="hero-fullbleed__content" data-animate="fade-up">
-      <span style="display: inline-block; padding: 8px 20px; background: rgba(255,255,255,0.2); backdrop-filter: blur(10px); border-radius: 30px; font-size: 0.875rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 24px;">About The Bridge</span>
-      <h1 class="hero-fullbleed__title" style="font-size: clamp(2.5rem, 6vw, 4.5rem);">Meet Dr. Nathan Beyerl</h1>
+      <span class="hero-badge">About The Bridge</span>
+      <h1 class="hero-fullbleed__title display-1">Meet Dr. Nathan Beyerl</h1>
       <p class="hero-fullbleed__subtitle">Your partner in moving better and living fuller.</p>
     </div>
   </section>
 
-  <!-- About Story -->
-  <section class="section section-hero">
-    <div class="container">
-      <div class="grid" style="grid-template-columns: 1.2fr 1fr; gap: 80px; align-items: center;">
-        <div data-animate="fade-right">
-          <span class="section__eyebrow" style="color: var(--color-accent);">Our Approach</span>
-          <h2 class="display-2" style="margin-bottom: 32px;">Healthcare That Empowers</h2>
-          <p class="text-large" style="color: var(--color-gray-dark); margin-bottom: 24px; line-height: 1.8;">I own and operate The Bridge Chiropractic, a movement-focused wellness clinic here in San Diego. My approach is simple: healthcare should give you control over your own health.</p>
-          <p style="color: var(--color-gray-dark); margin-bottom: 24px; line-height: 1.8;">Too many people experience rushed appointments, standardized treatment plans, and providers who don't take time to listen. I founded The Bridge to offer something different—calm, trust-based care that prioritizes your long-term function and independence.</p>
-          <p style="color: var(--color-gray-dark); margin-bottom: 40px; line-height: 1.8;">When you visit my clinic, you'll notice the difference immediately. I take time to listen to your concerns, explain what's happening in your body, and collaborate with you on a plan that fits YOUR goals—not a one-size-fits-all protocol.</p>
-
-          <a href="/contact" class="btn btn--primary btn--lg">Schedule a Consultation</a>
-        </div>
-
-        <div data-animate="fade-left" data-animate-delay="200">
-          <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=800&h=1000&fit=crop" alt="Chiropractor at work" style="border-radius: 16px; box-shadow: var(--shadow-xl); width: 100%; height: 100%; object-fit: cover;" />
+  <!-- About Story - 2-Column Premium Layout -->
+  <SectionWrapper spacing="hero" background="white">
+    <div class="about-story" data-animate="fade-up">
+      <div class="about-story__content">
+        <span class="section__eyebrow">Our Approach</span>
+        <h2 class="display-2">Healthcare That Empowers</h2>
+        <div class="about-story__body">
+          <p class="text-large">I own and operate The Bridge Chiropractic, a movement-focused wellness clinic here in San Diego. My approach is simple: healthcare should give you control over your own health.</p>
+          <p>Too many people experience rushed appointments, standardized treatment plans, and providers who don't take time to listen. I founded The Bridge to offer something different—calm, trust-based care that prioritizes your long-term function and independence.</p>
+          <p>When you visit my clinic, you'll notice the difference immediately. I take time to listen to your concerns, explain what's happening in your body, and collaborate with you on a plan that fits YOUR goals—not a one-size-fits-all protocol.</p>
+          <div class="about-story__cta">
+            <a href="/contact" class="btn btn--primary btn--lg">Schedule a Consultation</a>
+          </div>
         </div>
       </div>
+
+      <div class="about-story__image" data-animate="fade-left" data-animate-delay="200">
+        <img
+          src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=800&h=1000&fit=crop"
+          alt="Dr. Nathan Beyerl providing expert chiropractic care"
+          loading="lazy"
+        />
+      </div>
     </div>
-  </section>
+  </SectionWrapper>
 
   <!-- Stats Section -->
-  <section class="section" style="background: var(--color-off-white);">
-    <div class="container">
-      <div class="grid grid--3" style="text-align: center; gap: 64px;">
-        <div data-animate="fade-up" data-animate-delay="100">
-          <div class="counter" data-count="15" style="font-size: 4rem; font-weight: 600; color: var(--color-primary); font-family: var(--font-heading); line-height: 1; margin-bottom: 16px;">0</div>
-          <p style="font-size: 1.125rem; color: var(--color-gray-dark); font-weight: 500;">Years of Experience</p>
-        </div>
-        <div data-animate="fade-up" data-animate-delay="200">
-          <div class="counter" data-count="5000" style="font-size: 4rem; font-weight: 600; color: var(--color-primary); font-family: var(--font-heading); line-height: 1; margin-bottom: 16px;">0</div>
-          <p style="font-size: 1.125rem; color: var(--color-gray-dark); font-weight: 500;">Patients Helped</p>
-        </div>
-        <div data-animate="fade-up" data-animate-delay="300">
-          <div style="font-size: 4rem; font-weight: 600; color: var(--color-primary); font-family: var(--font-heading); line-height: 1; margin-bottom: 16px;">5.0</div>
-          <p style="font-size: 1.125rem; color: var(--color-gray-dark); font-weight: 500;">Google Rating</p>
-        </div>
+  <SectionWrapper spacing="normal" background="gray">
+    <ContentGrid columns={3} gap="xl" class="stats-grid">
+      <div class="stat-card" data-animate="fade-up" data-animate-delay="100">
+        <div class="stat-card__number counter" data-count="15">0</div>
+        <p class="stat-card__label">Years of Experience</p>
       </div>
-    </div>
-  </section>
+      <div class="stat-card" data-animate="fade-up" data-animate-delay="200">
+        <div class="stat-card__number counter" data-count="5000">0</div>
+        <p class="stat-card__label">Patients Helped</p>
+      </div>
+      <div class="stat-card" data-animate="fade-up" data-animate-delay="300">
+        <div class="stat-card__number">5.0</div>
+        <p class="stat-card__label">Google Rating</p>
+      </div>
+    </ContentGrid>
+  </SectionWrapper>
 
   <!-- Philosophy Cards -->
-  <section class="section section-hero">
-    <div class="container">
+  <FeatureSection
+    eyebrow="Philosophy"
+    title="Guiding Principles"
+    subtitle="Three pillars that guide every patient interaction."
+    features={[
+      {
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+          <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+        </svg>`,
+        title: "Education Over Dependency",
+        description: "I want you to understand your body. When you know WHY something hurts and HOW to prevent it, you're empowered to take control of your own health."
+      },
+      {
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+        </svg>`,
+        title: "Sustainable Improvement",
+        description: "Quick fixes rarely last. I focus on long-term solutions that help you stay active and pain-free for years to come, not just until your next appointment."
+      },
+      {
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg>`,
+        title: "Personalized Care",
+        description: "What one patient needs might be completely different from another. I create individualized care plans designed around YOUR body and YOUR goals."
+      }
+    ]}
+    background="white"
+  />
+
+  <!-- What to Expect - Premium Timeline -->
+  <SectionWrapper spacing="hero" background="gray" containerWidth="normal">
+    <div class="section__header" data-animate="fade-up">
+      <span class="section__eyebrow">Your Visit</span>
+      <h2 class="display-2">What to Expect</h2>
+      <p class="text-large">A patient-first experience from the moment you walk in.</p>
+    </div>
+
+    <div class="timeline">
+      <!-- Step 1 -->
+      <article class="timeline-item" data-animate="fade-up" data-animate-delay="100">
+        <div class="timeline-item__marker">
+          <div class="timeline-item__number">1</div>
+        </div>
+        <div class="timeline-item__content">
+          <h3 class="timeline-item__title">Initial Consultation</h3>
+          <p class="timeline-item__description">I'll listen carefully to your health history, current concerns, and goals. We'll spend 30-45 minutes discussing your pain patterns, lifestyle, and what you hope to achieve. This isn't rushed—you'll have my full attention.</p>
+        </div>
+      </article>
+
+      <!-- Step 2 -->
+      <article class="timeline-item" data-animate="fade-up" data-animate-delay="200">
+        <div class="timeline-item__marker">
+          <div class="timeline-item__number">2</div>
+        </div>
+        <div class="timeline-item__content">
+          <h3 class="timeline-item__title">Comprehensive Evaluation</h3>
+          <p class="timeline-item__description">Through movement assessments and hands-on examination, I'll identify the root cause of your discomfort. I'll explain my findings in plain language—no confusing medical jargon, just clear explanations you can understand.</p>
+        </div>
+      </article>
+
+      <!-- Step 3 -->
+      <article class="timeline-item" data-animate="fade-up" data-animate-delay="300">
+        <div class="timeline-item__marker">
+          <div class="timeline-item__number">3</div>
+        </div>
+        <div class="timeline-item__content">
+          <h3 class="timeline-item__title">Collaborative Care Plan</h3>
+          <p class="timeline-item__description">Together, we'll create a personalized plan that may include gentle adjustments, soft tissue work, and home exercises. You'll know exactly what to expect, how long treatment might take, and what you can do between visits to accelerate your progress.</p>
+        </div>
+      </article>
+
+      <!-- Step 4 -->
+      <article class="timeline-item" data-animate="fade-up" data-animate-delay="400">
+        <div class="timeline-item__marker">
+          <div class="timeline-item__number">4</div>
+        </div>
+        <div class="timeline-item__content">
+          <h3 class="timeline-item__title">Ongoing Support</h3>
+          <p class="timeline-item__description">As you progress, I'll continually assess what's working and adjust your plan as needed. My goal isn't to create dependency—it's to give you the tools and knowledge to maintain your health independently.</p>
+        </div>
+      </article>
+    </div>
+  </SectionWrapper>
+
+  <!-- Credentials - Premium Glassmorphism -->
+  <SectionWrapper spacing="hero" background="white" containerWidth="narrow">
+    <div class="credentials">
       <div class="section__header" data-animate="fade-up">
-        <span class="section__eyebrow" style="color: var(--color-accent);">Philosophy</span>
-        <h2 class="display-2">Guiding Principles</h2>
-        <p class="text-large" style="color: var(--color-gray-dark); max-width: 700px; margin: 0 auto;">Three pillars that guide every patient interaction.</p>
+        <span class="section__eyebrow">Credentials</span>
+        <h2 class="display-2">Education & Training</h2>
+        <p class="text-large">Committed to excellence through continuous learning and advanced certifications.</p>
       </div>
 
-      <div class="grid grid--3" style="margin-top: 64px;">
-        <div class="card-premium" data-animate="fade-up" data-animate-delay="100">
-          <div style="padding: 48px 40px;">
-            <div style="width: 72px; height: 72px; background: var(--color-primary-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 32px;">
-              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2">
-                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-              </svg>
-            </div>
-            <h3 style="font-size: 1.5rem; margin-bottom: 16px; font-weight: 600;">Education Over Dependency</h3>
-            <p style="color: var(--color-gray-dark); line-height: 1.7;">I want you to understand your body. When you know WHY something hurts and HOW to prevent it, you're empowered to take control of your own health.</p>
-          </div>
-        </div>
-
-        <div class="card-premium" data-animate="fade-up" data-animate-delay="200">
-          <div style="padding: 48px 40px;">
-            <div style="width: 72px; height: 72px; background: var(--color-primary-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 32px;">
-              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-              </svg>
-            </div>
-            <h3 style="font-size: 1.5rem; margin-bottom: 16px; font-weight: 600;">Sustainable Improvement</h3>
-            <p style="color: var(--color-gray-dark); line-height: 1.7;">Quick fixes rarely last. I focus on long-term solutions that help you stay active and pain-free for years to come, not just until your next appointment.</p>
-          </div>
-        </div>
-
-        <div class="card-premium" data-animate="fade-up" data-animate-delay="300">
-          <div style="padding: 48px 40px;">
-            <div style="width: 72px; height: 72px; background: var(--color-primary-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 32px;">
-              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2">
-                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                <circle cx="12" cy="7" r="4"></circle>
-              </svg>
-            </div>
-            <h3 style="font-size: 1.5rem; margin-bottom: 16px; font-weight: 600;">Personalized Care</h3>
-            <p style="color: var(--color-gray-dark); line-height: 1.7;">What one patient needs might be completely different from another. I create individualized care plans designed around YOUR body and YOUR goals.</p>
-          </div>
-        </div>
+      <div class="credentials-card glass" data-animate="fade-up" data-animate-delay="200">
+        <ul class="credentials-list">
+          <li class="credentials-item">
+            <svg class="credentials-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Doctor of Chiropractic (D.C.)</span>
+          </li>
+          <li class="credentials-item">
+            <svg class="credentials-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Certified in Neuro Rehabilitation</span>
+          </li>
+          <li class="credentials-item">
+            <svg class="credentials-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Advanced Training in Soft Tissue Techniques</span>
+          </li>
+          <li class="credentials-item">
+            <svg class="credentials-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Functional Movement Specialist</span>
+          </li>
+          <li class="credentials-item">
+            <svg class="credentials-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Member, California Chiropractic Association</span>
+          </li>
+        </ul>
       </div>
     </div>
-  </section>
-
-  <!-- What to Expect -->
-  <section class="section" style="background: var(--color-off-white);">
-    <div class="container">
-      <div class="section__header" data-animate="fade-up">
-        <span class="section__eyebrow" style="color: var(--color-accent);">Your Visit</span>
-        <h2 class="display-2">What to Expect</h2>
-        <p class="text-large" style="color: var(--color-gray-dark);">A patient-first experience from the moment you walk in.</p>
-      </div>
-
-      <div style="max-width: 900px; margin: 64px auto 0;">
-        <!-- Step 1 -->
-        <div class="elevated hover-lift" data-animate="fade-up" data-animate-delay="100" style="margin-bottom: 32px; padding: 48px; display: flex; gap: 40px; align-items: flex-start;">
-          <div style="flex-shrink: 0;">
-            <div style="width: 64px; height: 64px; background: var(--color-primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.75rem; font-weight: 700; font-family: var(--font-heading);">1</div>
-          </div>
-          <div>
-            <h3 style="font-size: 1.75rem; margin-bottom: 16px; font-weight: 600;">Initial Consultation</h3>
-            <p style="color: var(--color-gray-dark); line-height: 1.8; font-size: 1.0625rem;">I'll listen carefully to your health history, current concerns, and goals. We'll spend 30-45 minutes discussing your pain patterns, lifestyle, and what you hope to achieve. This isn't rushed—you'll have my full attention.</p>
-          </div>
-        </div>
-
-        <!-- Step 2 -->
-        <div class="elevated hover-lift" data-animate="fade-up" data-animate-delay="200" style="margin-bottom: 32px; padding: 48px; display: flex; gap: 40px; align-items: flex-start;">
-          <div style="flex-shrink: 0;">
-            <div style="width: 64px; height: 64px; background: var(--color-primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.75rem; font-weight: 700; font-family: var(--font-heading);">2</div>
-          </div>
-          <div>
-            <h3 style="font-size: 1.75rem; margin-bottom: 16px; font-weight: 600;">Comprehensive Evaluation</h3>
-            <p style="color: var(--color-gray-dark); line-height: 1.8; font-size: 1.0625rem;">Through movement assessments and hands-on examination, I'll identify the root cause of your discomfort. I'll explain my findings in plain language—no confusing medical jargon, just clear explanations you can understand.</p>
-          </div>
-        </div>
-
-        <!-- Step 3 -->
-        <div class="elevated hover-lift" data-animate="fade-up" data-animate-delay="300" style="margin-bottom: 32px; padding: 48px; display: flex; gap: 40px; align-items: flex-start;">
-          <div style="flex-shrink: 0;">
-            <div style="width: 64px; height: 64px; background: var(--color-primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.75rem; font-weight: 700; font-family: var(--font-heading);">3</div>
-          </div>
-          <div>
-            <h3 style="font-size: 1.75rem; margin-bottom: 16px; font-weight: 600;">Collaborative Care Plan</h3>
-            <p style="color: var(--color-gray-dark); line-height: 1.8; font-size: 1.0625rem;">Together, we'll create a personalized plan that may include gentle adjustments, soft tissue work, and home exercises. You'll know exactly what to expect, how long treatment might take, and what you can do between visits to accelerate your progress.</p>
-          </div>
-        </div>
-
-        <!-- Step 4 -->
-        <div class="elevated hover-lift" data-animate="fade-up" data-animate-delay="400" style="padding: 48px; display: flex; gap: 40px; align-items: flex-start;">
-          <div style="flex-shrink: 0;">
-            <div style="width: 64px; height: 64px; background: var(--color-primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.75rem; font-weight: 700; font-family: var(--font-heading);">4</div>
-          </div>
-          <div>
-            <h3 style="font-size: 1.75rem; margin-bottom: 16px; font-weight: 600;">Ongoing Support</h3>
-            <p style="color: var(--color-gray-dark); line-height: 1.8; font-size: 1.0625rem;">As you progress, I'll continually assess what's working and adjust your plan as needed. My goal isn't to create dependency—it's to give you the tools and knowledge to maintain your health independently.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Credentials -->
-  <section class="section section-hero">
-    <div class="container container-narrow" style="text-align: center;">
-      <div data-animate="fade-up">
-        <span class="section__eyebrow" style="color: var(--color-accent);">Credentials</span>
-        <h2 class="display-2" style="margin-bottom: 32px;">Education & Training</h2>
-        <p class="text-large" style="color: var(--color-gray-dark); max-width: 700px; margin: 0 auto 48px;">Committed to excellence through continuous learning and advanced certifications.</p>
-      </div>
-
-      <div class="glass" style="padding: 64px 48px; border-radius: 20px;" data-animate="fade-up" data-animate-delay="200">
-        <div style="max-width: 600px; margin: 0 auto;">
-          <ul style="list-style: none; text-align: left; font-size: 1.125rem; line-height: 2.2; color: var(--color-gray-dark);">
-            <li style="display: flex; align-items: center; gap: 16px; margin-bottom: 20px;">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Doctor of Chiropractic (D.C.)
-            </li>
-            <li style="display: flex; align-items: center; gap: 16px; margin-bottom: 20px;">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Certified in Neuro Rehabilitation
-            </li>
-            <li style="display: flex; align-items: center; gap: 16px; margin-bottom: 20px;">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Advanced Training in Soft Tissue Techniques
-            </li>
-            <li style="display: flex; align-items: center; gap: 16px; margin-bottom: 20px;">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Functional Movement Specialist
-            </li>
-            <li style="display: flex; align-items: center; gap: 16px;">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Member, California Chiropractic Association
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+  </SectionWrapper>
 
   <!-- CTA Section -->
   <section class="cta-premium">
     <div class="container container-narrow" data-animate="fade-up">
-      <h2>Ready to Experience the Difference?</h2>
-      <p>Schedule your consultation and take the first step toward lasting wellness.</p>
-      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+      <h2 class="cta-premium__title">Ready to Experience the Difference?</h2>
+      <p class="cta-premium__subtitle">Schedule your consultation and take the first step toward lasting wellness.</p>
+      <div class="cta-premium__actions">
         <a href="/contact" class="btn btn--white btn--lg">Book Your Visit</a>
-        <a href="tel:8582777500" class="btn btn--secondary btn--lg" style="background: transparent; border: 2px solid white; color: white;">Call (858) 277-7500</a>
+        <a href="tel:8582777500" class="btn btn--secondary btn--lg">Call (858) 277-7500</a>
       </div>
     </div>
   </section>
 </Layout>
 
 <style>
+  /* ==========================================
+     HERO BADGE
+     ========================================== */
+  .hero-badge {
+    display: inline-block;
+    padding: 10px 24px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    border-radius: 50px;
+    font-size: 0.875rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  /* ==========================================
+     ABOUT STORY - 2 COLUMN LAYOUT
+     ========================================== */
+  .about-story {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: clamp(60px, 8vw, 100px);
+    align-items: center;
+  }
+
+  .about-story__content {
+    max-width: 640px;
+  }
+
+  .about-story__body {
+    margin-top: var(--space-xl);
+  }
+
+  .about-story__body p {
+    color: var(--color-gray-dark);
+    line-height: 1.8;
+    font-size: 1.0625rem;
+    margin-bottom: var(--space-lg);
+  }
+
+  .about-story__body .text-large {
+    font-size: 1.25rem;
+    line-height: 1.7;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-xl);
+  }
+
+  .about-story__cta {
+    margin-top: var(--space-2xl);
+  }
+
+  .about-story__image {
+    position: relative;
+    height: 100%;
+    min-height: 600px;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-2xl);
+  }
+
+  .about-story__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .about-story__image:hover img {
+    transform: scale(1.05);
+  }
+
+  /* ==========================================
+     STATS CARDS
+     ========================================== */
+  .stats-grid {
+    text-align: center;
+  }
+
+  .stat-card {
+    background: var(--color-white);
+    padding: var(--space-3xl) var(--space-xl);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .stat-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+  }
+
+  .stat-card__number {
+    font-size: clamp(3rem, 8vw, 4.5rem);
+    font-weight: 700;
+    color: var(--color-primary);
+    font-family: var(--font-heading);
+    line-height: 1;
+    margin-bottom: var(--space-md);
+  }
+
+  .stat-card__label {
+    font-size: 1.125rem;
+    color: var(--color-gray-dark);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+
+  /* ==========================================
+     TIMELINE LAYOUT
+     ========================================== */
+  .timeline {
+    max-width: 900px;
+    margin: var(--space-5xl) auto 0;
+    position: relative;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 32px;
+    top: 32px;
+    bottom: 32px;
+    width: 2px;
+    background: linear-gradient(
+      to bottom,
+      var(--color-primary),
+      var(--color-primary-light)
+    );
+    opacity: 0.3;
+  }
+
+  .timeline-item {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: var(--space-xl);
+    margin-bottom: var(--space-3xl);
+    position: relative;
+  }
+
+  .timeline-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .timeline-item__marker {
+    position: relative;
+    z-index: 2;
+  }
+
+  .timeline-item__number {
+    width: 64px;
+    height: 64px;
+    background: var(--color-primary);
+    color: var(--color-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    font-weight: 700;
+    font-family: var(--font-heading);
+    box-shadow: 0 4px 16px rgba(0, 71, 187, 0.3);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .timeline-item:hover .timeline-item__number {
+    transform: scale(1.1);
+    box-shadow: 0 8px 24px rgba(0, 71, 187, 0.4);
+  }
+
+  .timeline-item__content {
+    background: var(--color-white);
+    padding: var(--space-2xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .timeline-item:hover .timeline-item__content {
+    transform: translateX(8px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .timeline-item__title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-md);
+    font-family: var(--font-heading);
+  }
+
+  .timeline-item__description {
+    color: var(--color-gray-dark);
+    line-height: 1.8;
+    font-size: 1.0625rem;
+  }
+
+  /* ==========================================
+     CREDENTIALS SECTION
+     ========================================== */
+  .credentials {
+    text-align: center;
+  }
+
+  .credentials-card {
+    padding: var(--space-4xl) var(--space-3xl);
+    border-radius: var(--radius-xl);
+    margin-top: var(--space-3xl);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .credentials-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-2xl);
+  }
+
+  .credentials-list {
+    list-style: none;
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .credentials-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-lg) 0;
+    font-size: 1.125rem;
+    color: var(--color-gray-dark);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+  }
+
+  .credentials-item:last-child {
+    border-bottom: none;
+  }
+
+  .credentials-item:hover {
+    color: var(--color-primary);
+    transform: translateX(8px);
+  }
+
+  .credentials-icon {
+    flex-shrink: 0;
+    stroke: var(--color-primary);
+    transition: all 0.3s ease;
+  }
+
+  .credentials-item:hover .credentials-icon {
+    stroke: var(--color-primary-dark);
+    transform: scale(1.1);
+  }
+
+  /* ==========================================
+     CTA PREMIUM ENHANCEMENTS
+     ========================================== */
+  .cta-premium__title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    margin-bottom: var(--space-md);
+  }
+
+  .cta-premium__subtitle {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-2xl);
+    opacity: 0.95;
+  }
+
+  .cta-premium__actions {
+    display: flex;
+    gap: var(--space-md);
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn--secondary {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+  }
+
+  .btn--secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+  }
+
+  /* ==========================================
+     RESPONSIVE DESIGN
+     ========================================== */
+
+  /* Tablets */
+  @media (max-width: 1024px) {
+    .about-story {
+      gap: var(--space-3xl);
+    }
+
+    .about-story__image {
+      min-height: 500px;
+    }
+
+    .timeline::before {
+      left: 28px;
+    }
+
+    .timeline-item {
+      grid-template-columns: 56px 1fr;
+      gap: var(--space-lg);
+    }
+
+    .timeline-item__number {
+      width: 56px;
+      height: 56px;
+      font-size: 1.5rem;
+    }
+  }
+
+  /* Mobile */
   @media (max-width: 768px) {
-    .grid[style*="grid-template-columns: 1.2fr 1fr"],
-    .grid[style*="grid-template-columns: 1fr 1fr"] {
-      grid-template-columns: 1fr !important;
-      gap: var(--space-2xl) !important;
+    .about-story {
+      grid-template-columns: 1fr;
+      gap: var(--space-2xl);
+    }
+
+    .about-story__image {
+      min-height: 400px;
+      order: -1;
+    }
+
+    .about-story__content {
+      max-width: 100%;
+    }
+
+    .about-story__body .text-large {
+      font-size: 1.125rem;
+    }
+
+    .stat-card {
+      padding: var(--space-2xl) var(--space-lg);
+    }
+
+    .stat-card__number {
+      font-size: clamp(2.5rem, 10vw, 3.5rem);
+    }
+
+    .timeline {
+      margin-top: var(--space-3xl);
+    }
+
+    .timeline::before {
+      left: 24px;
+    }
+
+    .timeline-item {
+      grid-template-columns: 48px 1fr;
+      gap: var(--space-md);
+      margin-bottom: var(--space-2xl);
+    }
+
+    .timeline-item__number {
+      width: 48px;
+      height: 48px;
+      font-size: 1.25rem;
+    }
+
+    .timeline-item__content {
+      padding: var(--space-lg);
+    }
+
+    .timeline-item__title {
+      font-size: 1.375rem;
+    }
+
+    .timeline-item__description {
+      font-size: 1rem;
+    }
+
+    .timeline-item:hover .timeline-item__content {
+      transform: translateX(4px);
+    }
+
+    .credentials-card {
+      padding: var(--space-2xl) var(--space-lg);
+    }
+
+    .credentials-item {
+      font-size: 1rem;
+      padding: var(--space-md) 0;
+    }
+
+    .cta-premium__actions {
+      flex-direction: column;
+      gap: var(--space-md);
+    }
+
+    .cta-premium__actions .btn {
+      width: 100%;
+    }
+  }
+
+  /* Small Mobile */
+  @media (max-width: 480px) {
+    .about-story__image {
+      min-height: 320px;
+    }
+
+    .timeline-item {
+      grid-template-columns: 40px 1fr;
+      gap: var(--space-sm);
+    }
+
+    .timeline-item__number {
+      width: 40px;
+      height: 40px;
+      font-size: 1.125rem;
+    }
+
+    .timeline-item__content {
+      padding: var(--space-md);
+    }
+
+    .timeline-item__title {
+      font-size: 1.25rem;
+    }
+
+    .credentials-item {
+      font-size: 0.9375rem;
+    }
+  }
+
+  /* ==========================================
+     ACCESSIBILITY
+     ========================================== */
+
+  /* Reduce motion for users who prefer it */
+  @media (prefers-reduced-motion: reduce) {
+    .about-story__image img,
+    .stat-card,
+    .timeline-item__number,
+    .timeline-item__content,
+    .credentials-card,
+    .credentials-item {
+      transition: none !important;
+    }
+
+    .about-story__image:hover img,
+    .stat-card:hover,
+    .timeline-item:hover .timeline-item__number,
+    .timeline-item:hover .timeline-item__content,
+    .credentials-card:hover,
+    .credentials-item:hover {
+      transform: none !important;
+    }
+  }
+
+  /* High contrast mode adjustments */
+  @media (prefers-contrast: high) {
+    .timeline::before {
+      opacity: 1;
+    }
+
+    .credentials-item {
+      border-bottom-width: 2px;
     }
   }
 </style>
@@ -228,7 +685,7 @@ import Layout from '../layouts/Layout.astro';
   // Scroll-triggered animations
   const observerOptions = {
     root: null,
-    rootMargin: '-100px',
+    rootMargin: '-80px',
     threshold: 0.1
   };
 

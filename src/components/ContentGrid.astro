@@ -1,0 +1,193 @@
+---
+interface Props {
+  columns?: 2 | 3 | 4;
+  gap?: 'sm' | 'md' | 'lg' | 'xl';
+  class?: string;
+}
+
+const {
+  columns = 3,
+  gap = 'xl',
+  class: className
+} = Astro.props;
+
+const gridClass = `content-grid--cols-${columns}`;
+const gapClass = `content-grid--gap-${gap}`;
+---
+
+<div class={`content-grid ${gridClass} ${gapClass} ${className || ''}`}>
+  <slot />
+</div>
+
+<style>
+  .content-grid {
+    display: grid;
+    width: 100%;
+  }
+
+  /* Column Variants */
+  .content-grid--cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .content-grid--cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .content-grid--cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Gap Variants */
+  .content-grid--gap-sm {
+    gap: var(--space-md);
+  }
+
+  .content-grid--gap-md {
+    gap: var(--space-lg);
+  }
+
+  .content-grid--gap-lg {
+    gap: var(--space-xl);
+  }
+
+  .content-grid--gap-xl {
+    gap: var(--space-2xl);
+  }
+
+  /* Responsive Breakpoints - Large Tablets */
+  @media (max-width: 1200px) {
+    .content-grid--cols-4 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  /* Responsive Breakpoints - Tablets */
+  @media (max-width: 1024px) {
+    .content-grid--cols-3,
+    .content-grid--cols-4 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .content-grid--gap-xl {
+      gap: var(--space-xl);
+    }
+  }
+
+  /* Responsive Breakpoints - Large Mobile */
+  @media (max-width: 768px) {
+    .content-grid--cols-2,
+    .content-grid--cols-3,
+    .content-grid--cols-4 {
+      grid-template-columns: 1fr;
+    }
+
+    .content-grid--gap-lg,
+    .content-grid--gap-xl {
+      gap: var(--space-lg);
+    }
+  }
+
+  /* Responsive Breakpoints - Small Mobile */
+  @media (max-width: 480px) {
+    .content-grid--gap-sm {
+      gap: var(--space-sm);
+    }
+
+    .content-grid--gap-md,
+    .content-grid--gap-lg,
+    .content-grid--gap-xl {
+      gap: var(--space-md);
+    }
+  }
+
+  /* Utility Classes for Special Layouts */
+  :global(.content-grid--auto-fit) {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  :global(.content-grid--auto-fill) {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+
+  /* Stagger Animation Support */
+  .content-grid > :global(*) {
+    animation: fadeInUp 0.6s ease backwards;
+  }
+
+  .content-grid > :global(*:nth-child(1)) {
+    animation-delay: 0ms;
+  }
+
+  .content-grid > :global(*:nth-child(2)) {
+    animation-delay: 100ms;
+  }
+
+  .content-grid > :global(*:nth-child(3)) {
+    animation-delay: 200ms;
+  }
+
+  .content-grid > :global(*:nth-child(4)) {
+    animation-delay: 300ms;
+  }
+
+  .content-grid > :global(*:nth-child(5)) {
+    animation-delay: 400ms;
+  }
+
+  .content-grid > :global(*:nth-child(6)) {
+    animation-delay: 500ms;
+  }
+
+  .content-grid > :global(*:nth-child(7)) {
+    animation-delay: 600ms;
+  }
+
+  .content-grid > :global(*:nth-child(8)) {
+    animation-delay: 700ms;
+  }
+
+  .content-grid > :global(*:nth-child(n+9)) {
+    animation-delay: 800ms;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Disable animations for reduced motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    .content-grid > :global(*) {
+      animation: none;
+    }
+  }
+
+  /* Support for masonry-style layouts (when supported) */
+  @supports (grid-template-rows: masonry) {
+    :global(.content-grid--masonry) {
+      grid-template-rows: masonry;
+    }
+  }
+
+  /* Equal height items */
+  :global(.content-grid--equal-height) > :global(*) {
+    height: 100%;
+  }
+
+  /* Center items vertically */
+  :global(.content-grid--align-center) {
+    align-items: center;
+  }
+
+  /* Center items horizontally */
+  :global(.content-grid--justify-center) {
+    justify-items: center;
+  }
+</style>

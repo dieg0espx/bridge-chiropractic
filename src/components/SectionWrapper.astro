@@ -1,0 +1,197 @@
+---
+interface Props {
+  background?: 'white' | 'gray' | 'dark';
+  spacing?: 'compact' | 'normal' | 'hero';
+  containerWidth?: 'narrow' | 'normal' | 'wide';
+  id?: string;
+  class?: string;
+}
+
+const {
+  background = 'white',
+  spacing = 'normal',
+  containerWidth = 'normal',
+  id,
+  class: className
+} = Astro.props;
+
+const backgroundClass = `section-wrapper--${background}`;
+const spacingClass = `section-wrapper--${spacing}`;
+const containerClass = containerWidth === 'narrow'
+  ? 'container-narrow'
+  : containerWidth === 'wide'
+  ? 'container-wide'
+  : 'container';
+---
+
+<section
+  id={id}
+  class={`section-wrapper ${backgroundClass} ${spacingClass} ${className || ''}`}
+>
+  <div class={containerClass}>
+    <slot />
+  </div>
+</section>
+
+<style>
+  .section-wrapper {
+    position: relative;
+    width: 100%;
+  }
+
+  /* Background Variants */
+  .section-wrapper--white {
+    background-color: var(--color-white);
+    color: var(--color-charcoal);
+  }
+
+  .section-wrapper--gray {
+    background-color: var(--color-off-white);
+    color: var(--color-charcoal);
+  }
+
+  .section-wrapper--dark {
+    background-color: var(--color-charcoal);
+    color: var(--color-white);
+  }
+
+  .section-wrapper--dark :global(h1),
+  .section-wrapper--dark :global(h2),
+  .section-wrapper--dark :global(h3),
+  .section-wrapper--dark :global(h4),
+  .section-wrapper--dark :global(h5),
+  .section-wrapper--dark :global(h6) {
+    color: var(--color-white);
+  }
+
+  .section-wrapper--dark :global(p) {
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  .section-wrapper--dark :global(.section__eyebrow) {
+    color: var(--color-primary);
+  }
+
+  /* Spacing Variants */
+  .section-wrapper--compact {
+    padding: var(--space-3xl) 0;
+  }
+
+  .section-wrapper--normal {
+    padding: var(--space-5xl) 0;
+  }
+
+  .section-wrapper--hero {
+    padding: clamp(80px, 15vh, 160px) 0;
+  }
+
+  /* Container Widths */
+  .container {
+    width: 100%;
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding-left: var(--space-lg);
+    padding-right: var(--space-lg);
+  }
+
+  .container-narrow {
+    width: 100%;
+    max-width: var(--container-narrow);
+    margin: 0 auto;
+    padding-left: var(--space-lg);
+    padding-right: var(--space-lg);
+  }
+
+  .container-wide {
+    width: 100%;
+    max-width: var(--container-wide);
+    margin: 0 auto;
+    padding-left: var(--space-lg);
+    padding-right: var(--space-lg);
+  }
+
+  /* Responsive Spacing Adjustments */
+  @media (max-width: 1024px) {
+    .section-wrapper--compact {
+      padding: var(--space-2xl) 0;
+    }
+
+    .section-wrapper--normal {
+      padding: var(--space-4xl) 0;
+    }
+
+    .section-wrapper--hero {
+      padding: clamp(60px, 12vh, 120px) 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .section-wrapper--compact {
+      padding: var(--space-xl) 0;
+    }
+
+    .section-wrapper--normal {
+      padding: var(--space-3xl) 0;
+    }
+
+    .section-wrapper--hero {
+      padding: clamp(48px, 10vh, 96px) 0;
+    }
+
+    .container,
+    .container-narrow,
+    .container-wide {
+      padding-left: var(--space-md);
+      padding-right: var(--space-md);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .section-wrapper--compact {
+      padding: var(--space-lg) 0;
+    }
+
+    .section-wrapper--normal {
+      padding: var(--space-2xl) 0;
+    }
+
+    .section-wrapper--hero {
+      padding: clamp(40px, 8vh, 80px) 0;
+    }
+  }
+
+  /* Optional: Add subtle texture or pattern to backgrounds */
+  .section-wrapper--gray::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(circle at 1px 1px, rgba(0, 0, 0, 0.02) 1px, transparent 0);
+    background-size: 20px 20px;
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  .section-wrapper--dark::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.03) 1px, transparent 0);
+    background-size: 20px 20px;
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  /* Ensure content is above pseudo-elements */
+  .container,
+  .container-narrow,
+  .container-wide {
+    position: relative;
+    z-index: 1;
+  }
+</style>

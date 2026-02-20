@@ -1,0 +1,216 @@
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║                         FEATURESECTION COMPONENT                              ║
+║                    Production-Ready Astro Component                          ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+
+┌───────────────────────────────────────────────────────────────────────────────┐
+│                              COMPONENT STRUCTURE                              │
+└───────────────────────────────────────────────────────────────────────────────┘
+
+<FeatureSection>
+│
+├─ Props
+│  ├─ eyebrow: string          ──→ "Why Choose Us"
+│  ├─ title: string             ──→ "Love Your Life"
+│  ├─ subtitle: string          ──→ "Experience wellness..."
+│  ├─ features: Feature[]       ──→ [{...}, {...}, {...}]
+│  ├─ background?: variant      ──→ 'white' | 'gray' | 'dark'
+│  └─ centered?: boolean        ──→ true (default)
+│
+├─ HTML Structure
+│  │
+│  └─ <section class="section feature-section">
+│     │
+│     └─ <div class="container">
+│        │
+│        ├─ Section Header
+│        │  ├─ <span class="section__eyebrow">eyebrow</span>
+│        │  ├─ <h2 class="display-2">title</h2>
+│        │  └─ <p class="text-large">subtitle</p>
+│        │
+│        └─ <div class="feature-grid">
+│           │
+│           ├─ Feature Card 1
+│           │  ├─ Visual (Image or Icon)
+│           │  └─ Content
+│           │     ├─ <h3>Feature Title</h3>
+│           │     ├─ <p>Description</p>
+│           │     └─ <a>Link (optional)</a>
+│           │
+│           ├─ Feature Card 2
+│           │  └─ (same structure)
+│           │
+│           └─ Feature Card 3
+│              └─ (same structure)
+│
+└─ Styling
+   ├─ Premium Cards (glassmorphism on dark)
+   ├─ Hover Effects (lift, scale, color)
+   ├─ Responsive Grid (3→2→1 columns)
+   ├─ Animations (staggered fade-up)
+   └─ Accessibility (focus, keyboard, screen readers)
+
+
+┌───────────────────────────────────────────────────────────────────────────────┐
+│                           VISUAL LAYOUT PREVIEW                               │
+└───────────────────────────────────────────────────────────────────────────────┘
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                                                                             ┃
+┃                            WHY CHOOSE US                                    ┃
+┃                                                                             ┃
+┃                          Love Your Life                                     ┃
+┃                                                                             ┃
+┃            Experience wellness that transforms your daily routine           ┃
+┃                                                                             ┃
+┃  ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐       ┃
+┃  │                 │    │                 │    │                 │       ┃
+┃  │  ┌───────────┐  │    │  ┌───────────┐  │    │  ┌───────────┐  │       ┃
+┃  │  │           │  │    │  │           │  │    │  │           │  │       ┃
+┃  │  │   IMAGE   │  │    │  │   IMAGE   │  │    │  │   IMAGE   │  │       ┃
+┃  │  │           │  │    │  │           │  │    │  │           │  │       ┃
+┃  │  └───────────┘  │    │  └───────────┘  │    │  └───────────┘  │       ┃
+┃  │                 │    │                 │    │                 │       ┃
+┃  │ Personalized    │    │ Expert          │    │ Lasting         │       ┃
+┃  │ Care            │    │ Guidance        │    │ Results         │       ┃
+┃  │                 │    │                 │    │                 │       ┃
+┃  │ Every treatment │    │ Learn from      │    │ Transform your  │       ┃
+┃  │ plan tailored   │    │ experienced     │    │ health with     │       ┃
+┃  │ to your needs   │    │ professionals   │    │ proven methods  │       ┃
+┃  │                 │    │                 │    │                 │       ┃
+┃  │ Learn More →    │    │ Learn More →    │    │ Learn More →    │       ┃
+┃  │                 │    │                 │    │                 │       ┃
+┃  └─────────────────┘    └─────────────────┘    └─────────────────┘       ┃
+┃                                                                             ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+
+┌───────────────────────────────────────────────────────────────────────────────┐
+│                         RESPONSIVE BREAKPOINTS                                │
+└───────────────────────────────────────────────────────────────────────────────┘
+
+DESKTOP (>1024px)                 TABLET (768-1024px)              MOBILE (<768px)
+┌─────────────────────────┐      ┌─────────────────────┐         ┌──────────────┐
+│  ┌──┐  ┌──┐  ┌──┐      │      │  ┌──┐  ┌──┐         │         │  ┌──────┐    │
+│  │  │  │  │  │  │      │      │  │  │  │  │         │         │  │      │    │
+│  └──┘  └──┘  └──┘      │      │  └──┘  └──┘         │         │  └──────┘    │
+│                         │      │                      │         │              │
+│  3 Columns              │      │  2 Columns           │         │  ┌──────┐    │
+│  48px gaps              │      │  32px gaps           │         │  │      │    │
+│  Full hover effects     │      │  Moderate hovers     │         │  └──────┘    │
+│                         │      │                      │         │              │
+└─────────────────────────┘      └─────────────────────┘         │  1 Column    │
+                                                                  │  24px gaps   │
+                                                                  │              │
+                                                                  └──────────────┘
+
+
+┌───────────────────────────────────────────────────────────────────────────────┐
+│                             ANIMATION TIMELINE                                │
+└───────────────────────────────────────────────────────────────────────────────┘
+
+Scroll into view triggers:
+
+    0ms                100ms              200ms              300ms
+     │                  │                  │                  │
+     ▼                  ▼                  ▼                  ▼
+┌─────────┐        ┌─────────┐        ┌─────────┐        ┌─────────┐
+│ Header  │        │ Card 1  │        │ Card 2  │        │ Card 3  │
+│ Fades   │────────│ Fades   │────────│ Fades   │────────│ Fades   │
+│ Up      │        │ Up      │        │ Up      │        │ Up      │
+└─────────┘        └─────────┘        └─────────┘        └─────────┘
+                        │                  │                  │
+                        └──────────────────┴──────────────────┘
+                                   Staggered Delays
+
+
+┌───────────────────────────────────────────────────────────────────────────────┐
+│                            HOVER INTERACTIONS                                 │
+└───────────────────────────────────────────────────────────────────────────────┘
+
+Card Hover:                    Image Hover:                Icon Hover:
+┌────────────┐                ┌────────────┐             ┌────────────┐
+│            │                │   ┌────┐   │             │   ┌────┐   │
+│   ↑ 8px    │                │   │ ╱╲ │   │             │   │ ●→◉│   │
+│            │                │   │╱  ╲│   │             │   └────┘   │
+│  Shadow+   │                │  Scale+    │             │  Color     │
+└────────────┘                └────────────┘             │  Change    │
+                                                         └────────────┘
+
+Link Hover:                    Focus State:
+Learn More →  ──→  Learn More  →→    ┌──────────────┐
+                                     │ ╭────────────╮│
+Gap increases                        │ │   Focus    ││
+Arrow slides right                   │ │  Outline   ││
+                                     │ ╰────────────╯│
+                                     └──────────────┘
+
+
+┌───────────────────────────────────────────────────────────────────────────────┐
+│                          BACKGROUND VARIANTS                                  │
+└───────────────────────────────────────────────────────────────────────────────┘
+
+WHITE                      GRAY                       DARK
+┌──────────────┐          ┌──────────────┐          ┌──────────────┐
+│ ░░░░░░░░░░░░ │          │ ▒▒▒▒▒▒▒▒▒▒▒▒ │          │ ████████████ │
+│ ░ White BG ░ │          │ ▒ Gray BG  ▒ │          │ █ Dark BG  █ │
+│ ░ Standard ░ │          │ ▒ Elevated ▒ │          │ █ Glass FX █ │
+│ ░░░░░░░░░░░░ │          │ ▒▒▒▒▒▒▒▒▒▒▒▒ │          │ ████████████ │
+└──────────────┘          └──────────────┘          └──────────────┘
+
+
+┌───────────────────────────────────────────────────────────────────────────────┐
+│                              FILE STRUCTURE                                   │
+└───────────────────────────────────────────────────────────────────────────────┘
+
+/Users/diego/Desktop/Bridge-chiropractic/
+│
+├── src/
+│   ├── components/
+│   │   ├── FeatureSection.astro          [12KB] Main Component
+│   │   └── FeatureSection.example.md     [11KB] Documentation
+│   │
+│   └── pages/
+│       └── feature-demo.astro            [ 7KB] Demo Page
+│
+├── FEATURE_SECTION_README.md             [ 5KB] Quick Start
+├── COMPONENT_SUMMARY.md                  [13KB] Architecture
+└── FEATURE_SECTION_VISUAL.txt            [ 7KB] This File
+
+
+┌───────────────────────────────────────────────────────────────────────────────┐
+│                             QUICK REFERENCE                                   │
+└───────────────────────────────────────────────────────────────────────────────┘
+
+Import:     import FeatureSection from '../components/FeatureSection.astro';
+
+Demo URL:   http://localhost:4321/feature-demo
+
+Required:   eyebrow, title, subtitle, features[]
+
+Optional:   background (white|gray|dark), centered (boolean)
+
+Grid:       3 cols → 2 cols → 1 col (responsive)
+
+Animation:  Staggered fade-up on scroll
+
+Accessible: WCAG 2.1 AA compliant
+
+Browser:    Modern browsers (latest 2 versions)
+
+
+┌───────────────────────────────────────────────────────────────────────────────┐
+│                            FEATURE HIGHLIGHTS                                 │
+└───────────────────────────────────────────────────────────────────────────────┘
+
+✓ Premium Design          Lifetime.life inspired aesthetics
+✓ Fully Responsive        Mobile-first, adapts to all screens
+✓ TypeScript Support      Full type safety and autocomplete
+✓ Accessibility Built-in  WCAG 2.1 AA compliant
+✓ Smooth Animations       GPU-accelerated, respects motion pref
+✓ Flexible Content        Images OR icons, with or without links
+✓ Dark Mode Ready         Glassmorphism effects on dark backgrounds
+✓ Performance Optimized   Lazy loading, inline SVG, minimal JS
+✓ Design System Ready     Uses existing CSS variables
+✓ Production Ready        Tested, documented, ready to deploy
+

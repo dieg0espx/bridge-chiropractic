@@ -1,490 +1,546 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import HeroVideo from '../components/HeroVideo.astro';
+import SectionWrapper from '../components/SectionWrapper.astro';
+import ContentGrid from '../components/ContentGrid.astro';
+import OfferingCard from '../components/OfferingCard.astro';
 ---
 
-<Layout title="Home">
-  <!-- Video Hero Section -->
-  <section class="video-hero">
-    <video class="video-hero__video" autoplay muted loop playsinline id="hero-video">
-      <source src="https://assets.mixkit.co/videos/preview/mixkit-physiotherapist-doing-back-massage-to-a-client-5262-large.mp4" type="video/mp4">
-    </video>
-    <div class="video-hero__overlay"></div>
+<Layout title="Bridge Chiropractic - Transform Your Wellness | San Diego">
+  <!-- Hero Video Section -->
+  <HeroVideo
+    videoUrl="https://assets.mixkit.co/videos/preview/mixkit-physiotherapist-doing-back-massage-to-a-client-5262-large.mp4"
+    posterImage="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1920&h=1080&fit=crop"
+    title="Discover Your Best Self"
+    subtitle="Experience transformative chiropractic care designed for San Diego adults who want to stay active, vibrant, and pain-free."
+    ctaText="Begin Your Journey"
+    ctaLink="/contact"
+    secondaryCtaText="Learn More"
+    secondaryCtaLink="/about"
+  />
 
-    <!-- Floating particles for ambiance -->
-    <div class="floating-particles">
-      <div class="particle" style="left: 10%; top: 20%; animation-delay: 0s;"></div>
-      <div class="particle" style="left: 85%; top: 30%; animation-delay: 5s;"></div>
-      <div class="particle" style="left: 50%; top: 60%; animation-delay: 10s;"></div>
+  <!-- How It Works Section -->
+  <SectionWrapper id="content" background="white" spacing="hero" containerWidth="normal">
+    <div class="section__header" data-animate="fade-up">
+      <span class="section__eyebrow">Your Journey</span>
+      <h2 class="display-2">How It Works</h2>
+      <p class="text-large" style="color: var(--color-gray-dark); max-width: 700px; margin: 0 auto;">
+        A personalized approach to your wellness, from first consultation to lasting results.
+      </p>
     </div>
 
-    <div class="video-hero__content" data-animate="fade-up">
-      <h1 class="hero-fullbleed__title">Discover Your Best Self</h1>
-      <p class="hero-fullbleed__subtitle">Experience transformative chiropractic care designed for San Diego adults who want to stay active, vibrant, and pain-free.</p>
-      <div class="hero__actions" style="display: flex; gap: 16px; justify-content: center; margin-top: 40px;">
-        <a href="/contact" class="btn btn--white btn--lg">Begin Your Journey</a>
-        <a href="/about" class="btn btn--secondary btn--lg" style="background: transparent; border: 2px solid white; color: white;">Learn More</a>
+    <ContentGrid columns={3} gap="xl" class="mt-4xl">
+      <article class="glass" style="padding: var(--space-2xl); border-radius: var(--radius-xl); text-align: center;">
+        <div class="icon-container icon-container--lg mx-auto">
+          <span style="font-size: 32px; font-weight: 600; font-family: var(--font-heading);">1</span>
+        </div>
+        <h3 style="font-size: 1.5rem; margin-bottom: var(--space-md); font-family: var(--font-heading);">
+          Initial Consultation
+        </h3>
+        <p style="color: var(--color-gray-dark); line-height: 1.7;">
+          We listen to your story, understand your goals, and perform a comprehensive evaluation.
+        </p>
+      </article>
+
+      <article class="glass" style="padding: var(--space-2xl); border-radius: var(--radius-xl); text-align: center;">
+        <div class="icon-container icon-container--lg mx-auto">
+          <span style="font-size: 32px; font-weight: 600; font-family: var(--font-heading);">2</span>
+        </div>
+        <h3 style="font-size: 1.5rem; margin-bottom: var(--space-md); font-family: var(--font-heading);">
+          Personalized Plan
+        </h3>
+        <p style="color: var(--color-gray-dark); line-height: 1.7;">
+          Together, we create a tailored care plan that fits your lifestyle and addresses your unique needs.
+        </p>
+      </article>
+
+      <article class="glass" style="padding: var(--space-2xl); border-radius: var(--radius-xl); text-align: center;">
+        <div class="icon-container icon-container--lg mx-auto">
+          <span style="font-size: 32px; font-weight: 600; font-family: var(--font-heading);">3</span>
+        </div>
+        <h3 style="font-size: 1.5rem; margin-bottom: var(--space-md); font-family: var(--font-heading);">
+          Ongoing Care
+        </h3>
+        <p style="color: var(--color-gray-dark); line-height: 1.7;">
+          Experience gentle adjustments, movement training, and continuous support as you transform.
+        </p>
+      </article>
+    </ContentGrid>
+  </SectionWrapper>
+
+  <!-- Featured Services Section -->
+  <SectionWrapper background="gray" spacing="hero" containerWidth="normal">
+    <div class="section__header" data-animate="fade-up">
+      <span class="section__eyebrow">Our Services</span>
+      <h2 class="display-2">Comprehensive Wellness</h2>
+      <p class="text-large" style="color: var(--color-gray-dark); max-width: 700px; margin: 0 auto;">
+        Holistic chiropractic care tailored to your body's needs.
+      </p>
+    </div>
+
+    <ContentGrid columns={3} gap="xl" class="mt-4xl">
+      <OfferingCard
+        image="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&h=600&fit=crop"
+        title="Chiropractic Adjustments"
+        description="Gentle spinal care that restores alignment and relieves discomfort naturally."
+        link="/services#chiropractic"
+      />
+
+      <OfferingCard
+        image="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800&h=600&fit=crop"
+        title="Soft Tissue Therapy"
+        description="Release tension and enhance your body's natural healing capacity with targeted techniques."
+        link="/services#soft-tissue"
+      />
+
+      <OfferingCard
+        image="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&h=600&fit=crop"
+        title="Movement Training"
+        description="Personalized exercises designed to strengthen, stabilize, and sustain your progress."
+        link="/services#movement"
+      />
+
+      <OfferingCard
+        image="https://images.unsplash.com/photo-1559329007-40df8a9345d8?w=800&h=600&fit=crop"
+        title="Neuro Rehabilitation"
+        description="Specialized support for balance, coordination, and neurological wellness."
+        link="/services#neuro"
+      />
+
+      <OfferingCard
+        image="https://images.unsplash.com/photo-1549890762-0a3f8933bc76?w=800&h=600&fit=crop"
+        title="Pain Management"
+        description="Comprehensive, medication-free approaches to managing chronic and acute discomfort."
+        link="/services#pain"
+      />
+
+      <OfferingCard
+        image="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&h=600&fit=crop"
+        title="Wellness Care"
+        description="Proactive maintenance for those who want to stay healthy, active, and thriving."
+        link="/services#wellness"
+      />
+    </ContentGrid>
+
+    <div class="text-center mt-4xl" data-animate="fade-up">
+      <a href="/services" class="btn btn--primary btn--lg">View All Services</a>
+    </div>
+  </SectionWrapper>
+
+  <!-- What We Treat Section -->
+  <SectionWrapper background="white" spacing="hero" containerWidth="normal">
+    <div class="section__header" data-animate="fade-up">
+      <span class="section__eyebrow">Conditions</span>
+      <h2 class="display-2">What We Treat</h2>
+      <p class="text-large" style="color: var(--color-gray-dark); max-width: 700px; margin: 0 auto;">
+        From everyday aches to chronic conditions, we provide expert care for a wide range of health concerns.
+      </p>
+    </div>
+
+    <ContentGrid columns={4} gap="lg" class="mt-4xl">
+      <article class="glass" style="padding: var(--space-xl); border-radius: var(--radius-lg); text-align: center;">
+        <div class="icon-container icon-container--accent mx-auto">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 11l3 3L22 4"></path>
+            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+          </svg>
+        </div>
+        <h4 style="font-size: 1.125rem; margin-bottom: var(--space-xs); font-family: var(--font-heading);">Back Pain</h4>
+        <p style="font-size: 0.9rem; color: var(--color-gray-dark);">Lower, mid, and upper back relief</p>
+      </article>
+
+      <article class="glass" style="padding: var(--space-xl); border-radius: var(--radius-lg); text-align: center;">
+        <div class="icon-container icon-container--accent mx-auto">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="8" r="7"></circle>
+            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+          </svg>
+        </div>
+        <h4 style="font-size: 1.125rem; margin-bottom: var(--space-xs); font-family: var(--font-heading);">Neck Pain</h4>
+        <p style="font-size: 0.9rem; color: var(--color-gray-dark);">Tension, stiffness, and mobility</p>
+      </article>
+
+      <article class="glass" style="padding: var(--space-xl); border-radius: var(--radius-lg); text-align: center;">
+        <div class="icon-container icon-container--accent mx-auto">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+          </svg>
+        </div>
+        <h4 style="font-size: 1.125rem; margin-bottom: var(--space-xs); font-family: var(--font-heading);">Headaches</h4>
+        <p style="font-size: 0.9rem; color: var(--color-gray-dark);">Migraines and tension headaches</p>
+      </article>
+
+      <article class="glass" style="padding: var(--space-xl); border-radius: var(--radius-lg); text-align: center;">
+        <div class="icon-container icon-container--accent mx-auto">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+          </svg>
+        </div>
+        <h4 style="font-size: 1.125rem; margin-bottom: var(--space-xs); font-family: var(--font-heading);">Sciatica</h4>
+        <p style="font-size: 0.9rem; color: var(--color-gray-dark);">Leg pain and numbness</p>
+      </article>
+
+      <article class="glass" style="padding: var(--space-xl); border-radius: var(--radius-lg); text-align: center;">
+        <div class="icon-container icon-container--accent mx-auto">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <circle cx="12" cy="12" r="6"></circle>
+            <circle cx="12" cy="12" r="2"></circle>
+          </svg>
+        </div>
+        <h4 style="font-size: 1.125rem; margin-bottom: var(--space-xs); font-family: var(--font-heading);">Joint Pain</h4>
+        <p style="font-size: 0.9rem; color: var(--color-gray-dark);">Shoulders, hips, knees, ankles</p>
+      </article>
+
+      <article class="glass" style="padding: var(--space-xl); border-radius: var(--radius-lg); text-align: center;">
+        <div class="icon-container icon-container--accent mx-auto">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 20V10"></path>
+            <path d="M12 20V4"></path>
+            <path d="M6 20v-6"></path>
+          </svg>
+        </div>
+        <h4 style="font-size: 1.125rem; margin-bottom: var(--space-xs); font-family: var(--font-heading);">Posture Issues</h4>
+        <p style="font-size: 0.9rem; color: var(--color-gray-dark);">Alignment and ergonomics</p>
+      </article>
+
+      <article class="glass" style="padding: var(--space-xl); border-radius: var(--radius-lg); text-align: center;">
+        <div class="icon-container icon-container--accent mx-auto">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+        </div>
+        <h4 style="font-size: 1.125rem; margin-bottom: var(--space-xs); font-family: var(--font-heading);">Sports Injuries</h4>
+        <p style="font-size: 0.9rem; color: var(--color-gray-dark);">Recovery and prevention</p>
+      </article>
+
+      <article class="glass" style="padding: var(--space-xl); border-radius: var(--radius-lg); text-align: center;">
+        <div class="icon-container icon-container--accent mx-auto">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+          </svg>
+        </div>
+        <h4 style="font-size: 1.125rem; margin-bottom: var(--space-xs); font-family: var(--font-heading);">Auto Injuries</h4>
+        <p style="font-size: 0.9rem; color: var(--color-gray-dark);">Whiplash and accident recovery</p>
+      </article>
+    </ContentGrid>
+
+    <div class="text-center mt-4xl" data-animate="fade-up">
+      <a href="/conditions" class="btn btn--primary btn--lg">See All Conditions</a>
+    </div>
+  </SectionWrapper>
+
+  <!-- About Dr. Beyerl Section -->
+  <SectionWrapper background="gray" spacing="hero" containerWidth="normal">
+    <div class="two-col-premium">
+      <div data-animate="fade-right">
+        <span class="section__eyebrow">Trusted Care</span>
+        <h2 class="display-2" style="margin-bottom: var(--space-lg);">Dr. Nathan Beyerl</h2>
+        <p class="text-large" style="color: var(--color-gray-dark); margin-bottom: var(--space-2xl);">
+          With over 15 years of experience, Dr. Beyerl brings expertise, compassion, and a deep commitment to your wellness journey.
+        </p>
+
+        <ContentGrid columns={2} gap="lg" class="mb-2xl">
+          <div class="stat-display">
+            <div class="stat-display__number counter" data-count="15">0</div>
+            <p class="stat-display__label">Years Experience</p>
+          </div>
+          <div class="stat-display">
+            <div class="stat-display__number counter" data-count="5000">0</div>
+            <p class="stat-display__label">Patients Helped</p>
+          </div>
+        </ContentGrid>
+
+        <a href="/about" class="btn btn--primary btn--lg">Meet Dr. Beyerl</a>
+      </div>
+
+      <div data-animate="fade-left">
+        <img
+          src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=800&h=1000&fit=crop"
+          alt="Dr. Nathan Beyerl"
+          style="border-radius: var(--radius-xl); box-shadow: var(--shadow-xl); width: 100%; height: 600px; object-fit: cover;"
+        />
+      </div>
+    </div>
+  </SectionWrapper>
+
+  <!-- Testimonials Section -->
+  <SectionWrapper background="white" spacing="hero" containerWidth="normal">
+    <div class="section__header" data-animate="fade-up">
+      <span class="section__eyebrow">Testimonials</span>
+      <h2 class="display-2">What Our Patients Say</h2>
+      <div style="display: flex; align-items: center; justify-content: center; gap: var(--space-sm); margin-top: var(--space-lg);">
+        <div style="display: flex; gap: 4px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#F59E0B">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#F59E0B">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#F59E0B">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#F59E0B">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#F59E0B">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+          </svg>
+        </div>
+        <span style="font-size: 1.25rem; font-weight: 600; color: var(--color-charcoal);">5.0</span>
+        <span style="color: var(--color-gray-medium);">•</span>
+        <span style="color: var(--color-gray-dark);">Based on 200+ reviews</span>
       </div>
     </div>
 
-    <div class="video-hero__controls">
-      <button class="video-control-btn" id="play-pause-btn" aria-label="Play/Pause video">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="pause-icon">
-          <rect x="6" y="4" width="4" height="16"></rect>
-          <rect x="14" y="4" width="4" height="16"></rect>
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="play-icon" style="display: none;">
-          <polygon points="5 3 19 12 5 21 5 3"></polygon>
-        </svg>
-      </button>
+    <ContentGrid columns={3} gap="xl" class="mt-4xl">
+      <article class="glass" style="padding: var(--space-2xl); border-radius: var(--radius-xl);">
+        <div style="display: flex; gap: 4px; margin-bottom: var(--space-md); color: var(--color-accent);">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+          </svg>
+        </div>
+        <p style="font-size: 1.0625rem; line-height: 1.7; margin-bottom: var(--space-lg); color: var(--color-charcoal);">
+          "Dr. Beyerl transformed my chronic back pain into a thing of the past. His holistic approach and genuine care made all the difference."
+        </p>
+        <p style="font-weight: 600; color: var(--color-charcoal);">— Sarah M.</p>
+      </article>
+
+      <article class="glass" style="padding: var(--space-2xl); border-radius: var(--radius-xl);">
+        <div style="display: flex; gap: 4px; margin-bottom: var(--space-md); color: var(--color-accent);">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+          </svg>
+        </div>
+        <p style="font-size: 1.0625rem; line-height: 1.7; margin-bottom: var(--space-lg); color: var(--color-charcoal);">
+          "After years of migraines, I finally found relief. The team here truly cares about their patients and it shows in every visit."
+        </p>
+        <p style="font-weight: 600; color: var(--color-charcoal);">— Michael T.</p>
+      </article>
+
+      <article class="glass" style="padding: var(--space-2xl); border-radius: var(--radius-xl);">
+        <div style="display: flex; gap: 4px; margin-bottom: var(--space-md); color: var(--color-accent);">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+          </svg>
+        </div>
+        <p style="font-size: 1.0625rem; line-height: 1.7; margin-bottom: var(--space-lg); color: var(--color-charcoal);">
+          "As an active runner, I need to stay in peak condition. Dr. Beyerl keeps me running strong and injury-free."
+        </p>
+        <p style="font-weight: 600; color: var(--color-charcoal);">— Jennifer L.</p>
+      </article>
+    </ContentGrid>
+
+    <div class="text-center mt-4xl" data-animate="fade-up">
+      <a href="/testimonials" class="btn btn--primary btn--lg">Read More Reviews</a>
     </div>
-  </section>
+  </SectionWrapper>
 
-  <!-- How It Works - Timeline Section -->
-  <section class="section section-hero">
-    <div class="container">
-      <div class="section__header" data-animate="fade-up">
-        <span class="section__eyebrow" style="color: var(--color-accent);">Your Journey</span>
-        <h2 class="display-2">How It Works</h2>
-        <p class="text-large" style="color: var(--color-gray-dark); max-width: 700px; margin: 0 auto;">A personalized approach to your wellness, from first consultation to lasting results.</p>
-      </div>
-
-      <div class="grid grid--3" style="margin-top: 64px;">
-        <div class="elevated hover-lift" data-animate="fade-up" data-animate-delay="100">
-          <div style="width: 56px; height: 56px; background: var(--color-primary-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 24px;">
-            <span style="font-size: 28px; font-weight: 600; color: var(--color-primary); font-family: var(--font-heading);">1</span>
-          </div>
-          <h3 style="font-size: 1.5rem; margin-bottom: 12px;">Initial Consultation</h3>
-          <p style="color: var(--color-gray-dark); line-height: 1.7;">We listen to your story, understand your goals, and perform a comprehensive evaluation.</p>
-        </div>
-
-        <div class="elevated hover-lift" data-animate="fade-up" data-animate-delay="200">
-          <div style="width: 56px; height: 56px; background: var(--color-primary-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 24px;">
-            <span style="font-size: 28px; font-weight: 600; color: var(--color-primary); font-family: var(--font-heading);">2</span>
-          </div>
-          <h3 style="font-size: 1.5rem; margin-bottom: 12px;">Personalized Plan</h3>
-          <p style="color: var(--color-gray-dark); line-height: 1.7;">Together, we create a tailored care plan that fits your lifestyle and addresses your unique needs.</p>
-        </div>
-
-        <div class="elevated hover-lift" data-animate="fade-up" data-animate-delay="300">
-          <div style="width: 56px; height: 56px; background: var(--color-primary-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 24px;">
-            <span style="font-size: 28px; font-weight: 600; color: var(--color-primary); font-family: var(--font-heading);">3</span>
-          </div>
-          <h3 style="font-size: 1.5rem; margin-bottom: 12px;">Ongoing Care</h3>
-          <p style="color: var(--color-gray-dark); line-height: 1.7;">Experience gentle adjustments, movement training, and continuous support as you transform.</p>
-        </div>
-      </div>
+  <!-- FAQ Preview Section -->
+  <SectionWrapper background="gray" spacing="hero" containerWidth="narrow">
+    <div class="section__header" data-animate="fade-up">
+      <span class="section__eyebrow">Questions</span>
+      <h2 class="display-2">Frequently Asked</h2>
     </div>
-  </section>
 
-  <!-- Featured Services - Premium Cards -->
-  <section class="section" style="background: var(--color-off-white);">
-    <div class="container">
-      <div class="section__header" data-animate="fade-up">
-        <span class="section__eyebrow" style="color: var(--color-accent);">Our Services</span>
-        <h2 class="display-2">Comprehensive Wellness</h2>
-        <p class="text-large" style="color: var(--color-gray-dark);">Holistic chiropractic care tailored to your body's needs.</p>
-      </div>
+    <div class="mt-4xl">
+      <details class="faq-item" data-animate="fade-up">
+        <summary class="faq-summary">
+          Does chiropractic care hurt?
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq-icon">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </summary>
+        <div class="faq-content">
+          Most patients find chiropractic adjustments comfortable and often experience immediate relief. Dr. Beyerl uses gentle techniques tailored to your comfort level.
+        </div>
+      </details>
 
-      <div class="grid grid--3" style="margin-top: 64px;">
-        <!-- Service Card 1 -->
-        <a href="/services#chiropractic" class="card-premium" data-animate="fade-up" data-animate-delay="100">
-          <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&h=600&fit=crop" alt="Chiropractic Adjustments" class="card-premium__image" />
-          <div class="card__content">
-            <h3 class="card__title" style="font-size: 1.5rem;">Chiropractic Adjustments</h3>
-            <p class="card__text" style="margin-bottom: 16px;">Gentle spinal care that restores alignment and relieves discomfort naturally.</p>
-            <span class="card__link">
-              Explore this service
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </span>
-          </div>
-        </a>
+      <details class="faq-item" data-animate="fade-up">
+        <summary class="faq-summary">
+          How many visits will I need?
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq-icon">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </summary>
+        <div class="faq-content">
+          Every patient is unique. After your initial consultation and evaluation, Dr. Beyerl will create a personalized care plan based on your specific needs and goals.
+        </div>
+      </details>
 
-        <!-- Service Card 2 -->
-        <a href="/services#soft-tissue" class="card-premium" data-animate="fade-up" data-animate-delay="200">
-          <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800&h=600&fit=crop" alt="Soft Tissue Therapy" class="card-premium__image" />
-          <div class="card__content">
-            <h3 class="card__title" style="font-size: 1.5rem;">Soft Tissue Therapy</h3>
-            <p class="card__text" style="margin-bottom: 16px;">Release tension and enhance your body's natural healing capacity with targeted techniques.</p>
-            <span class="card__link">
-              Explore this service
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </span>
-          </div>
-        </a>
-
-        <!-- Service Card 3 -->
-        <a href="/services#movement" class="card-premium" data-animate="fade-up" data-animate-delay="300">
-          <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&h=600&fit=crop" alt="Movement Training" class="card-premium__image" />
-          <div class="card__content">
-            <h3 class="card__title" style="font-size: 1.5rem;">Movement Training</h3>
-            <p class="card__text" style="margin-bottom: 16px;">Personalized exercises designed to strengthen, stabilize, and sustain your progress.</p>
-            <span class="card__link">
-              Explore this service
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </span>
-          </div>
-        </a>
-
-        <!-- Service Card 4 -->
-        <a href="/services#neuro" class="card-premium" data-animate="fade-up" data-animate-delay="100">
-          <img src="https://images.unsplash.com/photo-1559329007-40df8a9345d8?w=800&h=600&fit=crop" alt="Neuro Rehabilitation" class="card-premium__image" />
-          <div class="card__content">
-            <h3 class="card__title" style="font-size: 1.5rem;">Neuro Rehabilitation</h3>
-            <p class="card__text" style="margin-bottom: 16px;">Specialized support for balance, coordination, and neurological wellness.</p>
-            <span class="card__link">
-              Explore this service
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </span>
-          </div>
-        </a>
-
-        <!-- Service Card 5 -->
-        <a href="/services#pain" class="card-premium" data-animate="fade-up" data-animate-delay="200">
-          <img src="https://images.unsplash.com/photo-1549890762-0a3f8933bc76?w=800&h=600&fit=crop" alt="Pain Management" class="card-premium__image" />
-          <div class="card__content">
-            <h3 class="card__title" style="font-size: 1.5rem;">Pain Management</h3>
-            <p class="card__text" style="margin-bottom: 16px;">Comprehensive, medication-free approaches to managing chronic and acute discomfort.</p>
-            <span class="card__link">
-              Explore this service
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </span>
-          </div>
-        </a>
-
-        <!-- Service Card 6 -->
-        <a href="/services#wellness" class="card-premium" data-animate="fade-up" data-animate-delay="300">
-          <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&h=600&fit=crop" alt="Wellness Care" class="card-premium__image" />
-          <div class="card__content">
-            <h3 class="card__title" style="font-size: 1.5rem;">Wellness Care</h3>
-            <p class="card__text" style="margin-bottom: 16px;">Proactive maintenance for those who want to stay healthy, active, and thriving.</p>
-            <span class="card__link">
-              Explore this service
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </span>
-          </div>
-        </a>
-      </div>
-
-      <div style="text-align: center; margin-top: 64px;" data-animate="fade-up">
-        <a href="/services" class="btn btn--primary btn--lg">View All Services</a>
-      </div>
+      <details class="faq-item" data-animate="fade-up">
+        <summary class="faq-summary">
+          Do you accept insurance?
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq-icon">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </summary>
+        <div class="faq-content">
+          Yes, we accept most major insurance plans. Contact our office to verify your specific coverage and discuss payment options.
+        </div>
+      </details>
     </div>
-  </section>
 
-  <!-- What We Treat -->
-  <section class="section section-hero">
-    <div class="container">
-      <div class="section__header" data-animate="fade-up">
-        <span class="section__eyebrow" style="color: var(--color-accent);">Conditions</span>
-        <h2 class="display-2">What We Treat</h2>
-        <p class="text-large" style="color: var(--color-gray-dark); max-width: 700px; margin: 0 auto;">From everyday aches to chronic conditions, we provide expert care for a wide range of health concerns.</p>
-      </div>
-
-      <div class="grid grid--4" style="margin-top: 64px; gap: 24px;">
-        <div class="glass" style="padding: 32px; border-radius: 16px; text-align: center;" data-animate="scale" data-animate-delay="100">
-          <div style="width: 64px; height: 64px; background: var(--color-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-              <path d="M9 11l3 3L22 4"></path>
-              <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-            </svg>
-          </div>
-          <h4 style="font-size: 1.125rem; margin-bottom: 8px;">Back Pain</h4>
-          <p style="font-size: 0.9rem; color: var(--color-gray-dark);">Lower, mid, and upper back relief</p>
-        </div>
-
-        <div class="glass" style="padding: 32px; border-radius: 16px; text-align: center;" data-animate="scale" data-animate-delay="200">
-          <div style="width: 64px; height: 64px; background: var(--color-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-              <circle cx="12" cy="8" r="7"></circle>
-              <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
-            </svg>
-          </div>
-          <h4 style="font-size: 1.125rem; margin-bottom: 8px;">Neck Pain</h4>
-          <p style="font-size: 0.9rem; color: var(--color-gray-dark);">Tension, stiffness, and mobility</p>
-        </div>
-
-        <div class="glass" style="padding: 32px; border-radius: 16px; text-align: center;" data-animate="scale" data-animate-delay="300">
-          <div style="width: 64px; height: 64px; background: var(--color-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-              <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-            </svg>
-          </div>
-          <h4 style="font-size: 1.125rem; margin-bottom: 8px;">Headaches</h4>
-          <p style="font-size: 0.9rem; color: var(--color-gray-dark);">Migraines and tension headaches</p>
-        </div>
-
-        <div class="glass" style="padding: 32px; border-radius: 16px; text-align: center;" data-animate="scale" data-animate-delay="400">
-          <div style="width: 64px; height: 64px; background: var(--color-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
-              <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
-            </svg>
-          </div>
-          <h4 style="font-size: 1.125rem; margin-bottom: 8px;">Sciatica</h4>
-          <p style="font-size: 0.9rem; color: var(--color-gray-dark);">Leg pain and numbness</p>
-        </div>
-
-        <div class="glass" style="padding: 32px; border-radius: 16px; text-align: center;" data-animate="scale" data-animate-delay="100">
-          <div style="width: 64px; height: 64px; background: var(--color-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-              <circle cx="12" cy="12" r="10"></circle>
-              <circle cx="12" cy="12" r="6"></circle>
-              <circle cx="12" cy="12" r="2"></circle>
-            </svg>
-          </div>
-          <h4 style="font-size: 1.125rem; margin-bottom: 8px;">Joint Pain</h4>
-          <p style="font-size: 0.9rem; color: var(--color-gray-dark);">Shoulders, hips, knees, ankles</p>
-        </div>
-
-        <div class="glass" style="padding: 32px; border-radius: 16px; text-align: center;" data-animate="scale" data-animate-delay="200">
-          <div style="width: 64px; height: 64px; background: var(--color-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-              <path d="M18 20V10"></path>
-              <path d="M12 20V4"></path>
-              <path d="M6 20v-6"></path>
-            </svg>
-          </div>
-          <h4 style="font-size: 1.125rem; margin-bottom: 8px;">Posture Issues</h4>
-          <p style="font-size: 0.9rem; color: var(--color-gray-dark);">Alignment and ergonomics</p>
-        </div>
-
-        <div class="glass" style="padding: 32px; border-radius: 16px; text-align: center;" data-animate="scale" data-animate-delay="300">
-          <div style="width: 64px; height: 64px; background: var(--color-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-              <circle cx="12" cy="12" r="10"></circle>
-              <polyline points="12 6 12 12 16 14"></polyline>
-            </svg>
-          </div>
-          <h4 style="font-size: 1.125rem; margin-bottom: 8px;">Sports Injuries</h4>
-          <p style="font-size: 0.9rem; color: var(--color-gray-dark);">Recovery and prevention</p>
-        </div>
-
-        <div class="glass" style="padding: 32px; border-radius: 16px; text-align: center;" data-animate="scale" data-animate-delay="400">
-          <div style="width: 64px; height: 64px; background: var(--color-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
-            </svg>
-          </div>
-          <h4 style="font-size: 1.125rem; margin-bottom: 8px;">Auto Injuries</h4>
-          <p style="font-size: 0.9rem; color: var(--color-gray-dark);">Whiplash and accident recovery</p>
-        </div>
-      </div>
-
-      <div style="text-align: center; margin-top: 64px;" data-animate="fade-up">
-        <a href="/conditions" class="btn btn--primary btn--lg">See All Conditions</a>
-      </div>
+    <div class="text-center mt-3xl" data-animate="fade-up">
+      <a href="/faq" class="btn btn--primary btn--lg">View All FAQs</a>
     </div>
-  </section>
-
-  <!-- Stats & Social Proof -->
-  <section class="section" style="background: var(--color-off-white);">
-    <div class="container">
-      <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
-        <div data-animate="fade-right">
-          <span class="section__eyebrow" style="color: var(--color-accent);">Trusted Care</span>
-          <h2 class="display-2" style="margin-bottom: 24px;">Dr. Nathan Beyerl</h2>
-          <p class="text-large" style="color: var(--color-gray-dark); margin-bottom: 32px;">With over 15 years of experience, Dr. Beyerl brings expertise, compassion, and a deep commitment to your wellness journey.</p>
-
-          <div class="grid grid--2" style="gap: 32px; margin-bottom: 32px;">
-            <div>
-              <div class="counter" data-count="15" style="font-size: 3rem; font-weight: 600; color: var(--color-primary); font-family: var(--font-heading); line-height: 1;">0</div>
-              <p style="color: var(--color-gray-dark); font-size: 1rem; margin-top: 8px;">Years Experience</p>
-            </div>
-            <div>
-              <div class="counter" data-count="5000" style="font-size: 3rem; font-weight: 600; color: var(--color-primary); font-family: var(--font-heading); line-height: 1;">0</div>
-              <p style="color: var(--color-gray-dark); font-size: 1rem; margin-top: 8px;">Patients Helped</p>
-            </div>
-          </div>
-
-          <a href="/about" class="btn btn--primary btn--lg">Meet Dr. Beyerl</a>
-        </div>
-
-        <div data-animate="fade-left" data-animate-delay="200">
-          <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=800&h=1000&fit=crop" alt="Dr. Nathan Beyerl" style="border-radius: 16px; box-shadow: var(--shadow-xl); width: 100%; height: 600px; object-fit: cover;" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section class="section section-hero">
-    <div class="container">
-      <div class="section__header" data-animate="fade-up">
-        <span class="section__eyebrow" style="color: var(--color-accent);">Testimonials</span>
-        <h2 class="display-2">What Our Patients Say</h2>
-        <div style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 16px;">
-          <div style="display: flex; gap: 4px;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          </div>
-          <span style="font-size: 1.25rem; font-weight: 600; color: var(--color-charcoal);">5.0</span>
-          <span style="color: var(--color-gray-medium);">•</span>
-          <span style="color: var(--color-gray-dark);">Based on 200+ reviews</span>
-        </div>
-      </div>
-
-      <div class="grid grid--3" style="margin-top: 64px;">
-        <div class="testimonial glass" data-animate="fade-up" data-animate-delay="100">
-          <div class="testimonial__stars">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          </div>
-          <p class="testimonial__text">"Dr. Beyerl transformed my chronic back pain into a thing of the past. His holistic approach and genuine care made all the difference."</p>
-          <p class="testimonial__author">— Sarah M.</p>
-        </div>
-
-        <div class="testimonial glass" data-animate="fade-up" data-animate-delay="200">
-          <div class="testimonial__stars">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          </div>
-          <p class="testimonial__text">"After years of migraines, I finally found relief. The team here truly cares about their patients and it shows in every visit."</p>
-          <p class="testimonial__author">— Michael T.</p>
-        </div>
-
-        <div class="testimonial glass" data-animate="fade-up" data-animate-delay="300">
-          <div class="testimonial__stars">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          </div>
-          <p class="testimonial__text">"As an active runner, I need to stay in peak condition. Dr. Beyerl keeps me running strong and injury-free."</p>
-          <p class="testimonial__author">— Jennifer L.</p>
-        </div>
-      </div>
-
-      <div style="text-align: center; margin-top: 64px;" data-animate="fade-up">
-        <a href="/testimonials" class="btn btn--primary btn--lg">Read More Reviews</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ Preview -->
-  <section class="section" style="background: var(--color-off-white);">
-    <div class="container container-narrow">
-      <div class="section__header" data-animate="fade-up">
-        <span class="section__eyebrow" style="color: var(--color-accent);">Questions</span>
-        <h2 class="display-2">Frequently Asked</h2>
-      </div>
-
-      <div style="margin-top: 64px;">
-        <details class="faq-item" data-animate="fade-up" data-animate-delay="100">
-          <summary style="font-size: 1.25rem; font-weight: 600; padding: 24px 0; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--color-gray-light);">
-            Does chiropractic care hurt?
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transition: transform 0.3s ease;"><path d="M6 9l6 6 6-6"/></svg>
-          </summary>
-          <div style="padding: 24px 0; color: var(--color-gray-dark); line-height: 1.7;">
-            Most patients find chiropractic adjustments comfortable and often experience immediate relief. Dr. Beyerl uses gentle techniques tailored to your comfort level.
-          </div>
-        </details>
-
-        <details class="faq-item" data-animate="fade-up" data-animate-delay="200">
-          <summary style="font-size: 1.25rem; font-weight: 600; padding: 24px 0; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--color-gray-light);">
-            How many visits will I need?
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transition: transform 0.3s ease;"><path d="M6 9l6 6 6-6"/></svg>
-          </summary>
-          <div style="padding: 24px 0; color: var(--color-gray-dark); line-height: 1.7;">
-            Every patient is unique. After your initial consultation and evaluation, Dr. Beyerl will create a personalized care plan based on your specific needs and goals.
-          </div>
-        </details>
-
-        <details class="faq-item" data-animate="fade-up" data-animate-delay="300">
-          <summary style="font-size: 1.25rem; font-weight: 600; padding: 24px 0; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--color-gray-light);">
-            Do you accept insurance?
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transition: transform 0.3s ease;"><path d="M6 9l6 6 6-6"/></svg>
-          </summary>
-          <div style="padding: 24px 0; color: var(--color-gray-dark); line-height: 1.7;">
-            Yes, we accept most major insurance plans. Contact our office to verify your specific coverage and discuss payment options.
-          </div>
-        </details>
-      </div>
-
-      <div style="text-align: center; margin-top: 48px;" data-animate="fade-up">
-        <a href="/faq" class="btn btn--primary btn--lg">View All FAQs</a>
-      </div>
-    </div>
-  </section>
+  </SectionWrapper>
 
   <!-- Premium CTA Section -->
   <section class="cta-premium">
     <div class="container container-narrow" data-animate="fade-up">
-      <h2>Ready to Begin Your Wellness Journey?</h2>
-      <p>Schedule your consultation today and discover what's possible for your health.</p>
-      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+      <h2 class="display-2" style="color: var(--color-white); margin-bottom: var(--space-lg);">
+        Ready to Begin Your Wellness Journey?
+      </h2>
+      <p class="text-large" style="color: rgba(255, 255, 255, 0.9); max-width: 700px; margin: 0 auto var(--space-2xl);">
+        Schedule your consultation today and discover what's possible for your health.
+      </p>
+      <div style="display: flex; gap: var(--space-lg); justify-content: center; flex-wrap: wrap;">
         <a href="/contact" class="btn btn--white btn--lg">Book Appointment</a>
-        <a href="tel:8582777500" class="btn btn--secondary btn--lg" style="background: transparent; border: 2px solid white; color: white;">Call (858) 277-7500</a>
+        <a href="tel:8582777500" class="btn btn--secondary btn--lg" style="background: transparent; border: 2px solid white; color: white;">
+          Call (858) 277-7500
+        </a>
       </div>
     </div>
   </section>
 </Layout>
 
 <style>
-  /* FAQ item arrow rotation */
-  details[open] summary svg {
+  /* FAQ Item Styling */
+  .faq-item {
+    border-bottom: 1px solid var(--color-gray-200);
+    margin-bottom: 0;
+  }
+
+  .faq-summary {
+    font-size: 1.25rem;
+    font-weight: 600;
+    font-family: var(--font-heading);
+    padding: var(--space-xl) 0;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: color var(--transition-normal);
+    color: var(--color-charcoal);
+  }
+
+  .faq-summary:hover {
+    color: var(--color-primary);
+  }
+
+  .faq-summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-icon {
+    flex-shrink: 0;
+    transition: transform var(--transition-normal);
+  }
+
+  .faq-item[open] .faq-icon {
     transform: rotate(180deg);
   }
 
-  /* Responsive adjustments */
+  .faq-content {
+    padding: 0 0 var(--space-xl) 0;
+    color: var(--color-gray-dark);
+    line-height: 1.8;
+    font-size: 1.0625rem;
+  }
+
+  /* Responsive Adjustments */
   @media (max-width: 1024px) {
-    .grid {
-      gap: var(--space-lg) !important;
+    .two-col-premium {
+      gap: var(--space-3xl);
     }
   }
 
   @media (max-width: 768px) {
-    .grid[style*="grid-template-columns: 1fr 1fr"] {
-      grid-template-columns: 1fr !important;
-      gap: var(--space-2xl) !important;
+    .two-col-premium {
+      grid-template-columns: 1fr;
+      gap: var(--space-2xl);
     }
 
     .cta-premium h2 {
-      font-size: 2rem;
+      font-size: clamp(2rem, 8vw, 2.5rem);
     }
 
     .cta-premium p {
-      font-size: 1.1rem;
+      font-size: 1.125rem;
+    }
+
+    .faq-summary {
+      font-size: 1.125rem;
+      padding: var(--space-lg) 0;
+    }
+
+    .faq-content {
+      padding-bottom: var(--space-lg);
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .cta-premium {
+      padding: var(--space-4xl) 0;
     }
   }
 </style>
 
 <script>
-  // Video play/pause control
-  const video = document.getElementById('hero-video') as HTMLVideoElement;
-  const playPauseBtn = document.getElementById('play-pause-btn');
-  const playIcon = document.getElementById('play-icon');
-  const pauseIcon = document.getElementById('pause-icon');
+  /**
+   * Homepage Interactive Features
+   * Handles scroll animations, counters, and FAQ interactions
+   */
 
-  playPauseBtn?.addEventListener('click', () => {
-    if (video.paused) {
-      video.play();
-      playIcon!.style.display = 'none';
-      pauseIcon!.style.display = 'block';
-    } else {
-      video.pause();
-      playIcon!.style.display = 'block';
-      pauseIcon!.style.display = 'none';
-    }
-  });
-
-  // Scroll-triggered animations (from existing animation system)
+  // Scroll-triggered animations
   const observerOptions = {
     root: null,
-    rootMargin: '-100px',
-    threshold: 0.1
+    rootMargin: '-80px',
+    threshold: 0.15
   };
 
   const observer = new IntersectionObserver((entries) => {
@@ -498,7 +554,7 @@ import Layout from '../layouts/Layout.astro';
 
   document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
 
-  // Counter animation
+  // Counter animation for stats
   const counterObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {

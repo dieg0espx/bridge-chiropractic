@@ -1,10 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import SectionWrapper from '../components/SectionWrapper.astro';
+import ContentGrid from '../components/ContentGrid.astro';
 ---
 
 <Layout title="Contact" description="Schedule your appointment at The Bridge Chiropractic in San Diego. Call (858) 277-7500 or book online. Located at 4340 Genesee Ave, Suite 201.">
   <!-- Hero -->
-  <section class="hero-fullbleed" style="height: 70vh; min-height: 550px;">
+  <section class="hero-fullbleed" style="height: 80vh; min-height: 600px;">
     <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=1920&h=1080&fit=crop" alt="Contact us" class="hero-fullbleed__image" />
     <div class="hero-fullbleed__overlay"></div>
     <div class="hero-fullbleed__content" data-animate="fade-up">
@@ -15,175 +17,372 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- Quick Actions -->
-  <section class="section" style="padding-top: 0; margin-top: -80px; position: relative; z-index: 10;">
-    <div class="container">
-      <div class="grid grid--3" style="gap: 24px;">
-        <a href="tel:8582777500" class="glass hover-lift" style="padding: 40px 32px; text-align: center; text-decoration: none; border-radius: 16px;" data-animate="scale" data-animate-delay="100">
-          <div style="width: 64px; height: 64px; background: var(--color-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-          </div>
-          <h4 style="font-size: 1.125rem; font-weight: 600; color: var(--color-charcoal); margin-bottom: 8px;">Call Us</h4>
-          <p style="color: var(--color-gray-dark); font-size: 1rem;">(858) 277-7500</p>
-        </a>
-
-        <a href="mailto:bridgechiropracticsd@gmail.com" class="glass hover-lift" style="padding: 40px 32px; text-align: center; text-decoration: none; border-radius: 16px;" data-animate="scale" data-animate-delay="200">
-          <div style="width: 64px; height: 64px; background: var(--color-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-          </div>
-          <h4 style="font-size: 1.125rem; font-weight: 600; color: var(--color-charcoal); margin-bottom: 8px;">Email Us</h4>
-          <p style="color: var(--color-gray-dark); font-size: 1rem;">Send a message</p>
-        </a>
-
-        <div class="glass" style="padding: 40px 32px; text-align: center; border-radius: 16px;" data-animate="scale" data-animate-delay="300">
-          <div style="width: 64px; height: 64px; background: var(--color-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-          </div>
-          <h4 style="font-size: 1.125rem; font-weight: 600; color: var(--color-charcoal); margin-bottom: 8px;">Visit Us</h4>
-          <p style="color: var(--color-gray-dark); font-size: 1rem;">San Diego, CA</p>
+  <SectionWrapper spacing="compact" class="quick-actions-section">
+    <ContentGrid columns={3} gap="lg">
+      <a href="tel:8582777500" class="glass hover-lift action-card">
+        <div class="action-card__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
         </div>
+        <h4 class="action-card__title">Call Us</h4>
+        <p class="action-card__text">(858) 277-7500</p>
+      </a>
+
+      <a href="mailto:bridgechiropracticsd@gmail.com" class="glass hover-lift action-card">
+        <div class="action-card__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        </div>
+        <h4 class="action-card__title">Email Us</h4>
+        <p class="action-card__text">Send a message</p>
+      </a>
+
+      <div class="glass action-card">
+        <div class="action-card__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+        </div>
+        <h4 class="action-card__title">Visit Us</h4>
+        <p class="action-card__text">San Diego, CA</p>
       </div>
-    </div>
-  </section>
+    </ContentGrid>
+  </SectionWrapper>
 
   <!-- Contact Form & Info -->
-  <section class="section section-hero">
-    <div class="container">
-      <div class="grid" style="grid-template-columns: 1.2fr 1fr; gap: 80px; align-items: start;">
-        <!-- Form -->
-        <div data-animate="fade-right">
-          <h2 class="display-2" style="margin-bottom: 16px;">Schedule Your Visit</h2>
-          <p style="color: var(--color-gray-dark); font-size: 1.125rem; margin-bottom: 48px; line-height: 1.7;">Fill out the form below and we'll get back to you within 24 hours to confirm your appointment.</p>
+  <SectionWrapper spacing="hero">
+    <div class="grid contact-grid">
+      <!-- Form -->
+      <div data-animate="fade-right">
+        <h2 class="display-2" style="margin-bottom: 16px;">Schedule Your Visit</h2>
+        <p style="color: var(--color-gray-dark); font-size: 1.125rem; margin-bottom: 48px; line-height: 1.7;">Fill out the form below and we'll get back to you within 24 hours to confirm your appointment.</p>
 
-          <form class="glass" style="padding: 48px; border-radius: 20px;" id="contact-form">
-            <div class="grid grid--2" style="gap: 24px; margin-bottom: 24px;">
-              <div>
-                <label style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--color-charcoal); font-size: 0.9375rem;">First Name *</label>
-                <input type="text" id="firstName" name="firstName" required style="width: 100%; padding: 14px 16px; border: 1px solid var(--color-gray-light); border-radius: 12px; font-size: 1rem; transition: all 0.2s ease;" placeholder="John" />
-              </div>
-              <div>
-                <label style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--color-charcoal); font-size: 0.9375rem;">Last Name *</label>
-                <input type="text" id="lastName" name="lastName" required style="width: 100%; padding: 14px 16px; border: 1px solid var(--color-gray-light); border-radius: 12px; font-size: 1rem; transition: all 0.2s ease;" placeholder="Doe" />
-              </div>
+        <form class="glass contact-form" id="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name *</label>
+              <input type="text" id="firstName" name="firstName" required placeholder="John" />
             </div>
-
-            <div class="grid grid--2" style="gap: 24px; margin-bottom: 24px;">
-              <div>
-                <label style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--color-charcoal); font-size: 0.9375rem;">Email *</label>
-                <input type="email" id="email" name="email" required style="width: 100%; padding: 14px 16px; border: 1px solid var(--color-gray-light); border-radius: 12px; font-size: 1rem; transition: all 0.2s ease;" placeholder="john@example.com" />
-              </div>
-              <div>
-                <label style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--color-charcoal); font-size: 0.9375rem;">Phone *</label>
-                <input type="tel" id="phone" name="phone" required style="width: 100%; padding: 14px 16px; border: 1px solid var(--color-gray-light); border-radius: 12px; font-size: 1rem; transition: all 0.2s ease;" placeholder="(858) 555-1234" />
-              </div>
+            <div class="form-group">
+              <label>Last Name *</label>
+              <input type="text" id="lastName" name="lastName" required placeholder="Doe" />
             </div>
+          </div>
 
-            <div style="margin-bottom: 24px;">
-              <label style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--color-charcoal); font-size: 0.9375rem;">Type of Visit</label>
-              <select id="visitType" name="visitType" style="width: 100%; padding: 14px 16px; border: 1px solid var(--color-gray-light); border-radius: 12px; font-size: 1rem; transition: all 0.2s ease; background: white;">
-                <option value="">Select an option</option>
-                <option value="new-patient">New Patient Consultation</option>
-                <option value="follow-up">Follow-Up Appointment</option>
-                <option value="neuro-rehab">Neuro Rehabilitation Assessment</option>
-                <option value="question">General Question</option>
-              </select>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Email *</label>
+              <input type="email" id="email" name="email" required placeholder="john@example.com" />
             </div>
-
-            <div style="margin-bottom: 24px;">
-              <label style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--color-charcoal); font-size: 0.9375rem;">Preferred Time</label>
-              <select id="preferredTime" name="preferredTime" style="width: 100%; padding: 14px 16px; border: 1px solid var(--color-gray-light); border-radius: 12px; font-size: 1rem; transition: all 0.2s ease; background: white;">
-                <option value="">No preference</option>
-                <option value="morning">Morning (9am - 12pm)</option>
-                <option value="afternoon">Afternoon (12pm - 5pm)</option>
-              </select>
+            <div class="form-group">
+              <label>Phone *</label>
+              <input type="tel" id="phone" name="phone" required placeholder="(858) 555-1234" />
             </div>
+          </div>
 
-            <div style="margin-bottom: 32px;">
-              <label style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--color-charcoal); font-size: 0.9375rem;">Tell us about your concerns</label>
-              <textarea id="message" name="message" rows="5" style="width: 100%; padding: 14px 16px; border: 1px solid var(--color-gray-light); border-radius: 12px; font-size: 1rem; transition: all 0.2s ease; resize: vertical; font-family: inherit;" placeholder="What brings you in? Any specific issues or goals you'd like to address?"></textarea>
+          <div class="form-group">
+            <label>Type of Visit</label>
+            <select id="visitType" name="visitType">
+              <option value="">Select an option</option>
+              <option value="new-patient">New Patient Consultation</option>
+              <option value="follow-up">Follow-Up Appointment</option>
+              <option value="neuro-rehab">Neuro Rehabilitation Assessment</option>
+              <option value="question">General Question</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Preferred Time</label>
+            <select id="preferredTime" name="preferredTime">
+              <option value="">No preference</option>
+              <option value="morning">Morning (9am - 12pm)</option>
+              <option value="afternoon">Afternoon (12pm - 5pm)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Tell us about your concerns</label>
+            <textarea id="message" name="message" rows="5" placeholder="What brings you in? Any specific issues or goals you'd like to address?"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--lg" style="width: 100%;">
+            Send Message
+          </button>
+
+          <div id="form-message" class="form-message"></div>
+        </form>
+      </div>
+
+      <!-- Contact Info -->
+      <div data-animate="fade-left" data-animate-delay="200">
+        <div class="elevated info-card">
+          <h3 style="font-size: 1.5rem; margin-bottom: 32px; font-weight: 600;">Office Information</h3>
+
+          <div class="info-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <div>
+              <h4>Address</h4>
+              <p>4340 Genesee Ave, Suite 201<br>San Diego, CA 92117</p>
             </div>
+          </div>
 
-            <button type="submit" class="btn btn--primary btn--lg" style="width: 100%;">
-              Send Message
-            </button>
+          <div class="info-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <div>
+              <h4>Phone</h4>
+              <a href="tel:8582777500">(858) 277-7500</a>
+            </div>
+          </div>
 
-            <div id="form-message" style="margin-top: 20px; padding: 16px; border-radius: 12px; display: none;"></div>
-          </form>
+          <div class="info-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:bridgechiropracticsd@gmail.com">bridgechiropracticsd@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            <div>
+              <h4>Office Hours</h4>
+              <p>Monday - Friday: 9:00 AM - 5:00 PM<br>Saturday & Sunday: Closed</p>
+            </div>
+          </div>
         </div>
 
-        <!-- Contact Info -->
-        <div data-animate="fade-left" data-animate-delay="200">
-          <div class="elevated" style="padding: 48px; margin-bottom: 32px;">
-            <h3 style="font-size: 1.5rem; margin-bottom: 32px; font-weight: 600;">Office Information</h3>
-
-            <div style="margin-bottom: 32px;">
-              <div style="display: flex; gap: 16px; margin-bottom: 12px;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                <div>
-                  <h4 style="font-weight: 600; margin-bottom: 4px;">Address</h4>
-                  <p style="color: var(--color-gray-dark); line-height: 1.6;">4340 Genesee Ave, Suite 201<br>San Diego, CA 92117</p>
-                </div>
-              </div>
-            </div>
-
-            <div style="margin-bottom: 32px;">
-              <div style="display: flex; gap: 16px; margin-bottom: 12px;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                <div>
-                  <h4 style="font-weight: 600; margin-bottom: 4px;">Phone</h4>
-                  <a href="tel:8582777500" style="color: var(--color-gray-dark); text-decoration: none;">(858) 277-7500</a>
-                </div>
-              </div>
-            </div>
-
-            <div style="margin-bottom: 32px;">
-              <div style="display: flex; gap: 16px; margin-bottom: 12px;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                <div>
-                  <h4 style="font-weight: 600; margin-bottom: 4px;">Email</h4>
-                  <a href="mailto:bridgechiropracticsd@gmail.com" style="color: var(--color-gray-dark); text-decoration: none;">bridgechiropracticsd@gmail.com</a>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <div style="display: flex; gap: 16px;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                <div>
-                  <h4 style="font-weight: 600; margin-bottom: 4px;">Office Hours</h4>
-                  <p style="color: var(--color-gray-dark); line-height: 1.8;">Monday - Friday: 9:00 AM - 5:00 PM<br>Saturday & Sunday: Closed</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Map -->
-          <div style="border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-lg); height: 300px;">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3353.7858!2d-117.2089!3d32.8634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzLCsDUxJzQ4LjIiTiAxMTfCsDEyJzMyLjAiVw!5e0!3m2!1sen!2sus!4v1234567890"
-              width="100%"
-              height="100%"
-              style="border:0;"
-              allowfullscreen=""
-              loading="lazy">
-            </iframe>
-          </div>
+        <!-- Map -->
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3353.7858!2d-117.2089!3d32.8634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzLCsDUxJzQ4LjIiTiAxMTfCsDEyJzMyLjAiVw!5e0!3m2!1sen!2sus!4v1234567890"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy">
+          </iframe>
         </div>
       </div>
     </div>
-  </section>
+  </SectionWrapper>
 </Layout>
 
 <style>
-  input:focus, select:focus, textarea:focus {
+  /* Quick Actions Section */
+  .quick-actions-section {
+    margin-top: -80px;
+    position: relative;
+    z-index: 10;
+  }
+
+  .action-card {
+    padding: 40px 32px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all var(--transition-normal);
+  }
+
+  .action-card__icon {
+    width: 64px;
+    height: 64px;
+    background: var(--color-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .action-card__title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-charcoal);
+    margin-bottom: 8px;
+  }
+
+  .action-card__text {
+    color: var(--color-gray-dark);
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  /* Contact Grid */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  /* Contact Form */
+  .contact-form {
+    padding: 48px;
+    border-radius: 20px;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+
+  .form-group {
+    margin-bottom: 24px;
+  }
+
+  .form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--color-charcoal);
+    font-size: 0.9375rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid var(--color-gray-light);
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all var(--transition-fast);
+    font-family: inherit;
+  }
+
+  .form-group textarea {
+    resize: vertical;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
     outline: none;
-    border-color: var(--color-primary) !important;
-    box-shadow: 0 0 0 3px rgba(44, 44, 44, 0.1) !important;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(44, 44, 44, 0.1);
+  }
+
+  .form-group select {
+    background: white;
+    cursor: pointer;
+  }
+
+  .form-message {
+    margin-top: 20px;
+    padding: 16px;
+    border-radius: 12px;
+    display: none;
+  }
+
+  .form-message.success {
+    display: block;
+    background: var(--color-primary-light);
+    color: var(--color-primary);
+  }
+
+  .form-message.error {
+    display: block;
+    background: #FEE2E2;
+    color: #991B1B;
+  }
+
+  /* Info Card */
+  .info-card {
+    padding: 48px;
+    margin-bottom: 32px;
+  }
+
+  .info-item {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .info-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .info-item svg {
+    flex-shrink: 0;
+  }
+
+  .info-item h4 {
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: var(--color-charcoal);
+  }
+
+  .info-item p,
+  .info-item a {
+    color: var(--color-gray-dark);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .info-item a {
+    text-decoration: none;
+    transition: color var(--transition-fast);
+  }
+
+  .info-item a:hover {
+    color: var(--color-primary);
+  }
+
+  /* Map Container */
+  .map-container {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    height: 300px;
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+      gap: 60px;
+    }
   }
 
   @media (max-width: 768px) {
-    .grid[style*="grid-template-columns: 1.2fr 1fr"] {
-      grid-template-columns: 1fr !important;
-      gap: var(--space-2xl) !important;
+    .quick-actions-section {
+      margin-top: -60px;
+    }
+
+    .form-row {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    .contact-form {
+      padding: 32px;
+    }
+
+    .info-card {
+      padding: 32px;
+    }
+
+    .contact-grid {
+      gap: 40px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .quick-actions-section {
+      margin-top: -40px;
+    }
+
+    .action-card {
+      padding: 32px 24px;
+    }
+
+    .contact-form {
+      padding: 24px;
+    }
+
+    .info-card {
+      padding: 24px;
     }
   }
 </style>
@@ -225,18 +424,14 @@ import Layout from '../layouts/Layout.astro';
       });
 
       if (response.ok) {
-        formMessage!.style.display = 'block';
-        formMessage!.style.background = 'var(--color-primary-light)';
-        formMessage!.style.color = 'var(--color-primary)';
+        formMessage!.className = 'form-message success';
         formMessage!.textContent = 'Thank you! We\'ll be in touch within 24 hours.';
         form.reset();
       } else {
         throw new Error('Submission failed');
       }
     } catch (error) {
-      formMessage!.style.display = 'block';
-      formMessage!.style.background = '#FEE2E2';
-      formMessage!.style.color = '#991B1B';
+      formMessage!.className = 'form-message error';
       formMessage!.textContent = 'Something went wrong. Please call us at (858) 277-7500.';
     }
   });

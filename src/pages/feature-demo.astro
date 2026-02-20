@@ -1,0 +1,232 @@
+---
+/**
+ * Feature Section Component Demo Page
+ *
+ * This page demonstrates the FeatureSection component with various configurations.
+ * Visit /feature-demo to see the component in action.
+ */
+
+import Layout from '../layouts/Layout.astro';
+import FeatureSection from '../components/FeatureSection.astro';
+---
+
+<Layout title="Feature Section Demo">
+  <!-- Demo 1: Image-Based Features with White Background -->
+  <FeatureSection
+    eyebrow="Why Choose Us"
+    title="Love Your Life"
+    subtitle="Experience wellness that transforms your daily routine"
+    background="white"
+    features={[
+      {
+        image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&h=600&fit=crop",
+        title: "Personalized Care",
+        description: "Every treatment plan is tailored to your unique needs, goals, and lifestyle. We take the time to understand you.",
+        link: "/services",
+        linkText: "Explore Services"
+      },
+      {
+        image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800&h=600&fit=crop",
+        title: "Expert Guidance",
+        description: "Learn from experienced professionals dedicated to your long-term wellness and sustainable health practices.",
+        link: "/about",
+        linkText: "Meet Our Team"
+      },
+      {
+        image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&h=600&fit=crop",
+        title: "Lasting Results",
+        description: "Transform your health with proven techniques that create sustainable change for years to come.",
+        link: "/testimonials",
+        linkText: "Read Success Stories"
+      }
+    ]}
+  />
+
+  <!-- Demo 2: Icon-Based Features with Gray Background -->
+  <FeatureSection
+    eyebrow="Our Approach"
+    title="Comprehensive Wellness"
+    subtitle="A holistic path to optimal health and vitality"
+    background="gray"
+    features={[
+      {
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+        </svg>`,
+        title: "Evidence-Based",
+        description: "All treatments grounded in the latest research and proven methodologies that deliver real results.",
+        link: "/services"
+      },
+      {
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>`,
+        title: "Safe & Gentle",
+        description: "Comfortable techniques suitable for all ages and fitness levels, from beginners to athletes.",
+        link: "/services"
+      },
+      {
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+          <circle cx="9" cy="7" r="4"/>
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+          <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        </svg>`,
+        title: "Patient-Centered",
+        description: "Your comfort, concerns, and goals are at the heart of everything we do, every single day.",
+        link: "/about"
+      }
+    ]}
+  />
+
+  <!-- Demo 3: Dark Background with Icons (No Links) -->
+  <FeatureSection
+    eyebrow="What to Expect"
+    title="Your Journey to Wellness"
+    subtitle="A seamless experience from consultation to lasting health"
+    background="dark"
+    features={[
+      {
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+        </svg>`,
+        title: "Initial Consultation",
+        description: "We begin with a thorough evaluation and discussion of your health goals, medical history, and lifestyle."
+      },
+      {
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+        </svg>`,
+        title: "Customized Treatment",
+        description: "Receive care tailored specifically to your body's needs, your goals, and your daily routine."
+      },
+      {
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+          <polyline points="22 4 12 14.01 9 11.01"/>
+        </svg>`,
+        title: "Ongoing Support",
+        description: "Continue your progress with regular care, personalized wellness guidance, and support every step of the way."
+      }
+    ]}
+  />
+
+  <!-- Demo 4: Six Features with Images (2 rows on desktop) -->
+  <FeatureSection
+    eyebrow="Our Services"
+    title="Complete Care Solutions"
+    subtitle="From prevention to recovery, we support your health journey at every stage"
+    background="white"
+    features={[
+      {
+        image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&h=600&fit=crop",
+        title: "Chiropractic Adjustments",
+        description: "Gentle spinal care that restores alignment and relieves discomfort naturally.",
+        link: "/services",
+        linkText: "Learn More"
+      },
+      {
+        image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800&h=600&fit=crop",
+        title: "Soft Tissue Therapy",
+        description: "Release tension and enhance your body's natural healing capacity with targeted techniques.",
+        link: "/services",
+        linkText: "Learn More"
+      },
+      {
+        image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&h=600&fit=crop",
+        title: "Movement Training",
+        description: "Personalized exercises designed to strengthen, stabilize, and sustain your progress.",
+        link: "/services",
+        linkText: "Learn More"
+      },
+      {
+        image: "https://images.unsplash.com/photo-1559329007-40df8a9345d8?w=800&h=600&fit=crop",
+        title: "Neuro Rehabilitation",
+        description: "Specialized support for balance, coordination, and neurological wellness.",
+        link: "/services",
+        linkText: "Learn More"
+      },
+      {
+        image: "https://images.unsplash.com/photo-1549890762-0a3f8933bc76?w=800&h=600&fit=crop",
+        title: "Pain Management",
+        description: "Comprehensive, medication-free approaches to managing chronic and acute discomfort.",
+        link: "/services",
+        linkText: "Learn More"
+      },
+      {
+        image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&h=600&fit=crop",
+        title: "Wellness Care",
+        description: "Proactive maintenance for those who want to stay healthy, active, and thriving.",
+        link: "/services",
+        linkText: "Learn More"
+      }
+    ]}
+  />
+
+  <!-- Demo 5: Left-Aligned Header -->
+  <FeatureSection
+    eyebrow="The Bridge Difference"
+    title="Why Patients Choose Us"
+    subtitle="Experience care that goes beyond symptom relief to address the root causes"
+    background="gray"
+    centered={false}
+    features={[
+      {
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>`,
+        title: "15+ Years Experience",
+        description: "Dr. Beyerl brings over a decade of expertise in chiropractic care and rehabilitation."
+      },
+      {
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/>
+          <polyline points="12 6 12 12 16 14"/>
+        </svg>`,
+        title: "Flexible Scheduling",
+        description: "Convenient appointment times that work with your busy San Diego lifestyle."
+      },
+      {
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>`,
+        title: "San Diego Local",
+        description: "Proudly serving the San Diego community with convenient location and parking."
+      }
+    ]}
+  />
+
+  <!-- CTA Section -->
+  <section class="cta-premium">
+    <div class="container container-narrow" data-animate="fade-up">
+      <h2>Ready to Experience the Difference?</h2>
+      <p>Schedule your consultation today and discover what's possible for your health.</p>
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+        <a href="/contact" class="btn btn--white btn--lg">Book Appointment</a>
+        <a href="/" class="btn btn--secondary btn--lg" style="background: transparent; border: 2px solid white; color: white;">Back to Home</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  // Initialize scroll-triggered animations
+  const observerOptions = {
+    root: null,
+    rootMargin: '-100px',
+    threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animated');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
+</script>
