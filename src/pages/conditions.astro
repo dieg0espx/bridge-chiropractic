@@ -2,12 +2,21 @@
 import Layout from '../layouts/Layout.astro';
 import SectionWrapper from '../components/SectionWrapper.astro';
 import ContentGrid from '../components/ContentGrid.astro';
+import VideoBackground from '../components/VideoBackground.astro';
 ---
 
 <Layout title="Conditions We Treat" description="The Bridge Chiropractic treats back pain, neck pain, sciatica, headaches, balance issues, and more. Dr. Nathan Beyerl offers personalized care in San Diego.">
   <!-- Hero -->
   <section class="hero-fullbleed" style="height: 80vh; min-height: 600px;">
-    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1920&h=1080&fit=crop" alt="Healthcare" class="hero-fullbleed__image" />
+    <video
+      class="hero-fullbleed__image"
+      autoplay
+      muted
+      loop
+      playsinline
+    >
+      <source src="https://res.cloudinary.com/dku1gnuat/video/upload/v1772139018/basketball-players-playing-basketball-4k-2026-02-02-07-58-09-utc_lcrizu.mov" type="video/mp4" />
+    </video>
     <div class="hero-fullbleed__overlay"></div>
     <div class="hero-fullbleed__content" data-animate="fade-up">
       <span class="hero-badge">Comprehensive Care</span>
@@ -16,14 +25,94 @@ import ContentGrid from '../components/ContentGrid.astro';
     </div>
   </section>
 
-  <!-- Intro -->
-  <SectionWrapper spacing="hero" containerWidth="narrow">
-    <div style="text-align: center;">
-      <div class="glass" style="padding: 48px; border-radius: 20px;" data-animate="fade-up">
-        <div style="width: 72px; height: 72px; background: var(--color-primary-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;">
-          <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+  <!-- Intro - Premium Approach Section -->
+  <SectionWrapper spacing="hero">
+    <div class="personalized-care-section">
+      <div class="personalized-care-grid">
+        <!-- Main Content -->
+        <div class="personalized-care-main" data-animate="fade-right">
+          <div class="badge-premium">Personalized Approach</div>
+          <h2 class="display-3" style="margin-bottom: 24px; line-height: 1.2;">Your Unique Journey to Wellness</h2>
+          <p class="text-large" style="color: var(--color-gray-dark); line-height: 1.8; margin-bottom: 32px;">
+            Every patient receives individualized care. What works for one person may not work for another—that's why Dr. Beyerl takes time to understand <strong style="color: var(--color-primary);">YOUR</strong> specific condition, goals, and concerns before creating a treatment plan.
+          </p>
+
+          <div class="care-features">
+            <div class="care-feature-item">
+              <div class="care-feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <div>
+                <h4>Comprehensive Assessment</h4>
+                <p>Deep dive into your health history and current condition</p>
+              </div>
+            </div>
+
+            <div class="care-feature-item">
+              <div class="care-feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              </div>
+              <div>
+                <h4>Tailored Treatment Plans</h4>
+                <p>Custom strategies designed for your specific needs</p>
+              </div>
+            </div>
+
+            <div class="care-feature-item">
+              <div class="care-feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2">
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
+              </div>
+              <div>
+                <h4>Ongoing Support</h4>
+                <p>Continuous care adjustments as you progress</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <p class="text-large" style="color: var(--color-gray-dark); line-height: 1.8;">Every patient receives individualized care. What works for one person may not work for another—that's why Dr. Beyerl takes time to understand YOUR specific condition, goals, and concerns before creating a treatment plan.</p>
+
+        <!-- Stats Sidebar -->
+        <div class="personalized-care-stats" data-animate="fade-left" data-animate-delay="200">
+          <div class="stat-card glass">
+            <div class="stat-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+            </div>
+            <div class="stat-number" data-count="100">100</div>
+            <div class="stat-label">Individualized Care Plans</div>
+          </div>
+
+          <div class="stat-card glass">
+            <div class="stat-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <div class="stat-number" data-count="45">45</div>
+            <div class="stat-label">Minute Initial Consultation</div>
+          </div>
+
+          <div class="stat-card glass">
+            <div class="stat-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+              </svg>
+            </div>
+            <div class="stat-number" data-count="15" data-suffix="+">15</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+        </div>
       </div>
     </div>
   </SectionWrapper>
@@ -207,7 +296,12 @@ import ContentGrid from '../components/ContentGrid.astro';
   </SectionWrapper>
 
   <!-- CTA -->
-  <section class="cta-premium">
+  <VideoBackground
+    videoUrl="https://res.cloudinary.com/dku1gnuat/video/upload/v1772140186/professional-male-chiropractor-physiotherapist-tre-2025-12-17-11-25-49-utc_wkikq4.mov"
+    posterImage="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1920&h=1080&fit=crop"
+    overlayOpacity={0.7}
+    class="cta-premium"
+  >
     <div class="container container-narrow" data-animate="fade-up">
       <h2>Not Sure If We Can Help?</h2>
       <p>Schedule a consultation to discuss your specific condition and discover if chiropractic care is right for you.</p>
@@ -216,7 +310,7 @@ import ContentGrid from '../components/ContentGrid.astro';
         <a href="tel:8582777500" class="btn btn--secondary btn--lg" style="background: transparent; border: 2px solid white; color: white;">Call (858) 277-7500</a>
       </div>
     </div>
-  </section>
+  </VideoBackground>
 </Layout>
 
 <style>
@@ -224,15 +318,233 @@ import ContentGrid from '../components/ContentGrid.astro';
     margin-top: 64px;
   }
 
+  /* Personalized Care Section */
+  .personalized-care-section {
+    position: relative;
+  }
+
+  .personalized-care-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: clamp(40px, 6vw, 80px);
+    align-items: start;
+  }
+
+  .personalized-care-main {
+    position: relative;
+  }
+
+  .badge-premium {
+    display: inline-block;
+    padding: 8px 20px;
+    background: linear-gradient(135deg, rgba(71, 128, 184, 0.1), rgba(53, 96, 138, 0.15));
+    border: 1px solid rgba(71, 128, 184, 0.2);
+    border-radius: var(--radius-full);
+    color: var(--color-primary);
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 24px;
+  }
+
+  .care-features {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .care-feature-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 24px;
+    background: var(--color-white);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+  }
+
+  .care-feature-item:hover {
+    transform: translateX(8px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    border-color: rgba(71, 128, 184, 0.2);
+  }
+
+  .care-feature-icon {
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(71, 128, 184, 0.08), rgba(53, 96, 138, 0.12));
+    border-radius: var(--radius-md);
+    transition: all 0.3s ease;
+  }
+
+  .care-feature-item:hover .care-feature-icon {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  }
+
+  .care-feature-item:hover .care-feature-icon svg {
+    stroke: white;
+  }
+
+  .care-feature-item h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-charcoal);
+    margin-bottom: 6px;
+  }
+
+  .care-feature-item p {
+    font-size: 0.9375rem;
+    color: var(--color-gray-dark);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* Stats Sidebar */
+  .personalized-care-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    position: sticky;
+    top: 100px;
+  }
+
+  .stat-card {
+    padding: 32px;
+    border-radius: var(--radius-xl);
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .stat-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 16px 40px rgba(71, 128, 184, 0.2);
+  }
+
+  .stat-icon {
+    width: 72px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    background: linear-gradient(135deg, rgba(71, 128, 184, 0.1), rgba(53, 96, 138, 0.15));
+    border-radius: var(--radius-lg);
+    transition: all 0.3s ease;
+  }
+
+  .stat-card:hover .stat-icon {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    transform: rotate(5deg) scale(1.1);
+  }
+
+  .stat-card:hover .stat-icon svg {
+    stroke: white;
+  }
+
+  .stat-number {
+    font-size: 3.5rem;
+    font-weight: 700;
+    font-family: var(--font-heading);
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 8px;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 0.9375rem;
+    color: var(--color-gray-dark);
+    font-weight: 500;
+    line-height: 1.4;
+  }
+
+  /* Responsive Design */
   @media (max-width: 1024px) {
     .mt-4xl {
       margin-top: 48px;
+    }
+
+    .personalized-care-grid {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+
+    .personalized-care-stats {
+      position: static;
+      flex-direction: row;
+      overflow-x: auto;
+      gap: 16px;
+      padding-bottom: 8px;
+    }
+
+    .stat-card {
+      min-width: 200px;
+      flex-shrink: 0;
+    }
+
+    .stat-number {
+      font-size: 3rem;
     }
   }
 
   @media (max-width: 768px) {
     .mt-4xl {
       margin-top: 32px;
+    }
+
+    .care-feature-item {
+      flex-direction: column;
+      gap: 16px;
+      padding: 20px;
+    }
+
+    .care-feature-icon {
+      width: 48px;
+      height: 48px;
+    }
+
+    .stat-card {
+      padding: 24px;
+      min-width: 180px;
+    }
+
+    .stat-icon {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 16px;
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+    }
+
+    .stat-label {
+      font-size: 0.875rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .care-feature-item:hover {
+      transform: none;
+    }
+
+    .personalized-care-stats {
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .stat-card {
+      min-width: 100%;
     }
   }
 </style>

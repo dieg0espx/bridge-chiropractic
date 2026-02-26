@@ -2,12 +2,21 @@
 import Layout from '../layouts/Layout.astro';
 import SectionWrapper from '../components/SectionWrapper.astro';
 import ContentGrid from '../components/ContentGrid.astro';
+import VideoBackground from '../components/VideoBackground.astro';
 ---
 
 <Layout title="Testimonials" description="Read what patients say about their experience at The Bridge Chiropractic. Real reviews from San Diego patients who found relief through Dr. Nathan Beyerl's care.">
   <!-- Hero -->
   <section class="hero-fullbleed" style="height: 80vh; min-height: 600px;">
-    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1920&h=1080&fit=crop" alt="Happy patients" class="hero-fullbleed__image" />
+    <video
+      class="hero-fullbleed__image"
+      autoplay
+      muted
+      loop
+      playsinline
+    >
+      <source src="https://res.cloudinary.com/dku1gnuat/video/upload/v1772135494/A_0004C207H251212_163548YT_CANON_kfbpge.mp4" type="video/mp4" />
+    </video>
     <div class="hero-fullbleed__overlay"></div>
     <div class="hero-fullbleed__content" data-animate="fade-up">
       <span class="hero-badge">Patient Stories</span>
@@ -53,107 +62,265 @@ import ContentGrid from '../components/ContentGrid.astro';
   </SectionWrapper>
 
   <!-- Testimonials Grid -->
-  <SectionWrapper spacing="hero">
+  <SectionWrapper spacing="hero" containerWidth="full">
     <div class="section__header" data-animate="fade-up">
       <span class="section__eyebrow" style="color: var(--color-accent);">What Patients Say</span>
       <h2 class="display-2">Patient Reviews</h2>
     </div>
 
-    <ContentGrid columns={3} gap="xl" class="mt-4xl">
-      <div class="testimonial-card glass">
-        <div class="testimonial-stars">
-          {[...Array(5)].map(() => (
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          ))}
+    <div class="testimonials-scroll-container mt-4xl">
+      <div class="testimonials-scroll-track">
+        <div class="testimonial-card glass">
+          <div class="testimonial-stars">
+            {[...Array(5)].map(() => (
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            ))}
+          </div>
+          <p class="testimonial-text">"Dr. Beyerl transformed my chronic back pain into a thing of the past. His holistic approach and genuine care made all the difference. I can finally enjoy hiking again!"</p>
+          <p class="testimonial-author">— Sarah M.</p>
         </div>
-        <p class="testimonial-text">"Dr. Beyerl transformed my chronic back pain into a thing of the past. His holistic approach and genuine care made all the difference. I can finally enjoy hiking again!"</p>
-        <p class="testimonial-author">— Sarah M.</p>
-      </div>
 
-      <div class="testimonial-card glass">
-        <div class="testimonial-stars">
-          {[...Array(5)].map(() => (
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          ))}
+        <div class="testimonial-card glass">
+          <div class="testimonial-stars">
+            {[...Array(5)].map(() => (
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            ))}
+          </div>
+          <p class="testimonial-text">"After years of migraines, I finally found relief. The team here truly cares about their patients and it shows in every visit. Highly recommend!"</p>
+          <p class="testimonial-author">— Michael T.</p>
         </div>
-        <p class="testimonial-text">"After years of migraines, I finally found relief. The team here truly cares about their patients and it shows in every visit. Highly recommend!"</p>
-        <p class="testimonial-author">— Michael T.</p>
-      </div>
 
-      <div class="testimonial-card glass">
-        <div class="testimonial-stars">
-          {[...Array(5)].map(() => (
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          ))}
+        <div class="testimonial-card glass">
+          <div class="testimonial-stars">
+            {[...Array(5)].map(() => (
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            ))}
+          </div>
+          <p class="testimonial-text">"As an active runner, I need to stay in peak condition. Dr. Beyerl keeps me running strong and injury-free with his expert care."</p>
+          <p class="testimonial-author">— Jennifer L.</p>
         </div>
-        <p class="testimonial-text">"As an active runner, I need to stay in peak condition. Dr. Beyerl keeps me running strong and injury-free with his expert care."</p>
-        <p class="testimonial-author">— Jennifer L.</p>
-      </div>
 
-      <div class="testimonial-card glass">
-        <div class="testimonial-stars">
-          {[...Array(5)].map(() => (
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          ))}
+        <div class="testimonial-card glass">
+          <div class="testimonial-stars">
+            {[...Array(5)].map(() => (
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            ))}
+          </div>
+          <p class="testimonial-text">"Professional, knowledgeable, and caring. The office is clean and welcoming. I always leave feeling better than when I arrived. 10/10 recommend!"</p>
+          <p class="testimonial-author">— David K.</p>
         </div>
-        <p class="testimonial-text">"Professional, knowledgeable, and caring. The office is clean and welcoming. I always leave feeling better than when I arrived. 10/10 recommend!"</p>
-        <p class="testimonial-author">— David K.</p>
-      </div>
 
-      <div class="testimonial-card glass">
-        <div class="testimonial-stars">
-          {[...Array(5)].map(() => (
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          ))}
+        <div class="testimonial-card glass">
+          <div class="testimonial-stars">
+            {[...Array(5)].map(() => (
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            ))}
+          </div>
+          <p class="testimonial-text">"My posture has improved dramatically and my neck pain is gone. Dr. Beyerl explained everything clearly and gave me exercises to do at home. Life-changing!"</p>
+          <p class="testimonial-author">— Lisa R.</p>
         </div>
-        <p class="testimonial-text">"My posture has improved dramatically and my neck pain is gone. Dr. Beyerl explained everything clearly and gave me exercises to do at home. Life-changing!"</p>
-        <p class="testimonial-author">— Lisa R.</p>
-      </div>
 
-      <div class="testimonial-card glass">
-        <div class="testimonial-stars">
-          {[...Array(5)].map(() => (
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          ))}
+        <div class="testimonial-card glass">
+          <div class="testimonial-stars">
+            {[...Array(5)].map(() => (
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            ))}
+          </div>
+          <p class="testimonial-text">"Best chiropractor in San Diego! Helped me recover from a car accident when I thought I'd be in pain forever. Thank you Dr. Beyerl!"</p>
+          <p class="testimonial-author">— Robert P.</p>
         </div>
-        <p class="testimonial-text">"Best chiropractor in San Diego! Helped me recover from a car accident when I thought I'd be in pain forever. Thank you Dr. Beyerl!"</p>
-        <p class="testimonial-author">— Robert P.</p>
-      </div>
 
-      <div class="testimonial-card glass">
-        <div class="testimonial-stars">
-          {[...Array(5)].map(() => (
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          ))}
+        <div class="testimonial-card glass">
+          <div class="testimonial-stars">
+            {[...Array(5)].map(() => (
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            ))}
+          </div>
+          <p class="testimonial-text">"Exceptional care and attention to detail. Dr. Beyerl takes time to listen and understand your concerns. I wouldn't trust anyone else with my health."</p>
+          <p class="testimonial-author">— Emily S.</p>
         </div>
-        <p class="testimonial-text">"Exceptional care and attention to detail. Dr. Beyerl takes time to listen and understand your concerns. I wouldn't trust anyone else with my health."</p>
-        <p class="testimonial-author">— Emily S.</p>
-      </div>
 
-      <div class="testimonial-card glass">
-        <div class="testimonial-stars">
-          {[...Array(5)].map(() => (
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          ))}
+        <div class="testimonial-card glass">
+          <div class="testimonial-stars">
+            {[...Array(5)].map(() => (
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            ))}
+          </div>
+          <p class="testimonial-text">"I was skeptical about chiropractic care, but Dr. Beyerl changed my mind. His evidence-based approach and patient education made me a believer."</p>
+          <p class="testimonial-author">— James W.</p>
         </div>
-        <p class="testimonial-text">"I was skeptical about chiropractic care, but Dr. Beyerl changed my mind. His evidence-based approach and patient education made me a believer."</p>
-        <p class="testimonial-author">— James W.</p>
-      </div>
 
-      <div class="testimonial-card glass">
-        <div class="testimonial-stars">
-          {[...Array(5)].map(() => (
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          ))}
+        <div class="testimonial-card glass">
+          <div class="testimonial-stars">
+            {[...Array(5)].map(() => (
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            ))}
+          </div>
+          <p class="testimonial-text">"From my first visit, I felt heard and understood. The treatment plan was personalized and effective. My quality of life has improved tremendously."</p>
+          <p class="testimonial-author">— Maria G.</p>
         </div>
-        <p class="testimonial-text">"From my first visit, I felt heard and understood. The treatment plan was personalized and effective. My quality of life has improved tremendously."</p>
-        <p class="testimonial-author">— Maria G.</p>
+
+        <div class="testimonial-card glass">
+          <div class="testimonial-stars">
+            {[...Array(5)].map(() => (
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            ))}
+          </div>
+          <p class="testimonial-text">"The office environment is so calming and professional. Dr. Beyerl's treatments have been nothing short of miraculous for my sciatica."</p>
+          <p class="testimonial-author">— Thomas B.</p>
+        </div>
+
+        <div class="testimonial-card glass">
+          <div class="testimonial-stars">
+            {[...Array(5)].map(() => (
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            ))}
+          </div>
+          <p class="testimonial-text">"I've been to several chiropractors, but Dr. Beyerl stands out with his thorough assessments and personalized care plans. Truly exceptional!"</p>
+          <p class="testimonial-author">— Angela H.</p>
+        </div>
+
+        <div class="testimonial-card glass">
+          <div class="testimonial-stars">
+            {[...Array(5)].map(() => (
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            ))}
+          </div>
+          <p class="testimonial-text">"My shoulder mobility has returned to normal after just a few sessions. Dr. Beyerl's expertise in sports injuries is unmatched."</p>
+          <p class="testimonial-author">— Kevin P.</p>
+        </div>
+
+        <!-- Duplicate for seamless loop -->
+        <div class="testimonial-card glass">
+          <div class="testimonial-stars">
+            {[...Array(5)].map(() => (
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            ))}
+          </div>
+          <p class="testimonial-text">"Dr. Beyerl transformed my chronic back pain into a thing of the past. His holistic approach and genuine care made all the difference. I can finally enjoy hiking again!"</p>
+          <p class="testimonial-author">— Sarah M.</p>
+        </div>
+
+        <div class="testimonial-card glass">
+          <div class="testimonial-stars">
+            {[...Array(5)].map(() => (
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            ))}
+          </div>
+          <p class="testimonial-text">"After years of migraines, I finally found relief. The team here truly cares about their patients and it shows in every visit. Highly recommend!"</p>
+          <p class="testimonial-author">— Michael T.</p>
+        </div>
+
+        <div class="testimonial-card glass">
+          <div class="testimonial-stars">
+            {[...Array(5)].map(() => (
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            ))}
+          </div>
+          <p class="testimonial-text">"As an active runner, I need to stay in peak condition. Dr. Beyerl keeps me running strong and injury-free with his expert care."</p>
+          <p class="testimonial-author">— Jennifer L.</p>
+        </div>
+
+        <div class="testimonial-card glass">
+          <div class="testimonial-stars">
+            {[...Array(5)].map(() => (
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            ))}
+          </div>
+          <p class="testimonial-text">"Professional, knowledgeable, and caring. The office is clean and welcoming. I always leave feeling better than when I arrived. 10/10 recommend!"</p>
+          <p class="testimonial-author">— David K.</p>
+        </div>
+
+        <div class="testimonial-card glass">
+          <div class="testimonial-stars">
+            {[...Array(5)].map(() => (
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            ))}
+          </div>
+          <p class="testimonial-text">"My posture has improved dramatically and my neck pain is gone. Dr. Beyerl explained everything clearly and gave me exercises to do at home. Life-changing!"</p>
+          <p class="testimonial-author">— Lisa R.</p>
+        </div>
+
+        <div class="testimonial-card glass">
+          <div class="testimonial-stars">
+            {[...Array(5)].map(() => (
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            ))}
+          </div>
+          <p class="testimonial-text">"Best chiropractor in San Diego! Helped me recover from a car accident when I thought I'd be in pain forever. Thank you Dr. Beyerl!"</p>
+          <p class="testimonial-author">— Robert P.</p>
+        </div>
+
+        <div class="testimonial-card glass">
+          <div class="testimonial-stars">
+            {[...Array(5)].map(() => (
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            ))}
+          </div>
+          <p class="testimonial-text">"Exceptional care and attention to detail. Dr. Beyerl takes time to listen and understand your concerns. I wouldn't trust anyone else with my health."</p>
+          <p class="testimonial-author">— Emily S.</p>
+        </div>
+
+        <div class="testimonial-card glass">
+          <div class="testimonial-stars">
+            {[...Array(5)].map(() => (
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            ))}
+          </div>
+          <p class="testimonial-text">"I was skeptical about chiropractic care, but Dr. Beyerl changed my mind. His evidence-based approach and patient education made me a believer."</p>
+          <p class="testimonial-author">— James W.</p>
+        </div>
+
+        <div class="testimonial-card glass">
+          <div class="testimonial-stars">
+            {[...Array(5)].map(() => (
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            ))}
+          </div>
+          <p class="testimonial-text">"From my first visit, I felt heard and understood. The treatment plan was personalized and effective. My quality of life has improved tremendously."</p>
+          <p class="testimonial-author">— Maria G.</p>
+        </div>
+
+        <div class="testimonial-card glass">
+          <div class="testimonial-stars">
+            {[...Array(5)].map(() => (
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            ))}
+          </div>
+          <p class="testimonial-text">"The office environment is so calming and professional. Dr. Beyerl's treatments have been nothing short of miraculous for my sciatica."</p>
+          <p class="testimonial-author">— Thomas B.</p>
+        </div>
+
+        <div class="testimonial-card glass">
+          <div class="testimonial-stars">
+            {[...Array(5)].map(() => (
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            ))}
+          </div>
+          <p class="testimonial-text">"I've been to several chiropractors, but Dr. Beyerl stands out with his thorough assessments and personalized care plans. Truly exceptional!"</p>
+          <p class="testimonial-author">— Angela H.</p>
+        </div>
+
+        <div class="testimonial-card glass">
+          <div class="testimonial-stars">
+            {[...Array(5)].map(() => (
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            ))}
+          </div>
+          <p class="testimonial-text">"My shoulder mobility has returned to normal after just a few sessions. Dr. Beyerl's expertise in sports injuries is unmatched."</p>
+          <p class="testimonial-author">— Kevin P.</p>
+        </div>
       </div>
-    </ContentGrid>
+    </div>
   </SectionWrapper>
 
-  <!-- CTA -->
-  <section class="cta-premium">
+  <!-- CTA with Video Background -->
+  <VideoBackground
+    videoUrl="https://res.cloudinary.com/dku1gnuat/video/upload/v1772135510/A_0004C206H251212_163500CS_CANON_puvlaw.mp4"
+    posterImage="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1920&h=1080&fit=crop"
+    overlayOpacity={0.7}
+    class="cta-premium"
+  >
     <div class="container container-narrow" data-animate="fade-up">
       <h2>Ready to Write Your Success Story?</h2>
       <p>Join hundreds of satisfied patients who've found relief and renewed vitality.</p>
@@ -162,7 +329,7 @@ import ContentGrid from '../components/ContentGrid.astro';
         <a href="tel:8582777500" class="btn btn--secondary btn--lg" style="background: transparent; border: 2px solid white; color: white;">Call (858) 277-7500</a>
       </div>
     </div>
-  </section>
+  </VideoBackground>
 </Layout>
 
 <style>
@@ -242,17 +409,45 @@ import ContentGrid from '../components/ContentGrid.astro';
     margin: 0;
   }
 
-  /* Testimonial Cards */
-  .mt-4xl {
+  /* Testimonials Infinite Scroll */
+  .testimonials-scroll-container {
+    overflow: hidden;
     margin-top: 64px;
+    padding: 20px 0;
+  }
+
+  .testimonials-scroll-track {
+    display: flex;
+    gap: var(--space-xl);
+    animation: scroll 90s linear infinite;
+    will-change: transform;
+  }
+
+  .testimonials-scroll-track:hover {
+    animation-play-state: paused;
   }
 
   .testimonial-card {
+    flex: 0 0 400px;
     padding: 40px;
     border-radius: 16px;
     display: flex;
     flex-direction: column;
     height: 100%;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-400px * 12 - var(--space-xl) * 12));
+    }
+  }
+
+  /* Testimonial Cards */
+  .mt-4xl {
+    margin-top: 64px;
   }
 
   .testimonial-stars {
@@ -292,6 +487,19 @@ import ContentGrid from '../components/ContentGrid.astro';
     .mt-4xl {
       margin-top: 48px;
     }
+
+    .testimonial-card {
+      flex: 0 0 350px;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(calc(-350px * 12 - var(--space-xl) * 12));
+      }
+    }
   }
 
   @media (max-width: 768px) {
@@ -313,12 +521,26 @@ import ContentGrid from '../components/ContentGrid.astro';
       padding: 32px;
     }
 
+    .testimonials-scroll-container {
+      margin-top: 48px;
+    }
+
     .testimonial-card {
+      flex: 0 0 300px;
       padding: 32px;
     }
 
     .mt-4xl {
       margin-top: 32px;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(calc(-300px * 12 - var(--space-xl) * 12));
+      }
     }
   }
 
@@ -344,8 +566,22 @@ import ContentGrid from '../components/ContentGrid.astro';
       padding: 24px;
     }
 
+    .testimonials-scroll-container {
+      margin-top: 32px;
+    }
+
     .testimonial-card {
+      flex: 0 0 280px;
       padding: 24px;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(calc(-280px * 12 - var(--space-xl) * 12));
+      }
     }
   }
 </style>

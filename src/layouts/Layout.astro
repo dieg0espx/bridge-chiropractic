@@ -47,65 +47,88 @@ const { title, description = "Personalized chiropractic care for San Diego adult
 
         <div class="header__spacer"></div>
       </div>
-
-      <!-- Sidebar Nav -->
-      <nav class="sidebar-nav" id="sidebar-nav" aria-hidden="true">
-        <div class="sidebar-nav__header">
-          <button class="sidebar-nav__close" id="sidebar-close" aria-label="Close menu">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="18" y1="6" x2="6" y2="18"></line>
-              <line x1="6" y1="6" x2="18" y2="18"></line>
-            </svg>
-          </button>
-        </div>
-
-        <div class="sidebar-nav__content">
-          <div class="sidebar-nav__column">
-            <div class="sidebar-nav__section">
-              <h3 class="sidebar-nav__section-title">Our Practice</h3>
-              <ul class="sidebar-nav__list">
-                <li><a href="/about">About Dr. Beyerl</a></li>
-                <li><a href="/services">Services</a></li>
-                <li><a href="/conditions">What We Treat</a></li>
-                <li><a href="/testimonials">Patient Stories</a></li>
-              </ul>
-            </div>
-
-            <div class="sidebar-nav__section">
-              <ul class="sidebar-nav__list sidebar-nav__list--secondary">
-                <li><a href="/faq">FAQ</a></li>
-                <li><a href="/gallery">Gallery</a></li>
-                <li><a href="/blog">Blog</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="sidebar-nav__column">
-            <div class="sidebar-nav__section">
-              <h3 class="sidebar-nav__section-title">Get Started</h3>
-              <ul class="sidebar-nav__list">
-                <li>
-                  <a href="/contact" class="sidebar-nav__link--primary">
-                    Book Appointment
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M5 12h14M12 5l7 7-7 7"/>
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a href="tel:8582777500" class="sidebar-nav__link--contact">
-                    (858) 277-7500
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </nav>
-
-      <!-- Overlay -->
-      <div class="sidebar-overlay" id="sidebar-overlay"></div>
     </header>
+
+    <!-- Sidebar Nav (Outside header for proper z-index stacking) -->
+    <nav class="sidebar-nav" id="sidebar-nav" aria-hidden="true">
+      <div class="sidebar-nav__header">
+        <button class="sidebar-nav__close" id="sidebar-close" aria-label="Close menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="sidebar-nav__content">
+        <div class="sidebar-nav__main-links">
+          <ul class="sidebar-nav__list">
+            <li><a href="/about">About Dr. Beyerl</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/conditions">What We Treat</a></li>
+            <li><a href="/testimonials">Patient Stories</a></li>
+            <li><a href="/faq">FAQ</a></li>
+            <li><a href="/gallery">Gallery</a></li>
+            <li><a href="/blog">Blog</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-nav__cta">
+          <a href="/contact" class="sidebar-nav__btn">
+            Book Appointment
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="sidebar-nav__contact">
+          <div class="sidebar-nav__contact-item">
+            <div class="sidebar-nav__contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="sidebar-nav__contact-label">Call Us</div>
+              <a href="tel:8582777500" class="sidebar-nav__phone">(858) 277-7500</a>
+            </div>
+          </div>
+
+          <div class="sidebar-nav__contact-item">
+            <div class="sidebar-nav__contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <div>
+              <div class="sidebar-nav__contact-label">Visit Us</div>
+              <address class="sidebar-nav__address">
+                4340 Genesee Ave, Suite 201<br>
+                San Diego, CA 92117
+              </address>
+            </div>
+          </div>
+
+          <div class="sidebar-nav__contact-item">
+            <div class="sidebar-nav__contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <div>
+              <div class="sidebar-nav__contact-label">Hours</div>
+              <div class="sidebar-nav__hours">Mon - Fri: 9am - 5pm</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Overlay (Outside header for proper z-index stacking) -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
 
     <main id="main">
       <slot />
@@ -221,11 +244,14 @@ const { title, description = "Personalized chiropractic care for San Diego adult
         left: 0;
         right: 0;
         z-index: 1000;
+        width: 100%;
+        max-width: 100vw;
         background: rgba(255, 255, 255, 0.6);
         backdrop-filter: blur(12px);
         -webkit-backdrop-filter: blur(12px);
         border-bottom: 1px solid rgba(255, 255, 255, 0.3);
         transition: all var(--transition-normal);
+        overflow-x: hidden;
       }
 
       .header.scrolled {
@@ -258,6 +284,7 @@ const { title, description = "Personalized chiropractic care for San Diego adult
 
       .header__spacer {
         width: 40px;
+        order: -1;
       }
 
       /* Menu Toggle Button */
@@ -269,8 +296,9 @@ const { title, description = "Personalized chiropractic care for San Diego adult
         border: none;
         cursor: pointer;
         padding: 8px;
-        z-index: 1001;
+        z-index: 10000;
         transition: all var(--transition-fast);
+        position: relative;
       }
 
       .header__menu-toggle span {
@@ -297,17 +325,20 @@ const { title, description = "Personalized chiropractic care for San Diego adult
       .sidebar-nav {
         position: fixed;
         top: 0;
-        left: 0;
+        right: 0;
         width: 100%;
-        max-width: 600px;
+        max-width: 480px;
         height: 100vh;
         background: #F5F1ED;
-        padding: var(--space-4xl) var(--space-3xl);
-        box-shadow: 2px 0 30px rgba(0, 0, 0, 0.1);
-        transform: translateX(-100%);
+        padding: 0;
+        box-shadow: -2px 0 30px rgba(0, 0, 0, 0.1);
+        transform: translateX(100%);
         transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        z-index: 1002;
+        z-index: 999999;
         overflow-y: auto;
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
       }
 
       .sidebar-nav.active {
@@ -316,8 +347,13 @@ const { title, description = "Personalized chiropractic care for San Diego adult
 
       .sidebar-nav__header {
         display: flex;
-        justify-content: flex-end;
-        margin-bottom: var(--space-5xl);
+        justify-content: flex-start;
+        padding: var(--space-2xl) var(--space-3xl);
+        flex-shrink: 0;
+        background: #F5F1ED;
+        position: sticky;
+        top: 0;
+        z-index: 10;
       }
 
       .sidebar-nav__close {
@@ -327,84 +363,172 @@ const { title, description = "Personalized chiropractic care for San Diego adult
         padding: var(--space-sm);
         color: var(--color-charcoal);
         transition: all var(--transition-fast);
+        border-radius: var(--radius-sm);
       }
 
       .sidebar-nav__close:hover {
         transform: rotate(90deg);
         color: var(--color-charcoal);
-        opacity: 0.7;
+        background: rgba(0, 0, 0, 0.05);
       }
 
       .sidebar-nav__content {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: var(--space-5xl);
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-2xl);
+        padding: 0 var(--space-3xl) var(--space-4xl);
+        flex: 1;
       }
 
-      .sidebar-nav__section {
-        margin-bottom: var(--space-4xl);
-      }
-
-      .sidebar-nav__section-title {
-        font-size: 0.75rem;
-        font-weight: 600;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: var(--color-charcoal);
-        margin-bottom: var(--space-xl);
-        font-family: var(--font-body);
+      .sidebar-nav__main-links {
+        padding-bottom: var(--space-2xl);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
       }
 
       .sidebar-nav__list {
         list-style: none;
+        padding: 0;
+        margin: 0;
       }
 
       .sidebar-nav__list li {
-        margin-bottom: var(--space-lg);
+        margin-bottom: var(--space-md);
+      }
+
+      .sidebar-nav__list li:last-child {
+        margin-bottom: 0;
       }
 
       .sidebar-nav__list a {
         display: block;
         color: var(--color-charcoal);
         font-weight: 400;
-        font-size: 1.5rem;
+        font-size: 1.375rem;
         text-decoration: none;
         transition: all var(--transition-fast);
         font-family: var(--font-heading);
-        line-height: 1.3;
+        line-height: 1.4;
+        padding: var(--space-xs) 0;
       }
 
       .sidebar-nav__list a:hover,
       .sidebar-nav__list a.active {
         color: var(--color-accent);
-      }
-
-      .sidebar-nav__list--secondary a {
-        font-size: 1.25rem;
-        font-family: var(--font-body);
-        font-weight: 400;
-      }
-
-      .sidebar-nav__link--primary {
-        display: flex !important;
-        align-items: center;
-        gap: var(--space-sm);
-        font-size: 1.25rem !important;
-        font-family: var(--font-body) !important;
-      }
-
-      .sidebar-nav__link--primary svg {
-        transition: transform var(--transition-fast);
-      }
-
-      .sidebar-nav__link--primary:hover svg {
         transform: translateX(4px);
       }
 
-      .sidebar-nav__link--contact {
-        font-size: 1.125rem !important;
-        font-family: var(--font-body) !important;
-        font-weight: 400 !important;
+      .sidebar-nav__cta {
+        padding-bottom: var(--space-2xl);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      }
+
+      .sidebar-nav__btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: var(--space-sm);
+        background: var(--color-charcoal);
+        color: var(--color-white);
+        padding: 16px 32px;
+        border-radius: var(--radius-full);
+        font-size: 1.0625rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all var(--transition-normal);
+        font-family: var(--font-body);
+        width: 100%;
+      }
+
+      .sidebar-nav__btn:hover {
+        background: var(--color-accent);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+      }
+
+      .sidebar-nav__btn svg {
+        transition: transform var(--transition-fast);
+        flex-shrink: 0;
+      }
+
+      .sidebar-nav__btn:hover svg {
+        transform: translateX(4px);
+      }
+
+      .sidebar-nav__contact {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-xl);
+      }
+
+      .sidebar-nav__contact-item {
+        display: flex;
+        gap: var(--space-md);
+        align-items: flex-start;
+        padding: var(--space-md);
+        background: rgba(255, 255, 255, 0.5);
+        border-radius: var(--radius-md);
+        transition: all var(--transition-fast);
+      }
+
+      .sidebar-nav__contact-item:hover {
+        background: rgba(255, 255, 255, 0.8);
+        transform: translateX(2px);
+      }
+
+      .sidebar-nav__contact-icon {
+        flex-shrink: 0;
+        width: 42px;
+        height: 42px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.06);
+        border-radius: var(--radius-md);
+        color: var(--color-charcoal);
+        transition: all var(--transition-fast);
+      }
+
+      .sidebar-nav__contact-item:hover .sidebar-nav__contact-icon {
+        background: rgba(0, 0, 0, 0.08);
+      }
+
+      .sidebar-nav__contact-label {
+        font-size: 0.6875rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: rgba(0, 0, 0, 0.45);
+        margin-bottom: 4px;
+        font-family: var(--font-body);
+      }
+
+      .sidebar-nav__phone {
+        display: block;
+        color: var(--color-charcoal);
+        font-size: 1.0625rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all var(--transition-fast);
+        font-family: var(--font-body);
+      }
+
+      .sidebar-nav__phone:hover {
+        color: var(--color-accent);
+      }
+
+      .sidebar-nav__address {
+        font-style: normal;
+        color: var(--color-charcoal);
+        font-size: 0.9375rem;
+        line-height: 1.6;
+        font-family: var(--font-body);
+      }
+
+      .sidebar-nav__hours {
+        color: var(--color-charcoal);
+        font-size: 0.9375rem;
+        line-height: 1.5;
+        font-family: var(--font-body);
       }
 
       /* Sidebar Overlay */
@@ -414,13 +538,15 @@ const { title, description = "Personalized chiropractic care for San Diego adult
         left: 0;
         right: 0;
         bottom: 0;
+        width: 100vw;
+        height: 100vh;
         background: rgba(0, 0, 0, 0.4);
         backdrop-filter: blur(2px);
         -webkit-backdrop-filter: blur(2px);
         opacity: 0;
         visibility: hidden;
         transition: all var(--transition-normal);
-        z-index: 1001;
+        z-index: 999998;
       }
 
       .sidebar-overlay.active {
@@ -439,24 +565,36 @@ const { title, description = "Personalized chiropractic care for San Diego adult
 
         .sidebar-nav {
           max-width: 100%;
-          padding: var(--space-3xl) var(--space-2xl);
-        }
-
-        .sidebar-nav__content {
-          grid-template-columns: 1fr;
-          gap: var(--space-3xl);
         }
 
         .sidebar-nav__header {
-          margin-bottom: var(--space-3xl);
+          padding: var(--space-xl) var(--space-2xl);
+        }
+
+        .sidebar-nav__content {
+          gap: var(--space-xl);
+          padding: 0 var(--space-2xl) var(--space-3xl);
+        }
+
+        .sidebar-nav__list li {
+          margin-bottom: var(--space-sm);
         }
 
         .sidebar-nav__list a {
           font-size: 1.25rem;
         }
 
-        .sidebar-nav__list--secondary a {
-          font-size: 1.125rem;
+        .sidebar-nav__btn {
+          font-size: 1rem;
+          padding: 14px 28px;
+        }
+
+        .sidebar-nav__contact {
+          gap: var(--space-lg);
+        }
+
+        .sidebar-nav__phone {
+          font-size: 1rem;
         }
       }
 
@@ -469,24 +607,48 @@ const { title, description = "Personalized chiropractic care for San Diego adult
           height: 45px;
         }
 
-        .sidebar-nav {
-          padding: var(--space-2xl) var(--space-xl);
+        .sidebar-nav__header {
+          padding: var(--space-lg) var(--space-xl);
+        }
+
+        .sidebar-nav__content {
+          gap: var(--space-lg);
+          padding: 0 var(--space-xl) var(--space-2xl);
         }
 
         .sidebar-nav__list a {
           font-size: 1.125rem;
         }
 
-        .sidebar-nav__list--secondary a {
-          font-size: 1rem;
+        .sidebar-nav__list li {
+          margin-bottom: 6px;
         }
 
-        .sidebar-nav__link--primary {
-          font-size: 1.125rem !important;
+        .sidebar-nav__btn {
+          font-size: 0.9375rem;
+          padding: 12px 24px;
         }
 
-        .sidebar-nav__link--contact {
-          font-size: 1rem !important;
+        .sidebar-nav__contact {
+          gap: var(--space-md);
+        }
+
+        .sidebar-nav__contact-item {
+          padding: var(--space-sm) var(--space-md);
+        }
+
+        .sidebar-nav__phone {
+          font-size: 0.9375rem;
+        }
+
+        .sidebar-nav__address,
+        .sidebar-nav__hours {
+          font-size: 0.875rem;
+        }
+
+        .sidebar-nav__contact-icon {
+          width: 38px;
+          height: 38px;
         }
       }
 
@@ -809,19 +971,38 @@ const { title, description = "Personalized chiropractic care for San Diego adult
 
         .footer__brand {
           grid-column: span 1;
+          text-align: left;
+        }
+
+        .footer__social {
+          justify-content: flex-start;
+        }
+
+        .footer__col {
+          text-align: left;
+        }
+
+        .footer__col h4::after {
+          left: 0;
+          transform: none;
+        }
+
+        .footer__contact-item {
+          justify-content: flex-start;
         }
 
         .footer__bottom-content {
           flex-direction: column;
           gap: var(--space-md);
-          text-align: center;
+          text-align: left;
         }
       }
     </style>
 
-    <script>
-      // Header scroll effect
-      const header = document.getElementById('header');
+    <script is:inline>
+      document.addEventListener('DOMContentLoaded', () => {
+        // Header scroll effect
+        const header = document.getElementById('header');
 
       window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
@@ -889,172 +1070,173 @@ const { title, description = "Personalized chiropractic care for San Diego adult
           closeSidebar();
         }
       });
+    });
 
-      // ========================================
-      // SCROLL ANIMATIONS
-      // ========================================
+    // ========================================
+    // SCROLL ANIMATIONS
+    // ========================================
 
-      // Intersection Observer for scroll-triggered animations
-      const observerOptions = {
-        root: null,
-        rootMargin: '0px 0px -100px 0px',
-        threshold: 0.1
-      };
+    // Intersection Observer for scroll-triggered animations
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px 0px -100px 0px',
+      threshold: 0.1
+    };
 
-      const animationObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animated');
-            // Optionally unobserve after animation
-            // animationObserver.unobserve(entry.target);
-          }
-        });
-      }, observerOptions);
-
-      // Observe all elements with data-animate attribute
-      document.querySelectorAll('[data-animate]').forEach(el => {
-        animationObserver.observe(el);
-      });
-
-      // Observe stagger-children containers
-      document.querySelectorAll('.stagger-children').forEach(el => {
-        animationObserver.observe(el);
-      });
-
-      // Auto-add animations to common elements
-      const autoAnimateSelectors = [
-        '.section__header',
-        '.section__eyebrow',
-        '.service-card',
-        '.condition-card',
-        '.review-card',
-        '.highlight-card',
-        '.reason-card',
-        '.about-grid > *',
-        '.hero__content',
-        '.hero__image',
-        '.intro-card',
-        '.note-box',
-        '.faq-item',
-        '.stat',
-        '.credential-item'
-      ];
-
-      autoAnimateSelectors.forEach(selector => {
-        document.querySelectorAll(selector).forEach((el, index) => {
-          if (!el.hasAttribute('data-animate')) {
-            el.setAttribute('data-animate', 'fade-up');
-            el.setAttribute('data-animate-delay', String(Math.min(index * 100, 600)));
-            animationObserver.observe(el);
-          }
-        });
-      });
-
-      // ========================================
-      // SCROLL PROGRESS BAR
-      // ========================================
-
-      // Create scroll progress bar
-      const scrollProgress = document.createElement('div');
-      scrollProgress.className = 'scroll-progress';
-      document.body.prepend(scrollProgress);
-
-      window.addEventListener('scroll', () => {
-        const scrollTop = window.scrollY;
-        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-        const scrollPercent = scrollTop / docHeight;
-        scrollProgress.style.transform = `scaleX(${scrollPercent})`;
-      });
-
-      // ========================================
-      // COUNTER ANIMATION
-      // ========================================
-
-      function animateCounter(el: Element) {
-        const target = parseInt(el.getAttribute('data-count') || el.textContent || '0');
-        const duration = 2000;
-        const start = 0;
-        const startTime = performance.now();
-
-        function update(currentTime: number) {
-          const elapsed = currentTime - startTime;
-          const progress = Math.min(elapsed / duration, 1);
-
-          // Easing function
-          const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-          const current = Math.floor(start + (target - start) * easeOutQuart);
-
-          el.textContent = current.toLocaleString() + (el.getAttribute('data-suffix') || '');
-
-          if (progress < 1) {
-            requestAnimationFrame(update);
-          }
+    const animationObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animated');
+          // Optionally unobserve after animation
+          // animationObserver.unobserve(entry.target);
         }
+      });
+    }, observerOptions);
 
-        requestAnimationFrame(update);
+    // Observe all elements with data-animate attribute
+    document.querySelectorAll('[data-animate]').forEach(el => {
+      animationObserver.observe(el);
+    });
+
+    // Observe stagger-children containers
+    document.querySelectorAll('.stagger-children').forEach(el => {
+      animationObserver.observe(el);
+    });
+
+    // Auto-add animations to common elements
+    const autoAnimateSelectors = [
+      '.section__header',
+      '.section__eyebrow',
+      '.service-card',
+      '.condition-card',
+      '.review-card',
+      '.highlight-card',
+      '.reason-card',
+      '.about-grid > *',
+      '.hero__content',
+      '.hero__image',
+      '.intro-card',
+      '.note-box',
+      '.faq-item',
+      '.stat',
+      '.credential-item'
+    ];
+
+    autoAnimateSelectors.forEach(selector => {
+      document.querySelectorAll(selector).forEach((el, index) => {
+        if (!el.hasAttribute('data-animate')) {
+          el.setAttribute('data-animate', 'fade-up');
+          el.setAttribute('data-animate-delay', String(Math.min(index * 100, 600)));
+          animationObserver.observe(el);
+        }
+      });
+    });
+
+    // ========================================
+    // SCROLL PROGRESS BAR
+    // ========================================
+
+    // Create scroll progress bar
+    const scrollProgress = document.createElement('div');
+    scrollProgress.className = 'scroll-progress';
+    document.body.prepend(scrollProgress);
+
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = scrollTop / docHeight;
+      scrollProgress.style.transform = `scaleX(${scrollPercent})`;
+    });
+
+    // ========================================
+    // COUNTER ANIMATION
+    // ========================================
+
+    function animateCounter(el) {
+      const target = parseInt(el.getAttribute('data-count') || el.textContent || '0');
+      const duration = 2000;
+      const start = 0;
+      const startTime = performance.now();
+
+      function update(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+
+        // Easing function
+        const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+        const current = Math.floor(start + (target - start) * easeOutQuart);
+
+        el.textContent = current.toLocaleString() + (el.getAttribute('data-suffix') || '');
+
+        if (progress < 1) {
+          requestAnimationFrame(update);
+        }
       }
 
-      // Observe counters
-      const counterObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            animateCounter(entry.target);
-            counterObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.5 });
+      requestAnimationFrame(update);
+    }
 
-      document.querySelectorAll('[data-count]').forEach(el => {
-        counterObserver.observe(el);
+    // Observe counters
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          counterObserver.unobserve(entry.target);
+        }
       });
+    }, { threshold: 0.5 });
 
-      // ========================================
-      // SMOOTH REVEAL FOR IMAGES
-      // ========================================
+    document.querySelectorAll('[data-count]').forEach(el => {
+      counterObserver.observe(el);
+    });
 
-      document.querySelectorAll('.img-reveal').forEach(el => {
-        animationObserver.observe(el);
-      });
+    // ========================================
+    // SMOOTH REVEAL FOR IMAGES
+    // ========================================
 
-      // ========================================
-      // PARALLAX EFFECT (subtle)
-      // ========================================
+    document.querySelectorAll('.img-reveal').forEach(el => {
+      animationObserver.observe(el);
+    });
 
-      const parallaxElements = document.querySelectorAll('[data-parallax]');
+    // ========================================
+    // PARALLAX EFFECT (subtle)
+    // ========================================
 
-      if (parallaxElements.length > 0) {
-        window.addEventListener('scroll', () => {
-          const scrollY = window.scrollY;
+    const parallaxElements = document.querySelectorAll('[data-parallax]');
 
-          parallaxElements.forEach(el => {
-            const speed = parseFloat(el.getAttribute('data-parallax') || '0.5');
-            const rect = (el as HTMLElement).getBoundingClientRect();
-            const offsetTop = rect.top + scrollY;
-            const yPos = (scrollY - offsetTop) * speed;
+    if (parallaxElements.length > 0) {
+      window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
 
-            (el as HTMLElement).style.transform = `translateY(${yPos}px)`;
-          });
-        });
-      }
+        parallaxElements.forEach(el => {
+          const speed = parseFloat(el.getAttribute('data-parallax') || '0.5');
+          const rect = el.getBoundingClientRect();
+          const offsetTop = rect.top + scrollY;
+          const yPos = (scrollY - offsetTop) * speed;
 
-      // ========================================
-      // MAGNETIC BUTTONS (optional hover effect)
-      // ========================================
-
-      document.querySelectorAll('.btn--primary, .header__cta').forEach(btn => {
-        btn.addEventListener('mousemove', (e) => {
-          const rect = (btn as HTMLElement).getBoundingClientRect();
-          const x = (e as MouseEvent).clientX - rect.left - rect.width / 2;
-          const y = (e as MouseEvent).clientY - rect.top - rect.height / 2;
-
-          (btn as HTMLElement).style.transform = `translate(${x * 0.1}px, ${y * 0.1}px)`;
-        });
-
-        btn.addEventListener('mouseleave', () => {
-          (btn as HTMLElement).style.transform = '';
+          el.style.transform = `translateY(${yPos}px)`;
         });
       });
-    </script>
+    }
+
+    // ========================================
+    // MAGNETIC BUTTONS (optional hover effect)
+    // ========================================
+
+    document.querySelectorAll('.btn--primary, .header__cta').forEach(btn => {
+      btn.addEventListener('mousemove', (e) => {
+        const rect = btn.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+
+        btn.style.transform = `translate(${x * 0.1}px, ${y * 0.1}px)`;
+      });
+
+      btn.addEventListener('mouseleave', () => {
+        btn.style.transform = '';
+      });
+    });
+  </script>
   </body>
 </html>
 

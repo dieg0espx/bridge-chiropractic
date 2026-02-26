@@ -4,12 +4,12 @@ import HeroVideo from '../components/HeroVideo.astro';
 import SectionWrapper from '../components/SectionWrapper.astro';
 import ContentGrid from '../components/ContentGrid.astro';
 import OfferingCard from '../components/OfferingCard.astro';
+import VideoBackground from '../components/VideoBackground.astro';
 ---
 
 <Layout title="Bridge Chiropractic - Transform Your Wellness | San Diego">
   <!-- Hero Video Section -->
   <HeroVideo
-    videoUrl="https://assets.mixkit.co/videos/preview/mixkit-physiotherapist-doing-back-massage-to-a-client-5262-large.mp4"
     posterImage="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1920&h=1080&fit=crop"
     title="Discover Your Best Self"
     subtitle="Experience transformative chiropractic care designed for San Diego adults who want to stay active, vibrant, and pain-free."
@@ -30,7 +30,7 @@ import OfferingCard from '../components/OfferingCard.astro';
     </div>
 
     <ContentGrid columns={3} gap="xl" class="mt-4xl">
-      <article class="glass" style="padding: var(--space-2xl); border-radius: var(--radius-xl); text-align: center;">
+      <article class="glass" style="padding: var(--space-2xl); padding-bottom: var(--space-3xl); border-radius: var(--radius-xl); text-align: center;">
         <div class="icon-container icon-container--lg mx-auto">
           <span style="font-size: 32px; font-weight: 600; font-family: var(--font-heading);">1</span>
         </div>
@@ -42,7 +42,7 @@ import OfferingCard from '../components/OfferingCard.astro';
         </p>
       </article>
 
-      <article class="glass" style="padding: var(--space-2xl); border-radius: var(--radius-xl); text-align: center;">
+      <article class="glass" style="padding: var(--space-2xl); padding-bottom: var(--space-3xl); border-radius: var(--radius-xl); text-align: center;">
         <div class="icon-container icon-container--lg mx-auto">
           <span style="font-size: 32px; font-weight: 600; font-family: var(--font-heading);">2</span>
         </div>
@@ -54,7 +54,7 @@ import OfferingCard from '../components/OfferingCard.astro';
         </p>
       </article>
 
-      <article class="glass" style="padding: var(--space-2xl); border-radius: var(--radius-xl); text-align: center;">
+      <article class="glass" style="padding: var(--space-2xl); padding-bottom: var(--space-3xl); border-radius: var(--radius-xl); text-align: center;">
         <div class="icon-container icon-container--lg mx-auto">
           <span style="font-size: 32px; font-weight: 600; font-family: var(--font-heading);">3</span>
         </div>
@@ -101,7 +101,7 @@ import OfferingCard from '../components/OfferingCard.astro';
       />
 
       <OfferingCard
-        image="https://images.unsplash.com/photo-1559329007-40df8a9345d8?w=800&h=600&fit=crop"
+        image="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop"
         title="Neuro Rehabilitation"
         description="Specialized support for balance, coordination, and neurological wellness."
         link="/services#neuro"
@@ -261,16 +261,16 @@ import OfferingCard from '../components/OfferingCard.astro';
 
       <div data-animate="fade-left">
         <img
-          src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=800&h=1000&fit=crop"
+          src="/images/IMG_0954.JPG"
           alt="Dr. Nathan Beyerl"
-          style="border-radius: var(--radius-xl); box-shadow: var(--shadow-xl); width: 100%; height: 600px; object-fit: cover;"
+          style="border-radius: var(--radius-xl); box-shadow: var(--shadow-xl); width: 100%; height: 600px; object-fit: cover; object-position: top center;"
         />
       </div>
     </div>
   </SectionWrapper>
 
   <!-- Testimonials Section -->
-  <SectionWrapper background="white" spacing="hero" containerWidth="normal">
+  <SectionWrapper background="white" spacing="hero" containerWidth="full">
     <div class="section__header" data-animate="fade-up">
       <span class="section__eyebrow">Testimonials</span>
       <h2 class="display-2">What Our Patients Say</h2>
@@ -298,79 +298,394 @@ import OfferingCard from '../components/OfferingCard.astro';
       </div>
     </div>
 
-    <ContentGrid columns={3} gap="xl" class="mt-4xl">
-      <article class="glass" style="padding: var(--space-2xl); border-radius: var(--radius-xl);">
-        <div style="display: flex; gap: 4px; margin-bottom: var(--space-md); color: var(--color-accent);">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-          </svg>
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-          </svg>
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-          </svg>
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-          </svg>
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-          </svg>
-        </div>
-        <p style="font-size: 1.0625rem; line-height: 1.7; margin-bottom: var(--space-lg); color: var(--color-charcoal);">
-          "Dr. Beyerl transformed my chronic back pain into a thing of the past. His holistic approach and genuine care made all the difference."
-        </p>
-        <p style="font-weight: 600; color: var(--color-charcoal);">— Sarah M.</p>
-      </article>
+    <div class="testimonials-scroll-container mt-4xl">
+      <div class="testimonials-scroll-track">
+        <article class="testimonial-card glass">
+          <div style="display: flex; gap: 4px; margin-bottom: var(--space-md); color: var(--color-accent);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          </div>
+          <p style="font-size: 1.0625rem; line-height: 1.7; margin-bottom: var(--space-lg); color: var(--color-charcoal);">
+            "Dr. Beyerl transformed my chronic back pain into a thing of the past. His holistic approach and genuine care made all the difference."
+          </p>
+          <p style="font-weight: 600; color: var(--color-charcoal);">— Sarah M.</p>
+        </article>
 
-      <article class="glass" style="padding: var(--space-2xl); border-radius: var(--radius-xl);">
-        <div style="display: flex; gap: 4px; margin-bottom: var(--space-md); color: var(--color-accent);">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-          </svg>
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-          </svg>
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-          </svg>
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-          </svg>
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-          </svg>
-        </div>
-        <p style="font-size: 1.0625rem; line-height: 1.7; margin-bottom: var(--space-lg); color: var(--color-charcoal);">
-          "After years of migraines, I finally found relief. The team here truly cares about their patients and it shows in every visit."
-        </p>
-        <p style="font-weight: 600; color: var(--color-charcoal);">— Michael T.</p>
-      </article>
+        <article class="testimonial-card glass">
+          <div style="display: flex; gap: 4px; margin-bottom: var(--space-md); color: var(--color-accent);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          </div>
+          <p style="font-size: 1.0625rem; line-height: 1.7; margin-bottom: var(--space-lg); color: var(--color-charcoal);">
+            "After years of migraines, I finally found relief. The team here truly cares about their patients and it shows in every visit."
+          </p>
+          <p style="font-weight: 600; color: var(--color-charcoal);">— Michael T.</p>
+        </article>
 
-      <article class="glass" style="padding: var(--space-2xl); border-radius: var(--radius-xl);">
-        <div style="display: flex; gap: 4px; margin-bottom: var(--space-md); color: var(--color-accent);">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-          </svg>
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-          </svg>
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-          </svg>
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-          </svg>
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-          </svg>
-        </div>
-        <p style="font-size: 1.0625rem; line-height: 1.7; margin-bottom: var(--space-lg); color: var(--color-charcoal);">
-          "As an active runner, I need to stay in peak condition. Dr. Beyerl keeps me running strong and injury-free."
-        </p>
-        <p style="font-weight: 600; color: var(--color-charcoal);">— Jennifer L.</p>
-      </article>
-    </ContentGrid>
+        <article class="testimonial-card glass">
+          <div style="display: flex; gap: 4px; margin-bottom: var(--space-md); color: var(--color-accent);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          </div>
+          <p style="font-size: 1.0625rem; line-height: 1.7; margin-bottom: var(--space-lg); color: var(--color-charcoal);">
+            "As an active runner, I need to stay in peak condition. Dr. Beyerl keeps me running strong and injury-free."
+          </p>
+          <p style="font-weight: 600; color: var(--color-charcoal);">— Jennifer L.</p>
+        </article>
+
+        <article class="testimonial-card glass">
+          <div style="display: flex; gap: 4px; margin-bottom: var(--space-md); color: var(--color-accent);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          </div>
+          <p style="font-size: 1.0625rem; line-height: 1.7; margin-bottom: var(--space-lg); color: var(--color-charcoal);">
+            "Professional, knowledgeable, and caring. The office is clean and welcoming. I always leave feeling better than when I arrived."
+          </p>
+          <p style="font-weight: 600; color: var(--color-charcoal);">— David K.</p>
+        </article>
+
+        <article class="testimonial-card glass">
+          <div style="display: flex; gap: 4px; margin-bottom: var(--space-md); color: var(--color-accent);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          </div>
+          <p style="font-size: 1.0625rem; line-height: 1.7; margin-bottom: var(--space-lg); color: var(--color-charcoal);">
+            "My posture has improved dramatically and my neck pain is gone. Dr. Beyerl explained everything clearly and gave me exercises to do at home."
+          </p>
+          <p style="font-weight: 600; color: var(--color-charcoal);">— Lisa R.</p>
+        </article>
+
+        <article class="testimonial-card glass">
+          <div style="display: flex; gap: 4px; margin-bottom: var(--space-md); color: var(--color-accent);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          </div>
+          <p style="font-size: 1.0625rem; line-height: 1.7; margin-bottom: var(--space-lg); color: var(--color-charcoal);">
+            "Best chiropractor in San Diego! Helped me recover from a car accident when I thought I'd be in pain forever. Thank you Dr. Beyerl!"
+          </p>
+          <p style="font-weight: 600; color: var(--color-charcoal);">— Robert P.</p>
+        </article>
+
+        <article class="testimonial-card glass">
+          <div style="display: flex; gap: 4px; margin-bottom: var(--space-md); color: var(--color-accent);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          </div>
+          <p style="font-size: 1.0625rem; line-height: 1.7; margin-bottom: var(--space-lg); color: var(--color-charcoal);">
+            "Exceptional care and attention to detail. Dr. Beyerl takes time to listen and understand your concerns. I wouldn't trust anyone else."
+          </p>
+          <p style="font-weight: 600; color: var(--color-charcoal);">— Emily S.</p>
+        </article>
+
+        <article class="testimonial-card glass">
+          <div style="display: flex; gap: 4px; margin-bottom: var(--space-md); color: var(--color-accent);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          </div>
+          <p style="font-size: 1.0625rem; line-height: 1.7; margin-bottom: var(--space-lg); color: var(--color-charcoal);">
+            "I was skeptical about chiropractic care, but Dr. Beyerl changed my mind. His evidence-based approach made me a believer."
+          </p>
+          <p style="font-weight: 600; color: var(--color-charcoal);">— James W.</p>
+        </article>
+
+        <!-- Duplicate for seamless loop -->
+        <article class="testimonial-card glass">
+          <div style="display: flex; gap: 4px; margin-bottom: var(--space-md); color: var(--color-accent);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          </div>
+          <p style="font-size: 1.0625rem; line-height: 1.7; margin-bottom: var(--space-lg); color: var(--color-charcoal);">
+            "Dr. Beyerl transformed my chronic back pain into a thing of the past. His holistic approach and genuine care made all the difference."
+          </p>
+          <p style="font-weight: 600; color: var(--color-charcoal);">— Sarah M.</p>
+        </article>
+
+        <article class="testimonial-card glass">
+          <div style="display: flex; gap: 4px; margin-bottom: var(--space-md); color: var(--color-accent);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          </div>
+          <p style="font-size: 1.0625rem; line-height: 1.7; margin-bottom: var(--space-lg); color: var(--color-charcoal);">
+            "After years of migraines, I finally found relief. The team here truly cares about their patients and it shows in every visit."
+          </p>
+          <p style="font-weight: 600; color: var(--color-charcoal);">— Michael T.</p>
+        </article>
+
+        <article class="testimonial-card glass">
+          <div style="display: flex; gap: 4px; margin-bottom: var(--space-md); color: var(--color-accent);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          </div>
+          <p style="font-size: 1.0625rem; line-height: 1.7; margin-bottom: var(--space-lg); color: var(--color-charcoal);">
+            "As an active runner, I need to stay in peak condition. Dr. Beyerl keeps me running strong and injury-free."
+          </p>
+          <p style="font-weight: 600; color: var(--color-charcoal);">— Jennifer L.</p>
+        </article>
+
+        <article class="testimonial-card glass">
+          <div style="display: flex; gap: 4px; margin-bottom: var(--space-md); color: var(--color-accent);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          </div>
+          <p style="font-size: 1.0625rem; line-height: 1.7; margin-bottom: var(--space-lg); color: var(--color-charcoal);">
+            "Professional, knowledgeable, and caring. The office is clean and welcoming. I always leave feeling better than when I arrived."
+          </p>
+          <p style="font-weight: 600; color: var(--color-charcoal);">— David K.</p>
+        </article>
+
+        <article class="testimonial-card glass">
+          <div style="display: flex; gap: 4px; margin-bottom: var(--space-md); color: var(--color-accent);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          </div>
+          <p style="font-size: 1.0625rem; line-height: 1.7; margin-bottom: var(--space-lg); color: var(--color-charcoal);">
+            "My posture has improved dramatically and my neck pain is gone. Dr. Beyerl explained everything clearly and gave me exercises to do at home."
+          </p>
+          <p style="font-weight: 600; color: var(--color-charcoal);">— Lisa R.</p>
+        </article>
+
+        <article class="testimonial-card glass">
+          <div style="display: flex; gap: 4px; margin-bottom: var(--space-md); color: var(--color-accent);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          </div>
+          <p style="font-size: 1.0625rem; line-height: 1.7; margin-bottom: var(--space-lg); color: var(--color-charcoal);">
+            "Best chiropractor in San Diego! Helped me recover from a car accident when I thought I'd be in pain forever. Thank you Dr. Beyerl!"
+          </p>
+          <p style="font-weight: 600; color: var(--color-charcoal);">— Robert P.</p>
+        </article>
+
+        <article class="testimonial-card glass">
+          <div style="display: flex; gap: 4px; margin-bottom: var(--space-md); color: var(--color-accent);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          </div>
+          <p style="font-size: 1.0625rem; line-height: 1.7; margin-bottom: var(--space-lg); color: var(--color-charcoal);">
+            "Exceptional care and attention to detail. Dr. Beyerl takes time to listen and understand your concerns. I wouldn't trust anyone else."
+          </p>
+          <p style="font-weight: 600; color: var(--color-charcoal);">— Emily S.</p>
+        </article>
+
+        <article class="testimonial-card glass">
+          <div style="display: flex; gap: 4px; margin-bottom: var(--space-md); color: var(--color-accent);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          </div>
+          <p style="font-size: 1.0625rem; line-height: 1.7; margin-bottom: var(--space-lg); color: var(--color-charcoal);">
+            "I was skeptical about chiropractic care, but Dr. Beyerl changed my mind. His evidence-based approach made me a believer."
+          </p>
+          <p style="font-weight: 600; color: var(--color-charcoal);">— James W.</p>
+        </article>
+      </div>
+    </div>
 
     <div class="text-center mt-4xl" data-animate="fade-up">
       <a href="/testimonials" class="btn btn--primary btn--lg">Read More Reviews</a>
@@ -427,8 +742,13 @@ import OfferingCard from '../components/OfferingCard.astro';
     </div>
   </SectionWrapper>
 
-  <!-- Premium CTA Section -->
-  <section class="cta-premium">
+  <!-- Premium CTA Section with Video Background -->
+  <VideoBackground
+    videoUrl="https://res.cloudinary.com/dku1gnuat/video/upload/v1772139027/fitness-exercise-and-running-woman-at-beach-for-2025-12-17-11-33-16-utc_htkq3f.mov"
+    posterImage="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1920&h=1080&fit=crop"
+    overlayOpacity={0.7}
+    class="cta-premium"
+  >
     <div class="container container-narrow" data-animate="fade-up">
       <h2 class="display-2" style="color: var(--color-white); margin-bottom: var(--space-lg);">
         Ready to Begin Your Wellness Journey?
@@ -443,10 +763,43 @@ import OfferingCard from '../components/OfferingCard.astro';
         </a>
       </div>
     </div>
-  </section>
+  </VideoBackground>
 </Layout>
 
 <style>
+  /* Testimonials Infinite Scroll */
+  .testimonials-scroll-container {
+    overflow: hidden;
+    margin-top: 64px;
+    padding: 20px 0;
+  }
+
+  .testimonials-scroll-track {
+    display: flex;
+    gap: var(--space-xl);
+    animation: scroll 60s linear infinite;
+    will-change: transform;
+  }
+
+  .testimonials-scroll-track:hover {
+    animation-play-state: paused;
+  }
+
+  .testimonial-card {
+    flex: 0 0 400px;
+    padding: var(--space-2xl);
+    border-radius: var(--radius-xl);
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-400px * 8 - var(--space-xl) * 8));
+    }
+  }
+
   /* FAQ Item Styling */
   .faq-item {
     border-bottom: 1px solid var(--color-gray-200);
@@ -496,6 +849,19 @@ import OfferingCard from '../components/OfferingCard.astro';
     .two-col-premium {
       gap: var(--space-3xl);
     }
+
+    .testimonial-card {
+      flex: 0 0 350px;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(calc(-350px * 8 - var(--space-xl) * 8));
+      }
+    }
   }
 
   @media (max-width: 768px) {
@@ -521,11 +887,47 @@ import OfferingCard from '../components/OfferingCard.astro';
       padding-bottom: var(--space-lg);
       font-size: 1rem;
     }
+
+    .testimonials-scroll-container {
+      margin-top: 48px;
+    }
+
+    .testimonial-card {
+      flex: 0 0 300px;
+      padding: var(--space-xl);
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(calc(-300px * 8 - var(--space-xl) * 8));
+      }
+    }
   }
 
   @media (max-width: 480px) {
     .cta-premium {
       padding: var(--space-4xl) 0;
+    }
+
+    .testimonials-scroll-container {
+      margin-top: 32px;
+    }
+
+    .testimonial-card {
+      flex: 0 0 280px;
+      padding: var(--space-lg);
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(calc(-280px * 8 - var(--space-xl) * 8));
+      }
     }
   }
 </style>

@@ -1,12 +1,21 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import SectionWrapper from '../components/SectionWrapper.astro';
+import VideoBackground from '../components/VideoBackground.astro';
 ---
 
 <Layout title="FAQ" description="Frequently asked questions about chiropractic care at The Bridge Chiropractic. Learn about first visits, treatment approaches, insurance, and more.">
   <!-- Hero Section -->
   <section class="hero-fullbleed" style="height: 80vh; min-height: 600px;">
-    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1920&h=1080&fit=crop" alt="Chiropractic consultation" class="hero-fullbleed__image" />
+    <video
+      class="hero-fullbleed__image"
+      autoplay
+      muted
+      loop
+      playsinline
+    >
+      <source src="https://res.cloudinary.com/dku1gnuat/video/upload/v1772135510/A_0004C206H251212_163500CS_CANON_puvlaw.mp4" type="video/mp4" />
+    </video>
     <div class="hero-fullbleed__overlay"></div>
     <div class="hero-fullbleed__content" data-animate="fade-up">
       <span class="hero-badge">Questions & Answers</span>
@@ -20,7 +29,7 @@ import SectionWrapper from '../components/SectionWrapper.astro';
     <div class="faq-section" data-animate="fade-up">
       <h2 class="faq-section__title">Your First Visit</h2>
 
-      <div class="faq-list">
+      <div class="faq-list faq-list--columns">
         <div class="faq-item glass">
           <button class="faq-item__question" aria-expanded="false">
             <span>What should I expect during my first visit?</span>
@@ -60,6 +69,26 @@ import SectionWrapper from '../components/SectionWrapper.astro';
             <p>In most cases, yes. After your consultation and examination, if we determine chiropractic care is appropriate for your condition, we'll typically begin gentle treatment during your first visit. However, we never pressure patients—we'll only proceed when you're comfortable and understand the treatment plan.</p>
           </div>
         </div>
+
+        <div class="faq-item glass">
+          <button class="faq-item__question" aria-expanded="false">
+            <span>How long does the first appointment take?</span>
+            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-item__answer">
+            <p>Your initial consultation typically takes 45-60 minutes. This includes time for your health history review, physical examination, discussion of findings, and initial treatment if appropriate. We don't rush—this time is dedicated entirely to understanding your needs and starting your care properly.</p>
+          </div>
+        </div>
+
+        <div class="faq-item glass">
+          <button class="faq-item__question" aria-expanded="false">
+            <span>Should I arrive early for my first visit?</span>
+            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-item__answer">
+            <p>Yes, please arrive 10-15 minutes early for your first visit to complete any necessary paperwork. If you'd prefer, we can email forms to you in advance so you can complete them at home. This helps us maximize your time with Dr. Beyerl during the appointment.</p>
+          </div>
+        </div>
       </div>
     </div>
   </SectionWrapper>
@@ -69,7 +98,7 @@ import SectionWrapper from '../components/SectionWrapper.astro';
     <div class="faq-section" data-animate="fade-up">
       <h2 class="faq-section__title">About Treatment</h2>
 
-      <div class="faq-list">
+      <div class="faq-list faq-list--columns">
         <div class="faq-item glass">
           <button class="faq-item__question" aria-expanded="false">
             <span>Is chiropractic care safe?</span>
@@ -119,6 +148,36 @@ import SectionWrapper from '../components/SectionWrapper.astro';
             <p>We focus on calm, trust-based care that prioritizes your long-term function and independence. Unlike rushed, high-volume practices, we take time to listen, explain, and educate. We emphasize sustainable improvement rather than quick fixes or creating dependency on ongoing adjustments. We want to empower you to understand your body and take control of your own health.</p>
           </div>
         </div>
+
+        <div class="faq-item glass">
+          <button class="faq-item__question" aria-expanded="false">
+            <span>What techniques do you use?</span>
+            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-item__answer">
+            <p>We use a variety of evidence-based techniques tailored to each patient, including manual adjustments, soft tissue therapy, movement rehabilitation, and neuro rehabilitation exercises. The techniques we choose depend on your specific condition, comfort level, and treatment goals. We'll always explain what we're doing and why before we begin.</p>
+          </div>
+        </div>
+
+        <div class="faq-item glass">
+          <button class="faq-item__question" aria-expanded="false">
+            <span>Can I continue my regular activities during treatment?</span>
+            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-item__answer">
+            <p>In most cases, yes. We encourage staying active during treatment, though we may recommend temporary modifications to certain activities while you heal. Our goal is to help you maintain your lifestyle, not restrict it. We'll work with you to find the right balance between rest, activity modification, and staying engaged in the things you love.</p>
+          </div>
+        </div>
+
+        <div class="faq-item glass">
+          <button class="faq-item__question" aria-expanded="false">
+            <span>Do you offer exercises or home care recommendations?</span>
+            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-item__answer">
+            <p>Absolutely. Education and empowerment are core to our approach. We'll provide specific exercises, stretches, and self-care strategies to support your recovery and maintain long-term health. These aren't generic handouts—they're tailored to your specific condition and goals, helping you take an active role in your own healing.</p>
+          </div>
+        </div>
       </div>
     </div>
   </SectionWrapper>
@@ -128,7 +187,7 @@ import SectionWrapper from '../components/SectionWrapper.astro';
     <div class="faq-section" data-animate="fade-up">
       <h2 class="faq-section__title">Neuro Rehabilitation</h2>
 
-      <div class="faq-list">
+      <div class="faq-list faq-list--columns">
         <div class="faq-item glass">
           <button class="faq-item__question" aria-expanded="false">
             <span>What is neuro rehabilitation?</span>
@@ -158,6 +217,36 @@ import SectionWrapper from '../components/SectionWrapper.astro';
             <p>Falls often result from a combination of factors: decreased balance, slower reaction times, reduced strength, and poor coordination. Our program addresses all of these through targeted exercises that challenge your vestibular system (inner ear balance), improve proprioception (body awareness), strengthen key muscle groups, and enhance your brain's ability to process movement information quickly.</p>
           </div>
         </div>
+
+        <div class="faq-item glass">
+          <button class="faq-item__question" aria-expanded="false">
+            <span>How long does neuro rehabilitation take?</span>
+            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-item__answer">
+            <p>The length of neuro rehabilitation varies based on your starting point and goals. Many patients notice improvements in balance and confidence within 4-6 weeks of consistent training. However, like any fitness program, ongoing practice maintains and continues to improve your results. We'll create a personalized program that fits your schedule and needs.</p>
+          </div>
+        </div>
+
+        <div class="faq-item glass">
+          <button class="faq-item__question" aria-expanded="false">
+            <span>Is it too late to start if I've already had a fall?</span>
+            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-item__answer">
+            <p>Absolutely not. It's never too late to improve your balance and reduce future fall risk. In fact, if you've experienced a fall, that's an important signal that intervention can help. Our program can help rebuild confidence, improve stability, and prevent future falls. We'll start at your current ability level and progress gradually.</p>
+          </div>
+        </div>
+
+        <div class="faq-item glass">
+          <button class="faq-item__question" aria-expanded="false">
+            <span>Can neuro rehabilitation help with dizziness?</span>
+            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-item__answer">
+            <p>Yes, vestibular rehabilitation—a component of our neuro rehabilitation program—can be very effective for certain types of dizziness, particularly those related to inner ear balance issues or vestibular dysfunction. We'll assess your specific type of dizziness and determine if our program is appropriate for you or if a referral to another specialist might be better.</p>
+          </div>
+        </div>
       </div>
     </div>
   </SectionWrapper>
@@ -167,7 +256,7 @@ import SectionWrapper from '../components/SectionWrapper.astro';
     <div class="faq-section" data-animate="fade-up">
       <h2 class="faq-section__title">Practical Questions</h2>
 
-      <div class="faq-list">
+      <div class="faq-list faq-list--columns">
         <div class="faq-item glass">
           <button class="faq-item__question" aria-expanded="false">
             <span>Do you accept insurance?</span>
@@ -207,12 +296,57 @@ import SectionWrapper from '../components/SectionWrapper.astro';
             <p>You can schedule an appointment by calling us at <a href="tel:8582777500">(858) 277-7500</a>, emailing <a href="mailto:bridgechiropracticsd@gmail.com">bridgechiropracticsd@gmail.com</a>, or using our <a href="/contact">online contact form</a>. We'll get back to you within 24 hours to confirm your appointment.</p>
           </div>
         </div>
+
+        <div class="faq-item glass">
+          <button class="faq-item__question" aria-expanded="false">
+            <span>What is your cancellation policy?</span>
+            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-item__answer">
+            <p>We understand that schedules change. We ask that you provide at least 24 hours notice if you need to cancel or reschedule your appointment. This allows us to offer your time slot to another patient who needs care. Late cancellations or no-shows may be subject to a fee.</p>
+          </div>
+        </div>
+
+        <div class="faq-item glass">
+          <button class="faq-item__question" aria-expanded="false">
+            <span>Is parking available?</span>
+            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-item__answer">
+            <p>Yes, we have convenient parking available directly in front of the building. The office is located on the second floor, accessible by stairs or elevator. If you have mobility concerns, please let us know when scheduling and we'll ensure you have the easiest access possible.</p>
+          </div>
+        </div>
+
+        <div class="faq-item glass">
+          <button class="faq-item__question" aria-expanded="false">
+            <span>What if I need to contact you outside of office hours?</span>
+            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-item__answer">
+            <p>For non-emergency questions or appointment scheduling, you can email us at bridgechiropracticsd@gmail.com or use our online contact form, and we'll respond the next business day. For urgent health concerns that occur outside our hours, please contact your primary care physician or visit urgent care.</p>
+          </div>
+        </div>
+
+        <div class="faq-item glass">
+          <button class="faq-item__question" aria-expanded="false">
+            <span>Do you offer payment plans?</span>
+            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-item__answer">
+            <p>We understand that healthcare costs can be a concern. While we don't offer formal payment plans, we accept all major credit cards and can discuss flexible payment options for patients paying out-of-pocket. We're committed to making quality care accessible and will work with you to find a solution that fits your budget.</p>
+          </div>
+        </div>
       </div>
     </div>
   </SectionWrapper>
 
   <!-- CTA Section -->
-  <section class="cta-premium">
+  <VideoBackground
+    videoUrl="https://res.cloudinary.com/dku1gnuat/video/upload/v1772139027/fitness-exercise-and-running-woman-at-beach-for-2025-12-17-11-33-16-utc_htkq3f.mov"
+    posterImage="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1920&h=1080&fit=crop"
+    overlayOpacity={0.7}
+    class="cta-premium"
+  >
     <div class="container container-narrow" data-animate="fade-up">
       <h2>Still Have Questions?</h2>
       <p>We're happy to answer any questions you have about our practice, your condition, or whether chiropractic care might be right for you.</p>
@@ -221,13 +355,13 @@ import SectionWrapper from '../components/SectionWrapper.astro';
         <a href="tel:8582777500" class="btn btn--secondary btn--lg" style="background: transparent; border: 2px solid white; color: white;">Call (858) 277-7500</a>
       </div>
     </div>
-  </section>
+  </VideoBackground>
 </Layout>
 
 <style>
   /* FAQ Sections */
   .faq-section {
-    max-width: 900px;
+    max-width: 1400px;
     margin: 0 auto;
   }
 
@@ -245,6 +379,14 @@ import SectionWrapper from '../components/SectionWrapper.astro';
     display: flex;
     flex-direction: column;
     gap: 20px;
+  }
+
+  .faq-list--columns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    max-width: 1400px;
+    margin: 0 auto;
   }
 
   .faq-item {
@@ -328,6 +470,11 @@ import SectionWrapper from '../components/SectionWrapper.astro';
     .faq-section__title {
       font-size: 2rem;
       margin-bottom: 40px;
+    }
+
+    .faq-list--columns {
+      grid-template-columns: 1fr;
+      gap: 20px;
     }
   }
 

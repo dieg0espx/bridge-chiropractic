@@ -3,16 +3,22 @@ import Layout from '../layouts/Layout.astro';
 import SectionWrapper from '../components/SectionWrapper.astro';
 import ContentGrid from '../components/ContentGrid.astro';
 import FeatureSection from '../components/FeatureSection.astro';
+import VideoBackground from '../components/VideoBackground.astro';
 ---
 
 <Layout title="About" description="Meet Dr. Nathan Beyerl - San Diego chiropractor focused on education, autonomy, and sustainable improvement for adults seeking lasting wellness.">
-  <!-- Hero with Image Background -->
-  <section class="hero-fullbleed" style="height: 80vh; min-height: 600px;">
-    <img
-      src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=1920&h=1080&fit=crop"
-      alt="Healthcare professional"
-      class="hero-fullbleed__image"
-    />
+  <!-- Hero with Video Background -->
+  <section class="hero-fullbleed hero-video" style="height: 80vh; min-height: 600px;">
+    <video
+      class="hero-fullbleed__video"
+      autoplay
+      muted
+      loop
+      playsinline
+      poster="/images/IMG_0954.JPG"
+    >
+      <source src="https://res.cloudinary.com/dku1gnuat/video/upload/v1772135133/A_0004C195H251212_142658SI_CANON_eacze2.mp4" type="video/mp4" />
+    </video>
     <div class="hero-fullbleed__overlay"></div>
     <div class="hero-fullbleed__content" data-animate="fade-up">
       <span class="hero-badge">About The Bridge</span>
@@ -39,7 +45,7 @@ import FeatureSection from '../components/FeatureSection.astro';
 
       <div class="about-story__image" data-animate="fade-left" data-animate-delay="200">
         <img
-          src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=800&h=1000&fit=crop"
+          src="/images/IMG_0954.JPG"
           alt="Dr. Nathan Beyerl providing expert chiropractic care"
           loading="lazy"
         />
@@ -199,8 +205,13 @@ import FeatureSection from '../components/FeatureSection.astro';
     </div>
   </SectionWrapper>
 
-  <!-- CTA Section -->
-  <section class="cta-premium">
+  <!-- CTA Section with Video Background -->
+  <VideoBackground
+    videoUrl="https://res.cloudinary.com/dku1gnuat/video/upload/v1772135510/A_0004C206H251212_163500CS_CANON_puvlaw.mp4"
+    posterImage="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1920&h=1080&fit=crop"
+    overlayOpacity={0.7}
+    class="cta-premium"
+  >
     <div class="container container-narrow" data-animate="fade-up">
       <h2 class="cta-premium__title">Ready to Experience the Difference?</h2>
       <p class="cta-premium__subtitle">Schedule your consultation and take the first step toward lasting wellness.</p>
@@ -209,10 +220,26 @@ import FeatureSection from '../components/FeatureSection.astro';
         <a href="tel:8582777500" class="btn btn--secondary btn--lg">Call (858) 277-7500</a>
       </div>
     </div>
-  </section>
+  </VideoBackground>
 </Layout>
 
 <style>
+  /* ==========================================
+     HERO VIDEO
+     ========================================== */
+  .hero-fullbleed__video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: 0;
+  }
+
   /* ==========================================
      HERO BADGE
      ========================================== */

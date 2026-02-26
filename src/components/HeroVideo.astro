@@ -6,7 +6,7 @@
  */
 
 interface Props {
-  videoUrl: string;
+  videoUrl?: string;
   posterImage: string;
   title: string;
   subtitle: string;
@@ -17,7 +17,6 @@ interface Props {
 }
 
 const {
-  videoUrl,
   posterImage,
   title,
   subtitle,
@@ -26,20 +25,31 @@ const {
   secondaryCtaText,
   secondaryCtaLink,
 } = Astro.props;
+
+// Array of sports videos to randomly cycle through
+const videoUrls = [
+  'https://res.cloudinary.com/dku1gnuat/video/upload/v1772139027/fitness-exercise-and-running-woman-at-beach-for-2025-12-17-11-33-16-utc_htkq3f.mov',
+  'https://res.cloudinary.com/dku1gnuat/video/upload/v1772139018/basketball-players-playing-basketball-4k-2026-02-02-07-58-09-utc_lcrizu.mov',
+  'https://res.cloudinary.com/dku1gnuat/video/upload/v1772139030/sporty-girl-rock-climber-climbs-the-climbing-wall-2025-12-17-13-16-27-utc_aebiuq.mov',
+  'https://res.cloudinary.com/dku1gnuat/video/upload/v1772139047/boxing-2025-12-17-23-07-06-utc_jaaqa4.mov'
+];
 ---
 
 <section class="hero-video" aria-label="Hero section">
-  <!-- Image Slideshow Background -->
-  <div class="hero-video__slideshow" aria-hidden="true">
-    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1920&h=1080&fit=crop&q=80" alt="" class="hero-video__image active" data-index="0" />
-    <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=1920&h=1080&fit=crop&q=80" alt="" class="hero-video__image" data-index="1" />
-    <img src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=1920&h=1080&fit=crop&q=80" alt="" class="hero-video__image" data-index="2" />
-    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1920&h=1080&fit=crop&q=80" alt="" class="hero-video__image" data-index="3" />
-    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1920&h=1080&fit=crop&q=80" alt="" class="hero-video__image" data-index="4" />
-    <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=1920&h=1080&fit=crop&q=80" alt="" class="hero-video__image" data-index="5" />
-    <img src="https://images.unsplash.com/photo-1483721310020-03333e577078?w=1920&h=1080&fit=crop&q=80" alt="" class="hero-video__image" data-index="6" />
-    <img src="https://images.unsplash.com/photo-1519311965067-36d3e5f33d39?w=1920&h=1080&fit=crop&q=80" alt="" class="hero-video__image" data-index="7" />
-  </div>
+  <!-- Multiple Video Elements for Smooth Transitions -->
+  {videoUrls.map((url, index) => (
+    <video
+      class={`hero-video__video ${index === 0 ? 'active' : ''}`}
+      data-video-index={index}
+      autoplay={index === 0}
+      muted
+      loop
+      playsinline
+      aria-hidden="true"
+    >
+      <source src={url} type="video/mp4" />
+    </video>
+  ))}
 
   <!-- Dark Overlay Gradient -->
   <div class="hero-video__overlay" aria-hidden="true"></div>
@@ -102,17 +112,8 @@ const {
     justify-content: center;
   }
 
-  /* Image Slideshow Background */
-  .hero-video__slideshow {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-  }
-
-  .hero-video__image {
+  /* Video Background */
+  .hero-video__video {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -122,11 +123,12 @@ const {
     height: auto;
     transform: translate(-50%, -50%);
     object-fit: cover;
+    z-index: 0;
     opacity: 0;
-    transition: opacity 1s ease-in-out;
+    transition: opacity 0.8s ease-in-out;
   }
 
-  .hero-video__image.active {
+  .hero-video__video.active {
     opacity: 1;
   }
 
@@ -334,14 +336,28 @@ const {
     }
 
     .hero-video__content {
-      padding: 0 var(--space-xl);
+      padding: var(--space-4xl) var(--space-xl) var(--space-2xl);
     }
   }
 
   @media (max-width: 768px) {
     .hero-video {
-      height: 80vh;
-      min-height: 500px;
+      height: 100vh;
+      min-height: 600px;
+    }
+
+    .hero-video__content {
+      padding: var(--space-5xl) var(--space-lg) var(--space-3xl);
+    }
+
+    .hero-video__title {
+      font-size: clamp(2rem, 8vw, 3rem);
+      margin-bottom: var(--space-md);
+    }
+
+    .hero-video__subtitle {
+      font-size: clamp(1rem, 4vw, 1.125rem);
+      margin-bottom: var(--space-xl);
     }
 
     .hero-video__cta-group {
@@ -352,22 +368,46 @@ const {
 
     .hero-video__cta-group .btn {
       width: 100%;
-      max-width: 300px;
+      max-width: 320px;
+      padding: var(--space-md) var(--space-xl);
+      font-size: 1rem;
     }
 
     .hero-video__scroll-indicator {
-      bottom: var(--space-lg);
+      bottom: var(--space-xl);
     }
   }
 
   @media (max-width: 480px) {
     .hero-video {
-      height: 70vh;
-      min-height: 450px;
+      height: 100vh;
+      min-height: 550px;
     }
 
     .hero-video__content {
-      padding: 0 var(--space-lg);
+      padding: var(--space-4xl) var(--space-md) var(--space-2xl);
+    }
+
+    .hero-video__title {
+      font-size: clamp(1.75rem, 9vw, 2.5rem);
+      line-height: 1.15;
+    }
+
+    .hero-video__subtitle {
+      font-size: 1rem;
+      line-height: 1.6;
+      padding: 0 var(--space-sm);
+    }
+
+    .hero-video__cta-group .btn {
+      max-width: 100%;
+      padding: var(--space-sm) var(--space-lg);
+      font-size: 0.95rem;
+    }
+
+    .hero-video__scroll-indicator {
+      bottom: var(--space-lg);
+      scale: 0.85;
     }
   }
 
@@ -406,34 +446,67 @@ const {
 
 <script>
   /**
-   * Image Slideshow and Smooth Scroll
+   * Random Video Cycling and Smooth Scroll
    */
 
   // Wait for DOM to be ready
   document.addEventListener('DOMContentLoaded', () => {
-    const images = document.querySelectorAll('.hero-video__image') as NodeListOf<HTMLImageElement>;
+    const videos = document.querySelectorAll('.hero-video__video') as NodeListOf<HTMLVideoElement>;
 
-    if (images.length === 0) {
-      console.warn('HeroVideo: No images found for slideshow');
+    if (videos.length === 0) {
+      console.warn('HeroVideo: No videos found');
       return;
     }
 
     let currentIndex = 0;
+    let usedIndices: number[] = [0]; // Start with first video
 
-    // Function to show next image
-    function showNextImage() {
-      // Remove active class from current image
-      images[currentIndex].classList.remove('active');
+    // Preload all videos
+    videos.forEach((video, index) => {
+      if (index !== 0) {
+        video.load();
+      }
+    });
 
-      // Move to next image
-      currentIndex = (currentIndex + 1) % images.length;
+    // Function to get random index that hasn't been used recently
+    function getRandomIndex(): number {
+      // If we've used all videos, reset the used list but keep current
+      if (usedIndices.length >= videos.length) {
+        usedIndices = [currentIndex];
+      }
 
-      // Add active class to new image
-      images[currentIndex].classList.add('active');
+      let newIndex: number;
+      let attempts = 0;
+      do {
+        newIndex = Math.floor(Math.random() * videos.length);
+        attempts++;
+      } while (usedIndices.includes(newIndex) && attempts < 20);
+
+      return newIndex;
     }
 
-    // Start slideshow - change image every 2 seconds
-    setInterval(showNextImage, 2000);
+    // Function to switch to next random video
+    function switchVideo() {
+      const nextIndex = getRandomIndex();
+
+      // Fade out current video
+      videos[currentIndex].classList.remove('active');
+      videos[currentIndex].pause();
+
+      // Fade in next video
+      videos[nextIndex].classList.add('active');
+      videos[nextIndex].currentTime = 0;
+      videos[nextIndex].play().catch(err => {
+        console.warn('Video autoplay failed:', err);
+      });
+
+      // Update tracking
+      usedIndices.push(nextIndex);
+      currentIndex = nextIndex;
+    }
+
+    // Start video cycling - switch every 2 seconds
+    setInterval(switchVideo, 2000);
 
     // Smooth scroll for scroll indicator
     const scrollIndicator = document.querySelector('.hero-video__scroll-indicator');

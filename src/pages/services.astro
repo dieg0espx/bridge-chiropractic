@@ -2,12 +2,21 @@
 import Layout from '../layouts/Layout.astro';
 import SectionWrapper from '../components/SectionWrapper.astro';
 import OfferingCard from '../components/OfferingCard.astro';
+import VideoBackground from '../components/VideoBackground.astro';
 ---
 
 <Layout title="Services" description="Comprehensive chiropractic services including gentle adjustments, soft tissue therapy, movement training, and specialized neuro rehabilitation.">
   <!-- Hero Section -->
   <section class="hero-fullbleed" style="height: 85vh; min-height: 650px;">
-    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1920&h=1080&fit=crop" alt="Chiropractic care" class="hero-fullbleed__image" />
+    <video
+      class="hero-fullbleed__image"
+      autoplay
+      muted
+      loop
+      playsinline
+    >
+      <source src="https://res.cloudinary.com/dku1gnuat/video/upload/v1772135494/A_0004C207H251212_163548YT_CANON_kfbpge.mp4" type="video/mp4" />
+    </video>
     <div class="hero-fullbleed__overlay"></div>
 
     <!-- Floating particles for ambiance -->
@@ -68,7 +77,7 @@ import OfferingCard from '../components/OfferingCard.astro';
       />
 
       <OfferingCard
-        image="https://images.unsplash.com/photo-1559329007-40df8a9345d8?w=800&h=600&fit=crop"
+        image="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop"
         title="Neuro Rehabilitation"
         description="Specialized neurological care for balance, coordination, and fall prevention."
         link="#neuro"
@@ -175,7 +184,7 @@ import OfferingCard from '../components/OfferingCard.astro';
 
       <div class="service-detail__image" data-animate="fade-left" data-animate-delay="200">
         <div class="image-wrapper">
-          <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&h=1000&fit=crop" alt="Chiropractic adjustment" />
+          <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&h=1000&fit=crop" alt="Chiropractic care" />
           <div class="image-overlay"></div>
         </div>
       </div>
@@ -285,7 +294,15 @@ import OfferingCard from '../components/OfferingCard.astro';
 
       <div class="service-detail__image" data-animate="fade-left" data-animate-delay="200">
         <div class="image-wrapper">
-          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=1000&fit=crop" alt="Movement training" />
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            style="width: 100%; height: 100%; object-fit: cover;"
+          >
+            <source src="https://res.cloudinary.com/dku1gnuat/video/upload/v1772139030/sporty-girl-rock-climber-climbs-the-climbing-wall-2025-12-17-13-16-27-utc_aebiuq.mov" type="video/mp4" />
+          </video>
           <div class="image-overlay"></div>
         </div>
       </div>
@@ -297,7 +314,7 @@ import OfferingCard from '../components/OfferingCard.astro';
     <div class="service-detail service-detail--reverse">
       <div class="service-detail__image" data-animate="fade-right">
         <div class="image-wrapper">
-          <img src="https://images.unsplash.com/photo-1559329007-40df8a9345d8?w=800&h=1000&fit=crop" alt="Neuro rehabilitation" />
+          <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=1000&fit=crop" alt="Neuro rehabilitation" />
           <div class="image-overlay"></div>
         </div>
       </div>
@@ -348,7 +365,12 @@ import OfferingCard from '../components/OfferingCard.astro';
   </SectionWrapper>
 
   <!-- CTA Section -->
-  <section class="cta-premium">
+  <VideoBackground
+    videoUrl="https://res.cloudinary.com/dku1gnuat/video/upload/v1772135133/A_0004C195H251212_142658SI_CANON_eacze2.mp4"
+    posterImage="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1920&h=1080&fit=crop"
+    overlayOpacity={0.7}
+    class="cta-premium"
+  >
     <div class="container container-narrow" data-animate="fade-up">
       <span class="section__eyebrow" style="color: rgba(255,255,255,0.9); display: block; margin-bottom: 20px;">Ready to Begin?</span>
       <h2 style="font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 24px;">Experience Personalized Care</h2>
@@ -358,7 +380,7 @@ import OfferingCard from '../components/OfferingCard.astro';
         <a href="tel:8582777500" class="btn btn--secondary btn--lg" style="background: transparent; border: 2px solid white; color: white;">Call (858) 277-7500</a>
       </div>
     </div>
-  </section>
+  </VideoBackground>
 </Layout>
 
 <style>
