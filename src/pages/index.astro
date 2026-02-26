@@ -270,7 +270,7 @@ import VideoBackground from '../components/VideoBackground.astro';
   </SectionWrapper>
 
   <!-- Testimonials Section -->
-  <SectionWrapper background="white" spacing="hero" containerWidth="full">
+  <SectionWrapper background="white" spacing="normal" containerWidth="full">
     <div class="section__header" data-animate="fade-up">
       <span class="section__eyebrow">Testimonials</span>
       <h2 class="display-2">What Our Patients Say</h2>
@@ -686,55 +686,118 @@ import VideoBackground from '../components/VideoBackground.astro';
         </article>
       </div>
     </div>
-
-    <div class="text-center mt-4xl" data-animate="fade-up">
-      <a href="/testimonials" class="btn btn--primary btn--lg">Read More Reviews</a>
-    </div>
   </SectionWrapper>
 
   <!-- FAQ Preview Section -->
-  <SectionWrapper background="gray" spacing="hero" containerWidth="narrow">
+  <SectionWrapper background="gray" spacing="hero" containerWidth="normal">
     <div class="section__header" data-animate="fade-up">
       <span class="section__eyebrow">Questions</span>
       <h2 class="display-2">Frequently Asked</h2>
+      <p class="text-large" style="color: var(--color-gray-dark); max-width: 700px; margin: 0 auto;">
+        Get answers to common questions about chiropractic care and our practice.
+      </p>
     </div>
 
-    <div class="mt-4xl">
-      <details class="faq-item" data-animate="fade-up">
-        <summary class="faq-summary">
-          Does chiropractic care hurt?
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq-icon">
-            <path d="M6 9l6 6 6-6"/>
-          </svg>
-        </summary>
-        <div class="faq-content">
-          Most patients find chiropractic adjustments comfortable and often experience immediate relief. Dr. Beyerl uses gentle techniques tailored to your comfort level.
-        </div>
-      </details>
+    <div class="faq-grid mt-4xl">
+      <div class="faq-column">
+        <details class="faq-item" data-animate="fade-up">
+          <summary class="faq-summary">
+            Does chiropractic care hurt?
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq-icon">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </summary>
+          <div class="faq-content">
+            Most patients find chiropractic adjustments comfortable and often experience immediate relief. Dr. Beyerl uses gentle techniques tailored to your comfort level.
+          </div>
+        </details>
 
-      <details class="faq-item" data-animate="fade-up">
-        <summary class="faq-summary">
-          How many visits will I need?
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq-icon">
-            <path d="M6 9l6 6 6-6"/>
-          </svg>
-        </summary>
-        <div class="faq-content">
-          Every patient is unique. After your initial consultation and evaluation, Dr. Beyerl will create a personalized care plan based on your specific needs and goals.
-        </div>
-      </details>
+        <details class="faq-item" data-animate="fade-up">
+          <summary class="faq-summary">
+            How many visits will I need?
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq-icon">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </summary>
+          <div class="faq-content">
+            Every patient is unique. After your initial consultation and evaluation, Dr. Beyerl will create a personalized care plan based on your specific needs and goals.
+          </div>
+        </details>
 
-      <details class="faq-item" data-animate="fade-up">
-        <summary class="faq-summary">
-          Do you accept insurance?
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq-icon">
-            <path d="M6 9l6 6 6-6"/>
-          </svg>
-        </summary>
-        <div class="faq-content">
-          Yes, we accept most major insurance plans. Contact our office to verify your specific coverage and discuss payment options.
-        </div>
-      </details>
+        <details class="faq-item" data-animate="fade-up">
+          <summary class="faq-summary">
+            Do you accept insurance?
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq-icon">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </summary>
+          <div class="faq-content">
+            Yes, we accept most major insurance plans. Contact our office to verify your specific coverage and discuss payment options.
+          </div>
+        </details>
+
+        <details class="faq-item" data-animate="fade-up">
+          <summary class="faq-summary">
+            What should I wear to my appointment?
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq-icon">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </summary>
+          <div class="faq-content">
+            Wear comfortable, loose-fitting clothing that allows for movement. Athletic wear or casual clothes work perfectly for your chiropractic appointments.
+          </div>
+        </details>
+      </div>
+
+      <div class="faq-column">
+        <details class="faq-item" data-animate="fade-up">
+          <summary class="faq-summary">
+            What happens during my first visit?
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq-icon">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </summary>
+          <div class="faq-content">
+            Your first visit includes a comprehensive consultation, health history review, physical examination, and a personalized treatment plan discussion. Initial appointments typically last 45 minutes.
+          </div>
+        </details>
+
+        <details class="faq-item" data-animate="fade-up">
+          <summary class="faq-summary">
+            Is chiropractic care safe?
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq-icon">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </summary>
+          <div class="faq-content">
+            Yes, chiropractic care is one of the safest drug-free, non-invasive therapies available for musculoskeletal conditions. Dr. Beyerl uses evidence-based techniques with a proven track record of safety.
+          </div>
+        </details>
+
+        <details class="faq-item" data-animate="fade-up">
+          <summary class="faq-summary">
+            Can chiropractic help with headaches?
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq-icon">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </summary>
+          <div class="faq-content">
+            Absolutely! Chiropractic care is highly effective for tension headaches, migraines, and cervicogenic headaches. We address the underlying causes, not just the symptoms.
+          </div>
+        </details>
+
+        <details class="faq-item" data-animate="fade-up">
+          <summary class="faq-summary">
+            How long does an appointment take?
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq-icon">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </summary>
+          <div class="faq-content">
+            Follow-up appointments typically take 15-30 minutes, depending on your treatment needs. We respect your time while providing thorough, personalized care.
+          </div>
+        </details>
+      </div>
     </div>
 
     <div class="text-center mt-3xl" data-animate="fade-up">
@@ -800,22 +863,47 @@ import VideoBackground from '../components/VideoBackground.astro';
     }
   }
 
+  /* FAQ Grid Layout */
+  .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-2xl);
+    align-items: start;
+  }
+
+  .faq-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
   /* FAQ Item Styling */
   .faq-item {
-    border-bottom: 1px solid var(--color-gray-200);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
     margin-bottom: 0;
+    background: var(--color-white);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--space-md);
+    padding: 0 var(--space-lg);
+    transition: all var(--transition-normal);
+  }
+
+  .faq-item:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    transform: translateX(4px);
   }
 
   .faq-summary {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     font-weight: 600;
     font-family: var(--font-heading);
-    padding: var(--space-xl) 0;
+    padding: var(--space-lg) 0;
     cursor: pointer;
     list-style: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: var(--space-md);
     transition: color var(--transition-normal);
     color: var(--color-charcoal);
   }
@@ -831,17 +919,22 @@ import VideoBackground from '../components/VideoBackground.astro';
   .faq-icon {
     flex-shrink: 0;
     transition: transform var(--transition-normal);
+    color: var(--color-primary);
   }
 
   .faq-item[open] .faq-icon {
     transform: rotate(180deg);
   }
 
+  .faq-item[open] {
+    border-bottom-color: var(--color-primary);
+  }
+
   .faq-content {
-    padding: 0 0 var(--space-xl) 0;
+    padding: 0 0 var(--space-lg) 0;
     color: var(--color-gray-dark);
     line-height: 1.8;
-    font-size: 1.0625rem;
+    font-size: 1rem;
   }
 
   /* Responsive Adjustments */
@@ -852,6 +945,10 @@ import VideoBackground from '../components/VideoBackground.astro';
 
     .testimonial-card {
       flex: 0 0 350px;
+    }
+
+    .faq-grid {
+      gap: var(--space-xl);
     }
 
     @keyframes scroll {
@@ -878,14 +975,23 @@ import VideoBackground from '../components/VideoBackground.astro';
       font-size: 1.125rem;
     }
 
+    .faq-grid {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
     .faq-summary {
-      font-size: 1.125rem;
-      padding: var(--space-lg) 0;
+      font-size: 1.0625rem;
+      padding: var(--space-md) 0;
     }
 
     .faq-content {
-      padding-bottom: var(--space-lg);
-      font-size: 1rem;
+      padding-bottom: var(--space-md);
+      font-size: 0.9375rem;
+    }
+
+    .faq-item {
+      padding: 0 var(--space-md);
     }
 
     .testimonials-scroll-container {
