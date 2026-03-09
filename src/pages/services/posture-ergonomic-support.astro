@@ -1,0 +1,764 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SectionWrapper from '../../components/SectionWrapper.astro';
+import VideoBackground from '../../components/VideoBackground.astro';
+import ContentGrid from '../../components/ContentGrid.astro';
+import OfferingCard from '../../components/OfferingCard.astro';
+---
+
+<Layout
+  title="Posture & Ergonomic Support San Diego | Desk Work & Tech Neck Relief"
+  description="Expert posture correction and ergonomic support in San Diego for desk workers, remote professionals, and anyone dealing with tech neck, forward head posture, or computer-related pain. Dr. Nate Beyerl provides personalized solutions."
+>
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <VideoBackground
+      videoSrc="/videos/chiropractic-hero.mp4"
+      posterSrc="/images/hero-bg.jpg"
+      overlayOpacity={0.7}
+    />
+    <div class="hero-content container">
+      <div class="hero-text" data-animate="fade-up">
+        <p class="eyebrow">Modern Workplace Solutions</p>
+        <h1 class="hero-title">Posture & Ergonomic Support</h1>
+        <p class="hero-subtitle">
+          Comprehensive assessment and correction for desk workers, remote professionals, and anyone dealing with posture-related pain and dysfunction
+        </p>
+        <div class="hero-cta">
+          <a href="/contact" class="btn btn-primary">Schedule Assessment</a>
+          <a href="tel:+16194685233" class="btn btn-secondary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            (619) 468-5233
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Overview Section -->
+  <SectionWrapper>
+    <div class="overview-section container">
+      <div class="overview-content">
+        <h2 class="section-title" data-animate="fade-up">Addressing the Root Causes of Postural Dysfunction</h2>
+
+        <p class="text-large" data-animate="fade-up">
+          Hours at a desk, staring at screens, and repetitive movement patterns don't just cause temporary discomfort—they reshape how your body holds itself, moves, and functions. Poor posture leads to chronic pain, headaches, reduced breathing capacity, increased injury risk, and long-term degenerative changes.
+        </p>
+
+        <p data-animate="fade-up">
+          Posture & Ergonomic Support at The Bridge Chiropractic is a comprehensive approach to identifying and correcting the structural imbalances, movement compensations, and environmental factors contributing to your postural dysfunction. This isn't about simply "sitting up straight"—it's about restoring proper alignment, strengthening weak patterns, and creating sustainable ergonomic habits.
+        </p>
+
+        <p data-animate="fade-up">
+          Whether you're dealing with tech neck, forward head posture, rounded shoulders, low back strain from prolonged sitting, or upper back tension, we assess the underlying biomechanical dysfunctions and address them through manual therapy, corrective exercise, workspace optimization, and postural re-education.
+        </p>
+
+        <p data-animate="fade-up">
+          This service is ideal for desk workers, remote professionals, gamers, students, and anyone whose daily activities demand prolonged static positioning. Your body is designed for movement, not for sitting in one position for 8+ hours a day. We help bridge that gap between modern work demands and long-term musculoskeletal health.
+        </p>
+      </div>
+    </div>
+  </SectionWrapper>
+
+  <!-- Key Components Section -->
+  <SectionWrapper background="dark">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <h2 class="section-title">Comprehensive Posture Solutions</h2>
+        <p class="section-subtitle">Integrated assessment and correction strategies</p>
+      </div>
+
+      <ContentGrid columns={3}>
+        <OfferingCard
+          icon="search"
+          title="Postural Assessment"
+          description="Detailed analysis of standing and sitting posture, spinal alignment, head position, shoulder mechanics, and movement patterns to identify specific imbalances and compensations."
+        />
+        <OfferingCard
+          icon="monitor"
+          title="Workstation Ergonomics"
+          description="Evaluation and optimization of desk setup, monitor height, chair position, keyboard placement, and workspace arrangement to reduce strain and support proper alignment."
+        />
+        <OfferingCard
+          icon="activity"
+          title="Corrective Exercise"
+          description="Targeted strengthening and stretching programs to address muscle imbalances, activate underused stabilizers, and reinforce proper postural patterns."
+        />
+        <OfferingCard
+          icon="zap"
+          title="Manual Therapy"
+          description="Chiropractic adjustments and soft tissue work to restore joint mobility, release tension in overactive muscles, and reduce pain caused by postural stress."
+        />
+        <OfferingCard
+          icon="users"
+          title="Movement Re-education"
+          description="Training to improve body awareness, breathing mechanics, and functional movement patterns that support sustainable posture throughout your day."
+        />
+        <OfferingCard
+          icon="trending-up"
+          title="Habit Integration"
+          description="Practical strategies for implementing micro-breaks, position changes, and postural cues into your daily routine for lasting improvement."
+        />
+      </ContentGrid>
+    </div>
+  </SectionWrapper>
+
+  <!-- Treatment Approach Section -->
+  <SectionWrapper>
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <h2 class="section-title">Our Posture Correction Process</h2>
+        <p class="section-subtitle">Systematic approach to sustainable postural change</p>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-step" data-animate="fade-up">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3>Comprehensive Postural Analysis</h3>
+            <p>We evaluate your standing and sitting posture, spinal curves, head and shoulder position, pelvic alignment, and movement patterns. We also assess your workspace setup and daily habits that contribute to postural dysfunction. This identifies the primary drivers of your symptoms.</p>
+          </div>
+        </div>
+
+        <div class="process-step" data-animate="fade-up">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3>Address Structural Restrictions</h3>
+            <p>Before you can maintain better posture, we need to restore the mobility and function your body has lost. This includes spinal adjustments, soft tissue therapy for tight muscles, and joint mobilization to create the structural capacity for improved alignment.</p>
+          </div>
+        </div>
+
+        <div class="process-step" data-animate="fade-up">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3>Build Postural Strength & Control</h3>
+            <p>We implement corrective exercises that strengthen weak stabilizers (deep neck flexors, mid-back, core) and stretch overactive muscles (chest, hip flexors, upper traps). This creates the muscular support needed to maintain proper alignment without constant conscious effort.</p>
+          </div>
+        </div>
+
+        <div class="process-step" data-animate="fade-up">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h3>Optimize Your Environment & Habits</h3>
+            <p>We provide specific ergonomic recommendations for your desk setup, implement movement breaks throughout your day, and teach postural awareness cues. Sustainable change requires addressing both your body's capacity and the environmental demands placed on it.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </SectionWrapper>
+
+  <!-- Conditions Treated Section -->
+  <SectionWrapper background="light">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <h2 class="section-title">Posture-Related Conditions We Address</h2>
+        <p class="section-subtitle">Common issues from prolonged sitting and poor ergonomics</p>
+      </div>
+
+      <div class="conditions-grid">
+        <div class="condition-card" data-animate="fade-up">
+          <h3>Tech Neck & Forward Head Posture</h3>
+          <p>Chronic neck pain, headaches, and shoulder tension from prolonged screen time and forward head positioning that strains the cervical spine.</p>
+        </div>
+        <div class="condition-card" data-animate="fade-up">
+          <h3>Rounded Shoulders & Upper Crossed Syndrome</h3>
+          <p>Shoulder rounding, chest tightness, and upper back weakness from desk work, driving, and repetitive forward-reaching activities.</p>
+        </div>
+        <div class="condition-card" data-animate="fade-up">
+          <h3>Lower Back Pain from Sitting</h3>
+          <p>Low back strain, stiffness, and disc stress from prolonged sitting, poor lumbar support, and hip flexor tightness.</p>
+        </div>
+        <div class="condition-card" data-animate="fade-up">
+          <h3>Mid-Back Pain & Thoracic Stiffness</h3>
+          <p>Upper back tension, rib dysfunction, and breathing restriction from thoracic kyphosis and weak mid-back stabilizers.</p>
+        </div>
+        <div class="condition-card" data-animate="fade-up">
+          <h3>Tension Headaches & Migraines</h3>
+          <p>Headaches originating from neck tension, jaw clenching, poor head position, and sustained muscle contraction from postural stress.</p>
+        </div>
+        <div class="condition-card" data-animate="fade-up">
+          <h3>Ergonomic-Related Repetitive Strain</h3>
+          <p>Wrist pain, elbow tendonitis, shoulder impingement, and other overuse injuries caused by poor workstation setup and sustained positioning.</p>
+        </div>
+      </div>
+    </div>
+  </SectionWrapper>
+
+  <!-- FAQ Section -->
+  <SectionWrapper>
+    <div class="container faq-container">
+      <div class="section-header" data-animate="fade-up">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="faq-list">
+        <details class="faq-item" data-animate="fade-up">
+          <summary class="faq-summary">
+            Can poor posture really cause long-term damage?
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq-icon">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </summary>
+          <div class="faq-content">
+            Yes. Chronic postural dysfunction increases stress on spinal joints, accelerates disc degeneration, creates muscle imbalances that lead to injury, restricts breathing capacity, and causes chronic pain patterns. Forward head posture alone can add 10-20 pounds of extra force on the cervical spine for every inch your head moves forward. Over time, these stresses compound and become increasingly difficult to reverse.
+          </div>
+        </details>
+
+        <details class="faq-item" data-animate="fade-up">
+          <summary class="faq-summary">
+            How long does it take to correct posture?
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq-icon">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </summary>
+          <div class="faq-content">
+            Posture correction is a process, not a quick fix. Most people notice significant improvement in pain and function within 4-8 weeks of consistent care and exercise. Lasting structural changes typically take 3-6 months, depending on how long the postural dysfunction has been present and your consistency with corrective exercises and ergonomic modifications. The key is addressing both structural restrictions and the habits that created the problem.
+          </div>
+        </details>
+
+        <details class="faq-item" data-animate="fade-up">
+          <summary class="faq-summary">
+            Will I need to buy new furniture or equipment?
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq-icon">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </summary>
+          <div class="faq-content">
+            Not necessarily. We focus on optimizing your current setup first through simple adjustments—monitor height, chair position, keyboard placement, etc. In some cases, investing in a better chair, monitor arm, or sit-stand desk provides significant benefit, but we'll prioritize cost-effective modifications and only recommend purchases when they meaningfully address your specific needs.
+          </div>
+        </details>
+
+        <details class="faq-item" data-animate="fade-up">
+          <summary class="faq-summary">
+            Is standing better than sitting all day?
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq-icon">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </summary>
+          <div class="faq-content">
+            Not if you stand all day in one position. The issue isn't sitting or standing—it's sustained static positioning. Your body needs movement variability. We recommend alternating between sitting and standing throughout the day, incorporating movement breaks, and changing positions frequently. A sit-stand desk used properly (alternating every 30-60 minutes) is more beneficial than standing all day, which creates its own set of problems.
+          </div>
+        </details>
+
+        <details class="faq-item" data-animate="fade-up">
+          <summary class="faq-summary">
+            Can exercises alone fix my posture?
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq-icon">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </summary>
+          <div class="faq-content">
+            Not usually. If you have joint restrictions, muscle adhesions, or significant structural changes, exercise alone won't restore full function. You need manual therapy (adjustments, soft tissue work) to address these restrictions first, then corrective exercises to build strength and reinforce proper patterns. The combination is far more effective than either alone. We also need to address ergonomic factors—otherwise you're fighting against your environment.
+          </div>
+        </details>
+
+        <details class="faq-item" data-animate="fade-up">
+          <summary class="faq-summary">
+            I work from home—do I still need ergonomic support?
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq-icon">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </summary>
+          <div class="faq-content">
+            Absolutely—often more so. Remote workers frequently have worse ergonomic setups than office workers. Working from couches, beds, kitchen tables, or makeshift desks creates significant postural stress. We assess your home workspace and provide practical solutions for your specific setup, whether that's a dedicated home office or a multi-purpose space. Proper ergonomics matter regardless of where you work.
+          </div>
+        </details>
+      </div>
+    </div>
+  </SectionWrapper>
+
+  <!-- Related Services Section -->
+  <SectionWrapper background="light">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <h2 class="section-title">Related Services</h2>
+        <p class="section-subtitle">Complementary care for comprehensive postural health</p>
+      </div>
+
+      <ContentGrid columns={3}>
+        <a href="/services/chiropractic-adjustments" class="service-link-card" data-animate="fade-up">
+          <div class="service-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+            </svg>
+          </div>
+          <h3>Chiropractic Adjustments</h3>
+          <p>Restore spinal mobility and reduce joint restrictions that limit your ability to maintain proper posture.</p>
+        </a>
+
+        <a href="/services/soft-tissue-therapy" class="service-link-card" data-animate="fade-up">
+          <div class="service-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="3"></circle>
+              <path d="M12 1v6m0 6v6m5.2-13.2l-4.2 4.2m0 6l4.2 4.2M23 12h-6m-6 0H5m13.2 5.2l-4.2-4.2m0-6l4.2-4.2"></path>
+            </svg>
+          </div>
+          <h3>Soft Tissue Therapy</h3>
+          <p>Release muscle tension, break up adhesions, and restore proper tissue function in overworked postural muscles.</p>
+        </a>
+
+        <a href="/services/home-exercise-programs" class="service-link-card" data-animate="fade-up">
+          <div class="service-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+          </div>
+          <h3>Home Exercise Programs</h3>
+          <p>Customized corrective exercises and stretches to reinforce postural improvements between visits.</p>
+        </a>
+      </ContentGrid>
+    </div>
+  </SectionWrapper>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <VideoBackground
+      videoSrc="/videos/chiropractic-hero.mp4"
+      posterSrc="/images/hero-bg.jpg"
+      overlayOpacity={0.8}
+    />
+    <div class="cta-content container" data-animate="fade-up">
+      <h2>Ready to Improve Your Posture and Reduce Pain?</h2>
+      <p>Let's assess your posture, optimize your workspace, and create a plan to support long-term musculoskeletal health.</p>
+      <div class="cta-buttons">
+        <a href="/contact" class="btn btn-primary">Schedule Assessment</a>
+        <a href="tel:+16194685233" class="btn btn-secondary">Call (619) 468-5233</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Hero Section */
+  .hero-section {
+    position: relative;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 8rem 2rem 4rem;
+  }
+
+  .hero-text {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .eyebrow {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    display: block;
+  }
+
+  .hero-title {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* Overview Section */
+  .overview-section {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .overview-content p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+  }
+
+  .text-large {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    line-height: 1.7;
+  }
+
+  /* Process Grid */
+  .process-grid {
+    display: grid;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 3rem auto 0;
+  }
+
+  .process-step {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  .process-step:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    border-color: rgba(var(--accent-rgb), 0.3);
+  }
+
+  .step-number {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    flex-shrink: 0;
+  }
+
+  .step-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+  }
+
+  .step-content p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  /* Conditions Grid */
+  .conditions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .condition-card {
+    padding: 2rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+  }
+
+  .condition-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  }
+
+  .condition-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+  }
+
+  .condition-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* FAQ Section */
+  .faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 3rem;
+  }
+
+  .faq-item {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+  }
+
+  .faq-item:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .faq-item[open] {
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+  }
+
+  .faq-summary {
+    padding: 1.5rem 2rem;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    user-select: none;
+    list-style: none;
+  }
+
+  .faq-summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-icon {
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+    color: var(--accent);
+  }
+
+  .faq-item[open] .faq-icon {
+    transform: rotate(180deg);
+  }
+
+  .faq-content {
+    padding: 0 2rem 1.5rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  /* Related Services */
+  .service-link-card {
+    display: block;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .service-link-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  }
+
+  .service-card-icon {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .service-card-icon svg {
+    color: #fff;
+  }
+
+  .service-link-card h3 {
+    font-size: 1.35rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+  }
+
+  .service-link-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    position: relative;
+    padding: 6rem 2rem;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .cta-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .cta-content h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: #fff;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .cta-content p {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 2rem;
+    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* Section Styling */
+  .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .section-title {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+  }
+
+  .section-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+    color: #fff;
+    box-shadow: 0 4px 20px rgba(var(--accent-rgb), 0.3);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(var(--accent-rgb), 0.4);
+  }
+
+  .btn-secondary {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+  }
+
+  /* Animations */
+  [data-animate] {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  [data-animate].animated {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero-content {
+      padding: 6rem 1.5rem 3rem;
+    }
+
+    .process-step {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .step-number {
+      width: 50px;
+      height: 50px;
+      font-size: 1.25rem;
+    }
+
+    .conditions-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .faq-summary {
+      padding: 1.25rem 1.5rem;
+      font-size: 1.05rem;
+    }
+
+    .faq-content {
+      padding: 0 1.5rem 1.25rem;
+    }
+
+    .cta-section {
+      padding: 4rem 1.5rem;
+    }
+  }
+</style>
+
+<script>
+  // Scroll-triggered animations
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animated');
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('[data-animate]').forEach(el => {
+    observer.observe(el);
+  });
+</script>
