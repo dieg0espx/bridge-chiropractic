@@ -35,23 +35,23 @@ body::-webkit-scrollbar {
 
 /* CSS Variables */
 :root {
-  /* Brand Colors - Neutral Premium Palette with Light Blue Accent */
+  /* Brand Colors - Warm Earthy Neutral Palette */
   --color-primary: #2C2C2C;
   --color-primary-dark: #1A1A1A;
   --color-primary-light: #F5F5F5;
   --color-secondary: #4A4A4A;
-  --color-secondary-light: #FAFAFA;
-  --color-accent: #60A5FA;
-  --color-accent-hover: #3B82F6;
-  --color-accent-light: #DBEAFE;
-  --color-accent-dark: #2563EB;
+  --color-secondary-light: #FAF8F5;
+  --color-accent: #B8956A;
+  --color-accent-hover: #A17F52;
+  --color-accent-light: #F5EFE6;
+  --color-accent-dark: #8B6F47;
   --color-charcoal: #2C2C2C;
   --color-gray-dark: #5A5A5A;
   --color-gray-medium: #999999;
   --color-gray-light: #E5E5E5;
   --color-white: #FFFFFF;
-  --color-off-white: #FAFAFA;
-  --color-cream: #F9F9F9;
+  --color-off-white: #FAF8F5;
+  --color-cream: #F5F1EB;
   --color-success: #4A7C59;
   --color-error: #C14C4C;
 
@@ -61,10 +61,10 @@ body::-webkit-scrollbar {
   --color-primary-800: #1F1F1F;
   --color-primary-900: #121212;
 
-  /* Cool Blue Tones (complementing light blue accent) */
-  --color-warm-50: #F0F9FF;
-  --color-warm-100: #E0F2FE;
-  --color-warm-500: #60A5FA;
+  /* Warm Earthy Tones */
+  --color-warm-50: #FAF8F5;
+  --color-warm-100: #F5EFE6;
+  --color-warm-500: #B8956A;
 
   /* Enhanced Gray Scale */
   --color-gray-50: #FAFAFA;
@@ -119,10 +119,10 @@ body::-webkit-scrollbar {
   --shadow-2xl: 0 12px 48px rgba(0, 0, 0, 0.12);
 
   /* Colored Shadow Variants */
-  --shadow-warm: 0 4px 20px rgba(96, 165, 250, 0.15);
-  --shadow-warm-lg: 0 8px 32px rgba(96, 165, 250, 0.2);
-  --shadow-accent: 0 4px 20px rgba(96, 165, 250, 0.15);
-  --shadow-accent-lg: 0 8px 32px rgba(96, 165, 250, 0.2);
+  --shadow-warm: 0 4px 20px rgba(184, 149, 106, 0.15);
+  --shadow-warm-lg: 0 8px 32px rgba(184, 149, 106, 0.2);
+  --shadow-accent: 0 4px 20px rgba(184, 149, 106, 0.15);
+  --shadow-accent-lg: 0 8px 32px rgba(184, 149, 106, 0.2);
   --shadow-primary: 0 4px 20px rgba(44, 44, 44, 0.15);
   --shadow-primary-lg: 0 8px 32px rgba(44, 44, 44, 0.2);
 
@@ -840,7 +840,7 @@ img {
 }
 
 .hover-glow:hover {
-  box-shadow: 0 0 30px rgba(96, 165, 250, 0.3);
+  box-shadow: 0 0 30px rgba(184, 149, 106, 0.3);
 }
 
 /* Link Underline Animation */
@@ -1192,7 +1192,7 @@ main {
   margin-bottom: var(--space-2xl);
 }
 
-/* Hero Badge - Blue Accent */
+/* Hero Badge - Warm Earth Accent */
 .hero-badge {
   display: inline-block;
   padding: var(--space-xs) var(--space-lg);
@@ -1204,16 +1204,16 @@ main {
   letter-spacing: 0.1em;
   border-radius: var(--radius-full);
   margin-bottom: var(--space-lg);
-  box-shadow: 0 4px 16px rgba(96, 165, 250, 0.3);
+  box-shadow: 0 4px 16px rgba(184, 149, 106, 0.3);
 }
 
-/* Section eyebrow in hero - Blue Accent */
+/* Section eyebrow in hero - Warm Earth Accent */
 .hero-fullbleed .section__eyebrow {
   background: var(--color-accent);
   color: var(--color-white);
   padding: var(--space-xs) var(--space-lg);
   border-radius: var(--radius-full);
-  box-shadow: 0 4px 16px rgba(96, 165, 250, 0.3);
+  box-shadow: 0 4px 16px rgba(184, 149, 106, 0.3);
 }
 
 /* Glassmorphism */
@@ -1624,7 +1624,7 @@ main {
   width: 100%;
   height: 100%;
   background-image:
-    radial-gradient(circle at 20% 50%, rgba(96, 165, 250, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 20% 50%, rgba(184, 149, 106, 0.05) 0%, transparent 50%),
     radial-gradient(circle at 80% 80%, rgba(44, 44, 44, 0.03) 0%, transparent 50%);
   pointer-events: none;
 }
@@ -1677,7 +1677,7 @@ main {
 }
 
 .card-hover-glow:hover {
-  box-shadow: 0 12px 48px rgba(96, 165, 250, 0.2);
+  box-shadow: 0 12px 48px rgba(184, 149, 106, 0.2);
 }
 
 /* Premium Badge */
