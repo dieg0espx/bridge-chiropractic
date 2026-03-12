@@ -178,10 +178,11 @@ const { title, description = "Personalized chiropractic care for San Diego adult
             <div class="footer__col">
               <h4>Services</h4>
               <ul>
-                <li><a href="/services#chiropractic">Chiropractic Care</a></li>
-                <li><a href="/services#soft-tissue">Soft Tissue Therapy</a></li>
-                <li><a href="/services#movement">Movement Training</a></li>
-                <li><a href="/services#neuro">Neuro Rehabilitation</a></li>
+                <li><a href="/services/chiropractic-adjustments">Chiropractic Adjustments</a></li>
+                <li><a href="/services/soft-tissue-therapy">Soft Tissue Therapy</a></li>
+                <li><a href="/services/home-exercise-programs">Home Exercise Programs</a></li>
+                <li><a href="/services/fall-prevention-balance-training">Fall Prevention & Balance</a></li>
+                <li><a href="/services/optimal-longevity-function">Optimal Longevity</a></li>
               </ul>
             </div>
 
@@ -272,6 +273,7 @@ const { title, description = "Personalized chiropractic care for San Diego adult
         padding: var(--space-sm) var(--space-xl);
         max-width: 100%;
         gap: var(--space-xl);
+        position: relative;
       }
 
       .header__logo {
@@ -292,8 +294,6 @@ const { title, description = "Personalized chiropractic care for San Diego adult
         display: none;
         align-items: center;
         gap: var(--space-2xl);
-        flex: 1;
-        justify-content: center;
       }
 
       .header__nav-link {
@@ -328,6 +328,9 @@ const { title, description = "Personalized chiropractic care for San Diego adult
       @media (min-width: 769px) {
         .header__nav {
           display: flex;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
         }
       }
 

@@ -9,28 +9,29 @@ import VideoBackground from '../../components/VideoBackground.astro';
   description="Expert chiropractic adjustments in San Diego for back pain, neck pain, headaches, and more. Dr. Nate Beyerl offers personalized care with gentle and traditional adjustment techniques tailored to your needs."
 >
   <!-- Hero Section -->
-  <section class="hero-service">
-    <div class="hero-service__overlay"></div>
+  <section class="hero-fullbleed" style="height: 85vh; min-height: 650px;">
     <video
-      class="hero-service__video"
+      class="hero-fullbleed__image"
       autoplay
       muted
       loop
       playsinline
-      poster="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=1920&h=1080&fit=crop"
     >
       <source src="https://res.cloudinary.com/dku1gnuat/video/upload/v1772135494/A_0004C207H251212_163548YT_CANON_kfbpge.mp4" type="video/mp4" />
     </video>
-    <div class="container" data-animate="fade-up">
-      <div class="hero-service__content">
-        <span class="hero-badge">Core Service</span>
-        <h1 class="hero-service__title">Chiropractic Adjustments</h1>
-        <p class="hero-service__subtitle">Precise, personalized spinal adjustments to restore mobility, reduce pain, and help you move better.</p>
-        <div class="hero-service__actions">
-          <a href="/contact" class="btn btn--white btn--lg">Book an Appointment</a>
-          <a href="tel:8582777500" class="btn btn--secondary btn--lg">Call (858) 277-7500</a>
-        </div>
-      </div>
+    <div class="hero-fullbleed__overlay"></div>
+
+    <!-- Floating particles for ambiance -->
+    <div class="floating-particles">
+      <div class="particle" style="left: 15%; top: 25%; animation-delay: 0s;"></div>
+      <div class="particle" style="left: 80%; top: 40%; animation-delay: 5s;"></div>
+      <div class="particle" style="left: 45%; top: 70%; animation-delay: 10s;"></div>
+    </div>
+
+    <div class="hero-fullbleed__content" data-animate="fade-up">
+      <span class="hero-badge">Core Service</span>
+      <h1 class="hero-fullbleed__title">Chiropractic Adjustments</h1>
+      <p class="hero-fullbleed__subtitle">Precise, personalized spinal adjustments to restore mobility, reduce pain, and help you move better.</p>
     </div>
   </section>
 
@@ -61,7 +62,7 @@ import VideoBackground from '../../components/VideoBackground.astro';
     </div>
 
     <div class="benefits-grid">
-      <div class="benefit-card glass" data-animate="fade-up" data-animate-delay="100">
+      <div class="benefit-card glass" data-animate="fade-up" data-animate-delay="150">
         <div class="benefit-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
@@ -71,7 +72,7 @@ import VideoBackground from '../../components/VideoBackground.astro';
         <p>Reduce back pain, neck pain, headaches, and nerve irritation by addressing misalignments and restoring proper joint function.</p>
       </div>
 
-      <div class="benefit-card glass" data-animate="fade-up" data-animate-delay="200">
+      <div class="benefit-card glass" data-animate="scale" data-animate-delay="300">
         <div class="benefit-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <circle cx="12" cy="12" r="10"></circle>
@@ -84,7 +85,7 @@ import VideoBackground from '../../components/VideoBackground.astro';
         <p>Restore range of motion in stiff joints and tight muscles, making everyday movements easier and more comfortable.</p>
       </div>
 
-      <div class="benefit-card glass" data-animate="fade-up" data-animate-delay="300">
+      <div class="benefit-card glass" data-animate="fade-up" data-animate-delay="450">
         <div class="benefit-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
@@ -94,7 +95,7 @@ import VideoBackground from '../../components/VideoBackground.astro';
         <p>Maintain proper alignment and movement patterns to reduce the risk of future injuries and chronic issues.</p>
       </div>
 
-      <div class="benefit-card glass" data-animate="fade-up" data-animate-delay="400">
+      <div class="benefit-card glass" data-animate="scale" data-animate-delay="600">
         <div class="benefit-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
@@ -105,7 +106,7 @@ import VideoBackground from '../../components/VideoBackground.astro';
         <p>Address postural imbalances that contribute to discomfort, especially for desk workers and those with sedentary lifestyles.</p>
       </div>
 
-      <div class="benefit-card glass" data-animate="fade-up" data-animate-delay="500">
+      <div class="benefit-card glass" data-animate="fade-up" data-animate-delay="750">
         <div class="benefit-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
@@ -115,7 +116,7 @@ import VideoBackground from '../../components/VideoBackground.astro';
         <p>Optimize movement mechanics for better athletic performance and endurance in activities you love.</p>
       </div>
 
-      <div class="benefit-card glass" data-animate="fade-up" data-animate-delay="600">
+      <div class="benefit-card glass" data-animate="scale" data-animate-delay="900">
         <div class="benefit-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
@@ -388,91 +389,6 @@ import VideoBackground from '../../components/VideoBackground.astro';
 </Layout>
 
 <style>
-  /* Hero Service Section */
-  .hero-service {
-    position: relative;
-    height: 75vh;
-    min-height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-  }
-
-  .hero-service__video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
-    z-index: 0;
-  }
-
-  .hero-service__overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
-    z-index: 1;
-  }
-
-  .hero-service__content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    color: white;
-    max-width: 800px;
-    padding: 0 var(--space-lg);
-  }
-
-  .hero-badge {
-    display: inline-block;
-    padding: 10px 24px;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(12px);
-    border-radius: 50px;
-    font-size: 0.875rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin-bottom: 24px;
-    font-weight: 600;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-  }
-
-  .hero-service__title {
-    font-size: clamp(2.5rem, 6vw, 4rem);
-    font-weight: 700;
-    margin-bottom: var(--space-lg);
-    line-height: 1.1;
-  }
-
-  .hero-service__subtitle {
-    font-size: clamp(1.125rem, 2vw, 1.5rem);
-    margin-bottom: var(--space-2xl);
-    opacity: 0.95;
-    line-height: 1.6;
-  }
-
-  .hero-service__actions {
-    display: flex;
-    gap: var(--space-md);
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .btn--secondary {
-    background: transparent;
-    border: 2px solid white;
-    color: white;
-  }
-
-  .btn--secondary:hover {
-    background: rgba(255, 255, 255, 0.1);
-  }
-
   /* Service Overview */
   .service-overview {
     text-align: center;
@@ -500,31 +416,63 @@ import VideoBackground from '../../components/VideoBackground.astro';
   .benefits-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--space-xl);
+    gap: var(--space-2xl);
     margin-top: var(--space-4xl);
   }
 
   .benefit-card {
     padding: var(--space-2xl);
     border-radius: var(--radius-xl);
+    border-left: 4px solid var(--color-accent);
+    background: var(--color-white);
     text-align: center;
-    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .benefit-card:nth-child(3n+1) {
+    border-left-color: var(--color-primary);
+  }
+
+  .benefit-card:nth-child(3n+2) {
+    box-shadow: 0 6px 30px rgba(184, 149, 106, 0.12);
+  }
+
+  .benefit-card:nth-child(even) {
+    margin-top: var(--space-md);
+  }
+
+  .benefit-card:first-child,
+  .benefit-card:nth-child(4) {
+    background: var(--color-white);
+    border-left-width: 6px;
+    box-shadow: 0 8px 30px rgba(184, 149, 106, 0.15);
   }
 
   .benefit-card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-2xl);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 48px rgba(184, 149, 106, 0.2);
+    border-left-width: 6px;
   }
 
   .benefit-icon {
     width: 64px;
     height: 64px;
-    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    background: var(--color-accent);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto var(--space-lg);
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+
+  .benefit-card:nth-child(even) .benefit-icon {
+    background: var(--color-primary);
+  }
+
+  .benefit-card:hover .benefit-icon {
+    transform: scale(1.1) rotate(5deg);
   }
 
   .benefit-icon svg {
@@ -535,11 +483,14 @@ import VideoBackground from '../../components/VideoBackground.astro';
     font-size: 1.5rem;
     margin-bottom: var(--space-md);
     color: var(--color-charcoal);
+    font-weight: 700;
   }
 
   .benefit-card p {
     color: var(--color-gray-dark);
     line-height: 1.7;
+    margin: 0;
+    font-weight: 400;
   }
 
   /* Process Steps */
@@ -560,7 +511,7 @@ import VideoBackground from '../../components/VideoBackground.astro';
   .process-step__number {
     width: 80px;
     height: 80px;
-    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    background: var(--color-primary);
     color: white;
     border-radius: 50%;
     display: flex;
@@ -724,11 +675,6 @@ import VideoBackground from '../../components/VideoBackground.astro';
 
   /* Responsive */
   @media (max-width: 768px) {
-    .hero-service {
-      height: 65vh;
-      min-height: 500px;
-    }
-
     .benefits-grid {
       grid-template-columns: 1fr;
     }

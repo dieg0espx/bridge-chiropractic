@@ -337,7 +337,7 @@ import VideoBackground from '../components/VideoBackground.astro';
   .badge-premium {
     display: inline-block;
     padding: 8px 20px;
-    background: linear-gradient(135deg, rgba(71, 128, 184, 0.1), rgba(53, 96, 138, 0.15));
+    background: rgba(71, 128, 184, 0.12);
     border: 1px solid rgba(71, 128, 184, 0.2);
     border-radius: var(--radius-full);
     color: var(--color-primary);
@@ -379,13 +379,13 @@ import VideoBackground from '../components/VideoBackground.astro';
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, rgba(71, 128, 184, 0.08), rgba(53, 96, 138, 0.12));
+    background: rgba(71, 128, 184, 0.10);
     border-radius: var(--radius-md);
     transition: all 0.3s ease;
   }
 
   .care-feature-item:hover .care-feature-icon {
-    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    background: var(--color-primary);
   }
 
   .care-feature-item:hover .care-feature-icon svg {
@@ -435,13 +435,13 @@ import VideoBackground from '../components/VideoBackground.astro';
     align-items: center;
     justify-content: center;
     margin: 0 auto 20px;
-    background: linear-gradient(135deg, rgba(71, 128, 184, 0.1), rgba(53, 96, 138, 0.15));
+    background: rgba(71, 128, 184, 0.12);
     border-radius: var(--radius-lg);
     transition: all 0.3s ease;
   }
 
   .stat-card:hover .stat-icon {
-    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    background: var(--color-primary);
     transform: rotate(5deg) scale(1.1);
   }
 
@@ -453,7 +453,7 @@ import VideoBackground from '../components/VideoBackground.astro';
     font-size: 3.5rem;
     font-weight: 700;
     font-family: var(--font-heading);
-    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    background: var(--color-primary);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

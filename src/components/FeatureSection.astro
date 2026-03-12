@@ -243,17 +243,17 @@ const backgroundClasses = {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-off-white) 100%);
+    background: var(--color-primary-light);
     padding: var(--space-3xl);
     transition: background 0.4s ease;
   }
 
   .section--dark .feature-card__icon {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%);
+    background: rgba(255, 255, 255, 0.06);
   }
 
   .feature-card:hover .feature-card__icon {
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    background: var(--color-primary);
   }
 
   .feature-card__icon :global(svg) {

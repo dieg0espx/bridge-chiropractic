@@ -9,28 +9,29 @@ import VideoBackground from '../../components/VideoBackground.astro';
   description="Expert soft tissue therapy in San Diego to reduce muscle tension, improve mobility, and accelerate recovery. Dr. Nate Beyerl uses myofascial release, trigger point therapy, and instrument-assisted techniques."
 >
   <!-- Hero Section -->
-  <section class="hero-service">
-    <div class="hero-service__overlay"></div>
+  <section class="hero-fullbleed" style="height: 85vh; min-height: 650px;">
     <video
-      class="hero-service__video"
+      class="hero-fullbleed__image"
       autoplay
       muted
       loop
       playsinline
-      poster="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1920&h=1080&fit=crop"
     >
       <source src="https://res.cloudinary.com/dku1gnuat/video/upload/v1772135494/A_0004C207H251212_163548YT_CANON_kfbpge.mp4" type="video/mp4" />
     </video>
-    <div class="container" data-animate="fade-up">
-      <div class="hero-service__content">
-        <span class="hero-badge">Complementary Care</span>
-        <h1 class="hero-service__title">Soft Tissue Therapy</h1>
-        <p class="hero-service__subtitle">Release muscle tension, break down adhesions, and restore mobility with targeted soft tissue techniques.</p>
-        <div class="hero-service__actions">
-          <a href="/contact" class="btn btn--white btn--lg">Book an Appointment</a>
-          <a href="tel:8582777500" class="btn btn--secondary btn--lg">Call (858) 277-7500</a>
-        </div>
-      </div>
+    <div class="hero-fullbleed__overlay"></div>
+
+    <!-- Floating particles for ambiance -->
+    <div class="floating-particles">
+      <div class="particle" style="left: 15%; top: 25%; animation-delay: 0s;"></div>
+      <div class="particle" style="left: 80%; top: 40%; animation-delay: 5s;"></div>
+      <div class="particle" style="left: 45%; top: 70%; animation-delay: 10s;"></div>
+    </div>
+
+    <div class="hero-fullbleed__content" data-animate="fade-up">
+      <span class="hero-badge">Complementary Care</span>
+      <h1 class="hero-fullbleed__title">Soft Tissue Therapy</h1>
+      <p class="hero-fullbleed__subtitle">Release muscle tension, break down adhesions, and restore mobility with targeted soft tissue techniques.</p>
     </div>
   </section>
 
@@ -61,22 +62,22 @@ import VideoBackground from '../../components/VideoBackground.astro';
     </div>
 
     <div class="techniques-grid">
-      <div class="technique-card glass" data-animate="fade-up" data-animate-delay="100">
+      <div class="technique-card glass" data-animate="fade-up" data-animate-delay="150">
         <h3>Myofascial Release</h3>
         <p>Sustained pressure applied to fascial restrictions to release tension and restore mobility in connective tissue throughout the body.</p>
       </div>
 
-      <div class="technique-card glass" data-animate="fade-up" data-animate-delay="200">
+      <div class="technique-card glass" data-animate="scale" data-animate-delay="300">
         <h3>Trigger Point Therapy</h3>
         <p>Targeted pressure to deactivate painful muscle knots (trigger points) that refer pain to other areas and limit range of motion.</p>
       </div>
 
-      <div class="technique-card glass" data-animate="fade-up" data-animate-delay="300">
+      <div class="technique-card glass" data-animate="fade-up" data-animate-delay="450">
         <h3>Instrument-Assisted Mobilization</h3>
         <p>Precision tools detect and treat soft tissue restrictions, break down scar tissue, and improve tissue quality more effectively than hands alone.</p>
       </div>
 
-      <div class="technique-card glass" data-animate="fade-up" data-animate-delay="400">
+      <div class="technique-card glass" data-animate="scale" data-animate-delay="600">
         <h3>Manual Muscle Therapy</h3>
         <p>Hands-on techniques to address muscle imbalances, reduce spasm, and restore proper muscle activation patterns.</p>
       </div>
@@ -92,7 +93,7 @@ import VideoBackground from '../../components/VideoBackground.astro';
     </div>
 
     <div class="benefits-grid">
-      <div class="benefit-card glass" data-animate="fade-up" data-animate-delay="100">
+      <div class="benefit-card glass" data-animate="fade-up" data-animate-delay="150">
         <div class="benefit-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
@@ -103,7 +104,7 @@ import VideoBackground from '../../components/VideoBackground.astro';
         <p>Release chronic tightness and spasm that limits movement and creates discomfort.</p>
       </div>
 
-      <div class="benefit-card glass" data-animate="fade-up" data-animate-delay="200">
+      <div class="benefit-card glass" data-animate="scale" data-animate-delay="300">
         <div class="benefit-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
@@ -114,7 +115,7 @@ import VideoBackground from '../../components/VideoBackground.astro';
         <p>Restore range of motion by addressing restrictions in muscles and connective tissue.</p>
       </div>
 
-      <div class="benefit-card glass" data-animate="fade-up" data-animate-delay="300">
+      <div class="benefit-card glass" data-animate="fade-up" data-animate-delay="450">
         <div class="benefit-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <circle cx="12" cy="12" r="10"></circle>
@@ -125,7 +126,7 @@ import VideoBackground from '../../components/VideoBackground.astro';
         <p>Accelerate healing from injuries by improving circulation and breaking down scar tissue.</p>
       </div>
 
-      <div class="benefit-card glass" data-animate="fade-up" data-animate-delay="400">
+      <div class="benefit-card glass" data-animate="scale" data-animate-delay="600">
         <div class="benefit-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
@@ -135,7 +136,7 @@ import VideoBackground from '../../components/VideoBackground.astro';
         <p>Relaxed muscles allow adjustments to hold longer and work more effectively.</p>
       </div>
 
-      <div class="benefit-card glass" data-animate="fade-up" data-animate-delay="500">
+      <div class="benefit-card glass" data-animate="fade-up" data-animate-delay="750">
         <div class="benefit-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
@@ -148,7 +149,7 @@ import VideoBackground from '../../components/VideoBackground.astro';
         <p>Break up adhesions and old scar tissue that limit mobility and cause pain.</p>
       </div>
 
-      <div class="benefit-card glass" data-animate="fade-up" data-animate-delay="600">
+      <div class="benefit-card glass" data-animate="scale" data-animate-delay="900">
         <div class="benefit-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
@@ -168,7 +169,7 @@ import VideoBackground from '../../components/VideoBackground.astro';
     </div>
 
     <div class="conditions-grid">
-      <div class="condition-item" data-animate="fade-up" data-animate-delay="100">
+      <div class="condition-item" data-animate="fade-up" data-animate-delay="150">
         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M9 11l3 3L22 4"></path>
           <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
@@ -190,7 +191,7 @@ import VideoBackground from '../../components/VideoBackground.astro';
         </div>
       </div>
 
-      <div class="condition-item" data-animate="fade-up" data-animate-delay="200">
+      <div class="condition-item" data-animate="scale" data-animate-delay="300">
         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M9 11l3 3L22 4"></path>
           <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
@@ -212,7 +213,7 @@ import VideoBackground from '../../components/VideoBackground.astro';
         </div>
       </div>
 
-      <div class="condition-item" data-animate="fade-up" data-animate-delay="300">
+      <div class="condition-item" data-animate="fade-up" data-animate-delay="450">
         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M9 11l3 3L22 4"></path>
           <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
@@ -234,7 +235,7 @@ import VideoBackground from '../../components/VideoBackground.astro';
         </div>
       </div>
 
-      <div class="condition-item" data-animate="fade-up" data-animate-delay="400">
+      <div class="condition-item" data-animate="scale" data-animate-delay="600">
         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M9 11l3 3L22 4"></path>
           <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
@@ -348,19 +349,19 @@ import VideoBackground from '../../components/VideoBackground.astro';
     </div>
 
     <div class="related-services">
-      <a href="/services/chiropractic-adjustments" class="related-service-card glass" data-animate="fade-up" data-animate-delay="100">
+      <a href="/services/chiropractic-adjustments" class="related-service-card glass" data-animate="fade-up" data-animate-delay="150">
         <h3>Chiropractic Adjustments</h3>
         <p>Restore joint mobility and alignment</p>
         <span class="related-service-arrow">→</span>
       </a>
 
-      <a href="/services/home-exercise-programs" class="related-service-card glass" data-animate="fade-up" data-animate-delay="200">
+      <a href="/services/home-exercise-programs" class="related-service-card glass" data-animate="scale" data-animate-delay="300">
         <h3>Home Exercise Programs</h3>
         <p>Strengthen and maintain tissue improvements</p>
         <span class="related-service-arrow">→</span>
       </a>
 
-      <a href="/services/mobility-movement-guidance" class="related-service-card glass" data-animate="fade-up" data-animate-delay="300">
+      <a href="/services/mobility-movement-guidance" class="related-service-card glass" data-animate="fade-up" data-animate-delay="450">
         <h3>Mobility & Movement Guidance</h3>
         <p>Learn to move better and prevent re-injury</p>
         <span class="related-service-arrow">→</span>
@@ -404,6 +405,11 @@ import VideoBackground from '../../components/VideoBackground.astro';
     overflow: hidden;
   }
 
+  .hero-service .container {
+    position: relative;
+    z-index: 10;
+  }
+
   .hero-service__video {
     position: absolute;
     top: 50%;
@@ -420,7 +426,7 @@ import VideoBackground from '../../components/VideoBackground.astro';
   .hero-service__overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
+    background: rgba(0, 0, 0, 0.5);
     z-index: 1;
   }
 
@@ -431,6 +437,7 @@ import VideoBackground from '../../components/VideoBackground.astro';
     color: white;
     max-width: 800px;
     padding: 0 var(--space-lg);
+    margin: 0 auto;
   }
 
   .hero-badge {
@@ -445,6 +452,7 @@ import VideoBackground from '../../components/VideoBackground.astro';
     margin-bottom: 24px;
     font-weight: 600;
     border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
   }
 
   .hero-service__title {
@@ -452,6 +460,7 @@ import VideoBackground from '../../components/VideoBackground.astro';
     font-weight: 700;
     margin-bottom: var(--space-lg);
     line-height: 1.1;
+    color: white;
   }
 
   .hero-service__subtitle {
@@ -459,6 +468,7 @@ import VideoBackground from '../../components/VideoBackground.astro';
     margin-bottom: var(--space-2xl);
     opacity: 0.95;
     line-height: 1.6;
+    color: white;
   }
 
   .hero-service__actions {
@@ -532,31 +542,63 @@ import VideoBackground from '../../components/VideoBackground.astro';
   .benefits-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--space-xl);
+    gap: var(--space-2xl);
     margin-top: var(--space-4xl);
   }
 
   .benefit-card {
     padding: var(--space-2xl);
     border-radius: var(--radius-xl);
+    border-left: 4px solid var(--color-accent);
+    background: var(--color-white);
     text-align: center;
-    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .benefit-card:nth-child(3n+1) {
+    border-left-color: var(--color-primary);
+  }
+
+  .benefit-card:nth-child(3n+2) {
+    box-shadow: 0 6px 30px rgba(184, 149, 106, 0.12);
+  }
+
+  .benefit-card:nth-child(even) {
+    margin-top: var(--space-md);
+  }
+
+  .benefit-card:first-child,
+  .benefit-card:nth-child(4) {
+    background: var(--color-white);
+    border-left-width: 6px;
+    box-shadow: 0 8px 30px rgba(184, 149, 106, 0.15);
   }
 
   .benefit-card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-2xl);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 48px rgba(184, 149, 106, 0.2);
+    border-left-width: 6px;
   }
 
   .benefit-icon {
     width: 64px;
     height: 64px;
-    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    background: var(--color-accent);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto var(--space-lg);
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+
+  .benefit-card:nth-child(even) .benefit-icon {
+    background: var(--color-primary);
+  }
+
+  .benefit-card:hover .benefit-icon {
+    transform: scale(1.1) rotate(5deg);
   }
 
   .benefit-icon svg {
@@ -567,11 +609,14 @@ import VideoBackground from '../../components/VideoBackground.astro';
     font-size: 1.5rem;
     margin-bottom: var(--space-md);
     color: var(--color-charcoal);
+    font-weight: 700;
   }
 
   .benefit-card p {
     color: var(--color-gray-dark);
     line-height: 1.7;
+    margin: 0;
+    font-weight: 400;
   }
 
   .conditions-grid {
@@ -710,13 +755,9 @@ import VideoBackground from '../../components/VideoBackground.astro';
   }
 
   @media (max-width: 768px) {
-    .hero-service {
-      height: 65vh;
-      min-height: 500px;
-    }
-
     .techniques-grid,
-    .benefits-grid {
+    .benefits-grid,
+    .conditions-grid {
       grid-template-columns: 1fr;
     }
 
