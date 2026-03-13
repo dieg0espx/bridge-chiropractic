@@ -44,7 +44,19 @@ const { title, description = "Personalized chiropractic care for San Diego adult
           <a href="/" class="header__nav-link">Home</a>
           <a href="/about" class="header__nav-link">About</a>
           <a href="/services" class="header__nav-link">Services</a>
-          <a href="/contact" class="header__nav-link">Contact</a>
+          <a href="/conditions" class="header__nav-link">Conditions</a>
+          <div class="header__dropdown">
+            <button class="header__nav-link header__dropdown-trigger" aria-expanded="false">
+              More
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="header__dropdown-menu">
+              <a href="/testimonials" class="header__dropdown-link">Testimonials</a>
+              <a href="/faq" class="header__dropdown-link">FAQ</a>
+              <a href="/blog" class="header__dropdown-link">Blog</a>
+            </div>
+          </div>
+          <a href="/contact" class="header__nav-link header__nav-cta">Contact</a>
         </nav>
 
         <!-- Mobile Menu Toggle -->
@@ -258,7 +270,7 @@ const { title, description = "Personalized chiropractic care for San Diego adult
         -webkit-backdrop-filter: blur(12px);
         border-bottom: 1px solid rgba(255, 255, 255, 0.3);
         transition: all var(--transition-normal);
-        overflow-x: hidden;
+        overflow: visible;
       }
 
       .header.scrolled {
@@ -320,8 +332,99 @@ const { title, description = "Personalized chiropractic care for San Diego adult
         transition: width var(--transition-normal);
       }
 
-      .header__nav-link:hover::after {
+      .header__nav-link:hover::after,
+      .header__nav-link.active::after {
         width: 100%;
+      }
+
+      .header__nav-link.active {
+        color: var(--color-accent);
+      }
+
+      .header__dropdown-link.active {
+        color: var(--color-accent);
+      }
+
+      /* Contact CTA in nav */
+      .header__nav-cta {
+        background: var(--color-primary);
+        color: var(--color-white) !important;
+        padding: 8px 20px;
+        border-radius: var(--radius-full);
+        font-weight: 600;
+        font-size: 0.875rem;
+        transition: all 0.2s ease;
+      }
+
+      .header__nav-cta:hover {
+        background: var(--color-accent);
+        color: var(--color-white) !important;
+      }
+
+      .header__nav-cta::after {
+        display: none;
+      }
+
+      /* Dropdown */
+      .header__dropdown {
+        position: relative;
+      }
+
+      .header__dropdown-trigger {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-family: inherit;
+        padding: 0;
+      }
+
+      .header__dropdown-trigger svg {
+        transition: transform 0.2s ease;
+      }
+
+      .header__dropdown-trigger[aria-expanded="true"] svg {
+        transform: rotate(180deg);
+      }
+
+      .header__dropdown-menu {
+        position: absolute;
+        top: calc(100% + 12px);
+        left: 50%;
+        transform: translateX(-50%);
+        min-width: 180px;
+        background: var(--color-white);
+        border-radius: var(--radius-md);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(0, 0, 0, 0.06);
+        padding: 8px 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(-50%) translateY(8px);
+        transition: all 0.2s ease;
+      }
+
+      .header__dropdown.open .header__dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) translateY(0);
+      }
+
+      .header__dropdown-link {
+        display: block;
+        padding: 10px 20px;
+        color: var(--color-charcoal);
+        text-decoration: none;
+        font-size: 0.9375rem;
+        font-weight: 500;
+        transition: all 0.15s ease;
+      }
+
+      .header__dropdown-link:hover {
+        background: rgba(0, 0, 0, 0.03);
+        color: var(--color-accent);
       }
 
       /* Show desktop nav on larger screens */
@@ -1121,6 +1224,44 @@ const { title, description = "Personalized chiropractic care for San Diego adult
       document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && sidebarNav?.classList.contains('active')) {
           closeSidebar();
+        }
+      });
+
+      // Desktop dropdown menu
+      const dropdown = document.querySelector('.header__dropdown');
+      const dropdownTrigger = document.querySelector('.header__dropdown-trigger');
+
+      if (dropdown && dropdownTrigger) {
+        dropdownTrigger.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const isOpen = dropdown.classList.contains('open');
+          dropdown.classList.toggle('open');
+          dropdownTrigger.setAttribute('aria-expanded', String(!isOpen));
+        });
+
+        // Close on click outside
+        document.addEventListener('click', (e) => {
+          if (!dropdown.contains(e.target)) {
+            dropdown.classList.remove('open');
+            dropdownTrigger.setAttribute('aria-expanded', 'false');
+          }
+        });
+
+        // Close on Escape
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && dropdown.classList.contains('open')) {
+            dropdown.classList.remove('open');
+            dropdownTrigger.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
+
+      // Add active class to desktop nav links
+      const desktopLinks = document.querySelectorAll('.header__nav-link, .header__dropdown-link');
+      desktopLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === currentPath || (href && href !== '/' && currentPath.startsWith(href))) {
+          link.classList.add('active');
         }
       });
     });

@@ -28,13 +28,26 @@ import VideoBackground from '../components/VideoBackground.astro';
     </div>
   </section>
 
+  <!-- Category Navigation -->
+  <SectionWrapper spacing="compact">
+    <nav class="faq-nav" data-animate="fade-up">
+      <a href="#first-visit" class="faq-nav__pill">First Visit</a>
+      <a href="#treatment" class="faq-nav__pill">Treatment</a>
+      <a href="#neuro" class="faq-nav__pill">Neuro Rehab</a>
+      <a href="#practical" class="faq-nav__pill">Practical Info</a>
+    </nav>
+  </SectionWrapper>
+
   <!-- First Visit -->
   <SectionWrapper spacing="normal">
-    <div class="faq-section" data-animate="fade-up">
-      <h2 class="faq-section__title">Your First Visit</h2>
+    <div class="faq-section" id="first-visit" data-animate="fade-up">
+      <div class="faq-section__header">
+        <span class="faq-section__label">Getting Started</span>
+        <h2 class="faq-section__title">Your First Visit</h2>
+      </div>
 
-      <div class="faq-list faq-list--columns">
-        <div class="faq-item glass">
+      <div class="faq-list">
+        <div class="faq-item">
           <button class="faq-item__question" aria-expanded="false">
             <span>What should I expect during my first visit?</span>
             <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
@@ -44,7 +57,7 @@ import VideoBackground from '../components/VideoBackground.astro';
           </div>
         </div>
 
-        <div class="faq-item glass">
+        <div class="faq-item">
           <button class="faq-item__question" aria-expanded="false">
             <span>What should I wear to my appointment?</span>
             <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
@@ -54,7 +67,7 @@ import VideoBackground from '../components/VideoBackground.astro';
           </div>
         </div>
 
-        <div class="faq-item glass">
+        <div class="faq-item">
           <button class="faq-item__question" aria-expanded="false">
             <span>Do I need to bring anything to my first appointment?</span>
             <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
@@ -64,7 +77,7 @@ import VideoBackground from '../components/VideoBackground.astro';
           </div>
         </div>
 
-        <div class="faq-item glass">
+        <div class="faq-item">
           <button class="faq-item__question" aria-expanded="false">
             <span>Will I receive treatment on my first visit?</span>
             <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
@@ -74,7 +87,7 @@ import VideoBackground from '../components/VideoBackground.astro';
           </div>
         </div>
 
-        <div class="faq-item glass">
+        <div class="faq-item">
           <button class="faq-item__question" aria-expanded="false">
             <span>How long does the first appointment take?</span>
             <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
@@ -84,7 +97,7 @@ import VideoBackground from '../components/VideoBackground.astro';
           </div>
         </div>
 
-        <div class="faq-item glass">
+        <div class="faq-item">
           <button class="faq-item__question" aria-expanded="false">
             <span>Should I arrive early for my first visit?</span>
             <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
@@ -99,11 +112,14 @@ import VideoBackground from '../components/VideoBackground.astro';
 
   <!-- About Treatment -->
   <SectionWrapper background="gray" spacing="normal">
-    <div class="faq-section" data-animate="fade-up">
-      <h2 class="faq-section__title">About Treatment</h2>
+    <div class="faq-section" id="treatment" data-animate="fade-up">
+      <div class="faq-section__header">
+        <span class="faq-section__label">Care & Approach</span>
+        <h2 class="faq-section__title">About Treatment</h2>
+      </div>
 
-      <div class="faq-list faq-list--columns">
-        <div class="faq-item glass">
+      <div class="faq-list">
+        <div class="faq-item">
           <button class="faq-item__question" aria-expanded="false">
             <span>Is chiropractic care safe?</span>
             <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
@@ -113,7 +129,7 @@ import VideoBackground from '../components/VideoBackground.astro';
           </div>
         </div>
 
-        <div class="faq-item glass">
+        <div class="faq-item">
           <button class="faq-item__question" aria-expanded="false">
             <span>Does chiropractic treatment hurt?</span>
             <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
@@ -123,7 +139,7 @@ import VideoBackground from '../components/VideoBackground.astro';
           </div>
         </div>
 
-        <div class="faq-item glass">
+        <div class="faq-item">
           <button class="faq-item__question" aria-expanded="false">
             <span>How many visits will I need?</span>
             <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
@@ -133,27 +149,27 @@ import VideoBackground from '../components/VideoBackground.astro';
           </div>
         </div>
 
-        <div class="faq-item glass">
+        <div class="faq-item">
           <button class="faq-item__question" aria-expanded="false">
             <span>What conditions do you treat?</span>
             <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </button>
           <div class="faq-item__answer">
-            <p>We treat a wide range of musculoskeletal conditions including back pain, neck pain, headaches, sciatica, joint pain, and postural issues. We also specialize in neuro rehabilitation for balance issues and fall prevention in adults 55 and older. Patients often tell us "I didn't know you did that!"—because what one patient needs is different from another. <a href="/conditions">View our full list of conditions we treat</a>.</p>
+            <p>We treat a wide range of musculoskeletal conditions including back pain, neck pain, headaches, sciatica, joint pain, and postural issues. We also specialize in neuro rehabilitation for balance issues and fall prevention in adults 55 and older. <a href="/conditions">View our full list of conditions we treat</a>.</p>
           </div>
         </div>
 
-        <div class="faq-item glass">
+        <div class="faq-item">
           <button class="faq-item__question" aria-expanded="false">
             <span>What makes your approach different?</span>
             <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </button>
           <div class="faq-item__answer">
-            <p>We focus on calm, trust-based care that prioritizes your long-term function and independence. Unlike rushed, high-volume practices, we take time to listen, explain, and educate. We emphasize sustainable improvement rather than quick fixes or creating dependency on ongoing adjustments. We want to empower you to understand your body and take control of your own health.</p>
+            <p>We focus on calm, trust-based care that prioritizes your long-term function and independence. Unlike rushed, high-volume practices, we take time to listen, explain, and educate. We emphasize sustainable improvement rather than quick fixes or creating dependency on ongoing adjustments.</p>
           </div>
         </div>
 
-        <div class="faq-item glass">
+        <div class="faq-item">
           <button class="faq-item__question" aria-expanded="false">
             <span>What techniques do you use?</span>
             <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
@@ -163,23 +179,23 @@ import VideoBackground from '../components/VideoBackground.astro';
           </div>
         </div>
 
-        <div class="faq-item glass">
+        <div class="faq-item">
           <button class="faq-item__question" aria-expanded="false">
             <span>Can I continue my regular activities during treatment?</span>
             <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </button>
           <div class="faq-item__answer">
-            <p>In most cases, yes. We encourage staying active during treatment, though we may recommend temporary modifications to certain activities while you heal. Our goal is to help you maintain your lifestyle, not restrict it. We'll work with you to find the right balance between rest, activity modification, and staying engaged in the things you love.</p>
+            <p>In most cases, yes. We encourage staying active during treatment, though we may recommend temporary modifications to certain activities while you heal. Our goal is to help you maintain your lifestyle, not restrict it.</p>
           </div>
         </div>
 
-        <div class="faq-item glass">
+        <div class="faq-item">
           <button class="faq-item__question" aria-expanded="false">
             <span>Do you offer exercises or home care recommendations?</span>
             <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </button>
           <div class="faq-item__answer">
-            <p>Absolutely. Education and empowerment are core to our approach. We'll provide specific exercises, stretches, and self-care strategies to support your recovery and maintain long-term health. These aren't generic handouts—they're tailored to your specific condition and goals, helping you take an active role in your own healing.</p>
+            <p>Absolutely. Education and empowerment are core to our approach. We'll provide specific exercises, stretches, and self-care strategies to support your recovery and maintain long-term health. These aren't generic handouts—they're tailored to your specific condition and goals.</p>
           </div>
         </div>
       </div>
@@ -188,67 +204,70 @@ import VideoBackground from '../components/VideoBackground.astro';
 
   <!-- Neuro Rehabilitation -->
   <SectionWrapper spacing="normal">
-    <div class="faq-section" data-animate="fade-up">
-      <h2 class="faq-section__title">Neuro Rehabilitation</h2>
+    <div class="faq-section" id="neuro" data-animate="fade-up">
+      <div class="faq-section__header">
+        <span class="faq-section__label">Specialized Care</span>
+        <h2 class="faq-section__title">Neuro Rehabilitation</h2>
+      </div>
 
-      <div class="faq-list faq-list--columns">
-        <div class="faq-item glass">
+      <div class="faq-list">
+        <div class="faq-item">
           <button class="faq-item__question" aria-expanded="false">
             <span>What is neuro rehabilitation?</span>
             <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </button>
           <div class="faq-item__answer">
-            <p>Neuro rehabilitation (also called brain rehabilitation) focuses on improving the connection between your brain and body. It's particularly effective for balance issues, coordination problems, and fall prevention. Using specific exercises and techniques, we help retrain your nervous system to improve stability, reaction time, and overall motor function.</p>
+            <p>Neuro rehabilitation focuses on improving the connection between your brain and body. It's particularly effective for balance issues, coordination problems, and fall prevention. Using specific exercises and techniques, we help retrain your nervous system to improve stability, reaction time, and overall motor function.</p>
           </div>
         </div>
 
-        <div class="faq-item glass">
+        <div class="faq-item">
           <button class="faq-item__question" aria-expanded="false">
             <span>Who benefits from neuro rehabilitation?</span>
             <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </button>
           <div class="faq-item__answer">
-            <p>Our neuro rehabilitation program is especially beneficial for adults 55 and older who want to maintain independence and reduce fall risk. It's also helpful for anyone experiencing balance issues, dizziness, coordination problems, or concerns about stability. Falls are a leading cause of injury in older adults—our program helps you stay confident and active.</p>
+            <p>Our neuro rehabilitation program is especially beneficial for adults 55 and older who want to maintain independence and reduce fall risk. It's also helpful for anyone experiencing balance issues, dizziness, coordination problems, or concerns about stability.</p>
           </div>
         </div>
 
-        <div class="faq-item glass">
+        <div class="faq-item">
           <button class="faq-item__question" aria-expanded="false">
             <span>How does it reduce fall risk?</span>
             <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </button>
           <div class="faq-item__answer">
-            <p>Falls often result from a combination of factors: decreased balance, slower reaction times, reduced strength, and poor coordination. Our program addresses all of these through targeted exercises that challenge your vestibular system (inner ear balance), improve proprioception (body awareness), strengthen key muscle groups, and enhance your brain's ability to process movement information quickly.</p>
+            <p>Falls often result from a combination of factors: decreased balance, slower reaction times, reduced strength, and poor coordination. Our program addresses all of these through targeted exercises that challenge your vestibular system, improve proprioception, strengthen key muscle groups, and enhance your brain's ability to process movement information quickly.</p>
           </div>
         </div>
 
-        <div class="faq-item glass">
+        <div class="faq-item">
           <button class="faq-item__question" aria-expanded="false">
             <span>How long does neuro rehabilitation take?</span>
             <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </button>
           <div class="faq-item__answer">
-            <p>The length of neuro rehabilitation varies based on your starting point and goals. Many patients notice improvements in balance and confidence within 4-6 weeks of consistent training. However, like any fitness program, ongoing practice maintains and continues to improve your results. We'll create a personalized program that fits your schedule and needs.</p>
+            <p>Many patients notice improvements in balance and confidence within 4-6 weeks of consistent training. However, like any fitness program, ongoing practice maintains and continues to improve your results. We'll create a personalized program that fits your schedule and needs.</p>
           </div>
         </div>
 
-        <div class="faq-item glass">
+        <div class="faq-item">
           <button class="faq-item__question" aria-expanded="false">
             <span>Is it too late to start if I've already had a fall?</span>
             <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </button>
           <div class="faq-item__answer">
-            <p>Absolutely not. It's never too late to improve your balance and reduce future fall risk. In fact, if you've experienced a fall, that's an important signal that intervention can help. Our program can help rebuild confidence, improve stability, and prevent future falls. We'll start at your current ability level and progress gradually.</p>
+            <p>Absolutely not. It's never too late to improve your balance and reduce future fall risk. If you've experienced a fall, that's an important signal that intervention can help. We'll start at your current ability level and progress gradually.</p>
           </div>
         </div>
 
-        <div class="faq-item glass">
+        <div class="faq-item">
           <button class="faq-item__question" aria-expanded="false">
             <span>Can neuro rehabilitation help with dizziness?</span>
             <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </button>
           <div class="faq-item__answer">
-            <p>Yes, vestibular rehabilitation—a component of our neuro rehabilitation program—can be very effective for certain types of dizziness, particularly those related to inner ear balance issues or vestibular dysfunction. We'll assess your specific type of dizziness and determine if our program is appropriate for you or if a referral to another specialist might be better.</p>
+            <p>Yes, vestibular rehabilitation—a component of our neuro rehabilitation program—can be very effective for certain types of dizziness, particularly those related to inner ear balance issues. We'll assess your specific type of dizziness and determine if our program is appropriate or if a referral might be better.</p>
           </div>
         </div>
       </div>
@@ -257,31 +276,34 @@ import VideoBackground from '../components/VideoBackground.astro';
 
   <!-- Practical Questions -->
   <SectionWrapper background="gray" spacing="normal">
-    <div class="faq-section" data-animate="fade-up">
-      <h2 class="faq-section__title">Practical Questions</h2>
+    <div class="faq-section" id="practical" data-animate="fade-up">
+      <div class="faq-section__header">
+        <span class="faq-section__label">Logistics</span>
+        <h2 class="faq-section__title">Practical Questions</h2>
+      </div>
 
-      <div class="faq-list faq-list--columns">
-        <div class="faq-item glass">
+      <div class="faq-list">
+        <div class="faq-item">
           <button class="faq-item__question" aria-expanded="false">
             <span>Do you accept insurance?</span>
             <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </button>
           <div class="faq-item__answer">
-            <p>We accept most major insurance plans. Coverage varies by plan, so we recommend calling our office or contacting your insurance company to verify your chiropractic benefits. We're happy to help you understand your coverage and can provide documentation for out-of-network reimbursement if needed.</p>
+            <p>We accept most major insurance plans. Coverage varies by plan, so we recommend calling our office or contacting your insurance company to verify your chiropractic benefits. We can also provide documentation for out-of-network reimbursement if needed.</p>
           </div>
         </div>
 
-        <div class="faq-item glass">
+        <div class="faq-item">
           <button class="faq-item__question" aria-expanded="false">
             <span>What are your hours?</span>
             <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </button>
           <div class="faq-item__answer">
-            <p>We're open Monday through Friday, 9am to 5pm. We try to accommodate different schedules, so if these hours don't work for you, please contact us—we may be able to arrange an alternative time.</p>
+            <p>We're open Monday through Friday, 9am to 5pm. If these hours don't work for you, please contact us—we may be able to arrange an alternative time.</p>
           </div>
         </div>
 
-        <div class="faq-item glass">
+        <div class="faq-item">
           <button class="faq-item__question" aria-expanded="false">
             <span>Where are you located?</span>
             <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
@@ -291,53 +313,53 @@ import VideoBackground from '../components/VideoBackground.astro';
           </div>
         </div>
 
-        <div class="faq-item glass">
+        <div class="faq-item">
           <button class="faq-item__question" aria-expanded="false">
             <span>How do I schedule an appointment?</span>
             <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </button>
           <div class="faq-item__answer">
-            <p>You can schedule an appointment by calling us at <a href="tel:8582777500">(858) 277-7500</a>, emailing <a href="mailto:info@bridgechiropracticsd.com">info@bridgechiropracticsd.com</a>, or using our <a href="/contact">online contact form</a>. We'll get back to you within 24 hours to confirm your appointment.</p>
+            <p>You can schedule by calling <a href="tel:8582777500">(858) 277-7500</a>, emailing <a href="mailto:info@bridgechiropracticsd.com">info@bridgechiropracticsd.com</a>, or using our <a href="/contact">online contact form</a>. We'll confirm your appointment within 24 hours.</p>
           </div>
         </div>
 
-        <div class="faq-item glass">
+        <div class="faq-item">
           <button class="faq-item__question" aria-expanded="false">
             <span>What is your cancellation policy?</span>
             <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </button>
           <div class="faq-item__answer">
-            <p>We understand that schedules change. We ask that you provide at least 24 hours notice if you need to cancel or reschedule your appointment. This allows us to offer your time slot to another patient who needs care. Late cancellations or no-shows may be subject to a fee.</p>
+            <p>We ask for at least 24 hours notice if you need to cancel or reschedule. This allows us to offer your time slot to another patient. Late cancellations or no-shows may be subject to a fee.</p>
           </div>
         </div>
 
-        <div class="faq-item glass">
+        <div class="faq-item">
           <button class="faq-item__question" aria-expanded="false">
             <span>Is parking available?</span>
             <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </button>
           <div class="faq-item__answer">
-            <p>Yes, we have convenient parking available directly in front of the building. The office is located on the second floor, accessible by stairs or elevator. If you have mobility concerns, please let us know when scheduling and we'll ensure you have the easiest access possible.</p>
+            <p>Yes, we have convenient parking directly in front of the building. The office is on the second floor, accessible by stairs or elevator.</p>
           </div>
         </div>
 
-        <div class="faq-item glass">
+        <div class="faq-item">
           <button class="faq-item__question" aria-expanded="false">
             <span>What if I need to contact you outside of office hours?</span>
             <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </button>
           <div class="faq-item__answer">
-            <p>For non-emergency questions or appointment scheduling, you can email us at info@bridgechiropracticsd.com or use our online contact form, and we'll respond the next business day. For urgent health concerns that occur outside our hours, please contact your primary care physician or visit urgent care.</p>
+            <p>Email us at info@bridgechiropracticsd.com or use our online contact form—we'll respond the next business day. For urgent health concerns, please contact your primary care physician or visit urgent care.</p>
           </div>
         </div>
 
-        <div class="faq-item glass">
+        <div class="faq-item">
           <button class="faq-item__question" aria-expanded="false">
             <span>Do you offer payment plans?</span>
             <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </button>
           <div class="faq-item__answer">
-            <p>We understand that healthcare costs can be a concern. While we don't offer formal payment plans, we accept all major credit cards and can discuss flexible payment options for patients paying out-of-pocket. We're committed to making quality care accessible and will work with you to find a solution that fits your budget.</p>
+            <p>We accept all major credit cards and can discuss flexible payment options for patients paying out-of-pocket. We're committed to making quality care accessible.</p>
           </div>
         </div>
       </div>
@@ -353,7 +375,7 @@ import VideoBackground from '../components/VideoBackground.astro';
   >
     <div class="container container-narrow" data-animate="fade-up">
       <h2>Still Have Questions?</h2>
-      <p>We're happy to answer any questions you have about our practice, your condition, or whether chiropractic care might be right for you.</p>
+      <p>We're happy to answer any questions about our practice, your condition, or whether chiropractic care might be right for you.</p>
       <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
         <a href="/contact" class="btn btn--white btn--lg">Contact Us</a>
         <a href="tel:8582777500" class="btn btn--secondary btn--lg" style="background: transparent; border: 2px solid white; color: white;">Call (858) 277-7500</a>
@@ -363,44 +385,73 @@ import VideoBackground from '../components/VideoBackground.astro';
 </Layout>
 
 <style>
+  /* Category Navigation */
+  .faq-nav {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+  }
+
+  .faq-nav__pill {
+    padding: 10px 24px;
+    border-radius: 100px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--color-charcoal);
+    background: var(--color-white);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .faq-nav__pill:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
+    border-color: var(--color-primary);
+  }
+
   /* FAQ Sections */
   .faq-section {
-    max-width: 1400px;
+    max-width: 900px;
     margin: 0 auto;
+  }
+
+  .faq-section__header {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+  }
+
+  .faq-section__label {
+    display: inline-block;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: var(--space-xs);
   }
 
   .faq-section__title {
     font-family: var(--font-heading);
     font-size: 1.75rem;
     color: var(--color-primary);
-    margin-bottom: 40px;
-    padding-bottom: 20px;
-    border-bottom: 2px solid var(--color-gray-light);
-    text-align: center;
+    margin: 0;
   }
 
+  /* FAQ List — clean single column */
   .faq-list {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-  }
-
-  .faq-list--columns {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-    max-width: 1400px;
-    margin: 0 auto;
   }
 
   .faq-item {
-    overflow: hidden;
-    transition: all var(--transition-normal);
-    border-radius: 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   }
 
-  .faq-item:hover {
-    transform: translateY(-2px);
+  .faq-item:first-child {
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
   }
 
   .faq-item__question {
@@ -408,17 +459,21 @@ import VideoBackground from '../components/VideoBackground.astro';
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 24px;
-    padding: 32px 40px;
+    gap: var(--space-lg);
+    padding: 22px 0;
     background: transparent;
     border: none;
     font-family: var(--font-body);
-    font-size: 1.125rem;
+    font-size: 1.0625rem;
     font-weight: 600;
     color: var(--color-charcoal);
     cursor: pointer;
     text-align: left;
-    transition: all var(--transition-fast);
+    transition: color 0.2s ease;
+  }
+
+  .faq-item__question:hover {
+    color: var(--color-primary);
   }
 
   .faq-item__question span {
@@ -427,7 +482,7 @@ import VideoBackground from '../components/VideoBackground.astro';
 
   .faq-icon {
     flex-shrink: 0;
-    transition: transform var(--transition-normal);
+    transition: transform 0.3s ease;
     color: var(--color-accent);
   }
 
@@ -438,30 +493,28 @@ import VideoBackground from '../components/VideoBackground.astro';
   .faq-item__answer {
     max-height: 0;
     overflow: hidden;
-    padding: 0 40px;
-    background: transparent;
-    transition: all var(--transition-normal);
+    transition: all 0.3s ease;
     opacity: 0;
   }
 
   .faq-item.active .faq-item__answer {
     max-height: 600px;
-    padding: 0 40px 32px;
+    padding-bottom: 22px;
     opacity: 1;
   }
 
   .faq-item__answer p {
     margin: 0;
-    line-height: 1.8;
+    line-height: 1.75;
     color: var(--color-gray-dark);
-    font-size: 1.0625rem;
+    font-size: 0.9375rem;
   }
 
   .faq-item__answer a {
     color: var(--color-accent);
     font-weight: 500;
     text-decoration: none;
-    transition: color var(--transition-fast);
+    transition: color 0.2s ease;
   }
 
   .faq-item__answer a:hover {
@@ -470,51 +523,38 @@ import VideoBackground from '../components/VideoBackground.astro';
   }
 
   /* Responsive */
-  @media (max-width: 1024px) {
-    .faq-section__title {
-      font-size: 2rem;
-      margin-bottom: 40px;
-    }
-
-    .faq-list--columns {
-      grid-template-columns: 1fr;
-      gap: 20px;
-    }
-  }
-
   @media (max-width: 768px) {
-    .faq-section__title {
-      font-size: 1.75rem;
-      margin-bottom: 32px;
+    .faq-nav__pill {
+      padding: 8px 18px;
+      font-size: 0.8125rem;
     }
 
-    .faq-item__question {
-      padding: 24px 32px;
-      font-size: 1rem;
-    }
-
-    .faq-item.active .faq-item__answer {
-      padding: 0 32px 24px;
-    }
-  }
-
-  @media (max-width: 480px) {
     .faq-section__title {
       font-size: 1.5rem;
     }
 
     .faq-item__question {
-      padding: 20px 24px;
-      font-size: 0.95rem;
-      gap: 16px;
+      padding: 18px 0;
+      font-size: 1rem;
+      gap: var(--space-md);
     }
 
     .faq-item.active .faq-item__answer {
-      padding: 0 24px 20px;
+      padding-bottom: 18px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .faq-section__title {
+      font-size: 1.375rem;
+    }
+
+    .faq-item__question {
+      font-size: 0.9375rem;
     }
 
     .faq-item__answer p {
-      font-size: 1rem;
+      font-size: 0.875rem;
     }
   }
 </style>
@@ -529,19 +569,23 @@ import VideoBackground from '../components/VideoBackground.astro';
     question?.addEventListener('click', () => {
       const isExpanded = question.getAttribute('aria-expanded') === 'true';
 
-      // Toggle current item
       question.setAttribute('aria-expanded', (!isExpanded).toString());
       item.classList.toggle('active');
     });
   });
 
-  // Scroll-triggered animations
-  const observerOptions = {
-    root: null,
-    rootMargin: '-100px',
-    threshold: 0.1
-  };
+  // Smooth scroll for nav pills
+  document.querySelectorAll('.faq-nav__pill').forEach(pill => {
+    pill.addEventListener('click', (e) => {
+      e.preventDefault();
+      const target = document.querySelector(pill.getAttribute('href')!);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
 
+  // Scroll-triggered animations
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -549,7 +593,7 @@ import VideoBackground from '../components/VideoBackground.astro';
         observer.unobserve(entry.target);
       }
     });
-  }, observerOptions);
+  }, { root: null, rootMargin: '-100px', threshold: 0.1 });
 
   document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
 </script>

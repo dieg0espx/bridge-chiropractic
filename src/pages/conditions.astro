@@ -128,55 +128,67 @@ import VideoBackground from '../components/VideoBackground.astro';
       <h2 class="display-3">Back & Neck Conditions</h2>
     </div>
 
-    <ContentGrid columns={3} gap="xl" class="mt-4xl">
-      <div class="card-premium">
-        <div style="padding: 40px;">
-          <div style="font-size: 2rem; font-weight: 300; color: var(--color-primary); font-family: var(--font-heading); margin-bottom: 12px;">01</div>
-          <h3 style="font-size: 1.25rem; margin-bottom: 12px; font-weight: 600;">Low Back Pain</h3>
-          <p style="color: var(--color-gray-dark); line-height: 1.7;">Whether from injury, poor posture, or degenerative changes, we address the root cause through adjustments, soft tissue work, and movement training.</p>
+    <div class="condition-list mt-4xl">
+      <article class="condition-item" data-animate="fade-up">
+        <div class="condition-item__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
         </div>
-      </div>
+        <div class="condition-item__body">
+          <h3 class="condition-item__title">Low Back Pain</h3>
+          <p class="condition-item__desc">Whether from injury, poor posture, or degenerative changes, we address the root cause through adjustments, soft tissue work, and movement training.</p>
+        </div>
+      </article>
 
-      <div class="card-premium">
-        <div style="padding: 40px;">
-          <div style="font-size: 2rem; font-weight: 300; color: var(--color-primary); font-family: var(--font-heading); margin-bottom: 12px;">02</div>
-          <h3 style="font-size: 1.25rem; margin-bottom: 12px; font-weight: 600;">Neck Pain & Stiffness</h3>
-          <p style="color: var(--color-gray-dark); line-height: 1.7;">Office work, phone use, and daily stress create chronic neck tension. We restore mobility and reduce pain through gentle, targeted care.</p>
+      <article class="condition-item" data-animate="fade-up">
+        <div class="condition-item__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
         </div>
-      </div>
+        <div class="condition-item__body">
+          <h3 class="condition-item__title">Neck Pain & Stiffness</h3>
+          <p class="condition-item__desc">Office work, phone use, and daily stress create chronic neck tension. We restore mobility and reduce pain through gentle, targeted care.</p>
+        </div>
+      </article>
 
-      <div class="card-premium">
-        <div style="padding: 40px;">
-          <div style="font-size: 2rem; font-weight: 300; color: var(--color-primary); font-family: var(--font-heading); margin-bottom: 12px;">03</div>
-          <h3 style="font-size: 1.25rem; margin-bottom: 12px; font-weight: 600;">Sciatica</h3>
-          <p style="color: var(--color-gray-dark); line-height: 1.7;">Radiating leg pain from nerve compression requires precise treatment. We identify the source and provide relief through comprehensive care.</p>
+      <article class="condition-item" data-animate="fade-up">
+        <div class="condition-item__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
         </div>
-      </div>
+        <div class="condition-item__body">
+          <h3 class="condition-item__title">Sciatica</h3>
+          <p class="condition-item__desc">Radiating leg pain from nerve compression requires precise treatment. We identify the source and provide relief through comprehensive care.</p>
+        </div>
+      </article>
 
-      <div class="card-premium">
-        <div style="padding: 40px;">
-          <div style="font-size: 2rem; font-weight: 300; color: var(--color-primary); font-family: var(--font-heading); margin-bottom: 12px;">04</div>
-          <h3 style="font-size: 1.25rem; margin-bottom: 12px; font-weight: 600;">Disc Problems</h3>
-          <p style="color: var(--color-gray-dark); line-height: 1.7;">Herniated, bulging, or degenerative discs benefit from gentle decompression and stabilization exercises tailored to your condition.</p>
+      <article class="condition-item" data-animate="fade-up">
+        <div class="condition-item__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
         </div>
-      </div>
+        <div class="condition-item__body">
+          <h3 class="condition-item__title">Disc Problems</h3>
+          <p class="condition-item__desc">Herniated, bulging, or degenerative discs benefit from gentle decompression and stabilization exercises tailored to your condition.</p>
+        </div>
+      </article>
 
-      <div class="card-premium">
-        <div style="padding: 40px;">
-          <div style="font-size: 2rem; font-weight: 300; color: var(--color-primary); font-family: var(--font-heading); margin-bottom: 12px;">05</div>
-          <h3 style="font-size: 1.25rem; margin-bottom: 12px; font-weight: 600;">Spinal Stenosis</h3>
-          <p style="color: var(--color-gray-dark); line-height: 1.7;">Narrowing of the spinal canal causes pain and numbness. We help manage symptoms and improve function through conservative care.</p>
+      <article class="condition-item" data-animate="fade-up">
+        <div class="condition-item__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         </div>
-      </div>
+        <div class="condition-item__body">
+          <h3 class="condition-item__title">Spinal Stenosis</h3>
+          <p class="condition-item__desc">Narrowing of the spinal canal causes pain and numbness. We help manage symptoms and improve function through conservative care.</p>
+        </div>
+      </article>
 
-      <div class="card-premium">
-        <div style="padding: 40px;">
-          <div style="font-size: 2rem; font-weight: 300; color: var(--color-primary); font-family: var(--font-heading); margin-bottom: 12px;">06</div>
-          <h3 style="font-size: 1.25rem; margin-bottom: 12px; font-weight: 600;">Scoliosis</h3>
-          <p style="color: var(--color-gray-dark); line-height: 1.7;">Adult scoliosis can cause discomfort and imbalance. We provide supportive care to reduce pain and improve spinal function.</p>
+      <article class="condition-item" data-animate="fade-up">
+        <div class="condition-item__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
         </div>
-      </div>
-    </ContentGrid>
+        <div class="condition-item__body">
+          <h3 class="condition-item__title">Scoliosis</h3>
+          <p class="condition-item__desc">Adult scoliosis can cause discomfort and imbalance. We provide supportive care to reduce pain and improve spinal function.</p>
+        </div>
+      </article>
+    </div>
   </SectionWrapper>
 
   <!-- Joint & Extremity -->
@@ -186,83 +198,47 @@ import VideoBackground from '../components/VideoBackground.astro';
       <h2 class="display-3">Joint & Extremity Conditions</h2>
     </div>
 
-    <ContentGrid columns={2} gap="xl" class="mt-4xl">
-      <div class="elevated hover-lift" style="padding: 48px;">
-        <h3 style="font-size: 1.375rem; margin-bottom: 12px; font-weight: 600;">Shoulder Pain</h3>
-        <p style="color: var(--color-gray-dark); line-height: 1.7; margin-bottom: 20px;">Rotator cuff issues, frozen shoulder, and impingement affect daily activities. We address both the joint and surrounding soft tissue.</p>
-        <ul style="list-style: none; padding: 0;">
-          <li style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px; color: var(--color-gray-dark);">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Rotator cuff injuries
-          </li>
-          <li style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px; color: var(--color-gray-dark);">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Frozen shoulder
-          </li>
-          <li style="display: flex; align-items: center; gap: 12px; color: var(--color-gray-dark);">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Impingement syndrome
-          </li>
+    <div class="joint-grid mt-4xl">
+      <article class="joint-card" data-animate="fade-up">
+        <h3 class="joint-card__title">Shoulder Pain</h3>
+        <p class="joint-card__desc">Rotator cuff issues, frozen shoulder, and impingement affect daily activities. We address both the joint and surrounding soft tissue.</p>
+        <ul class="joint-card__list">
+          <li>Rotator cuff injuries</li>
+          <li>Frozen shoulder</li>
+          <li>Impingement syndrome</li>
         </ul>
-      </div>
+      </article>
 
-      <div class="elevated hover-lift" style="padding: 48px;">
-        <h3 style="font-size: 1.375rem; margin-bottom: 12px; font-weight: 600;">Hip & Knee Pain</h3>
-        <p style="color: var(--color-gray-dark); line-height: 1.7; margin-bottom: 20px;">Joint pain in the lower body affects mobility and independence. We help restore function and reduce discomfort.</p>
-        <ul style="list-style: none; padding: 0;">
-          <li style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px; color: var(--color-gray-dark);">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Hip arthritis & bursitis
-          </li>
-          <li style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px; color: var(--color-gray-dark);">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Knee osteoarthritis
-          </li>
-          <li style="display: flex; align-items: center; gap: 12px; color: var(--color-gray-dark);">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            IT band syndrome
-          </li>
+      <article class="joint-card" data-animate="fade-up">
+        <h3 class="joint-card__title">Hip & Knee Pain</h3>
+        <p class="joint-card__desc">Joint pain in the lower body affects mobility and independence. We help restore function and reduce discomfort.</p>
+        <ul class="joint-card__list">
+          <li>Hip arthritis & bursitis</li>
+          <li>Knee osteoarthritis</li>
+          <li>IT band syndrome</li>
         </ul>
-      </div>
+      </article>
 
-      <div class="elevated hover-lift" style="padding: 48px;">
-        <h3 style="font-size: 1.375rem; margin-bottom: 12px; font-weight: 600;">Elbow & Wrist Issues</h3>
-        <p style="color: var(--color-gray-dark); line-height: 1.7; margin-bottom: 20px;">Repetitive strain and overuse injuries respond well to targeted chiropractic care and rehabilitation.</p>
-        <ul style="list-style: none; padding: 0;">
-          <li style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px; color: var(--color-gray-dark);">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Tennis/golfer's elbow
-          </li>
-          <li style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px; color: var(--color-gray-dark);">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Carpal tunnel syndrome
-          </li>
-          <li style="display: flex; align-items: center; gap: 12px; color: var(--color-gray-dark);">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Wrist tendonitis
-          </li>
+      <article class="joint-card" data-animate="fade-up">
+        <h3 class="joint-card__title">Elbow & Wrist Issues</h3>
+        <p class="joint-card__desc">Repetitive strain and overuse injuries respond well to targeted chiropractic care and rehabilitation.</p>
+        <ul class="joint-card__list">
+          <li>Tennis/golfer's elbow</li>
+          <li>Carpal tunnel syndrome</li>
+          <li>Wrist tendonitis</li>
         </ul>
-      </div>
+      </article>
 
-      <div class="elevated hover-lift" style="padding: 48px;">
-        <h3 style="font-size: 1.375rem; margin-bottom: 12px; font-weight: 600;">Ankle & Foot Pain</h3>
-        <p style="color: var(--color-gray-dark); line-height: 1.7; margin-bottom: 20px;">From plantar fasciitis to ankle sprains, we treat the foundation of your movement system.</p>
-        <ul style="list-style: none; padding: 0;">
-          <li style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px; color: var(--color-gray-dark);">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Plantar fasciitis
-          </li>
-          <li style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px; color: var(--color-gray-dark);">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Ankle instability
-          </li>
-          <li style="display: flex; align-items: center; gap: 12px; color: var(--color-gray-dark);">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Achilles tendonitis
-          </li>
+      <article class="joint-card" data-animate="fade-up">
+        <h3 class="joint-card__title">Ankle & Foot Pain</h3>
+        <p class="joint-card__desc">From plantar fasciitis to ankle sprains, we treat the foundation of your movement system.</p>
+        <ul class="joint-card__list">
+          <li>Plantar fasciitis</li>
+          <li>Ankle instability</li>
+          <li>Achilles tendonitis</li>
         </ul>
-      </div>
-    </ContentGrid>
+      </article>
+    </div>
   </SectionWrapper>
 
   <!-- Neurological & Other -->
@@ -472,6 +448,108 @@ import VideoBackground from '../components/VideoBackground.astro';
     line-height: 1.4;
   }
 
+  /* Spinal Condition List */
+  .condition-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+  }
+
+  .condition-item {
+    display: flex;
+    gap: var(--space-lg);
+    align-items: flex-start;
+    padding: var(--space-xl);
+    background: var(--color-white);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+  }
+
+  .condition-item:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+    transform: translateY(-2px);
+  }
+
+  .condition-item__icon {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-md);
+    background: rgba(58, 114, 100, 0.08);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .condition-item__title {
+    font-family: var(--font-heading);
+    font-size: 1.0625rem;
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-xs);
+  }
+
+  .condition-item__desc {
+    font-size: 0.875rem;
+    line-height: 1.65;
+    color: var(--color-gray-dark);
+  }
+
+  /* Joint Cards Grid */
+  .joint-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+  }
+
+  .joint-card {
+    padding: var(--space-xl);
+    background: var(--color-white);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+  }
+
+  .joint-card:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+    transform: translateY(-2px);
+  }
+
+  .joint-card__title {
+    font-family: var(--font-heading);
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-sm);
+  }
+
+  .joint-card__desc {
+    font-size: 0.875rem;
+    line-height: 1.65;
+    color: var(--color-gray-dark);
+    margin-bottom: var(--space-md);
+  }
+
+  .joint-card__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+  }
+
+  .joint-card__list li {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--color-primary);
+    background: rgba(58, 114, 100, 0.08);
+    padding: 4px 12px;
+    border-radius: var(--radius-full);
+  }
+
   /* Responsive Design */
   @media (max-width: 1024px) {
     .mt-4xl {
@@ -534,6 +612,11 @@ import VideoBackground from '../components/VideoBackground.astro';
 
     .stat-label {
       font-size: 0.875rem;
+    }
+
+    .condition-list,
+    .joint-grid {
+      grid-template-columns: 1fr;
     }
   }
 
