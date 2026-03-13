@@ -7,37 +7,33 @@ import VideoBackground from '../components/VideoBackground.astro';
 
 <Layout title="Services" description="Comprehensive chiropractic services including gentle adjustments, soft tissue therapy, movement training, and specialized neuro rehabilitation.">
   <!-- Hero Section -->
-  <section class="hero-fullbleed" style="height: 85vh; min-height: 650px;">
+  <section class="hero-fullbleed">
     <video
-      class="hero-fullbleed__image"
+      class="hero-fullbleed__video"
       autoplay
       muted
       loop
       playsinline
+      aria-hidden="true"
     >
       <source src="https://res.cloudinary.com/dku1gnuat/video/upload/v1772135494/A_0004C207H251212_163548YT_CANON_kfbpge.mp4" type="video/mp4" />
     </video>
-    <div class="hero-fullbleed__overlay"></div>
-
-    <!-- Floating particles for ambiance -->
-    <div class="floating-particles">
-      <div class="particle" style="left: 15%; top: 25%; animation-delay: 0s;"></div>
-      <div class="particle" style="left: 80%; top: 40%; animation-delay: 5s;"></div>
-      <div class="particle" style="left: 45%; top: 70%; animation-delay: 10s;"></div>
-    </div>
-
-    <div class="hero-fullbleed__content" data-animate="fade-up">
-      <span class="hero-badge">Comprehensive Care</span>
-      <h1 class="hero-fullbleed__title">Our Services</h1>
-      <p class="hero-fullbleed__subtitle">Tailored treatments designed for your unique needs and wellness goals.</p>
+    <div class="hero-fullbleed__overlay" aria-hidden="true"></div>
+    <div class="hero-fullbleed__content">
+      <span class="hero-fullbleed__eyebrow">Our Services</span>
+      <h1 class="hero-fullbleed__title">Treatment that adapts<br />to your body.</h1>
+      <p class="hero-fullbleed__subtitle">Adjustments, soft tissue work, and movement training — combined and tailored to how you respond, so results actually last.</p>
+      <div class="hero-fullbleed__cta">
+        <a href="/contact" class="btn btn--primary btn--lg">Book Your Visit</a>
+      </div>
     </div>
   </section>
 
   <!-- Services Overview -->
-  <SectionWrapper background="white" spacing="hero" containerWidth="narrow">
+  <SectionWrapper background="white" spacing="normal" containerWidth="narrow">
     <div style="text-align: center;" data-animate="fade-up">
       <span class="section__eyebrow" style="color: var(--color-accent); display: block; margin-bottom: 20px;">Holistic Approach</span>
-      <h2 class="display-2" style="margin-bottom: 32px;">More Than Adjustments</h2>
+      <h2 class="display-2" style="margin-bottom: 24px;">More Than Adjustments</h2>
       <p class="text-large" style="color: var(--color-gray-dark); line-height: 1.8; margin-bottom: 24px;">At The Bridge Chiropractic, we offer comprehensive care that addresses your whole body. Our integrated approach combines multiple techniques to help you move better, feel stronger, and live pain-free.</p>
       <p style="color: var(--color-gray-dark); line-height: 1.8; font-size: 1.0625rem;">Each treatment plan is personalized to your specific condition, goals, and comfort level.</p>
     </div>
@@ -47,7 +43,7 @@ import VideoBackground from '../components/VideoBackground.astro';
   <SectionWrapper background="gray" spacing="normal">
     <div class="section__header" style="text-align: center; margin-bottom: 64px;" data-animate="fade-up">
       <span class="section__eyebrow" style="color: var(--color-accent);">Explore Our Services</span>
-      <h2 class="display-2">Choose Your Path to Wellness</h2>
+      <h2 class="display-3">Choose Your Path to Wellness</h2>
     </div>
 
     <div class="service-nav-grid">
@@ -121,10 +117,10 @@ import VideoBackground from '../components/VideoBackground.astro';
   </SectionWrapper>
 
   <!-- Treatment Process Timeline -->
-  <SectionWrapper background="white" spacing="hero">
+  <SectionWrapper background="white" spacing="normal">
     <div class="section__header" style="text-align: center; margin-bottom: 80px;" data-animate="fade-up">
       <span class="section__eyebrow" style="color: var(--color-accent);">Your Treatment Journey</span>
-      <h2 class="display-2">Our Comprehensive Process</h2>
+      <h2 class="display-3">Our Comprehensive Process</h2>
       <p class="text-large" style="color: var(--color-gray-dark); max-width: 700px; margin: 0 auto;">From assessment to recovery, we guide you through every step of your wellness journey.</p>
     </div>
 
@@ -170,16 +166,16 @@ import VideoBackground from '../components/VideoBackground.astro';
   </SectionWrapper>
 
   <!-- Chiropractic Care Detail -->
-  <SectionWrapper background="gray" spacing="hero" id="chiropractic">
+  <SectionWrapper background="gray" spacing="normal" id="chiropractic">
     <div class="service-detail">
       <div class="service-detail__content" data-animate="fade-right">
         <span class="section__eyebrow" style="color: var(--color-accent);">Core Service</span>
-        <h2 class="display-2" style="margin-bottom: 32px;">Chiropractic Care</h2>
+        <h2 class="display-3" style="margin-bottom: 32px;">Chiropractic Care</h2>
         <p class="text-large" style="color: var(--color-gray-dark); margin-bottom: 24px; line-height: 1.8;">Our chiropractic care includes both gentle and traditional adjustment techniques. We tailor our approach to your comfort level and specific needs, ensuring you receive care that feels right for your body.</p>
         <p style="color: var(--color-gray-dark); margin-bottom: 40px; line-height: 1.8; font-size: 1.0625rem;">Whether you prefer a gentle, low-force approach or traditional manual adjustments, we customize each session to what works best for your body. The goal is always the same: restore proper function and reduce pain.</p>
 
         <div class="service-features">
-          <h3 style="font-size: 1.75rem; margin-bottom: 28px; font-weight: 600; color: var(--color-charcoal);">What We Treat</h3>
+          <h3 style="font-size: 1.375rem; margin-bottom: 20px; font-weight: 600; color: var(--color-charcoal);">What We Treat</h3>
           <ul class="feature-list">
             <li>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
@@ -225,7 +221,7 @@ import VideoBackground from '../components/VideoBackground.astro';
   </SectionWrapper>
 
   <!-- Soft Tissue Therapy Detail -->
-  <SectionWrapper background="white" spacing="hero" id="soft-tissue">
+  <SectionWrapper background="white" spacing="normal" id="soft-tissue">
     <div class="service-detail service-detail--reverse">
       <div class="service-detail__image" data-animate="fade-right">
         <div class="image-wrapper">
@@ -236,12 +232,12 @@ import VideoBackground from '../components/VideoBackground.astro';
 
       <div class="service-detail__content" data-animate="fade-left" data-animate-delay="200">
         <span class="section__eyebrow" style="color: var(--color-accent);">Complementary Care</span>
-        <h2 class="display-2" style="margin-bottom: 32px;">Soft Tissue Therapy</h2>
+        <h2 class="display-3" style="margin-bottom: 32px;">Soft Tissue Therapy</h2>
         <p class="text-large" style="color: var(--color-gray-dark); margin-bottom: 24px; line-height: 1.8;">Muscles, tendons, and fascia play a crucial role in how you move. Our soft tissue work complements chiropractic adjustments to address the full picture of your musculoskeletal health.</p>
         <p style="color: var(--color-gray-dark); margin-bottom: 40px; line-height: 1.8; font-size: 1.0625rem;">Using techniques like myofascial release, trigger point therapy, and instrument-assisted therapy, we target tension and adhesions that limit your mobility and cause pain.</p>
 
         <div class="service-features">
-          <h3 style="font-size: 1.75rem; margin-bottom: 28px; font-weight: 600; color: var(--color-charcoal);">Benefits Include</h3>
+          <h3 style="font-size: 1.375rem; margin-bottom: 20px; font-weight: 600; color: var(--color-charcoal);">Benefits Include</h3>
           <ul class="feature-list">
             <li>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
@@ -280,16 +276,16 @@ import VideoBackground from '../components/VideoBackground.astro';
   </SectionWrapper>
 
   <!-- Movement Training Detail -->
-  <SectionWrapper background="gray" spacing="hero" id="movement">
+  <SectionWrapper background="gray" spacing="normal" id="movement">
     <div class="service-detail">
       <div class="service-detail__content" data-animate="fade-right">
         <span class="section__eyebrow" style="color: var(--color-accent);">Active Care</span>
-        <h2 class="display-2" style="margin-bottom: 32px;">Movement Training</h2>
+        <h2 class="display-3" style="margin-bottom: 32px;">Movement Training</h2>
         <p class="text-large" style="color: var(--color-gray-dark); margin-bottom: 24px; line-height: 1.8;">Movement is medicine. We teach you exercises and stretches designed to reinforce the improvements we make during treatment and empower you to maintain your progress.</p>
         <p style="color: var(--color-gray-dark); margin-bottom: 40px; line-height: 1.8; font-size: 1.0625rem;">These aren't generic exercises from a handout. Each movement is selected specifically for your body and your goals, ensuring you know exactly how to maintain your progress between visits and prevent future injuries.</p>
 
         <div class="service-features">
-          <h3 style="font-size: 1.75rem; margin-bottom: 28px; font-weight: 600; color: var(--color-charcoal);">You'll Learn</h3>
+          <h3 style="font-size: 1.375rem; margin-bottom: 20px; font-weight: 600; color: var(--color-charcoal);">You'll Learn</h3>
           <ul class="feature-list">
             <li>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
@@ -343,7 +339,7 @@ import VideoBackground from '../components/VideoBackground.astro';
   </SectionWrapper>
 
   <!-- Neuro Rehabilitation Detail -->
-  <SectionWrapper background="white" spacing="hero" id="neuro">
+  <SectionWrapper background="white" spacing="normal" id="neuro">
     <div class="service-detail service-detail--reverse">
       <div class="service-detail__image" data-animate="fade-right">
         <div class="image-wrapper">
@@ -354,12 +350,12 @@ import VideoBackground from '../components/VideoBackground.astro';
 
       <div class="service-detail__content" data-animate="fade-left" data-animate-delay="200">
         <span class="section__eyebrow" style="color: var(--color-accent);">Specialized Care</span>
-        <h2 class="display-2" style="margin-bottom: 32px;">Neuro Rehabilitation</h2>
+        <h2 class="display-3" style="margin-bottom: 32px;">Neuro Rehabilitation</h2>
         <p class="text-large" style="color: var(--color-gray-dark); margin-bottom: 24px; line-height: 1.8;">Our specialized neurological rehabilitation focuses on improving balance, coordination, and proprioception—your body's ability to sense where it is in space.</p>
         <p style="color: var(--color-gray-dark); margin-bottom: 40px; line-height: 1.8; font-size: 1.0625rem;">This service is particularly valuable for those concerned about falls, experiencing dizziness, or dealing with age-related balance changes. We use evidence-based protocols to retrain your nervous system and improve overall stability.</p>
 
         <div class="service-features">
-          <h3 style="font-size: 1.75rem; margin-bottom: 28px; font-weight: 600; color: var(--color-charcoal);">Ideal For</h3>
+          <h3 style="font-size: 1.375rem; margin-bottom: 20px; font-weight: 600; color: var(--color-charcoal);">Ideal For</h3>
           <ul class="feature-list">
             <li>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
@@ -470,15 +466,15 @@ import VideoBackground from '../components/VideoBackground.astro';
   }
 
   .timeline-number {
-    width: 72px;
-    height: 72px;
+    width: 56px;
+    height: 56px;
     background: var(--color-primary);
     color: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 700;
     font-family: var(--font-heading);
     margin: 0 auto 24px;

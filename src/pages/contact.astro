@@ -6,21 +6,25 @@ import ContentGrid from '../components/ContentGrid.astro';
 
 <Layout title="Contact" description="Schedule your appointment at The Bridge Chiropractic in San Diego. Call (858) 277-7500 or book online. Located at 4340 Genesee Ave, Suite 201.">
   <!-- Hero -->
-  <section class="hero-fullbleed" style="height: 80vh; min-height: 600px;">
+  <section class="hero-fullbleed">
     <video
-      class="hero-fullbleed__image"
+      class="hero-fullbleed__video"
       autoplay
       muted
       loop
       playsinline
+      aria-hidden="true"
     >
       <source src="https://res.cloudinary.com/dku1gnuat/video/upload/v1772135510/A_0004C206H251212_163500CS_CANON_puvlaw.mp4" type="video/mp4" />
     </video>
-    <div class="hero-fullbleed__overlay"></div>
-    <div class="hero-fullbleed__content" data-animate="fade-up">
-      <span class="hero-badge">Let's Connect</span>
-      <h1 class="hero-fullbleed__title">Get in Touch</h1>
-      <p class="hero-fullbleed__subtitle">Ready to start your journey to better movement and less pain?</p>
+    <div class="hero-fullbleed__overlay" aria-hidden="true"></div>
+    <div class="hero-fullbleed__content">
+      <span class="hero-fullbleed__eyebrow">Contact Us</span>
+      <h1 class="hero-fullbleed__title">Ready to move better<br />and feel stronger?</h1>
+      <p class="hero-fullbleed__subtitle">Book your first visit online, give us a call, or stop by our San Diego office. We'll take it from there.</p>
+      <div class="hero-fullbleed__cta">
+        <a href="tel:8582777500" class="btn btn--primary btn--lg">Call (858) 277-7500</a>
+      </div>
     </div>
   </section>
 
@@ -54,10 +58,10 @@ import ContentGrid from '../components/ContentGrid.astro';
   </SectionWrapper>
 
   <!-- Contact Form & Info -->
-  <SectionWrapper spacing="hero">
+  <SectionWrapper spacing="normal">
     <!-- Form at Top -->
     <div class="form-wrapper" data-animate="fade-up">
-      <h2 class="display-2" style="margin-bottom: 16px; text-align: center;">Schedule Your Visit</h2>
+      <h2 class="display-3" style="margin-bottom: 16px; text-align: center;">Schedule Your Visit</h2>
       <p style="color: var(--color-gray-dark); font-size: 1.125rem; margin-bottom: 48px; line-height: 1.7; text-align: center;">Fill out the form below and we'll get back to you within 24 hours to confirm your appointment.</p>
 
       <form class="glass contact-form" id="contact-form">

@@ -100,10 +100,10 @@ body::-webkit-scrollbar {
   --space-8xl: 256px;
 
   /* Responsive Section Padding */
-  --section-padding-sm: clamp(60px, 10vh, 80px);
-  --section-padding-md: clamp(80px, 12vh, 120px);
-  --section-padding-lg: clamp(120px, 15vh, 160px);
-  --section-padding-xl: clamp(160px, 20vh, 240px);
+  --section-padding-sm: clamp(40px, 6vh, 60px);
+  --section-padding-md: clamp(60px, 8vh, 80px);
+  --section-padding-lg: clamp(80px, 10vh, 100px);
+  --section-padding-xl: clamp(100px, 12vh, 140px);
 
   /* Border Radius - Sharp 90° Angles */
   --radius-sm: 0;
@@ -182,18 +182,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: clamp(2.5rem, 5.5vw, 4rem);
+  font-size: clamp(2rem, 4vw, 3rem);
   letter-spacing: -0.02em;
 }
 h2 {
-  font-size: clamp(2rem, 4.5vw, 3rem);
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
   letter-spacing: -0.015em;
 }
 h3 {
-  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
 }
 h4 {
-  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  font-size: clamp(1.0625rem, 2vw, 1.25rem);
 }
 
 p {
@@ -1134,87 +1134,101 @@ main {
 .hero-fullbleed {
   position: relative;
   width: 100%;
-  height: 90vh;
-  min-height: 700px;
+  height: 100vh;
+  min-height: 500px;
+  max-height: 700px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
 
+.hero-fullbleed__video,
 .hero-fullbleed__image {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
   object-fit: cover;
-  animation: slowZoom 20s ease-in-out infinite alternate;
-}
-
-@keyframes slowZoom {
-  0% { transform: scale(1); }
-  100% { transform: scale(1.05); }
+  z-index: 0;
 }
 
 .hero-fullbleed__overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.4);
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 
 .hero-fullbleed__content {
   position: relative;
-  z-index: 2;
-  color: var(--color-white);
+  z-index: 3;
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--space-2xl);
   text-align: center;
-  max-width: 800px;
-  padding: var(--space-2xl);
+}
+
+.hero-fullbleed__eyebrow {
+  display: inline-block;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-accent);
+  margin-bottom: var(--space-lg);
 }
 
 .hero-fullbleed__title {
-  font-size: clamp(3rem, 7vw, 5.5rem);
-  font-weight: 400;
+  font-family: var(--font-heading);
+  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+  font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--color-white);
   margin-bottom: var(--space-lg);
-  line-height: 1.1;
+  line-height: 1.15;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-fullbleed__subtitle {
-  font-size: clamp(1.125rem, 2vw, 1.5rem);
-  font-weight: 300;
-  letter-spacing: 0.01em;
-  color: rgba(255, 255, 255, 0.95);
-  margin-bottom: var(--space-2xl);
+  font-size: clamp(0.9375rem, 1.3vw, 1.0625rem);
+  font-weight: 400;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: var(--space-xl);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Hero Badge - Warm Earth Accent */
+.hero-fullbleed__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xl);
+  flex-wrap: wrap;
+}
+
+/* Hero Badge - legacy support */
 .hero-badge {
   display: inline-block;
-  padding: var(--space-xs) var(--space-lg);
-  background: var(--color-accent);
-  color: var(--color-white);
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  border-radius: var(--radius-full);
+  letter-spacing: 0.12em;
+  color: var(--color-accent);
   margin-bottom: var(--space-lg);
-  box-shadow: 0 4px 16px rgba(184, 149, 106, 0.3);
 }
 
-/* Section eyebrow in hero - Warm Earth Accent */
+/* Section eyebrow in hero */
 .hero-fullbleed .section__eyebrow {
-  background: var(--color-accent);
-  color: var(--color-white);
-  padding: var(--space-xs) var(--space-lg);
-  border-radius: var(--radius-full);
-  box-shadow: 0 4px 16px rgba(184, 149, 106, 0.3);
+  color: var(--color-accent);
 }
 
 /* Glassmorphism */
@@ -1288,42 +1302,42 @@ main {
 
 /* Expanded spacing */
 .section-hero {
-  padding: clamp(80px, 15vh, 160px) 0;
+  padding: clamp(60px, 10vh, 100px) 0;
 }
 
 /* Typography Refinements */
 .display-1 {
-  font-size: clamp(3.5rem, 9vw, 7rem);
+  font-size: clamp(2.5rem, 5vw, 3.75rem);
   font-weight: 400;
-  line-height: 1.05;
+  line-height: 1.1;
   letter-spacing: -0.03em;
   font-family: var(--font-heading);
 }
 
 .display-2 {
-  font-size: clamp(2.75rem, 7vw, 5.5rem);
+  font-size: clamp(1.875rem, 3.5vw, 2.75rem);
   font-weight: 400;
-  line-height: 1.08;
+  line-height: 1.15;
   letter-spacing: -0.025em;
   font-family: var(--font-heading);
 }
 
 .display-3 {
-  font-size: clamp(2.25rem, 5.5vw, 4rem);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
   font-weight: 400;
-  line-height: 1.12;
+  line-height: 1.2;
   letter-spacing: -0.02em;
   font-family: var(--font-heading);
 }
 
 .text-large {
-  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  font-size: clamp(1.0625rem, 1.5vw, 1.25rem);
   line-height: 1.8;
   font-weight: 300;
 }
 
 .text-xl {
-  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-size: clamp(1.125rem, 2vw, 1.375rem);
   line-height: 1.7;
   font-weight: 300;
 }
@@ -1385,7 +1399,7 @@ main {
 
 /* Premium CTA */
 .cta-premium {
-  padding: clamp(80px, 12vh, 140px) 0;
+  padding: clamp(60px, 8vh, 100px) 0;
   background: var(--color-charcoal);
   color: var(--color-white);
   text-align: center;
@@ -1398,7 +1412,7 @@ main {
 
 .cta-premium p {
   color: rgba(255, 255, 255, 0.85);
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   max-width: 700px;
   margin: 0 auto var(--space-2xl);
 }
@@ -1407,8 +1421,22 @@ main {
 @media (max-width: 768px) {
   .video-hero,
   .hero-fullbleed {
-    height: 70vh;
+    max-height: none;
     min-height: 500px;
+    height: 70vh;
+  }
+
+  .hero-fullbleed__content {
+    padding: 0 var(--space-lg);
+  }
+
+  .hero-fullbleed__title {
+    font-size: clamp(1.875rem, 7vw, 2.5rem);
+    max-width: 100%;
+  }
+
+  .hero-fullbleed__subtitle {
+    max-width: 100%;
   }
 
   .video-hero__controls {
@@ -1419,10 +1447,6 @@ main {
   .video-control-btn {
     width: 40px;
     height: 40px;
-  }
-
-  .hero-fullbleed__title {
-    font-size: clamp(2rem, 10vw, 3rem);
   }
 }
 
@@ -1647,7 +1671,7 @@ main {
 
 .stat-display__number {
   font-family: var(--font-heading);
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 700;
   line-height: 1;
   color: var(--color-primary);

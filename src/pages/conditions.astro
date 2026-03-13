@@ -7,32 +7,36 @@ import VideoBackground from '../components/VideoBackground.astro';
 
 <Layout title="Conditions We Treat" description="The Bridge Chiropractic treats back pain, neck pain, sciatica, headaches, balance issues, and more. Dr. Nathan Beyerl offers personalized care in San Diego.">
   <!-- Hero -->
-  <section class="hero-fullbleed" style="height: 80vh; min-height: 600px;">
+  <section class="hero-fullbleed">
     <video
-      class="hero-fullbleed__image"
+      class="hero-fullbleed__video"
       autoplay
       muted
       loop
       playsinline
+      aria-hidden="true"
     >
       <source src="https://res.cloudinary.com/dku1gnuat/video/upload/v1772139018/basketball-players-playing-basketball-4k-2026-02-02-07-58-09-utc_lcrizu.mov" type="video/mp4" />
     </video>
-    <div class="hero-fullbleed__overlay"></div>
-    <div class="hero-fullbleed__content" data-animate="fade-up">
-      <span class="hero-badge">Comprehensive Care</span>
-      <h1 class="hero-fullbleed__title">Conditions We Treat</h1>
-      <p class="hero-fullbleed__subtitle">Personalized treatment for musculoskeletal and neurological conditions.</p>
+    <div class="hero-fullbleed__overlay" aria-hidden="true"></div>
+    <div class="hero-fullbleed__content">
+      <span class="hero-fullbleed__eyebrow">Conditions We Treat</span>
+      <h1 class="hero-fullbleed__title">Pain doesn't have to<br />run your life.</h1>
+      <p class="hero-fullbleed__subtitle">Whether it's back pain, neck stiffness, headaches, or balance issues — we find what's driving the problem and build a plan to fix it.</p>
+      <div class="hero-fullbleed__cta">
+        <a href="/contact" class="btn btn--primary btn--lg">Book Your Visit</a>
+      </div>
     </div>
   </section>
 
   <!-- Intro - Premium Approach Section -->
-  <SectionWrapper spacing="hero">
+  <SectionWrapper spacing="normal">
     <div class="personalized-care-section">
       <div class="personalized-care-grid">
         <!-- Main Content -->
         <div class="personalized-care-main" data-animate="fade-right">
           <div class="badge-premium">Personalized Approach</div>
-          <h2 class="display-3" style="margin-bottom: 24px; line-height: 1.2;">Your Unique Journey to Wellness</h2>
+          <h2 class="display-2" style="margin-bottom: 20px; line-height: 1.2;">Your Unique Journey to Wellness</h2>
           <p class="text-large" style="color: var(--color-gray-dark); line-height: 1.8; margin-bottom: 32px;">
             Every patient receives individualized care. What works for one person may not work for another—that's why Dr. Beyerl takes time to understand <strong style="color: var(--color-primary);">YOUR</strong> specific condition, goals, and concerns before creating a treatment plan.
           </p>
@@ -118,57 +122,57 @@ import VideoBackground from '../components/VideoBackground.astro';
   </SectionWrapper>
 
   <!-- Spinal Conditions -->
-  <SectionWrapper background="gray" spacing="hero">
+  <SectionWrapper background="gray" spacing="normal">
     <div class="section__header" data-animate="fade-up">
       <span class="section__eyebrow" style="color: var(--color-accent);">Spinal Health</span>
-      <h2 class="display-2">Back & Neck Conditions</h2>
+      <h2 class="display-3">Back & Neck Conditions</h2>
     </div>
 
     <ContentGrid columns={3} gap="xl" class="mt-4xl">
       <div class="card-premium">
         <div style="padding: 40px;">
-          <div style="font-size: 3rem; font-weight: 300; color: var(--color-primary); font-family: var(--font-heading); margin-bottom: 16px;">01</div>
-          <h3 style="font-size: 1.5rem; margin-bottom: 16px; font-weight: 600;">Low Back Pain</h3>
+          <div style="font-size: 2rem; font-weight: 300; color: var(--color-primary); font-family: var(--font-heading); margin-bottom: 12px;">01</div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 12px; font-weight: 600;">Low Back Pain</h3>
           <p style="color: var(--color-gray-dark); line-height: 1.7;">Whether from injury, poor posture, or degenerative changes, we address the root cause through adjustments, soft tissue work, and movement training.</p>
         </div>
       </div>
 
       <div class="card-premium">
         <div style="padding: 40px;">
-          <div style="font-size: 3rem; font-weight: 300; color: var(--color-primary); font-family: var(--font-heading); margin-bottom: 16px;">02</div>
-          <h3 style="font-size: 1.5rem; margin-bottom: 16px; font-weight: 600;">Neck Pain & Stiffness</h3>
+          <div style="font-size: 2rem; font-weight: 300; color: var(--color-primary); font-family: var(--font-heading); margin-bottom: 12px;">02</div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 12px; font-weight: 600;">Neck Pain & Stiffness</h3>
           <p style="color: var(--color-gray-dark); line-height: 1.7;">Office work, phone use, and daily stress create chronic neck tension. We restore mobility and reduce pain through gentle, targeted care.</p>
         </div>
       </div>
 
       <div class="card-premium">
         <div style="padding: 40px;">
-          <div style="font-size: 3rem; font-weight: 300; color: var(--color-primary); font-family: var(--font-heading); margin-bottom: 16px;">03</div>
-          <h3 style="font-size: 1.5rem; margin-bottom: 16px; font-weight: 600;">Sciatica</h3>
+          <div style="font-size: 2rem; font-weight: 300; color: var(--color-primary); font-family: var(--font-heading); margin-bottom: 12px;">03</div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 12px; font-weight: 600;">Sciatica</h3>
           <p style="color: var(--color-gray-dark); line-height: 1.7;">Radiating leg pain from nerve compression requires precise treatment. We identify the source and provide relief through comprehensive care.</p>
         </div>
       </div>
 
       <div class="card-premium">
         <div style="padding: 40px;">
-          <div style="font-size: 3rem; font-weight: 300; color: var(--color-primary); font-family: var(--font-heading); margin-bottom: 16px;">04</div>
-          <h3 style="font-size: 1.5rem; margin-bottom: 16px; font-weight: 600;">Disc Problems</h3>
+          <div style="font-size: 2rem; font-weight: 300; color: var(--color-primary); font-family: var(--font-heading); margin-bottom: 12px;">04</div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 12px; font-weight: 600;">Disc Problems</h3>
           <p style="color: var(--color-gray-dark); line-height: 1.7;">Herniated, bulging, or degenerative discs benefit from gentle decompression and stabilization exercises tailored to your condition.</p>
         </div>
       </div>
 
       <div class="card-premium">
         <div style="padding: 40px;">
-          <div style="font-size: 3rem; font-weight: 300; color: var(--color-primary); font-family: var(--font-heading); margin-bottom: 16px;">05</div>
-          <h3 style="font-size: 1.5rem; margin-bottom: 16px; font-weight: 600;">Spinal Stenosis</h3>
+          <div style="font-size: 2rem; font-weight: 300; color: var(--color-primary); font-family: var(--font-heading); margin-bottom: 12px;">05</div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 12px; font-weight: 600;">Spinal Stenosis</h3>
           <p style="color: var(--color-gray-dark); line-height: 1.7;">Narrowing of the spinal canal causes pain and numbness. We help manage symptoms and improve function through conservative care.</p>
         </div>
       </div>
 
       <div class="card-premium">
         <div style="padding: 40px;">
-          <div style="font-size: 3rem; font-weight: 300; color: var(--color-primary); font-family: var(--font-heading); margin-bottom: 16px;">06</div>
-          <h3 style="font-size: 1.5rem; margin-bottom: 16px; font-weight: 600;">Scoliosis</h3>
+          <div style="font-size: 2rem; font-weight: 300; color: var(--color-primary); font-family: var(--font-heading); margin-bottom: 12px;">06</div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 12px; font-weight: 600;">Scoliosis</h3>
           <p style="color: var(--color-gray-dark); line-height: 1.7;">Adult scoliosis can cause discomfort and imbalance. We provide supportive care to reduce pain and improve spinal function.</p>
         </div>
       </div>
@@ -176,15 +180,15 @@ import VideoBackground from '../components/VideoBackground.astro';
   </SectionWrapper>
 
   <!-- Joint & Extremity -->
-  <SectionWrapper spacing="hero">
+  <SectionWrapper spacing="normal">
     <div class="section__header" data-animate="fade-up">
       <span class="section__eyebrow" style="color: var(--color-accent);">Joint Health</span>
-      <h2 class="display-2">Joint & Extremity Conditions</h2>
+      <h2 class="display-3">Joint & Extremity Conditions</h2>
     </div>
 
     <ContentGrid columns={2} gap="xl" class="mt-4xl">
       <div class="elevated hover-lift" style="padding: 48px;">
-        <h3 style="font-size: 1.75rem; margin-bottom: 16px; font-weight: 600;">Shoulder Pain</h3>
+        <h3 style="font-size: 1.375rem; margin-bottom: 12px; font-weight: 600;">Shoulder Pain</h3>
         <p style="color: var(--color-gray-dark); line-height: 1.7; margin-bottom: 20px;">Rotator cuff issues, frozen shoulder, and impingement affect daily activities. We address both the joint and surrounding soft tissue.</p>
         <ul style="list-style: none; padding: 0;">
           <li style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px; color: var(--color-gray-dark);">
@@ -203,7 +207,7 @@ import VideoBackground from '../components/VideoBackground.astro';
       </div>
 
       <div class="elevated hover-lift" style="padding: 48px;">
-        <h3 style="font-size: 1.75rem; margin-bottom: 16px; font-weight: 600;">Hip & Knee Pain</h3>
+        <h3 style="font-size: 1.375rem; margin-bottom: 12px; font-weight: 600;">Hip & Knee Pain</h3>
         <p style="color: var(--color-gray-dark); line-height: 1.7; margin-bottom: 20px;">Joint pain in the lower body affects mobility and independence. We help restore function and reduce discomfort.</p>
         <ul style="list-style: none; padding: 0;">
           <li style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px; color: var(--color-gray-dark);">
@@ -222,7 +226,7 @@ import VideoBackground from '../components/VideoBackground.astro';
       </div>
 
       <div class="elevated hover-lift" style="padding: 48px;">
-        <h3 style="font-size: 1.75rem; margin-bottom: 16px; font-weight: 600;">Elbow & Wrist Issues</h3>
+        <h3 style="font-size: 1.375rem; margin-bottom: 12px; font-weight: 600;">Elbow & Wrist Issues</h3>
         <p style="color: var(--color-gray-dark); line-height: 1.7; margin-bottom: 20px;">Repetitive strain and overuse injuries respond well to targeted chiropractic care and rehabilitation.</p>
         <ul style="list-style: none; padding: 0;">
           <li style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px; color: var(--color-gray-dark);">
@@ -241,7 +245,7 @@ import VideoBackground from '../components/VideoBackground.astro';
       </div>
 
       <div class="elevated hover-lift" style="padding: 48px;">
-        <h3 style="font-size: 1.75rem; margin-bottom: 16px; font-weight: 600;">Ankle & Foot Pain</h3>
+        <h3 style="font-size: 1.375rem; margin-bottom: 12px; font-weight: 600;">Ankle & Foot Pain</h3>
         <p style="color: var(--color-gray-dark); line-height: 1.7; margin-bottom: 20px;">From plantar fasciitis to ankle sprains, we treat the foundation of your movement system.</p>
         <ul style="list-style: none; padding: 0;">
           <li style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px; color: var(--color-gray-dark);">
@@ -262,10 +266,10 @@ import VideoBackground from '../components/VideoBackground.astro';
   </SectionWrapper>
 
   <!-- Neurological & Other -->
-  <SectionWrapper background="gray" spacing="hero">
+  <SectionWrapper background="gray" spacing="normal">
     <div class="section__header" data-animate="fade-up">
       <span class="section__eyebrow" style="color: var(--color-accent);">Neurological Health</span>
-      <h2 class="display-2">Neurological & Other Conditions</h2>
+      <h2 class="display-3">Neurological & Other Conditions</h2>
     </div>
 
     <ContentGrid columns={3} gap="xl" class="mt-4xl">
@@ -450,7 +454,7 @@ import VideoBackground from '../components/VideoBackground.astro';
   }
 
   .stat-number {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-weight: 700;
     font-family: var(--font-heading);
     background: var(--color-primary);

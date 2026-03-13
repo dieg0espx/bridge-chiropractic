@@ -11,29 +11,24 @@ import OfferingCard from '../../components/OfferingCard.astro';
   description="Expert neurological rehabilitation in San Diego for concussions, post-concussion syndrome, vestibular disorders, and brain injury recovery. Dr. Nate Beyerl offers specialized neuro rehab to restore function and quality of life."
 >
   <!-- Hero Section -->
-  <section class="hero-fullbleed" style="height: 85vh; min-height: 650px;">
+  <section class="hero-fullbleed">
     <video
-      class="hero-fullbleed__image"
+      class="hero-fullbleed__video"
       autoplay
       muted
       loop
       playsinline
+      aria-hidden="true"
     >
       <source src="https://res.cloudinary.com/dku1gnuat/video/upload/v1772135494/A_0004C207H251212_163548YT_CANON_kfbpge.mp4" type="video/mp4" />
     </video>
-    <div class="hero-fullbleed__overlay"></div>
+    <div class="hero-fullbleed__overlay" aria-hidden="true"></div>
 
-    <!-- Floating particles for ambiance -->
-    <div class="floating-particles">
-      <div class="particle" style="left: 15%; top: 25%; animation-delay: 0s;"></div>
-      <div class="particle" style="left: 80%; top: 40%; animation-delay: 5s;"></div>
-      <div class="particle" style="left: 45%; top: 70%; animation-delay: 10s;"></div>
-    </div>
-
-    <div class="hero-fullbleed__content" data-animate="fade-up">
-      <span class="hero-badge">Specialized Care</span>
-      <h1 class="hero-fullbleed__title">Neuro & Brain Rehabilitation</h1>
-      <p class="hero-fullbleed__subtitle">Targeted rehabilitation for concussions, vestibular disorders, and neurological conditions to restore function, reduce symptoms, and support brain health.</p>
+    <div class="hero-fullbleed__content">
+      <span class="hero-fullbleed__eyebrow">Neuro Rehabilitation</span>
+      <h1 class="hero-fullbleed__title">Reconnecting brain<br />and body.</h1>
+      <p class="hero-fullbleed__subtitle">Specialized neurological rehabilitation to improve balance, coordination, and cognitive-motor function after injury or decline.</p>
+      <div class="hero-fullbleed__cta"><a href="/contact" class="btn btn--primary btn--lg">Book Your Visit</a></div>
     </div>
   </section>
 

@@ -9,28 +9,24 @@ import VideoBackground from '../../components/VideoBackground.astro';
   description="Specialized fall prevention and balance training in San Diego for active adults 55+. Dr. Nate Beyerl helps improve stability, coordination, and confidence to reduce fall risk and maintain independence."
 >
   <!-- Hero Section -->
-  <section class="hero-fullbleed" style="height: 85vh; min-height: 650px;">
-    <video class="hero-fullbleed__image" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1920&h=1080&fit=crop">
+  <section class="hero-fullbleed">
+    <video class="hero-fullbleed__video" autoplay muted loop playsinline aria-hidden="true">
       <source src="https://res.cloudinary.com/dku1gnuat/video/upload/v1772135494/A_0004C207H251212_163548YT_CANON_kfbpge.mp4" type="video/mp4" />
     </video>
-    <div class="hero-fullbleed__overlay"></div>
-    <div class="floating-particles">
-      <div class="particle" style="left: 15%; top: 25%; animation-delay: 0s;"></div>
-      <div class="particle" style="left: 80%; top: 40%; animation-delay: 5s;"></div>
-      <div class="particle" style="left: 45%; top: 70%; animation-delay: 10s;"></div>
-    </div>
-    <div class="hero-fullbleed__content" data-animate="fade-up">
-      <span class="hero-badge">Specialized Care</span>
-      <h1 class="hero-fullbleed__title">Fall Prevention & Balance Training</h1>
-      <p class="hero-fullbleed__subtitle">Improve stability, reduce fall risk, and maintain independence with targeted balance and coordination training.</p>
+    <div class="hero-fullbleed__overlay" aria-hidden="true"></div>
+    <div class="hero-fullbleed__content">
+      <span class="hero-fullbleed__eyebrow">Fall Prevention</span>
+      <h1 class="hero-fullbleed__title">Stay steady.<br />Stay independent.</h1>
+      <p class="hero-fullbleed__subtitle">Balance and coordination training to reduce fall risk and help you move through life with confidence.</p>
+      <div class="hero-fullbleed__cta"><a href="/contact" class="btn btn--primary btn--lg">Book Your Visit</a></div>
     </div>
   </section>
 
   <!-- Overview Section -->
-  <SectionWrapper background="white" spacing="hero" containerWidth="narrow">
+  <SectionWrapper background="white" spacing="normal" containerWidth="narrow">
     <div class="service-overview" data-animate="fade-up">
       <span class="section__eyebrow">Why Fall Prevention Matters</span>
-      <h2 class="display-2">Stay Active, Confident, and Independent</h2>
+      <h2 class="display-3">Stay Active, Confident, and Independent</h2>
 
       <div class="overview-content">
         <p class="text-large">Falls are not a normal part of aging—they're often preventable. Poor balance, reduced coordination, and declining strength create risk, but targeted training can reverse these changes and restore confidence in your movement.</p>
@@ -45,10 +41,10 @@ import VideoBackground from '../../components/VideoBackground.astro';
   </SectionWrapper>
 
   <!-- Program Components -->
-  <SectionWrapper background="gray" spacing="hero">
+  <SectionWrapper background="gray" spacing="normal">
     <div class="section__header" data-animate="fade-up">
       <span class="section__eyebrow">Training Components</span>
-      <h2 class="display-2">What Fall Prevention Training Includes</h2>
+      <h2 class="display-3">What Fall Prevention Training Includes</h2>
       <p class="text-large" style="max-width: 700px; margin: 0 auto;">Evidence-based protocols targeting all aspects of balance.</p>
     </div>
 
@@ -120,10 +116,10 @@ import VideoBackground from '../../components/VideoBackground.astro';
   </SectionWrapper>
 
   <!-- Benefits -->
-  <SectionWrapper background="white" spacing="hero">
+  <SectionWrapper background="white" spacing="normal">
     <div class="section__header" data-animate="fade-up">
       <span class="section__eyebrow">Expected Outcomes</span>
-      <h2 class="display-2">Benefits of Fall Prevention Training</h2>
+      <h2 class="display-3">Benefits of Fall Prevention Training</h2>
     </div>
 
     <div class="conditions-grid">
@@ -196,10 +192,10 @@ import VideoBackground from '../../components/VideoBackground.astro';
   </SectionWrapper>
 
   <!-- Who Benefits -->
-  <SectionWrapper background="gray" spacing="hero">
+  <SectionWrapper background="gray" spacing="normal">
     <div class="section__header" data-animate="fade-up">
       <span class="section__eyebrow">Ideal Candidates</span>
-      <h2 class="display-2">Who Benefits from Fall Prevention Training?</h2>
+      <h2 class="display-3">Who Benefits from Fall Prevention Training?</h2>
     </div>
 
     <div class="process-steps">
@@ -238,10 +234,10 @@ import VideoBackground from '../../components/VideoBackground.astro';
   </SectionWrapper>
 
   <!-- FAQ Section -->
-  <SectionWrapper background="white" spacing="hero" containerWidth="normal">
+  <SectionWrapper background="white" spacing="normal" containerWidth="normal">
     <div class="section__header" data-animate="fade-up">
       <span class="section__eyebrow">Common Questions</span>
-      <h2 class="display-2">Fall Prevention FAQs</h2>
+      <h2 class="display-3">Fall Prevention FAQs</h2>
     </div>
 
     <div class="faq-grid">
@@ -323,7 +319,7 @@ import VideoBackground from '../../components/VideoBackground.astro';
   <SectionWrapper background="gray" spacing="normal">
     <div class="section__header" data-animate="fade-up">
       <span class="section__eyebrow">Complementary Care</span>
-      <h2 class="display-2">Services That Work Well Together</h2>
+      <h2 class="display-3">Services That Work Well Together</h2>
     </div>
 
     <div class="related-services">
@@ -355,7 +351,7 @@ import VideoBackground from '../../components/VideoBackground.astro';
     class="cta-premium"
   >
     <div class="container container-narrow" data-animate="fade-up">
-      <h2 class="display-2" style="color: var(--color-white); margin-bottom: var(--space-lg);">
+      <h2 class="display-3" style="color: var(--color-white); margin-bottom: var(--space-lg);">
         Move with Confidence Again
       </h2>
       <p class="text-large" style="color: rgba(255, 255, 255, 0.9); max-width: 700px; margin: 0 auto var(--space-2xl);">

@@ -9,37 +9,32 @@ import VideoBackground from '../../components/VideoBackground.astro';
   description="Expert chiropractic adjustments in San Diego for back pain, neck pain, headaches, and more. Dr. Nate Beyerl offers personalized care with gentle and traditional adjustment techniques tailored to your needs."
 >
   <!-- Hero Section -->
-  <section class="hero-fullbleed" style="height: 85vh; min-height: 650px;">
+  <section class="hero-fullbleed">
     <video
-      class="hero-fullbleed__image"
+      class="hero-fullbleed__video"
       autoplay
       muted
       loop
       playsinline
+      aria-hidden="true"
     >
       <source src="https://res.cloudinary.com/dku1gnuat/video/upload/v1772135494/A_0004C207H251212_163548YT_CANON_kfbpge.mp4" type="video/mp4" />
     </video>
-    <div class="hero-fullbleed__overlay"></div>
+    <div class="hero-fullbleed__overlay" aria-hidden="true"></div>
 
-    <!-- Floating particles for ambiance -->
-    <div class="floating-particles">
-      <div class="particle" style="left: 15%; top: 25%; animation-delay: 0s;"></div>
-      <div class="particle" style="left: 80%; top: 40%; animation-delay: 5s;"></div>
-      <div class="particle" style="left: 45%; top: 70%; animation-delay: 10s;"></div>
-    </div>
-
-    <div class="hero-fullbleed__content" data-animate="fade-up">
-      <span class="hero-badge">Core Service</span>
-      <h1 class="hero-fullbleed__title">Chiropractic Adjustments</h1>
-      <p class="hero-fullbleed__subtitle">Precise, personalized spinal adjustments to restore mobility, reduce pain, and help you move better.</p>
+    <div class="hero-fullbleed__content">
+      <span class="hero-fullbleed__eyebrow">Chiropractic Adjustments</span>
+      <h1 class="hero-fullbleed__title">Precise adjustments.<br />Lasting relief.</h1>
+      <p class="hero-fullbleed__subtitle">Controlled, personalized spinal adjustments that restore mobility and reduce pain — tailored to your comfort level.</p>
+      <div class="hero-fullbleed__cta"><a href="/contact" class="btn btn--primary btn--lg">Book Your Visit</a></div>
     </div>
   </section>
 
   <!-- Overview Section -->
-  <SectionWrapper background="white" spacing="hero" containerWidth="narrow">
+  <SectionWrapper background="white" spacing="normal" containerWidth="narrow">
     <div class="service-overview" data-animate="fade-up">
       <span class="section__eyebrow">What Are Chiropractic Adjustments?</span>
-      <h2 class="display-2">Restore Movement, Reduce Pain, Build Resilience</h2>
+      <h2 class="display-3">Restore Movement, Reduce Pain, Build Resilience</h2>
 
       <div class="overview-content">
         <p class="text-large">Chiropractic adjustments are controlled, precise movements applied to spinal joints that aren't moving properly. When joints lose mobility due to injury, poor posture, or daily stress, they create irritation that leads to pain, stiffness, and reduced function.</p>
@@ -54,10 +49,10 @@ import VideoBackground from '../../components/VideoBackground.astro';
   </SectionWrapper>
 
   <!-- Benefits Section -->
-  <SectionWrapper background="gray" spacing="hero">
+  <SectionWrapper background="gray" spacing="normal">
     <div class="section__header" data-animate="fade-up">
       <span class="section__eyebrow">Benefits</span>
-      <h2 class="display-2">How Chiropractic Adjustments Help</h2>
+      <h2 class="display-3">How Chiropractic Adjustments Help</h2>
       <p class="text-large" style="max-width: 700px; margin: 0 auto;">Targeted adjustments address the root cause of discomfort, not just symptoms.</p>
     </div>
 
@@ -130,10 +125,10 @@ import VideoBackground from '../../components/VideoBackground.astro';
   </SectionWrapper>
 
   <!-- Process Section -->
-  <SectionWrapper background="white" spacing="hero">
+  <SectionWrapper background="white" spacing="normal">
     <div class="section__header" data-animate="fade-up">
       <span class="section__eyebrow">Our Approach</span>
-      <h2 class="display-2">What to Expect During Your Adjustment</h2>
+      <h2 class="display-3">What to Expect During Your Adjustment</h2>
       <p class="text-large" style="max-width: 700px; margin: 0 auto;">Care tailored to your comfort, your body, and your goals.</p>
     </div>
 
@@ -173,10 +168,10 @@ import VideoBackground from '../../components/VideoBackground.astro';
   </SectionWrapper>
 
   <!-- Conditions Treated -->
-  <SectionWrapper background="gray" spacing="hero">
+  <SectionWrapper background="gray" spacing="normal">
     <div class="section__header" data-animate="fade-up">
       <span class="section__eyebrow">Conditions We Treat</span>
-      <h2 class="display-2">Common Issues Helped by Chiropractic Adjustments</h2>
+      <h2 class="display-3">Common Issues Helped by Chiropractic Adjustments</h2>
     </div>
 
     <div class="conditions-grid">
@@ -255,10 +250,10 @@ import VideoBackground from '../../components/VideoBackground.astro';
   </SectionWrapper>
 
   <!-- FAQ Section -->
-  <SectionWrapper background="white" spacing="hero" containerWidth="normal">
+  <SectionWrapper background="white" spacing="normal" containerWidth="normal">
     <div class="section__header" data-animate="fade-up">
       <span class="section__eyebrow">Common Questions</span>
-      <h2 class="display-2">Chiropractic Adjustment FAQs</h2>
+      <h2 class="display-3">Chiropractic Adjustment FAQs</h2>
     </div>
 
     <div class="faq-grid">
@@ -340,7 +335,7 @@ import VideoBackground from '../../components/VideoBackground.astro';
   <SectionWrapper background="gray" spacing="normal">
     <div class="section__header" data-animate="fade-up">
       <span class="section__eyebrow">Complementary Care</span>
-      <h2 class="display-2">Services That Work Well Together</h2>
+      <h2 class="display-3">Services That Work Well Together</h2>
     </div>
 
     <div class="related-services">
@@ -372,7 +367,7 @@ import VideoBackground from '../../components/VideoBackground.astro';
     class="cta-premium"
   >
     <div class="container container-narrow" data-animate="fade-up">
-      <h2 class="display-2" style="color: var(--color-white); margin-bottom: var(--space-lg);">
+      <h2 class="display-3" style="color: var(--color-white); margin-bottom: var(--space-lg);">
         Ready to Move Better?
       </h2>
       <p class="text-large" style="color: rgba(255, 255, 255, 0.9); max-width: 700px; margin: 0 auto var(--space-2xl);">

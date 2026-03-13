@@ -9,28 +9,24 @@ import VideoBackground from '../../components/VideoBackground.astro';
   description="Customized home exercise programs in San Diego to support your chiropractic care. Dr. Nate Beyerl creates personalized exercises to maintain progress, prevent re-injury, and build lasting strength."
 >
   <!-- Hero Section -->
-  <section class="hero-fullbleed" style="height: 85vh; min-height: 650px;">
-    <video class="hero-fullbleed__image" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1920&h=1080&fit=crop">
+  <section class="hero-fullbleed">
+    <video class="hero-fullbleed__video" autoplay muted loop playsinline aria-hidden="true">
       <source src="https://res.cloudinary.com/dku1gnuat/video/upload/v1772139030/sporty-girl-rock-climber-climbs-the-climbing-wall-2025-12-17-13-16-27-utc_aebiuq.mov" type="video/mp4" />
     </video>
-    <div class="hero-fullbleed__overlay"></div>
-    <div class="floating-particles">
-      <div class="particle" style="left: 15%; top: 25%; animation-delay: 0s;"></div>
-      <div class="particle" style="left: 80%; top: 40%; animation-delay: 5s;"></div>
-      <div class="particle" style="left: 45%; top: 70%; animation-delay: 10s;"></div>
-    </div>
-    <div class="hero-fullbleed__content" data-animate="fade-up">
-      <span class="hero-badge">Active Care</span>
-      <h1 class="hero-fullbleed__title">Home Exercise Programs</h1>
-      <p class="hero-fullbleed__subtitle">Personalized exercises designed to reinforce treatment, build resilience, and help you maintain progress independently.</p>
+    <div class="hero-fullbleed__overlay" aria-hidden="true"></div>
+    <div class="hero-fullbleed__content">
+      <span class="hero-fullbleed__eyebrow">Home Exercises</span>
+      <h1 class="hero-fullbleed__title">Simple exercises.<br />Stronger results.</h1>
+      <p class="hero-fullbleed__subtitle">Personalized movement programs designed to reinforce your progress between visits and build lasting resilience.</p>
+      <div class="hero-fullbleed__cta"><a href="/contact" class="btn btn--primary btn--lg">Book Your Visit</a></div>
     </div>
   </section>
 
   <!-- Overview Section -->
-  <SectionWrapper background="white" spacing="hero" containerWidth="narrow">
+  <SectionWrapper background="white" spacing="normal" containerWidth="narrow">
     <div class="service-overview" data-animate="fade-up">
       <span class="section__eyebrow">Why Home Exercises Matter</span>
-      <h2 class="display-2">Movement Is Medicine</h2>
+      <h2 class="display-3">Movement Is Medicine</h2>
 
       <div class="overview-content">
         <p class="text-large">Home exercises aren't extra credit—they're a critical part of sustainable improvement. What you do between visits determines how well adjustments hold, how quickly you recover, and whether issues return.</p>
@@ -45,10 +41,10 @@ import VideoBackground from '../../components/VideoBackground.astro';
   </SectionWrapper>
 
   <!-- Program Components -->
-  <SectionWrapper background="gray" spacing="hero">
+  <SectionWrapper background="gray" spacing="normal">
     <div class="section__header" data-animate="fade-up">
       <span class="section__eyebrow">What's Included</span>
-      <h2 class="display-2">Components of Your Program</h2>
+      <h2 class="display-3">Components of Your Program</h2>
       <p class="text-large" style="max-width: 700px; margin: 0 auto;">Targeted exercises addressing your specific needs.</p>
     </div>
 
@@ -117,10 +113,10 @@ import VideoBackground from '../../components/VideoBackground.astro';
   </SectionWrapper>
 
   <!-- How It Works -->
-  <SectionWrapper background="white" spacing="hero">
+  <SectionWrapper background="white" spacing="normal">
     <div class="section__header" data-animate="fade-up">
       <span class="section__eyebrow">The Process</span>
-      <h2 class="display-2">How Your Program Is Created</h2>
+      <h2 class="display-3">How Your Program Is Created</h2>
       <p class="text-large" style="max-width: 700px; margin: 0 auto;">Customized to your body, your goals, and your lifestyle.</p>
     </div>
 
@@ -160,10 +156,10 @@ import VideoBackground from '../../components/VideoBackground.astro';
   </SectionWrapper>
 
   <!-- Benefits -->
-  <SectionWrapper background="gray" spacing="hero">
+  <SectionWrapper background="gray" spacing="normal">
     <div class="section__header" data-animate="fade-up">
       <span class="section__eyebrow">Why This Works</span>
-      <h2 class="display-2">Benefits of Home Exercise Programs</h2>
+      <h2 class="display-3">Benefits of Home Exercise Programs</h2>
     </div>
 
     <div class="conditions-grid">
@@ -236,10 +232,10 @@ import VideoBackground from '../../components/VideoBackground.astro';
   </SectionWrapper>
 
   <!-- FAQ Section -->
-  <SectionWrapper background="white" spacing="hero" containerWidth="normal">
+  <SectionWrapper background="white" spacing="normal" containerWidth="normal">
     <div class="section__header" data-animate="fade-up">
       <span class="section__eyebrow">Common Questions</span>
-      <h2 class="display-2">Home Exercise Program FAQs</h2>
+      <h2 class="display-3">Home Exercise Program FAQs</h2>
     </div>
 
     <div class="faq-grid">
@@ -321,7 +317,7 @@ import VideoBackground from '../../components/VideoBackground.astro';
   <SectionWrapper background="gray" spacing="normal">
     <div class="section__header" data-animate="fade-up">
       <span class="section__eyebrow">Complementary Care</span>
-      <h2 class="display-2">Services That Work Well Together</h2>
+      <h2 class="display-3">Services That Work Well Together</h2>
     </div>
 
     <div class="related-services">
@@ -353,7 +349,7 @@ import VideoBackground from '../../components/VideoBackground.astro';
     class="cta-premium"
   >
     <div class="container container-narrow" data-animate="fade-up">
-      <h2 class="display-2" style="color: var(--color-white); margin-bottom: var(--space-lg);">
+      <h2 class="display-3" style="color: var(--color-white); margin-bottom: var(--space-lg);">
         Take Control of Your Recovery
       </h2>
       <p class="text-large" style="color: rgba(255, 255, 255, 0.9); max-width: 700px; margin: 0 auto var(--space-2xl);">

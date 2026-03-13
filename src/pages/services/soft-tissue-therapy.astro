@@ -9,37 +9,32 @@ import VideoBackground from '../../components/VideoBackground.astro';
   description="Expert soft tissue therapy in San Diego to reduce muscle tension, improve mobility, and accelerate recovery. Dr. Nate Beyerl uses myofascial release, trigger point therapy, and instrument-assisted techniques."
 >
   <!-- Hero Section -->
-  <section class="hero-fullbleed" style="height: 85vh; min-height: 650px;">
+  <section class="hero-fullbleed">
     <video
-      class="hero-fullbleed__image"
+      class="hero-fullbleed__video"
       autoplay
       muted
       loop
       playsinline
+      aria-hidden="true"
     >
       <source src="https://res.cloudinary.com/dku1gnuat/video/upload/v1772135494/A_0004C207H251212_163548YT_CANON_kfbpge.mp4" type="video/mp4" />
     </video>
-    <div class="hero-fullbleed__overlay"></div>
+    <div class="hero-fullbleed__overlay" aria-hidden="true"></div>
 
-    <!-- Floating particles for ambiance -->
-    <div class="floating-particles">
-      <div class="particle" style="left: 15%; top: 25%; animation-delay: 0s;"></div>
-      <div class="particle" style="left: 80%; top: 40%; animation-delay: 5s;"></div>
-      <div class="particle" style="left: 45%; top: 70%; animation-delay: 10s;"></div>
-    </div>
-
-    <div class="hero-fullbleed__content" data-animate="fade-up">
-      <span class="hero-badge">Complementary Care</span>
-      <h1 class="hero-fullbleed__title">Soft Tissue Therapy</h1>
-      <p class="hero-fullbleed__subtitle">Release muscle tension, break down adhesions, and restore mobility with targeted soft tissue techniques.</p>
+    <div class="hero-fullbleed__content">
+      <span class="hero-fullbleed__eyebrow">Soft Tissue Therapy</span>
+      <h1 class="hero-fullbleed__title">Releasing tension<br />your body's been holding.</h1>
+      <p class="hero-fullbleed__subtitle">Targeted muscle and fascia work to reduce stiffness, improve range of motion, and help adjustments last longer.</p>
+      <div class="hero-fullbleed__cta"><a href="/contact" class="btn btn--primary btn--lg">Book Your Visit</a></div>
     </div>
   </section>
 
   <!-- Overview Section -->
-  <SectionWrapper background="white" spacing="hero" containerWidth="narrow">
+  <SectionWrapper background="white" spacing="normal" containerWidth="narrow">
     <div class="service-overview" data-animate="fade-up">
       <span class="section__eyebrow">What Is Soft Tissue Therapy?</span>
-      <h2 class="display-2">Address Muscles, Fascia, and Connective Tissue</h2>
+      <h2 class="display-3">Address Muscles, Fascia, and Connective Tissue</h2>
 
       <div class="overview-content">
         <p class="text-large">Soft tissue therapy targets the muscles, tendons, ligaments, and fascia that support your spine and joints. When these tissues become tight, restricted, or develop adhesions, they limit mobility and contribute to pain—even when joints are moving properly.</p>
@@ -54,10 +49,10 @@ import VideoBackground from '../../components/VideoBackground.astro';
   </SectionWrapper>
 
   <!-- Techniques Section -->
-  <SectionWrapper background="gray" spacing="hero">
+  <SectionWrapper background="gray" spacing="normal">
     <div class="section__header" data-animate="fade-up">
       <span class="section__eyebrow">Treatment Methods</span>
-      <h2 class="display-2">Soft Tissue Techniques We Use</h2>
+      <h2 class="display-3">Soft Tissue Techniques We Use</h2>
       <p class="text-large" style="max-width: 700px; margin: 0 auto;">Evidence-based methods tailored to your specific tissue restrictions.</p>
     </div>
 
@@ -85,10 +80,10 @@ import VideoBackground from '../../components/VideoBackground.astro';
   </SectionWrapper>
 
   <!-- Benefits Section -->
-  <SectionWrapper background="white" spacing="hero">
+  <SectionWrapper background="white" spacing="normal">
     <div class="section__header" data-animate="fade-up">
       <span class="section__eyebrow">Benefits</span>
-      <h2 class="display-2">Why Soft Tissue Therapy Matters</h2>
+      <h2 class="display-3">Why Soft Tissue Therapy Matters</h2>
       <p class="text-large" style="max-width: 700px; margin: 0 auto;">Addressing muscles and fascia creates lasting improvements in mobility and pain.</p>
     </div>
 
@@ -162,10 +157,10 @@ import VideoBackground from '../../components/VideoBackground.astro';
   </SectionWrapper>
 
   <!-- Conditions Section -->
-  <SectionWrapper background="gray" spacing="hero">
+  <SectionWrapper background="gray" spacing="normal">
     <div class="section__header" data-animate="fade-up">
       <span class="section__eyebrow">Conditions Treated</span>
-      <h2 class="display-2">Issues Helped by Soft Tissue Therapy</h2>
+      <h2 class="display-3">Issues Helped by Soft Tissue Therapy</h2>
     </div>
 
     <div class="conditions-grid">
@@ -260,10 +255,10 @@ import VideoBackground from '../../components/VideoBackground.astro';
   </SectionWrapper>
 
   <!-- FAQ Section -->
-  <SectionWrapper background="white" spacing="hero" containerWidth="normal">
+  <SectionWrapper background="white" spacing="normal" containerWidth="normal">
     <div class="section__header" data-animate="fade-up">
       <span class="section__eyebrow">Common Questions</span>
-      <h2 class="display-2">Soft Tissue Therapy FAQs</h2>
+      <h2 class="display-3">Soft Tissue Therapy FAQs</h2>
     </div>
 
     <div class="faq-grid">
@@ -345,7 +340,7 @@ import VideoBackground from '../../components/VideoBackground.astro';
   <SectionWrapper background="gray" spacing="normal">
     <div class="section__header" data-animate="fade-up">
       <span class="section__eyebrow">Complementary Care</span>
-      <h2 class="display-2">Services That Work Well Together</h2>
+      <h2 class="display-3">Services That Work Well Together</h2>
     </div>
 
     <div class="related-services">
@@ -377,7 +372,7 @@ import VideoBackground from '../../components/VideoBackground.astro';
     class="cta-premium"
   >
     <div class="container container-narrow" data-animate="fade-up">
-      <h2 class="display-2" style="color: var(--color-white); margin-bottom: var(--space-lg);">
+      <h2 class="display-3" style="color: var(--color-white); margin-bottom: var(--space-lg);">
         Release Tension, Restore Mobility
       </h2>
       <p class="text-large" style="color: rgba(255, 255, 255, 0.9); max-width: 700px; margin: 0 auto var(--space-2xl);">

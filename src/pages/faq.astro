@@ -6,26 +6,30 @@ import VideoBackground from '../components/VideoBackground.astro';
 
 <Layout title="FAQ" description="Frequently asked questions about chiropractic care at The Bridge Chiropractic. Learn about first visits, treatment approaches, insurance, and more.">
   <!-- Hero Section -->
-  <section class="hero-fullbleed" style="height: 80vh; min-height: 600px;">
+  <section class="hero-fullbleed">
     <video
-      class="hero-fullbleed__image"
+      class="hero-fullbleed__video"
       autoplay
       muted
       loop
       playsinline
+      aria-hidden="true"
     >
       <source src="https://res.cloudinary.com/dku1gnuat/video/upload/v1772135510/A_0004C206H251212_163500CS_CANON_puvlaw.mp4" type="video/mp4" />
     </video>
-    <div class="hero-fullbleed__overlay"></div>
-    <div class="hero-fullbleed__content" data-animate="fade-up">
-      <span class="hero-badge">Questions & Answers</span>
-      <h1 class="hero-fullbleed__title">Frequently Asked Questions</h1>
-      <p class="hero-fullbleed__subtitle">Everything you need to know before your visit.</p>
+    <div class="hero-fullbleed__overlay" aria-hidden="true"></div>
+    <div class="hero-fullbleed__content">
+      <span class="hero-fullbleed__eyebrow">Questions & Answers</span>
+      <h1 class="hero-fullbleed__title">Good questions<br />deserve clear answers.</h1>
+      <p class="hero-fullbleed__subtitle">Everything you need to know about chiropractic care, what to expect, and how we can help.</p>
+      <div class="hero-fullbleed__cta">
+        <a href="/contact" class="btn btn--primary btn--lg">Book Your Visit</a>
+      </div>
     </div>
   </section>
 
   <!-- First Visit -->
-  <SectionWrapper spacing="hero">
+  <SectionWrapper spacing="normal">
     <div class="faq-section" data-animate="fade-up">
       <h2 class="faq-section__title">Your First Visit</h2>
 
@@ -94,7 +98,7 @@ import VideoBackground from '../components/VideoBackground.astro';
   </SectionWrapper>
 
   <!-- About Treatment -->
-  <SectionWrapper background="gray" spacing="hero">
+  <SectionWrapper background="gray" spacing="normal">
     <div class="faq-section" data-animate="fade-up">
       <h2 class="faq-section__title">About Treatment</h2>
 
@@ -183,7 +187,7 @@ import VideoBackground from '../components/VideoBackground.astro';
   </SectionWrapper>
 
   <!-- Neuro Rehabilitation -->
-  <SectionWrapper spacing="hero">
+  <SectionWrapper spacing="normal">
     <div class="faq-section" data-animate="fade-up">
       <h2 class="faq-section__title">Neuro Rehabilitation</h2>
 
@@ -252,7 +256,7 @@ import VideoBackground from '../components/VideoBackground.astro';
   </SectionWrapper>
 
   <!-- Practical Questions -->
-  <SectionWrapper background="gray" spacing="hero">
+  <SectionWrapper background="gray" spacing="normal">
     <div class="faq-section" data-animate="fade-up">
       <h2 class="faq-section__title">Practical Questions</h2>
 
@@ -367,10 +371,10 @@ import VideoBackground from '../components/VideoBackground.astro';
 
   .faq-section__title {
     font-family: var(--font-heading);
-    font-size: 2.5rem;
+    font-size: 1.75rem;
     color: var(--color-primary);
-    margin-bottom: 48px;
-    padding-bottom: 24px;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
     border-bottom: 2px solid var(--color-gray-light);
     text-align: center;
   }

@@ -10,121 +10,119 @@ import VideoBackground from '../components/VideoBackground.astro';
 <Layout title="Bridge Chiropractic - Transform Your Wellness | San Diego">
   <!-- Hero Video Section -->
   <HeroVideo
-    posterImage="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1920&h=1080&fit=crop"
-    title="Discover Your Best Self"
-    subtitle="Experience transformative chiropractic care designed for San Diego adults who want to stay active, vibrant, and pain-free."
-    ctaText="Book a Visit"
+    posterImage="/images/IMG_0954.JPG"
+    ctaText="Book Your Visit"
     ctaLink="/contact"
-    secondaryCtaText="Learn More"
+    secondaryCtaText="Learn about our approach"
     secondaryCtaLink="/about"
   />
 
   <!-- How It Works Section -->
-  <SectionWrapper id="content" background="white" spacing="hero" containerWidth="normal">
+  <SectionWrapper id="content" background="white" spacing="normal" containerWidth="normal">
     <div class="section__header" data-animate="fade-up">
       <span class="section__eyebrow">Your Journey</span>
-      <h2 class="display-2">How It Works</h2>
-      <p class="text-large" style="color: var(--color-gray-dark); max-width: 700px; margin: 0 auto;">
-        A personalized approach to your wellness, from first consultation to lasting results.
+      <h2 class="display-3">What to expect</h2>
+      <p class="text-large" style="color: var(--color-gray-dark); max-width: 600px; margin: 0 auto;">
+        A straightforward path from your first visit to lasting results.
       </p>
     </div>
 
-    <ContentGrid columns={3} gap="xl" class="mt-4xl">
-      <article class="glass" style="padding: var(--space-2xl); padding-bottom: var(--space-3xl); border-radius: var(--radius-xl); text-align: center;">
-        <div class="icon-container icon-container--lg mx-auto">
-          <span style="font-size: 32px; font-weight: 600; font-family: var(--font-heading);">1</span>
+    <div class="steps-timeline mt-4xl">
+      <article class="step" data-animate="fade-up">
+        <div class="step__number">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
         </div>
-        <h3 style="font-size: 1.5rem; margin-bottom: var(--space-md); font-family: var(--font-heading);">
-          Initial Consultation
-        </h3>
-        <p style="color: var(--color-gray-dark); line-height: 1.7;">
-          We listen to your story, understand your goals, and perform a comprehensive evaluation.
-        </p>
+        <div class="step__connector"></div>
+        <h3 class="step__title">Book & arrive</h3>
+        <p class="step__desc">Schedule online or by phone. Your first visit starts with a conversation — we want to understand your history, your goals, and what's been holding you back.</p>
       </article>
 
-      <article class="glass" style="padding: var(--space-2xl); padding-bottom: var(--space-3xl); border-radius: var(--radius-xl); text-align: center;">
-        <div class="icon-container icon-container--lg mx-auto">
-          <span style="font-size: 32px; font-weight: 600; font-family: var(--font-heading);">2</span>
+      <article class="step" data-animate="fade-up">
+        <div class="step__number">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
         </div>
-        <h3 style="font-size: 1.5rem; margin-bottom: var(--space-md); font-family: var(--font-heading);">
-          Personalized Plan
-        </h3>
-        <p style="color: var(--color-gray-dark); line-height: 1.7;">
-          Together, we create a tailored care plan that fits your lifestyle and addresses your unique needs.
-        </p>
+        <div class="step__connector"></div>
+        <h3 class="step__title">Get a clear plan</h3>
+        <p class="step__desc">After a thorough evaluation, you'll receive honest recommendations — what's going on, what we can do about it, and how long it should take.</p>
       </article>
 
-      <article class="glass" style="padding: var(--space-2xl); padding-bottom: var(--space-3xl); border-radius: var(--radius-xl); text-align: center;">
-        <div class="icon-container icon-container--lg mx-auto">
-          <span style="font-size: 32px; font-weight: 600; font-family: var(--font-heading);">3</span>
+      <article class="step" data-animate="fade-up">
+        <div class="step__number">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
         </div>
-        <h3 style="font-size: 1.5rem; margin-bottom: var(--space-md); font-family: var(--font-heading);">
-          Ongoing Care
-        </h3>
-        <p style="color: var(--color-gray-dark); line-height: 1.7;">
-          Experience gentle adjustments, movement training, and continuous support as you transform.
-        </p>
+        <h3 class="step__title">Feel the difference</h3>
+        <p class="step__desc">Targeted adjustments, soft tissue work, and movement training — all adapted to how your body responds, so improvements actually last.</p>
       </article>
-    </ContentGrid>
+    </div>
   </SectionWrapper>
 
   <!-- Featured Services Section -->
-  <SectionWrapper background="gray" spacing="hero" containerWidth="normal">
+  <SectionWrapper background="gray" spacing="normal" containerWidth="normal">
     <div class="section__header" data-animate="fade-up">
       <span class="section__eyebrow">Our Services</span>
-      <h2 class="display-2">Personalized treatment to create results that last</h2>
-      <p class="text-large" style="color: var(--color-gray-dark); max-width: 700px; margin: 0 auto;">
-        Tailored care designed for your specific needs and goals.
+      <h2 class="display-2">What we do</h2>
+      <p class="text-large" style="color: var(--color-gray-dark); max-width: 600px; margin: 0 auto;">
+        Every service is chosen based on what your body needs — not a one-size-fits-all protocol.
       </p>
     </div>
 
-    <ContentGrid columns={3} gap="xl" class="mt-4xl">
-      <OfferingCard
-        image="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&h=600&fit=crop"
-        title="Chiropractic Adjustments"
-        description="Precise adjustments to restore joint movement, reduce irritation, and help your body move better."
-        link="/services/chiropractic-adjustments"
-      />
+    <div class="services-grid mt-4xl">
+      <a href="/services/chiropractic-adjustments" class="svc-card" style="background-image: url('/images/chiropractic-care.jpg');" data-animate="fade-up">
+        <div class="svc-card__overlay"></div>
+        <div class="svc-card__content">
+          <h3 class="svc-card__title">Chiropractic Adjustments</h3>
+          <p class="svc-card__desc">Precise adjustments to restore joint movement and help your body move better.</p>
+          <span class="svc-card__link">Learn more <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+        </div>
+      </a>
 
-      <OfferingCard
-        image="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800&h=600&fit=crop"
-        title="Soft Tissue Therapy"
-        description="Reduce muscle tension to decrease stiffness and help adjustments last longer."
-        link="/services/soft-tissue-therapy"
-      />
+      <a href="/services/soft-tissue-therapy" class="svc-card" style="background-image: url('/images/soft-tissue.jpg');" data-animate="fade-up">
+        <div class="svc-card__overlay"></div>
+        <div class="svc-card__content">
+          <h3 class="svc-card__title">Soft Tissue Therapy</h3>
+          <p class="svc-card__desc">Release muscle tension so adjustments hold longer and stiffness fades.</p>
+          <span class="svc-card__link">Learn more <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+        </div>
+      </a>
 
-      <OfferingCard
-        image="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&h=600&fit=crop"
-        title="Home Exercise Programs"
-        description="Personalized exercises to support your progress and build long-term resilience."
-        link="/services/home-exercise-programs"
-      />
+      <a href="/services/home-exercise-programs" class="svc-card" style="background-image: url('/images/movement-training.jpg');" data-animate="fade-up">
+        <div class="svc-card__overlay"></div>
+        <div class="svc-card__content">
+          <h3 class="svc-card__title">Home Exercise Programs</h3>
+          <p class="svc-card__desc">Personalized exercises that reinforce progress and build lasting resilience.</p>
+          <span class="svc-card__link">Learn more <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+        </div>
+      </a>
 
-      <OfferingCard
-        image="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop"
-        title="Fall Prevention & Balance"
-        description="Improve balance, coordination, and stability to reduce fall risk and maintain independence."
-        link="/services/fall-prevention-balance-training"
-      />
+      <a href="/services/fall-prevention-balance-training" class="svc-card" style="background-image: url('/images/senior-wellness.jpg');" data-animate="fade-up">
+        <div class="svc-card__overlay"></div>
+        <div class="svc-card__content">
+          <h3 class="svc-card__title">Fall Prevention & Balance</h3>
+          <p class="svc-card__desc">Improve stability and coordination to stay confident on your feet.</p>
+          <span class="svc-card__link">Learn more <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+        </div>
+      </a>
 
-      <OfferingCard
-        image="https://images.unsplash.com/photo-1549890762-0a3f8933bc76?w=800&h=600&fit=crop"
-        title="Optimal Longevity & Function"
-        description="Proactive care designed to preserve mobility, strength, and independence as you age."
-        link="/services/optimal-longevity-function"
-      />
-    </ContentGrid>
+      <a href="/services/optimal-longevity-function" class="svc-card" style="background-image: url('/images/care-plan.jpg');" data-animate="fade-up">
+        <div class="svc-card__overlay"></div>
+        <div class="svc-card__content">
+          <h3 class="svc-card__title">Optimal Longevity & Function</h3>
+          <p class="svc-card__desc">Proactive care to preserve mobility, strength, and independence as you age.</p>
+          <span class="svc-card__link">Learn more <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+        </div>
+      </a>
+    </div>
 
-    <div class="text-center mt-4xl" data-animate="fade-up">
+    <div class="text-center mt-3xl" data-animate="fade-up">
       <a href="/services" class="btn btn--primary btn--lg">View All Services</a>
     </div>
   </SectionWrapper>
 
   <!-- What We Treat Section -->
-  <SectionWrapper background="white" spacing="hero" containerWidth="normal">
+  <SectionWrapper background="white" spacing="normal" containerWidth="normal">
     <div class="section__header" data-animate="fade-up">
       <span class="section__eyebrow">Conditions</span>
-      <h2 class="display-2">What We Treat</h2>
+      <h2 class="display-3">What We Treat</h2>
       <p class="text-large" style="color: var(--color-gray-dark); max-width: 700px; margin: 0 auto;">
         From everyday aches to chronic conditions, we provide expert care for a wide range of health concerns.
       </p>
@@ -229,11 +227,11 @@ import VideoBackground from '../components/VideoBackground.astro';
   </SectionWrapper>
 
   <!-- About Dr. Beyerl Section -->
-  <SectionWrapper background="gray" spacing="hero" containerWidth="normal">
+  <SectionWrapper background="gray" spacing="normal" containerWidth="normal">
     <div class="two-col-premium">
       <div data-animate="fade-right">
         <span class="section__eyebrow">About Dr. Beyerl</span>
-        <h2 class="display-2" style="margin-bottom: var(--space-lg);">Helping Active Adults Stay Strong, Mobile, and Independent</h2>
+        <h2 class="display-3" style="margin-bottom: var(--space-lg);">Helping Active Adults Stay Strong, Mobile, and Independent</h2>
         <p class="text-large" style="color: var(--color-gray-dark); margin-bottom: var(--space-xl);">
           Dr. Nate Beyerl works with active adults in San Diego who want more than short-term relief. His personalized approach helps reduce pain, restore movement, and preserve independence long term.
         </p>
@@ -263,7 +261,7 @@ import VideoBackground from '../components/VideoBackground.astro';
   <SectionWrapper background="white" spacing="normal" containerWidth="full">
     <div class="section__header" data-animate="fade-up">
       <span class="section__eyebrow">Testimonials</span>
-      <h2 class="display-2">What Our Patients Say</h2>
+      <h2 class="display-3">What Our Patients Say</h2>
       <div style="display: flex; align-items: center; justify-content: center; gap: var(--space-sm); margin-top: var(--space-lg);">
         <div style="display: flex; gap: 4px;">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#F59E0B">
@@ -679,10 +677,10 @@ import VideoBackground from '../components/VideoBackground.astro';
   </SectionWrapper>
 
   <!-- FAQ Preview Section -->
-  <SectionWrapper background="gray" spacing="hero" containerWidth="normal">
+  <SectionWrapper background="gray" spacing="normal" containerWidth="normal">
     <div class="section__header" data-animate="fade-up">
       <span class="section__eyebrow">Questions</span>
-      <h2 class="display-2">Frequently Asked</h2>
+      <h2 class="display-3">Frequently Asked</h2>
       <p class="text-large" style="color: var(--color-gray-dark); max-width: 700px; margin: 0 auto;">
         Get answers to common questions about chiropractic care and our practice.
       </p>
@@ -791,7 +789,7 @@ import VideoBackground from '../components/VideoBackground.astro';
     class="cta-premium"
   >
     <div class="container container-narrow" data-animate="fade-up">
-      <h2 class="display-2" style="color: var(--color-white); margin-bottom: var(--space-lg);">
+      <h2 class="display-3" style="color: var(--color-white); margin-bottom: var(--space-lg);">
         Ready to Begin Your Wellness Journey?
       </h2>
       <p class="text-large" style="color: rgba(255, 255, 255, 0.9); max-width: 700px; margin: 0 auto var(--space-2xl);">
@@ -1028,6 +1026,213 @@ import VideoBackground from '../components/VideoBackground.astro';
       flex: 0 0 90vw;
       max-width: 320px;
       padding: var(--space-lg);
+    }
+  }
+
+  /* Services Grid — 3 top, 2 bottom */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+  }
+
+  /* Bottom row: 2 cards, wider */
+  .services-grid > :nth-child(4) {
+    grid-column: 1 / 2;
+  }
+  .services-grid > :nth-child(5) {
+    grid-column: 2 / 4;
+  }
+
+  /* Card with background image */
+  .svc-card {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    min-height: 280px;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    text-decoration: none;
+    color: var(--color-white);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .svc-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  }
+
+  .svc-card__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    transition: background 0.3s ease;
+  }
+
+  .svc-card:hover .svc-card__overlay {
+    background: rgba(0, 0, 0, 0.55);
+  }
+
+  .svc-card__content {
+    position: relative;
+    z-index: 1;
+    padding: var(--space-xl);
+    width: 100%;
+  }
+
+  .svc-card__title {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: var(--space-xs);
+    line-height: 1.3;
+  }
+
+  .svc-card__desc {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: var(--space-md);
+  }
+
+  .svc-card__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    transition: gap 0.2s ease;
+  }
+
+  .svc-card:hover .svc-card__link {
+    gap: 10px;
+  }
+
+  @media (max-width: 768px) {
+    .services-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .services-grid > :nth-child(4),
+    .services-grid > :nth-child(5) {
+      grid-column: span 1;
+    }
+
+    .svc-card {
+      min-height: 240px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .svc-card {
+      min-height: 220px;
+    }
+  }
+
+  /* Steps Timeline */
+  .steps-timeline {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-2xl);
+    position: relative;
+  }
+
+  .step {
+    position: relative;
+    text-align: center;
+    padding: var(--space-xl) var(--space-lg) 0;
+  }
+
+  .step__number {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    color: var(--color-white);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--space-lg);
+    position: relative;
+    z-index: 1;
+  }
+
+  .step__connector {
+    position: absolute;
+    top: calc(var(--space-xl) + 28px);
+    left: calc(50% + 36px);
+    width: calc(100% - 72px + var(--space-2xl));
+    height: 2px;
+    background: var(--color-gray-light);
+    z-index: 0;
+  }
+
+  .step:last-child .step__connector {
+    display: none;
+  }
+
+  .step__title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    font-family: var(--font-heading);
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-sm);
+  }
+
+  .step__desc {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    color: var(--color-gray-dark);
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 768px) {
+    .steps-timeline {
+      grid-template-columns: 1fr;
+      gap: var(--space-xl);
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      grid-template-rows: auto auto;
+      gap: 0 var(--space-lg);
+      text-align: left;
+      padding: 0;
+    }
+
+    .step__number {
+      grid-row: 1 / 3;
+      margin-bottom: 0;
+      align-self: start;
+    }
+
+    .step__connector {
+      position: absolute;
+      top: 56px;
+      left: 27px;
+      width: 2px;
+      height: calc(100% + var(--space-xl) - 56px);
+    }
+
+    .step__title {
+      align-self: end;
+    }
+
+    .step__desc {
+      max-width: none;
+      margin: 0;
     }
   }
 </style>
