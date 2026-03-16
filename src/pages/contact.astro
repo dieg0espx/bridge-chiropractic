@@ -28,38 +28,8 @@ import ContentGrid from '../components/ContentGrid.astro';
     </div>
   </section>
 
-  <!-- Quick Actions -->
-  <SectionWrapper spacing="compact" class="quick-actions-section">
-    <ContentGrid columns={3} gap="lg">
-      <a href="tel:8582777500" class="glass hover-lift action-card">
-        <div class="action-card__icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-        </div>
-        <h4 class="action-card__title">Call Us</h4>
-        <p class="action-card__text">(858) 277-7500</p>
-      </a>
-
-      <a href="mailto:info@bridgechiropracticsd.com" class="glass hover-lift action-card">
-        <div class="action-card__icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-        </div>
-        <h4 class="action-card__title">Email Us</h4>
-        <p class="action-card__text">Send a message</p>
-      </a>
-
-      <div class="glass action-card">
-        <div class="action-card__icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-        </div>
-        <h4 class="action-card__title">Visit Us</h4>
-        <p class="action-card__text">San Diego, CA</p>
-      </div>
-    </ContentGrid>
-  </SectionWrapper>
-
-  <!-- Contact Form & Info -->
+  <!-- Contact Form -->
   <SectionWrapper spacing="normal">
-    <!-- Form at Top -->
     <div class="form-wrapper" data-animate="fade-up">
       <h2 class="display-3" style="margin-bottom: 16px; text-align: center;">Schedule Your Visit</h2>
       <p style="color: var(--color-gray-dark); font-size: 1.125rem; margin-bottom: 48px; line-height: 1.7; text-align: center;">Fill out the form below and we'll get back to you within 24 hours to confirm your appointment.</p>
@@ -99,8 +69,39 @@ import ContentGrid from '../components/ContentGrid.astro';
         <div id="form-message" class="form-message"></div>
       </form>
     </div>
+  </SectionWrapper>
 
-    <!-- Contact Info Below Form -->
+  <!-- Quick Actions -->
+  <SectionWrapper spacing="compact" class="quick-actions-section">
+    <ContentGrid columns={3} gap="lg">
+      <a href="tel:8582777500" class="glass hover-lift action-card">
+        <div class="action-card__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        </div>
+        <h4 class="action-card__title">Call Us</h4>
+        <p class="action-card__text">(858) 277-7500</p>
+      </a>
+
+      <a href="mailto:info@bridgechiropracticsd.com" class="glass hover-lift action-card">
+        <div class="action-card__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        </div>
+        <h4 class="action-card__title">Email Us</h4>
+        <p class="action-card__text">Send a message</p>
+      </a>
+
+      <div class="glass action-card">
+        <div class="action-card__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+        </div>
+        <h4 class="action-card__title">Visit Us</h4>
+        <p class="action-card__text">San Diego, CA</p>
+      </div>
+    </ContentGrid>
+  </SectionWrapper>
+
+  <!-- Contact Info -->
+  <SectionWrapper spacing="normal">
     <div class="grid contact-info-grid">
       <div data-animate="fade-up" data-animate-delay="100">
         <div class="elevated info-card">
@@ -130,13 +131,6 @@ import ContentGrid from '../components/ContentGrid.astro';
             </div>
           </div>
 
-          <div class="info-item">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-            <div>
-              <h4>Office Hours</h4>
-              <p>Monday - Friday: 9:00 AM - 5:00 PM<br>Saturday & Sunday: Closed</p>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -160,7 +154,6 @@ import ContentGrid from '../components/ContentGrid.astro';
 <style>
   /* Quick Actions Section */
   .quick-actions-section {
-    margin-top: -80px;
     position: relative;
     z-index: 10;
   }
@@ -356,10 +349,6 @@ import ContentGrid from '../components/ContentGrid.astro';
   }
 
   @media (max-width: 768px) {
-    .quick-actions-section {
-      margin-top: -60px;
-    }
-
     .form-wrapper {
       margin-bottom: 60px;
       padding: 0;
@@ -380,10 +369,6 @@ import ContentGrid from '../components/ContentGrid.astro';
   }
 
   @media (max-width: 480px) {
-    .quick-actions-section {
-      margin-top: -40px;
-    }
-
     .action-card {
       padding: 32px 24px;
     }
