@@ -41,10 +41,10 @@ body::-webkit-scrollbar {
   --color-primary-light: #F5F5F5;
   --color-secondary: #4A4A4A;
   --color-secondary-light: #FAF8F5;
-  --color-accent: #B8956A;
-  --color-accent-hover: #A17F52;
-  --color-accent-light: #F5EFE6;
-  --color-accent-dark: #8B6F47;
+  --color-accent: #33a7de;
+  --color-accent-hover: #2b8fbe;
+  --color-accent-light: #e0f0fa;
+  --color-accent-dark: #1e7aaa;
   --color-blue: #4A9FF5;
   --color-blue-hover: #3A8FE5;
   --color-blue-light: #E3F2FD;
@@ -54,7 +54,7 @@ body::-webkit-scrollbar {
   --color-gray-light: #E5E5E5;
   --color-white: #FFFFFF;
   --color-off-white: #FAF8F5;
-  --color-cream: #F5F1EB;
+  --color-cream: #e0f0fa;
   --color-success: #4A7C59;
   --color-error: #C14C4C;
 
@@ -65,9 +65,9 @@ body::-webkit-scrollbar {
   --color-primary-900: #121212;
 
   /* Warm Earthy Tones */
-  --color-warm-50: #FAF8F5;
-  --color-warm-100: #F5EFE6;
-  --color-warm-500: #B8956A;
+  --color-warm-50: #f0f8fd;
+  --color-warm-100: #e0f0fa;
+  --color-warm-500: #33a7de;
 
   /* Enhanced Gray Scale */
   --color-gray-50: #FAFAFA;
