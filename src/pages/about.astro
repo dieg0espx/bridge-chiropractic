@@ -6,40 +6,27 @@ import VideoBackground from '../components/VideoBackground.astro';
 ---
 
 <Layout title="About" description="Meet Dr. Nathan Beyerl - San Diego chiropractor focused on education, autonomy, and sustainable improvement for adults seeking lasting wellness.">
-  <!-- Hero with Video Background -->
-  <section class="hero-fullbleed">
-    <video
-      class="hero-fullbleed__video"
-      autoplay
-      muted
-      loop
-      playsinline
-      poster="/images/IMG_0954.JPG"
-      aria-hidden="true"
-    >
-      <source src="https://res.cloudinary.com/dku1gnuat/video/upload/v1773678669/copy_C8C8BA7D-35C3-4286-85F6-927425408BE0_q174of.mp4" type="video/mp4" />
-    </video>
-    <div class="hero-fullbleed__overlay" aria-hidden="true"></div>
-    <div class="hero-fullbleed__content">
-      <span class="hero-fullbleed__eyebrow">About The Bridge Chiropractic</span>
-      <h1 class="hero-fullbleed__title">Care built around<br />how your body responds.</h1>
-      <p class="hero-fullbleed__subtitle">Dr. Nate Beyerl helps active adults in San Diego reduce pain, restore movement, and stay independent — with a personalized approach, not a one-size-fits-all protocol.</p>
-      <div class="hero-fullbleed__cta">
-        <a href="/contact" class="btn btn--primary btn--lg">Book Your Visit</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Story - 2-Column Premium Layout -->
+  <!-- Hero - About Story -->
   <SectionWrapper spacing="normal" background="white">
     <div class="about-story" data-animate="fade-up">
       <div class="about-story__content">
-        <span class="section__eyebrow">Dr. Nate Beyerl</span>
-        <h2 class="display-3">Helping active adults stay strong, mobile, and independent.</h2>
+        <span class="section__eyebrow">About The Bridge Chiropractic</span>
+        <h1 class="display-3">Helping active adults stay strong, mobile, and independent.</h1>
         <div class="about-story__body">
           <p class="text-large">You deserve healthcare that prioritizes how you want to function long term. Whether your goal is reducing pain, improving mobility, or staying active as you age, care should help you move with confidence and clarity.</p>
           <p>At The Bridge Chiropractic, treatment is personalized for active adults who want more than short-term relief. Instead of a one-size-fits-all approach, your plan is tailored to how your body responds, integrating adjustments, soft tissue therapy, movement training, and balance work when appropriate.</p>
           <p>Every visit focuses on reducing irritation, restoring movement, and building lasting resilience so you can continue doing what matters most. Care evolves with you, with clear guidance and thoughtful reassessment along the way.</p>
+
+          <div class="credentials-inline">
+            <h3 style="font-size: 1.25rem; font-weight: 600; color: var(--color-charcoal); margin-bottom: var(--space-md); margin-top: var(--space-2xl);">Education & Credentials</h3>
+            <ul class="credentials-list-inline">
+              <li>Doctor of Chiropractic, licensed in California</li>
+              <li>Advanced training in neurological and balance rehabilitation</li>
+              <li>Specialized coursework in movement assessment and mobility</li>
+              <li>Ongoing education focused on active aging and long-term function</li>
+            </ul>
+          </div>
+
           <div class="about-story__cta">
             <a href="/contact" class="btn btn--primary btn--lg">Book a Visit</a>
           </div>
@@ -119,101 +106,6 @@ import VideoBackground from '../components/VideoBackground.astro';
     </div>
   </SectionWrapper>
 
-  <!-- What to Expect - Premium Timeline -->
-  <SectionWrapper spacing="normal" background="gray" containerWidth="normal">
-    <div class="section__header" data-animate="fade-up">
-      <span class="section__eyebrow">Your Visit</span>
-      <h2 class="display-3">What to Expect</h2>
-      <p class="text-large">A patient-first experience from the moment you walk in.</p>
-    </div>
-
-    <div class="timeline">
-      <!-- Step 1 -->
-      <article class="timeline-item" data-animate="fade-up" data-animate-delay="100">
-        <div class="timeline-item__marker">
-          <div class="timeline-item__number">1</div>
-        </div>
-        <div class="timeline-item__content">
-          <h3 class="timeline-item__title">Initial Consultation</h3>
-          <p class="timeline-item__description">I'll listen carefully to your health history, current concerns, and goals. We'll spend 30-45 minutes discussing your pain patterns, lifestyle, and what you hope to achieve. This isn't rushed—you'll have my full attention.</p>
-        </div>
-      </article>
-
-      <!-- Step 2 -->
-      <article class="timeline-item" data-animate="fade-up" data-animate-delay="200">
-        <div class="timeline-item__marker">
-          <div class="timeline-item__number">2</div>
-        </div>
-        <div class="timeline-item__content">
-          <h3 class="timeline-item__title">Comprehensive Evaluation</h3>
-          <p class="timeline-item__description">Through movement assessments and hands-on examination, I'll identify the root cause of your discomfort. I'll explain my findings in plain language—no confusing medical jargon, just clear explanations you can understand.</p>
-        </div>
-      </article>
-
-      <!-- Step 3 -->
-      <article class="timeline-item" data-animate="fade-up" data-animate-delay="300">
-        <div class="timeline-item__marker">
-          <div class="timeline-item__number">3</div>
-        </div>
-        <div class="timeline-item__content">
-          <h3 class="timeline-item__title">Collaborative Care Plan</h3>
-          <p class="timeline-item__description">We create a plan together that may include gentle adjustments, soft tissue work, and home exercises. You'll know exactly what to expect, how long treatment might take, and what you can do between visits to accelerate your progress.</p>
-        </div>
-      </article>
-
-      <!-- Step 4 -->
-      <article class="timeline-item" data-animate="fade-up" data-animate-delay="400">
-        <div class="timeline-item__marker">
-          <div class="timeline-item__number">4</div>
-        </div>
-        <div class="timeline-item__content">
-          <h3 class="timeline-item__title">Ongoing Support</h3>
-          <p class="timeline-item__description">As you progress, I'll continually assess what's working and adjust your plan as needed. My goal isn't to create dependency—it's to give you the tools and knowledge to maintain your health independently.</p>
-        </div>
-      </article>
-    </div>
-  </SectionWrapper>
-
-  <!-- Credentials - Premium Glassmorphism -->
-  <SectionWrapper spacing="normal" background="white" containerWidth="narrow">
-    <div class="credentials">
-      <div class="section__header" data-animate="fade-up">
-        <span class="section__eyebrow">Credentials</span>
-        <h2 class="display-3">Education & Clinical Focus</h2>
-        <p class="text-large">Dedicated to advanced training in movement, balance, and longevity-focused care.</p>
-      </div>
-
-      <div class="credentials-card glass" data-animate="fade-up" data-animate-delay="200">
-        <ul class="credentials-list">
-          <li class="credentials-item">
-            <svg class="credentials-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="20 6 9 17 4 12"></polyline>
-            </svg>
-            <span>Doctor of Chiropractic, licensed in California</span>
-          </li>
-          <li class="credentials-item">
-            <svg class="credentials-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="20 6 9 17 4 12"></polyline>
-            </svg>
-            <span>Advanced training in neurological and balance rehabilitation</span>
-          </li>
-          <li class="credentials-item">
-            <svg class="credentials-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="20 6 9 17 4 12"></polyline>
-            </svg>
-            <span>Specialized coursework in movement assessment and mobility</span>
-          </li>
-          <li class="credentials-item">
-            <svg class="credentials-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="20 6 9 17 4 12"></polyline>
-            </svg>
-            <span>Ongoing education focused on active aging and long-term function</span>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </SectionWrapper>
-
   <!-- CTA Section with Video Background -->
   <VideoBackground
     videoUrl="https://res.cloudinary.com/dku1gnuat/video/upload/v1773678669/copy_C8C8BA7D-35C3-4286-85F6-927425408BE0_q174of.mp4"
@@ -247,6 +139,11 @@ import VideoBackground from '../components/VideoBackground.astro';
     transform: translate(-50%, -50%);
     object-fit: cover;
     z-index: 0;
+  }
+
+  /* Header offset for non-hero pages */
+  .about-story {
+    padding-top: 80px;
   }
 
   /* ==========================================
@@ -283,6 +180,32 @@ import VideoBackground from '../components/VideoBackground.astro';
 
   .about-story__cta {
     margin-top: var(--space-2xl);
+  }
+
+  .credentials-list-inline {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .credentials-list-inline li {
+    padding: var(--space-sm) 0;
+    padding-left: var(--space-lg);
+    position: relative;
+    color: var(--color-gray-dark);
+    font-size: 1.0625rem;
+    line-height: 1.7;
+  }
+
+  .credentials-list-inline li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 8px;
+    height: 8px;
+    background: var(--color-primary);
+    border-radius: 50%;
   }
 
   .about-story__image {

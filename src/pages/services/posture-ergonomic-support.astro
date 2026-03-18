@@ -188,32 +188,14 @@ import OfferingCard from '../../components/OfferingCard.astro';
         <p class="section-subtitle">Common issues from prolonged sitting and poor ergonomics</p>
       </div>
 
-      <div class="conditions-grid">
-        <div class="condition-card" data-animate="fade-up">
-          <h3>Tech Neck & Forward Head Posture</h3>
-          <p>Chronic neck pain, headaches, and shoulder tension from prolonged screen time and forward head positioning that strains the cervical spine.</p>
-        </div>
-        <div class="condition-card" data-animate="fade-up">
-          <h3>Rounded Shoulders & Upper Crossed Syndrome</h3>
-          <p>Shoulder rounding, chest tightness, and upper back weakness from desk work, driving, and repetitive forward-reaching activities.</p>
-        </div>
-        <div class="condition-card" data-animate="fade-up">
-          <h3>Lower Back Pain from Sitting</h3>
-          <p>Low back strain, stiffness, and disc stress from prolonged sitting, poor lumbar support, and hip flexor tightness.</p>
-        </div>
-        <div class="condition-card" data-animate="fade-up">
-          <h3>Mid-Back Pain & Thoracic Stiffness</h3>
-          <p>Upper back tension, rib dysfunction, and breathing restriction from thoracic kyphosis and weak mid-back stabilizers.</p>
-        </div>
-        <div class="condition-card" data-animate="fade-up">
-          <h3>Tension Headaches & Migraines</h3>
-          <p>Headaches originating from neck tension, jaw clenching, poor head position, and sustained muscle contraction from postural stress.</p>
-        </div>
-        <div class="condition-card" data-animate="fade-up">
-          <h3>Ergonomic-Related Repetitive Strain</h3>
-          <p>Wrist pain, elbow tendonitis, shoulder impingement, and other overuse injuries caused by poor workstation setup and sustained positioning.</p>
-        </div>
-      </div>
+      <ul class="conditions-list" data-animate="fade-up">
+        <li><strong>Tech Neck & Forward Head Posture</strong> — Chronic neck pain, headaches, and shoulder tension from prolonged screen time and forward head positioning that strains the cervical spine.</li>
+        <li><strong>Rounded Shoulders & Upper Crossed Syndrome</strong> — Shoulder rounding, chest tightness, and upper back weakness from desk work, driving, and repetitive forward-reaching activities.</li>
+        <li><strong>Lower Back Pain from Sitting</strong> — Low back strain, stiffness, and disc stress from prolonged sitting, poor lumbar support, and hip flexor tightness.</li>
+        <li><strong>Mid-Back Pain & Thoracic Stiffness</strong> — Upper back tension, rib dysfunction, and breathing restriction from thoracic kyphosis and weak mid-back stabilizers.</li>
+        <li><strong>Tension Headaches & Migraines</strong> — Headaches originating from neck tension, jaw clenching, poor head position, and sustained muscle contraction from postural stress.</li>
+        <li><strong>Ergonomic-Related Repetitive Strain</strong> — Wrist pain, elbow tendonitis, shoulder impingement, and other overuse injuries caused by poor workstation setup and sustained positioning.</li>
+      </ul>
     </div>
   </SectionWrapper>
 
@@ -520,37 +502,38 @@ import OfferingCard from '../../components/OfferingCard.astro';
     margin: 0;
   }
 
-  /* Conditions Grid */
-  .conditions-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-    margin-top: 3rem;
+  /* Conditions List */
+  .conditions-list {
+    list-style: none;
+    padding: 0;
+    margin-top: var(--space-4xl);
+    columns: 2;
+    column-gap: var(--space-2xl);
   }
 
-  .condition-card {
-    padding: 2rem;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease;
-  }
-
-  .condition-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-  }
-
-  .condition-card h3 {
-    font-size: 1.25rem;
-    margin-bottom: 0.75rem;
-    color: var(--color-charcoal);
-  }
-
-  .condition-card p {
+  .conditions-list li {
+    padding: var(--space-sm) 0;
+    padding-left: var(--space-lg);
+    position: relative;
     color: var(--color-gray-dark);
-    line-height: 1.6;
-    margin: 0;
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    break-inside: avoid;
+  }
+
+  .conditions-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 8px;
+    height: 8px;
+    background: var(--color-primary);
+    border-radius: 50%;
+  }
+
+  .conditions-list li strong {
+    color: var(--color-charcoal);
   }
 
   /* FAQ Section */
@@ -807,8 +790,8 @@ import OfferingCard from '../../components/OfferingCard.astro';
       font-size: 1.25rem;
     }
 
-    .conditions-grid {
-      grid-template-columns: 1fr;
+    .conditions-list {
+      columns: 1;
     }
 
     .faq-summary {

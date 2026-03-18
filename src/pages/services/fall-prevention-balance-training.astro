@@ -122,73 +122,14 @@ import VideoBackground from '../../components/VideoBackground.astro';
       <h2 class="display-3">Benefits of Fall Prevention Training</h2>
     </div>
 
-    <div class="conditions-grid">
-      <div class="condition-item" data-animate="fade-up" data-animate-delay="150">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M9 11l3 3L22 4"></path>
-          <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-        </svg>
-        <div>
-          <h4>Reduced Fall Risk</h4>
-          <p>Measurable improvement in balance and stability reduces likelihood of falls</p>
-        </div>
-      </div>
-
-      <div class="condition-item" data-animate="fade-up" data-animate-delay="150">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M9 11l3 3L22 4"></path>
-          <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-        </svg>
-        <div>
-          <h4>Greater Confidence</h4>
-          <p>Feel secure in your movement without fear of falling</p>
-        </div>
-      </div>
-
-      <div class="condition-item" data-animate="scale" data-animate-delay="300">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M9 11l3 3L22 4"></path>
-          <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-        </svg>
-        <div>
-          <h4>Improved Mobility</h4>
-          <p>Move more freely without relying on assistive devices</p>
-        </div>
-      </div>
-
-      <div class="condition-item" data-animate="fade-up" data-animate-delay="250">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M9 11l3 3L22 4"></path>
-          <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-        </svg>
-        <div>
-          <h4>Maintained Independence</h4>
-          <p>Continue living actively without fear limiting your activities</p>
-        </div>
-      </div>
-
-      <div class="condition-item" data-animate="fade-up" data-animate-delay="450">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M9 11l3 3L22 4"></path>
-          <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-        </svg>
-        <div>
-          <h4>Better Coordination</h4>
-          <p>Enhanced ability to control body movements smoothly</p>
-        </div>
-      </div>
-
-      <div class="condition-item" data-animate="fade-up" data-animate-delay="350">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M9 11l3 3L22 4"></path>
-          <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-        </svg>
-        <div>
-          <h4>Reduced Dizziness</h4>
-          <p>Vestibular training helps manage vertigo and balance-related dizziness</p>
-        </div>
-      </div>
-    </div>
+    <ul class="conditions-list" data-animate="fade-up">
+      <li><strong>Reduced Fall Risk</strong> — Measurable improvement in balance and stability reduces likelihood of falls</li>
+      <li><strong>Greater Confidence</strong> — Feel secure in your movement without fear of falling</li>
+      <li><strong>Improved Mobility</strong> — Move more freely without relying on assistive devices</li>
+      <li><strong>Maintained Independence</strong> — Continue living actively without fear limiting your activities</li>
+      <li><strong>Better Coordination</strong> — Enhanced ability to control body movements smoothly</li>
+      <li><strong>Reduced Dizziness</strong> — Vestibular training helps manage vertigo and balance-related dizziness</li>
+    </ul>
   </SectionWrapper>
 
   <!-- Who Benefits -->
@@ -510,45 +451,37 @@ import VideoBackground from '../../components/VideoBackground.astro';
     font-size: 1.0625rem;
   }
 
-  .conditions-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: var(--space-lg);
+  .conditions-list {
+    list-style: none;
+    padding: 0;
     margin-top: var(--space-4xl);
+    columns: 2;
+    column-gap: var(--space-2xl);
   }
 
-  .condition-item {
-    display: flex;
-    align-items: start;
-    gap: var(--space-md);
-    padding: var(--space-xl);
-    background: white;
-    border-radius: var(--radius-lg);
-    border-left: 4px solid var(--color-primary);
-    transition: all 0.3s ease;
-  }
-
-  .condition-item:hover {
-    transform: translateX(8px);
-    box-shadow: var(--shadow-lg);
-  }
-
-  .condition-item svg {
-    flex-shrink: 0;
-    stroke: var(--color-primary);
-    margin-top: 2px;
-  }
-
-  .condition-item h4 {
-    font-size: 1.125rem;
-    margin-bottom: var(--space-xs);
-    color: var(--color-charcoal);
-  }
-
-  .condition-item p {
-    font-size: 0.9375rem;
+  .conditions-list li {
+    padding: var(--space-sm) 0;
+    padding-left: var(--space-lg);
+    position: relative;
     color: var(--color-gray-dark);
-    line-height: 1.6;
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    break-inside: avoid;
+  }
+
+  .conditions-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 8px;
+    height: 8px;
+    background: var(--color-primary);
+    border-radius: 50%;
+  }
+
+  .conditions-list li strong {
+    color: var(--color-charcoal);
   }
 
   .faq-grid {
@@ -646,9 +579,12 @@ import VideoBackground from '../../components/VideoBackground.astro';
   }
 
   @media (max-width: 768px) {
-    .benefits-grid,
-    .conditions-grid {
+    .benefits-grid {
       grid-template-columns: 1fr;
+    }
+
+    .conditions-list {
+      columns: 1;
     }
 
     .process-step {

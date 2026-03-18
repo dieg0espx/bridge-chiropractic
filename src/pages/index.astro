@@ -17,41 +17,41 @@ import VideoBackground from '../components/VideoBackground.astro';
     secondaryCtaLink="/about"
   />
 
-  <!-- How It Works Section -->
+  <!-- What Sets Us Apart Section -->
   <SectionWrapper id="content" background="white" spacing="normal" containerWidth="normal">
     <div class="section__header" data-animate="fade-up">
-      <span class="section__eyebrow">Your Journey</span>
-      <h2 class="display-3">What to expect</h2>
+      <span class="section__eyebrow">Our Approach</span>
+      <h2 class="display-3">What sets us apart</h2>
       <p class="text-large" style="color: var(--color-gray-dark); max-width: 600px; margin: 0 auto;">
-        A straightforward path from your first visit to lasting results.
+        Three pillars of care, combined and tailored to how your body responds.
       </p>
     </div>
 
     <div class="steps-timeline mt-4xl">
       <article class="step" data-animate="fade-up">
         <div class="step__number">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10"></path><path d="M12 20V4"></path><path d="M6 20v-6"></path></svg>
         </div>
         <div class="step__connector"></div>
-        <h3 class="step__title">Book & arrive</h3>
-        <p class="step__desc">Schedule online or by phone. Your first visit starts with a conversation — we want to understand your history, your goals, and what's been holding you back.</p>
+        <h3 class="step__title">Chiropractic Adjustments</h3>
+        <p class="step__desc">Precise, personalized spinal adjustments that restore joint mobility, reduce nerve irritation, and help your body move the way it's designed to.</p>
       </article>
 
       <article class="step" data-animate="fade-up">
         <div class="step__number">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
         </div>
         <div class="step__connector"></div>
-        <h3 class="step__title">Get a clear plan</h3>
-        <p class="step__desc">After a thorough evaluation, you'll receive honest recommendations — what's going on, what we can do about it, and how long it should take.</p>
+        <h3 class="step__title">Soft Tissue Work</h3>
+        <p class="step__desc">Myofascial release, trigger point therapy, and targeted muscle work to break down tension and adhesions — so adjustments hold longer and you feel better faster.</p>
       </article>
 
       <article class="step" data-animate="fade-up">
         <div class="step__number">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
         </div>
-        <h3 class="step__title">Feel the difference</h3>
-        <p class="step__desc">Targeted adjustments, soft tissue work, and movement training — all adapted to how your body responds, so improvements actually last.</p>
+        <h3 class="step__title">Optimizing Biomechanics</h3>
+        <p class="step__desc">Movement pattern analysis, corrective exercises, and performance guidance to build lasting resilience, prevent re-injury, and support longevity.</p>
       </article>
     </div>
   </SectionWrapper>
@@ -111,10 +111,14 @@ import VideoBackground from '../components/VideoBackground.astro';
           <span class="svc-card__link">Learn more <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
         </div>
       </a>
-    </div>
-
-    <div class="text-center mt-3xl" data-animate="fade-up">
-      <a href="/services" class="btn btn--primary btn--lg">View All Services</a>
+      <a href="/services" class="svc-card svc-card--all" data-animate="fade-up">
+        <div class="svc-card__overlay"></div>
+        <div class="svc-card__content">
+          <h3 class="svc-card__title">All Services</h3>
+          <p class="svc-card__desc">Explore our full range of personalized chiropractic and wellness services.</p>
+          <span class="svc-card__link">View all <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+        </div>
+      </a>
     </div>
   </SectionWrapper>
 
@@ -1029,19 +1033,11 @@ import VideoBackground from '../components/VideoBackground.astro';
     }
   }
 
-  /* Services Grid — 3 top, 2 bottom */
+  /* Services Grid — 3 columns, equal cards */
   .services-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-lg);
-  }
-
-  /* Bottom row: 2 cards, wider */
-  .services-grid > :nth-child(4) {
-    grid-column: 1 / 2;
-  }
-  .services-grid > :nth-child(5) {
-    grid-column: 2 / 4;
   }
 
   /* Card with background image */
@@ -1112,14 +1108,18 @@ import VideoBackground from '../components/VideoBackground.astro';
     gap: 10px;
   }
 
+  .svc-card--all {
+    background: var(--color-primary) !important;
+    background-image: none !important;
+  }
+
+  .svc-card--all .svc-card__overlay {
+    background: transparent;
+  }
+
   @media (max-width: 768px) {
     .services-grid {
       grid-template-columns: 1fr 1fr;
-    }
-
-    .services-grid > :nth-child(4),
-    .services-grid > :nth-child(5) {
-      grid-column: span 1;
     }
 
     .svc-card {

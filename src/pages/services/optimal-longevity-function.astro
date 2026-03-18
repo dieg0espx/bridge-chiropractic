@@ -163,73 +163,14 @@ import VideoBackground from '../../components/VideoBackground.astro';
       <h2 class="display-3">Why Proactive Care Matters</h2>
     </div>
 
-    <div class="conditions-grid">
-      <div class="condition-item" data-animate="fade-up" data-animate-delay="150">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M9 11l3 3L22 4"></path>
-          <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-        </svg>
-        <div>
-          <h4>Maintained Independence</h4>
-          <p>Continue living actively without relying on others for basic function</p>
-        </div>
-      </div>
-
-      <div class="condition-item" data-animate="fade-up" data-animate-delay="150">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M9 11l3 3L22 4"></path>
-          <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-        </svg>
-        <div>
-          <h4>Reduced Injury Risk</h4>
-          <p>Prevent falls, strains, and overuse injuries that sideline active adults</p>
-        </div>
-      </div>
-
-      <div class="condition-item" data-animate="scale" data-animate-delay="300">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M9 11l3 3L22 4"></path>
-          <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-        </svg>
-        <div>
-          <h4>Better Quality of Life</h4>
-          <p>Stay active in sports, hobbies, travel, and activities you enjoy</p>
-        </div>
-      </div>
-
-      <div class="condition-item" data-animate="fade-up" data-animate-delay="250">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M9 11l3 3L22 4"></path>
-          <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-        </svg>
-        <div>
-          <h4>Slower Functional Decline</h4>
-          <p>Preserve strength, mobility, and coordination that naturally decrease with age</p>
-        </div>
-      </div>
-
-      <div class="condition-item" data-animate="fade-up" data-animate-delay="450">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M9 11l3 3L22 4"></path>
-          <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-        </svg>
-        <div>
-          <h4>Less Need for Invasive Care</h4>
-          <p>Avoid surgeries, medications, and aggressive interventions through maintenance</p>
-        </div>
-      </div>
-
-      <div class="condition-item" data-animate="fade-up" data-animate-delay="350">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M9 11l3 3L22 4"></path>
-          <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-        </svg>
-        <div>
-          <h4>Confidence in Movement</h4>
-          <p>Feel capable and secure in your body without fear of injury or limitation</p>
-        </div>
-      </div>
-    </div>
+    <ul class="conditions-list" data-animate="fade-up">
+      <li><strong>Maintained Independence</strong> — Continue living actively without relying on others for basic function</li>
+      <li><strong>Reduced Injury Risk</strong> — Prevent falls, strains, and overuse injuries that sideline active adults</li>
+      <li><strong>Better Quality of Life</strong> — Stay active in sports, hobbies, travel, and activities you enjoy</li>
+      <li><strong>Slower Functional Decline</strong> — Preserve strength, mobility, and coordination that naturally decrease with age</li>
+      <li><strong>Less Need for Invasive Care</strong> — Avoid surgeries, medications, and aggressive interventions through maintenance</li>
+      <li><strong>Confidence in Movement</strong> — Feel capable and secure in your body without fear of injury or limitation</li>
+    </ul>
   </SectionWrapper>
 
   <!-- FAQ Section -->
@@ -509,45 +450,37 @@ import VideoBackground from '../../components/VideoBackground.astro';
     font-size: 1.0625rem;
   }
 
-  .conditions-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: var(--space-lg);
+  .conditions-list {
+    list-style: none;
+    padding: 0;
     margin-top: var(--space-4xl);
+    columns: 2;
+    column-gap: var(--space-2xl);
   }
 
-  .condition-item {
-    display: flex;
-    align-items: start;
-    gap: var(--space-md);
-    padding: var(--space-xl);
-    background: white;
-    border-radius: var(--radius-lg);
-    border-left: 4px solid var(--color-primary);
-    transition: all 0.3s ease;
-  }
-
-  .condition-item:hover {
-    transform: translateX(8px);
-    box-shadow: var(--shadow-lg);
-  }
-
-  .condition-item svg {
-    flex-shrink: 0;
-    stroke: var(--color-primary);
-    margin-top: 2px;
-  }
-
-  .condition-item h4 {
-    font-size: 1.125rem;
-    margin-bottom: var(--space-xs);
-    color: var(--color-charcoal);
-  }
-
-  .condition-item p {
-    font-size: 0.9375rem;
+  .conditions-list li {
+    padding: var(--space-sm) 0;
+    padding-left: var(--space-lg);
+    position: relative;
     color: var(--color-gray-dark);
-    line-height: 1.6;
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    break-inside: avoid;
+  }
+
+  .conditions-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 8px;
+    height: 8px;
+    background: var(--color-primary);
+    border-radius: 50%;
+  }
+
+  .conditions-list li strong {
+    color: var(--color-charcoal);
   }
 
   .faq-grid {
@@ -645,9 +578,12 @@ import VideoBackground from '../../components/VideoBackground.astro';
   }
 
   @media (max-width: 768px) {
-    .benefits-grid,
-    .conditions-grid {
+    .benefits-grid {
       grid-template-columns: 1fr;
+    }
+
+    .conditions-list {
+      columns: 1;
     }
 
     .process-step {

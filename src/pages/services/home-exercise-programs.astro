@@ -162,73 +162,14 @@ import VideoBackground from '../../components/VideoBackground.astro';
       <h2 class="display-3">Benefits of Home Exercise Programs</h2>
     </div>
 
-    <div class="conditions-grid">
-      <div class="condition-item" data-animate="fade-up" data-animate-delay="150">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M9 11l3 3L22 4"></path>
-          <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-        </svg>
-        <div>
-          <h4>Faster Recovery</h4>
-          <p>Active participation accelerates healing and reduces treatment time</p>
-        </div>
-      </div>
-
-      <div class="condition-item" data-animate="fade-up" data-animate-delay="150">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M9 11l3 3L22 4"></path>
-          <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-        </svg>
-        <div>
-          <h4>Better Adjustment Results</h4>
-          <p>Stronger muscles help joints stay aligned longer</p>
-        </div>
-      </div>
-
-      <div class="condition-item" data-animate="scale" data-animate-delay="300">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M9 11l3 3L22 4"></path>
-          <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-        </svg>
-        <div>
-          <h4>Long-Term Independence</h4>
-          <p>Learn to manage your own health instead of relying solely on treatment</p>
-        </div>
-      </div>
-
-      <div class="condition-item" data-animate="fade-up" data-animate-delay="250">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M9 11l3 3L22 4"></path>
-          <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-        </svg>
-        <div>
-          <h4>Reduced Re-Injury Risk</h4>
-          <p>Build resilience to prevent problems from coming back</p>
-        </div>
-      </div>
-
-      <div class="condition-item" data-animate="fade-up" data-animate-delay="450">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M9 11l3 3L22 4"></path>
-          <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-        </svg>
-        <div>
-          <h4>Improved Daily Function</h4>
-          <p>Move better in activities that matter most to you</p>
-        </div>
-      </div>
-
-      <div class="condition-item" data-animate="fade-up" data-animate-delay="350">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M9 11l3 3L22 4"></path>
-          <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-        </svg>
-        <div>
-          <h4>Enhanced Confidence</h4>
-          <p>Feel capable and in control of your physical health</p>
-        </div>
-      </div>
-    </div>
+    <ul class="conditions-list" data-animate="fade-up">
+      <li><strong>Faster Recovery</strong> — Active participation accelerates healing and reduces treatment time</li>
+      <li><strong>Better Adjustment Results</strong> — Stronger muscles help joints stay aligned longer</li>
+      <li><strong>Long-Term Independence</strong> — Learn to manage your own health instead of relying solely on treatment</li>
+      <li><strong>Reduced Re-Injury Risk</strong> — Build resilience to prevent problems from coming back</li>
+      <li><strong>Improved Daily Function</strong> — Move better in activities that matter most to you</li>
+      <li><strong>Enhanced Confidence</strong> — Feel capable and in control of your physical health</li>
+    </ul>
   </SectionWrapper>
 
   <!-- FAQ Section -->
@@ -508,45 +449,37 @@ import VideoBackground from '../../components/VideoBackground.astro';
     font-size: 1.0625rem;
   }
 
-  .conditions-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: var(--space-lg);
+  .conditions-list {
+    list-style: none;
+    padding: 0;
     margin-top: var(--space-4xl);
+    columns: 2;
+    column-gap: var(--space-2xl);
   }
 
-  .condition-item {
-    display: flex;
-    align-items: start;
-    gap: var(--space-md);
-    padding: var(--space-xl);
-    background: white;
-    border-radius: var(--radius-lg);
-    border-left: 4px solid var(--color-primary);
-    transition: all 0.3s ease;
-  }
-
-  .condition-item:hover {
-    transform: translateX(8px);
-    box-shadow: var(--shadow-lg);
-  }
-
-  .condition-item svg {
-    flex-shrink: 0;
-    stroke: var(--color-primary);
-    margin-top: 2px;
-  }
-
-  .condition-item h4 {
-    font-size: 1.125rem;
-    margin-bottom: var(--space-xs);
-    color: var(--color-charcoal);
-  }
-
-  .condition-item p {
-    font-size: 0.9375rem;
+  .conditions-list li {
+    padding: var(--space-sm) 0;
+    padding-left: var(--space-lg);
+    position: relative;
     color: var(--color-gray-dark);
-    line-height: 1.6;
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    break-inside: avoid;
+  }
+
+  .conditions-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 8px;
+    height: 8px;
+    background: var(--color-primary);
+    border-radius: 50%;
+  }
+
+  .conditions-list li strong {
+    color: var(--color-charcoal);
   }
 
   .faq-grid {
@@ -644,9 +577,12 @@ import VideoBackground from '../../components/VideoBackground.astro';
   }
 
   @media (max-width: 768px) {
-    .benefits-grid,
-    .conditions-grid {
+    .benefits-grid {
       grid-template-columns: 1fr;
+    }
+
+    .conditions-list {
+      columns: 1;
     }
 
     .process-step {

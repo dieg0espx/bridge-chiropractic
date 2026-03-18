@@ -163,95 +163,16 @@ import VideoBackground from '../../components/VideoBackground.astro';
       <h2 class="display-3">Issues Helped by Soft Tissue Therapy</h2>
     </div>
 
-    <div class="conditions-grid">
-      <div class="condition-item" data-animate="fade-up" data-animate-delay="150">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M9 11l3 3L22 4"></path>
-          <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-        </svg>
-        <div>
-          <h4>Chronic Muscle Tension</h4>
-          <p>Persistent tightness in neck, shoulders, back, and hips</p>
-        </div>
-      </div>
-
-      <div class="condition-item" data-animate="fade-up" data-animate-delay="150">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M9 11l3 3L22 4"></path>
-          <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-        </svg>
-        <div>
-          <h4>Sports Injuries</h4>
-          <p>Strains, overuse injuries, and muscle tears</p>
-        </div>
-      </div>
-
-      <div class="condition-item" data-animate="scale" data-animate-delay="300">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M9 11l3 3L22 4"></path>
-          <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-        </svg>
-        <div>
-          <h4>Repetitive Strain Injuries</h4>
-          <p>Tennis elbow, golfer's elbow, carpal tunnel syndrome</p>
-        </div>
-      </div>
-
-      <div class="condition-item" data-animate="fade-up" data-animate-delay="250">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M9 11l3 3L22 4"></path>
-          <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-        </svg>
-        <div>
-          <h4>Trigger Points</h4>
-          <p>Painful muscle knots causing referred pain</p>
-        </div>
-      </div>
-
-      <div class="condition-item" data-animate="fade-up" data-animate-delay="450">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M9 11l3 3L22 4"></path>
-          <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-        </svg>
-        <div>
-          <h4>Limited Range of Motion</h4>
-          <p>Stiffness preventing full movement in joints</p>
-        </div>
-      </div>
-
-      <div class="condition-item" data-animate="fade-up" data-animate-delay="350">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M9 11l3 3L22 4"></path>
-          <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-        </svg>
-        <div>
-          <h4>Post-Surgical Scar Tissue</h4>
-          <p>Adhesions limiting function after surgery</p>
-        </div>
-      </div>
-
-      <div class="condition-item" data-animate="scale" data-animate-delay="600">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M9 11l3 3L22 4"></path>
-          <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-        </svg>
-        <div>
-          <h4>Plantar Fasciitis</h4>
-          <p>Heel and foot pain from fascial restriction</p>
-        </div>
-      </div>
-
-      <div class="condition-item" data-animate="fade-up" data-animate-delay="450">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M9 11l3 3L22 4"></path>
-          <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-        </svg>
-        <div>
-          <h4>IT Band Syndrome</h4>
-          <p>Lateral knee and hip pain from tight iliotibial band</p>
-        </div>
-      </div>
-    </div>
+    <ul class="conditions-list" data-animate="fade-up">
+      <li><strong>Chronic Muscle Tension</strong> — Persistent tightness in neck, shoulders, back, and hips</li>
+      <li><strong>Sports Injuries</strong> — Strains, overuse injuries, and muscle tears</li>
+      <li><strong>Repetitive Strain Injuries</strong> — Tennis elbow, golfer's elbow, carpal tunnel syndrome</li>
+      <li><strong>Trigger Points</strong> — Painful muscle knots causing referred pain</li>
+      <li><strong>Limited Range of Motion</strong> — Stiffness preventing full movement in joints</li>
+      <li><strong>Post-Surgical Scar Tissue</strong> — Adhesions limiting function after surgery</li>
+      <li><strong>Plantar Fasciitis</strong> — Heel and foot pain from fascial restriction</li>
+      <li><strong>IT Band Syndrome</strong> — Lateral knee and hip pain from tight iliotibial band</li>
+    </ul>
   </SectionWrapper>
 
   <!-- FAQ Section -->
@@ -614,45 +535,37 @@ import VideoBackground from '../../components/VideoBackground.astro';
     font-weight: 400;
   }
 
-  .conditions-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: var(--space-lg);
+  .conditions-list {
+    list-style: none;
+    padding: 0;
     margin-top: var(--space-4xl);
+    columns: 2;
+    column-gap: var(--space-2xl);
   }
 
-  .condition-item {
-    display: flex;
-    align-items: start;
-    gap: var(--space-md);
-    padding: var(--space-xl);
-    background: white;
-    border-radius: var(--radius-lg);
-    border-left: 4px solid var(--color-primary);
-    transition: all 0.3s ease;
-  }
-
-  .condition-item:hover {
-    transform: translateX(8px);
-    box-shadow: var(--shadow-lg);
-  }
-
-  .condition-item svg {
-    flex-shrink: 0;
-    stroke: var(--color-primary);
-    margin-top: 2px;
-  }
-
-  .condition-item h4 {
-    font-size: 1.125rem;
-    margin-bottom: var(--space-xs);
-    color: var(--color-charcoal);
-  }
-
-  .condition-item p {
-    font-size: 0.9375rem;
+  .conditions-list li {
+    padding: var(--space-sm) 0;
+    padding-left: var(--space-lg);
+    position: relative;
     color: var(--color-gray-dark);
-    line-height: 1.6;
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    break-inside: avoid;
+  }
+
+  .conditions-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 8px;
+    height: 8px;
+    background: var(--color-primary);
+    border-radius: 50%;
+  }
+
+  .conditions-list li strong {
+    color: var(--color-charcoal);
   }
 
   .faq-grid {
@@ -751,9 +664,12 @@ import VideoBackground from '../../components/VideoBackground.astro';
 
   @media (max-width: 768px) {
     .techniques-grid,
-    .benefits-grid,
-    .conditions-grid {
+    .benefits-grid {
       grid-template-columns: 1fr;
+    }
+
+    .conditions-list {
+      columns: 1;
     }
 
     .faq-grid {

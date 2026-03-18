@@ -43,20 +43,27 @@ const { title, description = "Personalized chiropractic care for San Diego adult
         <nav class="header__nav">
           <a href="/" class="header__nav-link">Home</a>
           <a href="/about" class="header__nav-link">About</a>
-          <a href="/services" class="header__nav-link">Services</a>
-          <a href="/conditions" class="header__nav-link">Conditions</a>
           <div class="header__dropdown">
             <button class="header__nav-link header__dropdown-trigger" aria-expanded="false">
-              More
+              Services
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
             </button>
             <div class="header__dropdown-menu">
-              <a href="/testimonials" class="header__dropdown-link">Testimonials</a>
-              <a href="/faq" class="header__dropdown-link">FAQ</a>
-              <a href="/blog" class="header__dropdown-link">Blog</a>
+              <a href="/services" class="header__dropdown-link">All Services</a>
+              <a href="/services/chiropractic-adjustments" class="header__dropdown-link">Chiropractic Adjustments</a>
+              <a href="/services/soft-tissue-therapy" class="header__dropdown-link">Soft Tissue Therapy</a>
+              <a href="/services/home-exercise-programs" class="header__dropdown-link">Home Exercise Programs</a>
+              <a href="/services/fall-prevention-balance-training" class="header__dropdown-link">Fall Prevention & Balance</a>
+              <a href="/services/mobility-movement-guidance" class="header__dropdown-link">Mobility & Movement</a>
+              <a href="/services/optimal-longevity-function" class="header__dropdown-link">Optimal Longevity</a>
+              <a href="/services/posture-ergonomic-support" class="header__dropdown-link">Posture & Ergonomics</a>
+              <a href="/services/neuro-brain-rehabilitation" class="header__dropdown-link">Neuro Rehabilitation</a>
             </div>
           </div>
-          <a href="/contact" class="header__nav-link header__nav-cta">Contact</a>
+          <a href="/conditions" class="header__nav-link">Conditions</a>
+          <a href="/testimonials" class="header__nav-link">Testimonials</a>
+          <a href="/faq" class="header__nav-link">FAQ</a>
+          <a href="/contact" class="header__nav-link header__nav-cta">Book Now</a>
         </nav>
 
         <!-- Mobile Menu Toggle -->
@@ -84,16 +91,27 @@ const { title, description = "Personalized chiropractic care for San Diego adult
           <ul class="sidebar-nav__list">
             <li><a href="/about">About Dr. Beyerl</a></li>
             <li><a href="/services">Services</a></li>
+            <li class="sidebar-nav__sub-items">
+              <ul class="sidebar-nav__sublist">
+                <li><a href="/services/chiropractic-adjustments">Chiropractic Adjustments</a></li>
+                <li><a href="/services/soft-tissue-therapy">Soft Tissue Therapy</a></li>
+                <li><a href="/services/home-exercise-programs">Home Exercise Programs</a></li>
+                <li><a href="/services/fall-prevention-balance-training">Fall Prevention & Balance</a></li>
+                <li><a href="/services/mobility-movement-guidance">Mobility & Movement</a></li>
+                <li><a href="/services/optimal-longevity-function">Optimal Longevity</a></li>
+                <li><a href="/services/posture-ergonomic-support">Posture & Ergonomics</a></li>
+                <li><a href="/services/neuro-brain-rehabilitation">Neuro Rehabilitation</a></li>
+              </ul>
+            </li>
             <li><a href="/conditions">What We Treat</a></li>
             <li><a href="/testimonials">Patient Stories</a></li>
             <li><a href="/faq">FAQ</a></li>
-            <li><a href="/blog">Blog</a></li>
           </ul>
         </div>
 
         <div class="sidebar-nav__cta">
           <a href="/contact" class="sidebar-nav__btn">
-            Book a Visit
+            Book Now
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M5 12h14M12 5l7 7-7 7"/>
             </svg>
@@ -168,6 +186,9 @@ const { title, description = "Personalized chiropractic care for San Diego adult
                 <a href="https://instagram.com/bridgechiropracticsd" aria-label="Instagram" target="_blank" rel="noopener">
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
                 </a>
+                <a href="https://www.facebook.com/p/The-Bridge-Chiropractic-61576636796704/" aria-label="Facebook" target="_blank" rel="noopener">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                </a>
               </div>
             </div>
 
@@ -180,6 +201,7 @@ const { title, description = "Personalized chiropractic care for San Diego adult
                 <li><a href="/conditions">Conditions We Treat</a></li>
                 <li><a href="/testimonials">Patient Stories</a></li>
                 <li><a href="/faq">FAQ</a></li>
+                <li><a href="/contact">Book Now</a></li>
               </ul>
             </div>
 
@@ -206,6 +228,12 @@ const { title, description = "Personalized chiropractic care for San Diego adult
                   4340 Genesee Ave, Suite 201<br>
                   San Diego, CA 92117
                 </address>
+              </div>
+              <div class="footer__contact-item">
+                <div class="footer__contact-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </div>
+                <a href="tel:8582777500" style="color: inherit; text-decoration: none;">(858) 277-7500</a>
               </div>
               <div class="footer__contact-item">
                 <div class="footer__contact-icon">
@@ -395,7 +423,7 @@ const { title, description = "Personalized chiropractic care for San Diego adult
         top: calc(100% + 12px);
         left: 50%;
         transform: translateX(-50%);
-        min-width: 180px;
+        min-width: 240px;
         background: var(--color-white);
         border-radius: var(--radius-md);
         box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
@@ -426,6 +454,13 @@ const { title, description = "Personalized chiropractic care for San Diego adult
       .header__dropdown-link:hover {
         background: rgba(0, 0, 0, 0.03);
         color: var(--color-accent);
+      }
+
+      .header__dropdown-link:first-child {
+        font-weight: 600;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        margin-bottom: 4px;
+        padding-bottom: 12px;
       }
 
       /* Show desktop nav on larger screens */
@@ -572,6 +607,31 @@ const { title, description = "Personalized chiropractic care for San Diego adult
       .sidebar-nav__list a.active {
         color: var(--color-accent);
         transform: translateX(4px);
+      }
+
+      .sidebar-nav__sub-items {
+        margin-bottom: var(--space-md);
+      }
+
+      .sidebar-nav__sublist {
+        list-style: none;
+        padding: 0 0 0 var(--space-lg);
+        margin: var(--space-xs) 0 0;
+      }
+
+      .sidebar-nav__sublist li {
+        margin-bottom: var(--space-xs);
+      }
+
+      .sidebar-nav__sublist a {
+        font-size: 1.0625rem !important;
+        font-weight: 400;
+        color: var(--color-gray-dark);
+        font-family: var(--font-body) !important;
+      }
+
+      .sidebar-nav__sublist a:hover {
+        color: var(--color-accent);
       }
 
       .sidebar-nav__cta {

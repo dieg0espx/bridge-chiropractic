@@ -187,32 +187,14 @@ import OfferingCard from '../../components/OfferingCard.astro';
         <p class="section-subtitle">Specialized care for neurological and vestibular disorders</p>
       </div>
 
-      <div class="conditions-grid">
-        <div class="condition-card" data-animate="fade-up">
-          <h3>Concussion & Post-Concussion Syndrome</h3>
-          <p>Recovery support for acute concussions and persistent symptoms including headaches, brain fog, light sensitivity, and difficulty concentrating.</p>
-        </div>
-        <div class="condition-card" data-animate="fade-up">
-          <h3>Vestibular Disorders</h3>
-          <p>Treatment for dizziness, vertigo, BPPV, vestibular neuritis, and balance disturbances related to inner ear dysfunction.</p>
-        </div>
-        <div class="condition-card" data-animate="fade-up">
-          <h3>Visual-Vestibular Dysfunction</h3>
-          <p>Rehabilitation for visual tracking problems, convergence insufficiency, motion sensitivity, and coordination between eye movements and balance.</p>
-        </div>
-        <div class="condition-card" data-animate="fade-up">
-          <h3>Cervicogenic Dizziness</h3>
-          <p>Assessment and treatment of dizziness and balance problems originating from neck dysfunction, whiplash, or cervical spine issues.</p>
-        </div>
-        <div class="condition-card" data-animate="fade-up">
-          <h3>Balance & Coordination Deficits</h3>
-          <p>Intervention for unsteadiness, poor coordination, spatial disorientation, and difficulty with dynamic or complex movements.</p>
-        </div>
-        <div class="condition-card" data-animate="fade-up">
-          <h3>Headaches & Migraines</h3>
-          <p>Neurological approach to chronic headaches, vestibular migraines, and head pain related to brain injury or sensory dysfunction.</p>
-        </div>
-      </div>
+      <ul class="conditions-list" data-animate="fade-up">
+        <li><strong>Concussion & Post-Concussion Syndrome</strong> — Recovery support for acute concussions and persistent symptoms including headaches, brain fog, light sensitivity, and difficulty concentrating.</li>
+        <li><strong>Vestibular Disorders</strong> — Treatment for dizziness, vertigo, BPPV, vestibular neuritis, and balance disturbances related to inner ear dysfunction.</li>
+        <li><strong>Visual-Vestibular Dysfunction</strong> — Rehabilitation for visual tracking problems, convergence insufficiency, motion sensitivity, and coordination between eye movements and balance.</li>
+        <li><strong>Cervicogenic Dizziness</strong> — Assessment and treatment of dizziness and balance problems originating from neck dysfunction, whiplash, or cervical spine issues.</li>
+        <li><strong>Balance & Coordination Deficits</strong> — Intervention for unsteadiness, poor coordination, spatial disorientation, and difficulty with dynamic or complex movements.</li>
+        <li><strong>Headaches & Migraines</strong> — Neurological approach to chronic headaches, vestibular migraines, and head pain related to brain injury or sensory dysfunction.</li>
+      </ul>
     </div>
   </SectionWrapper>
 
@@ -519,37 +501,38 @@ import OfferingCard from '../../components/OfferingCard.astro';
     margin: 0;
   }
 
-  /* Conditions Grid */
-  .conditions-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-    margin-top: 3rem;
+  /* Conditions List */
+  .conditions-list {
+    list-style: none;
+    padding: 0;
+    margin-top: var(--space-4xl);
+    columns: 2;
+    column-gap: var(--space-2xl);
   }
 
-  .condition-card {
-    padding: 2rem;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease;
-  }
-
-  .condition-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-  }
-
-  .condition-card h3 {
-    font-size: 1.25rem;
-    margin-bottom: 0.75rem;
-    color: var(--color-charcoal);
-  }
-
-  .condition-card p {
+  .conditions-list li {
+    padding: var(--space-sm) 0;
+    padding-left: var(--space-lg);
+    position: relative;
     color: var(--color-gray-dark);
-    line-height: 1.6;
-    margin: 0;
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    break-inside: avoid;
+  }
+
+  .conditions-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 8px;
+    height: 8px;
+    background: var(--color-primary);
+    border-radius: 50%;
+  }
+
+  .conditions-list li strong {
+    color: var(--color-charcoal);
   }
 
   /* FAQ Section */
@@ -806,8 +789,8 @@ import OfferingCard from '../../components/OfferingCard.astro';
       font-size: 1.25rem;
     }
 
-    .conditions-grid {
-      grid-template-columns: 1fr;
+    .conditions-list {
+      columns: 1;
     }
 
     .faq-summary {

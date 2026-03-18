@@ -1,0 +1,16 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Book Now" description="Schedule your appointment at The Bridge Chiropractic in San Diego.">
+  <section style="min-height: 60vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: var(--space-4xl);">
+    <div>
+      <h1 class="display-3">Redirecting to booking...</h1>
+      <p style="color: var(--color-gray-dark); margin-top: var(--space-lg);">If you're not redirected automatically, <a href="/contact">click here</a>.</p>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  window.location.href = '/contact';
+</script>

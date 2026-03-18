@@ -186,32 +186,14 @@ import OfferingCard from '../../components/OfferingCard.astro';
         <p class="section-subtitle">Movement optimization for diverse needs and goals</p>
       </div>
 
-      <div class="conditions-grid">
-        <div class="condition-card" data-animate="fade-up">
-          <h3>Athletes & Active Adults</h3>
-          <p>Improve performance, reduce injury risk, and address sport-specific movement limitations through targeted mobility and motor control training.</p>
-        </div>
-        <div class="condition-card" data-animate="fade-up">
-          <h3>Post-Injury Recovery</h3>
-          <p>Restore proper movement mechanics after injury, address compensatory patterns, and rebuild confidence in functional movements.</p>
-        </div>
-        <div class="condition-card" data-animate="fade-up">
-          <h3>Chronic Pain Sufferers</h3>
-          <p>Identify and correct faulty movement patterns that perpetuate pain cycles, reduce joint stress, and improve movement efficiency.</p>
-        </div>
-        <div class="condition-card" data-animate="fade-up">
-          <h3>Aging Adults</h3>
-          <p>Maintain functional independence through improved mobility, balance, and movement quality to support daily activities and reduce fall risk.</p>
-        </div>
-        <div class="condition-card" data-animate="fade-up">
-          <h3>Desk Workers</h3>
-          <p>Address movement restrictions and postural adaptations from prolonged sitting, restore functional capacity, and prevent chronic dysfunction.</p>
-        </div>
-        <div class="condition-card" data-animate="fade-up">
-          <h3>Weekend Warriors</h3>
-          <p>Prepare your body for sporadic high-intensity activity, reduce injury risk from inadequate movement preparation, and optimize recovery.</p>
-        </div>
-      </div>
+      <ul class="conditions-list" data-animate="fade-up">
+        <li><strong>Athletes & Active Adults</strong> — Improve performance, reduce injury risk, and address sport-specific movement limitations through targeted mobility and motor control training.</li>
+        <li><strong>Post-Injury Recovery</strong> — Restore proper movement mechanics after injury, address compensatory patterns, and rebuild confidence in functional movements.</li>
+        <li><strong>Chronic Pain Sufferers</strong> — Identify and correct faulty movement patterns that perpetuate pain cycles, reduce joint stress, and improve movement efficiency.</li>
+        <li><strong>Aging Adults</strong> — Maintain functional independence through improved mobility, balance, and movement quality to support daily activities and reduce fall risk.</li>
+        <li><strong>Desk Workers</strong> — Address movement restrictions and postural adaptations from prolonged sitting, restore functional capacity, and prevent chronic dysfunction.</li>
+        <li><strong>Weekend Warriors</strong> — Prepare your body for sporadic high-intensity activity, reduce injury risk from inadequate movement preparation, and optimize recovery.</li>
+      </ul>
     </div>
   </SectionWrapper>
 
@@ -518,37 +500,38 @@ import OfferingCard from '../../components/OfferingCard.astro';
     margin: 0;
   }
 
-  /* Conditions Grid */
-  .conditions-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-    margin-top: 3rem;
+  /* Conditions List */
+  .conditions-list {
+    list-style: none;
+    padding: 0;
+    margin-top: var(--space-4xl);
+    columns: 2;
+    column-gap: var(--space-2xl);
   }
 
-  .condition-card {
-    padding: 2rem;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease;
-  }
-
-  .condition-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-  }
-
-  .condition-card h3 {
-    font-size: 1.25rem;
-    margin-bottom: 0.75rem;
-    color: var(--color-charcoal);
-  }
-
-  .condition-card p {
+  .conditions-list li {
+    padding: var(--space-sm) 0;
+    padding-left: var(--space-lg);
+    position: relative;
     color: var(--color-gray-dark);
-    line-height: 1.6;
-    margin: 0;
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    break-inside: avoid;
+  }
+
+  .conditions-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 8px;
+    height: 8px;
+    background: var(--color-primary);
+    border-radius: 50%;
+  }
+
+  .conditions-list li strong {
+    color: var(--color-charcoal);
   }
 
   /* FAQ Section */
@@ -805,8 +788,8 @@ import OfferingCard from '../../components/OfferingCard.astro';
       font-size: 1.25rem;
     }
 
-    .conditions-grid {
-      grid-template-columns: 1fr;
+    .conditions-list {
+      columns: 1;
     }
 
     .faq-summary {
