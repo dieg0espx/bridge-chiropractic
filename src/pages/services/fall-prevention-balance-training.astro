@@ -141,7 +141,7 @@ import VideoBackground from '../../components/VideoBackground.astro';
 
     <div class="process-steps">
       <div class="process-step" data-animate="fade-up" data-animate-delay="150">
-        <div class="process-step__number">55+</div>
+        <div class="process-step__number"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
         <div class="process-step__content">
           <h3>Active Adults Over 55</h3>
           <p>Balance naturally declines with age, but it doesn't have to limit you. Training helps maintain stability and prevent age-related balance loss before it becomes a problem.</p>
@@ -149,7 +149,7 @@ import VideoBackground from '../../components/VideoBackground.astro';
       </div>
 
       <div class="process-step" data-animate="scale" data-animate-delay="300">
-        <div class="process-step__number">⚠️</div>
+        <div class="process-step__number"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" x2="12" y1="9" y2="13"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg></div>
         <div class="process-step__content">
           <h3>Those with Fall History</h3>
           <p>If you've experienced a fall or multiple near-falls, training identifies why it happened and addresses the underlying cause to prevent recurrence.</p>
@@ -157,7 +157,7 @@ import VideoBackground from '../../components/VideoBackground.astro';
       </div>
 
       <div class="process-step" data-animate="fade-up" data-animate-delay="450">
-        <div class="process-step__number">🌀</div>
+        <div class="process-step__number"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8.5a6.5 6.5 0 1 1 13 0c0 6-6 6.5-6 10.5"/><path d="M15 8.5a2.5 2.5 0 0 0-5 0v1a2 2 0 1 1-4 0"/></svg></div>
         <div class="process-step__content">
           <h3>People with Dizziness</h3>
           <p>Vestibular issues, vertigo, or unexplained dizziness can be addressed with specific balance and coordination exercises designed to retrain the inner ear system.</p>
@@ -165,7 +165,7 @@ import VideoBackground from '../../components/VideoBackground.astro';
       </div>
 
       <div class="process-step" data-animate="scale" data-animate-delay="600">
-        <div class="process-step__number">🎯</div>
+        <div class="process-step__number"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></div>
         <div class="process-step__content">
           <h3>Proactive Health-Focused Individuals</h3>
           <p>You don't need to have fallen to benefit. Proactive training builds resilience and prevents problems before they start, especially if balance feels "off."</p>
@@ -333,7 +333,7 @@ import VideoBackground from '../../components/VideoBackground.astro';
 
   .benefits-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--space-2xl);
     margin-top: var(--space-4xl);
   }
@@ -341,7 +341,7 @@ import VideoBackground from '../../components/VideoBackground.astro';
   .benefit-card {
     padding: var(--space-2xl);
     border-radius: var(--radius-xl);
-    border-left: 4px solid var(--color-accent);
+    border-top: 4px solid var(--color-accent);
     background: var(--color-white);
     text-align: center;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -349,28 +349,16 @@ import VideoBackground from '../../components/VideoBackground.astro';
   }
 
   .benefit-card:nth-child(3n+1) {
-    border-left-color: var(--color-primary);
+    border-top-color: var(--color-primary);
   }
 
   .benefit-card:nth-child(3n+2) {
     box-shadow: 0 6px 30px rgba(184, 149, 106, 0.12);
   }
 
-  .benefit-card:nth-child(even) {
-    margin-top: var(--space-md);
-  }
-
-  .benefit-card:first-child,
-  .benefit-card:nth-child(4) {
-    background: var(--color-white);
-    border-left-width: 6px;
-    box-shadow: 0 8px 30px rgba(184, 149, 106, 0.15);
-  }
-
   .benefit-card:hover {
     transform: translateY(-8px) scale(1.02);
     box-shadow: 0 12px 48px rgba(184, 149, 106, 0.2);
-    border-left-width: 6px;
   }
 
   .benefit-icon {
@@ -385,7 +373,7 @@ import VideoBackground from '../../components/VideoBackground.astro';
     transition: transform 0.3s ease, background 0.3s ease;
   }
 
-  .benefit-card:nth-child(even) .benefit-icon {
+  .benefit-card:nth-child(3n+1) .benefit-icon {
     background: var(--color-primary);
   }
 
@@ -576,6 +564,12 @@ import VideoBackground from '../../components/VideoBackground.astro';
 
   .related-service-card:hover .related-service-arrow {
     transform: translateX(8px);
+  }
+
+  @media (max-width: 1024px) {
+    .benefits-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   @media (max-width: 768px) {
