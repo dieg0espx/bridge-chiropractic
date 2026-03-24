@@ -10,23 +10,14 @@ import VideoBackground from '../../components/VideoBackground.astro';
 >
   <!-- Hero Section -->
   <section class="hero-fullbleed">
-    <video
-      class="hero-fullbleed__video"
-      autoplay
-      muted
-      loop
-      playsinline
-      aria-hidden="true"
-    >
-      <source src="https://res.cloudinary.com/dku1gnuat/video/upload/v1773678669/copy_C8C8BA7D-35C3-4286-85F6-927425408BE0_q174of.mp4" type="video/mp4" />
-    </video>
+    <img src="/images/soft-tissue.jpg" class="hero-fullbleed__image" alt="" aria-hidden="true" />
     <div class="hero-fullbleed__overlay" aria-hidden="true"></div>
 
     <div class="hero-fullbleed__content">
       <span class="hero-fullbleed__eyebrow">Soft Tissue Therapy</span>
       <h1 class="hero-fullbleed__title">Releasing tension<br />your body's been holding.</h1>
       <p class="hero-fullbleed__subtitle">Targeted muscle and fascia work to reduce stiffness, improve range of motion, and help adjustments last longer.</p>
-      <div class="hero-fullbleed__cta"><a href="/contact" class="btn btn--primary btn--lg">Book Your Visit</a></div>
+      <div class="hero-fullbleed__cta"><a href="#" class="btn btn--primary btn--lg" data-cal-link="sdbridgechiropractic/30min" data-cal-config='{"layout":"month_view"}'>Book Your Visit</a></div>
     </div>
   </section>
 
@@ -300,7 +291,7 @@ import VideoBackground from '../../components/VideoBackground.astro';
         Experience targeted soft tissue therapy designed to address the root cause of muscle restriction.
       </p>
       <div style="display: flex; gap: var(--space-lg); justify-content: center; flex-wrap: wrap;">
-        <a href="/contact" class="btn btn--white btn--lg">Book a Visit</a>
+        <a href="#" class="btn btn--white btn--lg" data-cal-link="sdbridgechiropractic/30min" data-cal-config='{"layout":"month_view"}'>Book a Visit</a>
         <a href="tel:8582777500" class="btn btn--secondary btn--lg" style="background: transparent; border: 2px solid white; color: white;">
           Call (858) 277-7500
         </a>

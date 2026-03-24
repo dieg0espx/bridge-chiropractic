@@ -1122,7 +1122,7 @@ main {
 .hero-fullbleed {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 75vh;
   min-height: 500px;
   max-height: 700px;
   display: flex;

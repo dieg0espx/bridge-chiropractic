@@ -8,6 +8,7 @@ interface Props {
   posterImage: string;
   ctaText: string;
   ctaLink: string;
+  ctaCalLink?: string;
   secondaryCtaText?: string;
   secondaryCtaLink?: string;
 }
@@ -16,6 +17,7 @@ const {
   posterImage,
   ctaText,
   ctaLink,
+  ctaCalLink,
   secondaryCtaText,
   secondaryCtaLink,
 } = Astro.props;
@@ -47,9 +49,15 @@ const videoUrl = 'https://res.cloudinary.com/dku1gnuat/video/upload/v1773678669/
       <h1 class="hero__title">Move better.<br />Feel stronger.<br />Stay independent.</h1>
       <p class="hero__subtitle">Personalized chiropractic care for active adults who want lasting relief — not quick fixes. Dr. Nate Beyerl helps you reduce pain, restore movement, and build long-term resilience.</p>
       <div class="hero__cta-group">
-        <a href={ctaLink} class="btn btn--primary btn--lg">
-          {ctaText}
-        </a>
+        {ctaCalLink ? (
+          <a href="#" class="btn btn--primary btn--lg" data-cal-link={ctaCalLink} data-cal-config='{"layout":"month_view"}'>
+            {ctaText}
+          </a>
+        ) : (
+          <a href={ctaLink} class="btn btn--primary btn--lg">
+            {ctaText}
+          </a>
+        )}
         {secondaryCtaText && secondaryCtaLink && (
           <a href={secondaryCtaLink} class="hero__secondary-link">
             {secondaryCtaText}

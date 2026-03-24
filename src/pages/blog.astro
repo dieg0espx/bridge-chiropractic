@@ -5,15 +5,7 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="Blog" description="Health tips, chiropractic insights, and wellness advice from Dr. Nathan Beyerl at The Bridge Chiropractic in San Diego.">
   <!-- Hero Section -->
   <section class="hero-fullbleed">
-    <video
-      class="hero-fullbleed__image"
-      autoplay
-      muted
-      loop
-      playsinline
-    >
-      <source src="https://res.cloudinary.com/dku1gnuat/video/upload/v1773678669/copy_C8C8BA7D-35C3-4286-85F6-927425408BE0_q174of.mp4" type="video/mp4" />
-    </video>
+    <img src="/images/care-plan.jpg" class="hero-fullbleed__image" alt="" aria-hidden="true" />
     <div class="hero-fullbleed__overlay"></div>
     <div class="hero-fullbleed__content">
       <div class="container">
@@ -100,7 +92,7 @@ import Layout from '../layouts/Layout.astro';
       <div class="question-cta">
         <h2>Have a Health Question?</h2>
         <p>While we build out our blog, feel free to reach out with any questions. Dr. Beyerl is always happy to discuss your health concerns.</p>
-        <a href="/contact" class="btn btn--primary btn--lg">Book a Visit</a>
+        <a href="#" class="btn btn--primary btn--lg" data-cal-link="sdbridgechiropractic/30min" data-cal-config='{"layout":"month_view"}'>Book a Visit</a>
       </div>
     </div>
   </section>
