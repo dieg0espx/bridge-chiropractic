@@ -16,7 +16,17 @@
       "Bash(git add:*)",
       "Bash(git commit:*)",
       "Bash(git push:*)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(grep -E \"\\\\.astro$\")",
+      "Bash(npx skills:*)",
+      "Bash(while read:*)",
+      "Bash(do sed:*)",
+      "Bash(sed -i 's/class=\"\"\"\"btn btn--lg\"\"\"\" style=\"\"\"\"background: transparent; border: 2px solid white; color: white;\"\"\"\"/class=\"\"\"\"btn btn--outline-white btn--lg\"\"\"\"/g' \"$f\")",
+      "Bash(done)",
+      "Bash(sed -i 's/class=\"\"technique-card glass\"\"/class=\"\"technique-card\"\"/g' src/pages/services/soft-tissue-therapy.astro)",
+      "Bash(sed -i 's/class=\"\"legal-content glass-card reveal\"\"/class=\"\"legal-content reveal\"\"/g' src/pages/privacy.astro)",
+      "Bash(sed -i 's/class=\"\"legal-content glass-card reveal\"\"/class=\"\"legal-content reveal\"\"/g' src/pages/terms.astro)",
+      "Bash(cd:*)"
     ]
   }
 }
