@@ -29,21 +29,10 @@ import VideoBackground from '../components/VideoBackground.astro';
     </div>
   </section>
 
-  <!-- Services Overview -->
-  <SectionWrapper background="white" spacing="normal" containerWidth="narrow">
-    <div style="text-align: center;" data-animate="fade-up">
-      <span class="section__eyebrow" style="color: var(--color-accent); display: block; margin-bottom: 20px;">Holistic Approach</span>
-      <h2 class="display-2" style="margin-bottom: 24px;">More Than Adjustments</h2>
-      <p class="text-large" style="color: var(--color-gray-dark); line-height: 1.8; margin-bottom: 24px;">At The Bridge Chiropractic, we offer comprehensive care that addresses your whole body. Our integrated approach combines multiple techniques to help you move better, feel stronger, and live pain-free.</p>
-      <p style="color: var(--color-gray-dark); line-height: 1.8; font-size: 1.0625rem;">Each treatment plan is personalized to your specific condition, goals, and comfort level.</p>
-    </div>
-  </SectionWrapper>
-
   <!-- Service Navigation Cards -->
-  <SectionWrapper background="gray" spacing="normal">
+  <SectionWrapper background="white" spacing="normal">
     <div class="section__header" style="text-align: center; margin-bottom: 64px;" data-animate="fade-up">
-      <span class="section__eyebrow" style="color: var(--color-accent);">Explore Our Services</span>
-      <h2 class="display-3">Choose Your Path to Wellness</h2>
+      <h2 class="display-3">Find the Right Service for You</h2>
     </div>
 
     <div class="service-nav-grid">
@@ -53,7 +42,7 @@ import VideoBackground from '../components/VideoBackground.astro';
         description="Gentle and traditional adjustment techniques tailored to restore proper function and reduce pain."
         link="/services/chiropractic-adjustments"
         badge="Core Service"
-        glass={true}
+        
       />
 
       <OfferingCard
@@ -61,7 +50,7 @@ import VideoBackground from '../components/VideoBackground.astro';
         title="Soft Tissue Therapy"
         description="Target tension and adhesions that limit mobility through specialized myofascial techniques."
         link="/services/soft-tissue-therapy"
-        glass={true}
+        
       />
 
       <OfferingCard
@@ -69,7 +58,7 @@ import VideoBackground from '../components/VideoBackground.astro';
         title="Home Exercise Programs"
         description="Personalized exercises and stretches designed to reinforce your treatment and prevent future issues."
         link="/services/home-exercise-programs"
-        glass={true}
+        
       />
 
       <OfferingCard
@@ -78,7 +67,7 @@ import VideoBackground from '../components/VideoBackground.astro';
         description="Specialized training to improve balance, coordination, and stability to reduce fall risk."
         link="/services/fall-prevention-balance-training"
         badge="Specialized"
-        glass={true}
+        
       />
 
       <OfferingCard
@@ -86,7 +75,7 @@ import VideoBackground from '../components/VideoBackground.astro';
         title="Mobility & Movement Guidance"
         description="Expert guidance to improve how you move and maintain functional independence."
         link="/services/mobility-movement-guidance"
-        glass={true}
+        
       />
 
       <OfferingCard
@@ -94,7 +83,7 @@ import VideoBackground from '../components/VideoBackground.astro';
         title="Optimal Longevity & Function"
         description="Proactive care designed to preserve mobility, strength, and independence as you age."
         link="/services/optimal-longevity-function"
-        glass={true}
+        
       />
 
       <OfferingCard
@@ -102,7 +91,7 @@ import VideoBackground from '../components/VideoBackground.astro';
         title="Posture & Ergonomic Support"
         description="Correct postural imbalances and optimize your workspace for long-term health."
         link="/services/posture-ergonomic-support"
-        glass={true}
+        
       />
 
       <OfferingCard
@@ -111,7 +100,7 @@ import VideoBackground from '../components/VideoBackground.astro';
         description="Specialized neurological care for balance, coordination, and cognitive function."
         link="/services/neuro-brain-rehabilitation"
         badge="Specialized"
-        glass={true}
+        
       />
     </div>
   </SectionWrapper>
@@ -129,7 +118,7 @@ import VideoBackground from '../components/VideoBackground.astro';
       <p style="font-size: 1.25rem; margin-bottom: 48px; opacity: 0.95;">Schedule your consultation and discover which services are right for you.</p>
       <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
         <a href="#" class="btn btn--white btn--lg" data-cal-link="sdbridgechiropractic/30min" data-cal-config='{"layout":"month_view"}'>Book a Visit</a>
-        <a href="tel:8582777500" class="btn btn--secondary btn--lg" style="background: transparent; border: 2px solid white; color: white;">Call (858) 277-7500</a>
+        <a href="tel:8582777500" class="btn btn--outline-white btn--lg">Call (858) 277-7500</a>
       </div>
     </div>
   </VideoBackground>

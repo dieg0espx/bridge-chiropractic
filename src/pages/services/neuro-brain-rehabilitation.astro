@@ -2,8 +2,6 @@
 import Layout from '../../layouts/Layout.astro';
 import SectionWrapper from '../../components/SectionWrapper.astro';
 import VideoBackground from '../../components/VideoBackground.astro';
-import ContentGrid from '../../components/ContentGrid.astro';
-import OfferingCard from '../../components/OfferingCard.astro';
 ---
 
 <Layout
@@ -24,339 +22,316 @@ import OfferingCard from '../../components/OfferingCard.astro';
   </section>
 
   <!-- Overview Section -->
-  <SectionWrapper>
-    <div class="overview-section container">
+  <SectionWrapper background="white" spacing="normal" containerWidth="narrow">
+    <div class="service-overview" data-animate="fade-up">
+      <span class="section__eyebrow">What Is Neuro Rehabilitation?</span>
+      <h2 class="display-3">Supporting Brain Function and Neurological Recovery</h2>
+
       <div class="overview-content">
-        <h2 class="section-title" data-animate="fade-up">Supporting Brain Function and Neurological Recovery</h2>
+        <p class="text-large">Brain injuries, concussions, and neurological conditions don't just cause physical symptoms. They disrupt coordination, cognition, balance, mood, and quality of life. Recovery requires more than rest; it demands targeted rehabilitation that addresses the nervous system's ability to adapt, heal, and restore function.</p>
 
-        <p class="text-large" data-animate="fade-up">
-          Brain injuries, concussions, and neurological conditions don't just cause physical symptoms—they disrupt coordination, cognition, balance, mood, and quality of life. Recovery requires more than rest; it demands targeted rehabilitation that addresses the nervous system's ability to adapt, heal, and restore function.
-        </p>
+        <p>Neuro and Brain Rehabilitation at The Bridge Chiropractic is evidence-based care for adults recovering from concussions, post-concussion syndrome, vestibular disorders, and other neurological challenges. This specialized approach integrates neurological assessment, vestibular rehabilitation, sensory integration, and functional movement training to support your brain's recovery process.</p>
 
-        <p data-animate="fade-up">
-          Neuro and Brain Rehabilitation at The Bridge Chiropractic is evidence-based care for adults recovering from concussions, post-concussion syndrome, vestibular disorders, and other neurological challenges. This specialized approach integrates neurological assessment, vestibular rehabilitation, sensory integration, and functional movement training to support your brain's recovery process.
-        </p>
+        <p>Whether you're dealing with persistent headaches, dizziness, brain fog, vision problems, or balance disturbances after a concussion or injury, neuro rehab targets the root causes of dysfunction rather than masking symptoms. Care is personalized based on your specific deficits, symptoms, and recovery goals.</p>
 
-        <p data-animate="fade-up">
-          Whether you're dealing with persistent headaches, dizziness, brain fog, vision problems, or balance disturbances after a concussion or injury, neuro rehab targets the root causes of dysfunction rather than masking symptoms. Care is personalized based on your specific deficits, symptoms, and recovery goals.
-        </p>
-
-        <p data-animate="fade-up">
-          This isn't passive treatment—it's active, progressive rehabilitation designed to retrain your nervous system, restore confidence in movement, and help you return to work, sports, and daily activities with clarity and function. Recovery is possible with the right guidance and strategic intervention.
-        </p>
+        <p>This isn't passive treatment. It's active, progressive rehabilitation designed to retrain your nervous system, restore confidence in movement, and help you return to work, sports, and daily activities with clarity and function. Recovery is possible with the right guidance and strategic intervention.</p>
       </div>
     </div>
   </SectionWrapper>
 
-  <!-- Key Components Section -->
-  <SectionWrapper background="gray">
-    <div class="container">
-      <div class="section-header" data-animate="fade-up">
-        <h2 class="section-title">Core Components of Neuro Rehabilitation</h2>
-        <p class="section-subtitle">Comprehensive neurological assessment and targeted interventions</p>
+  <!-- Benefits Section -->
+  <SectionWrapper background="gray" spacing="normal">
+    <div class="section__header" data-animate="fade-up">
+      <span class="section__eyebrow">Benefits</span>
+      <h2 class="display-3">Core Components of Neuro Rehabilitation</h2>
+      <p class="text-large" style="max-width: 700px; margin: 0 auto;">Comprehensive neurological assessment and targeted interventions.</p>
+    </div>
+
+    <div class="benefits-grid">
+      <div class="benefit-card" data-animate="fade-up" data-animate-delay="150">
+        <div class="benefit-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M12 8v4"></path>
+            <path d="M12 16h.01"></path>
+          </svg>
+        </div>
+        <h3>Neurological Assessment</h3>
+        <p>Detailed evaluation of cognitive function, balance, coordination, visual tracking, and vestibular function to identify specific deficits and create targeted treatment plans.</p>
       </div>
 
-      <div class="benefits-grid">
-        <div class="benefit-card glass" data-animate="fade-up" data-animate-delay="150">
-          <div class="benefit-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="10"></circle>
-              <path d="M12 8v4"></path>
-              <path d="M12 16h.01"></path>
-            </svg>
-          </div>
-          <h3>Neurological Assessment</h3>
-          <p>Detailed evaluation of cognitive function, balance, coordination, visual tracking, and vestibular function to identify specific deficits and create targeted treatment plans.</p>
+      <div class="benefit-card" data-animate="scale" data-animate-delay="300">
+        <div class="benefit-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+            <circle cx="12" cy="12" r="3"></circle>
+          </svg>
         </div>
+        <h3>Vestibular Rehabilitation</h3>
+        <p>Specialized exercises to address dizziness, vertigo, balance disturbances, and visual-vestibular dysfunction commonly seen after concussions and inner ear disorders.</p>
+      </div>
 
-        <div class="benefit-card glass" data-animate="scale" data-animate-delay="300">
-          <div class="benefit-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-              <circle cx="12" cy="12" r="3"></circle>
-            </svg>
-          </div>
-          <h3>Vestibular Rehabilitation</h3>
-          <p>Specialized exercises to address dizziness, vertigo, balance disturbances, and visual-vestibular dysfunction commonly seen after concussions and inner ear disorders.</p>
+      <div class="benefit-card" data-animate="fade-up" data-animate-delay="450">
+        <div class="benefit-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <circle cx="12" cy="12" r="6"></circle>
+            <circle cx="12" cy="12" r="2"></circle>
+          </svg>
         </div>
+        <h3>Oculomotor Training</h3>
+        <p>Eye movement exercises to improve visual tracking, focus, convergence, and reduce symptoms like headaches, eye strain, and difficulty reading or concentrating.</p>
+      </div>
 
-        <div class="benefit-card glass" data-animate="fade-up" data-animate-delay="450">
-          <div class="benefit-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="10"></circle>
-              <circle cx="12" cy="12" r="6"></circle>
-              <circle cx="12" cy="12" r="2"></circle>
-            </svg>
-          </div>
-          <h3>Oculomotor Training</h3>
-          <p>Eye movement exercises to improve visual tracking, focus, convergence, and reduce symptoms like headaches, eye strain, and difficulty reading or concentrating.</p>
+      <div class="benefit-card" data-animate="scale" data-animate-delay="600">
+        <div class="benefit-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+          </svg>
         </div>
+        <h3>Sensory Integration</h3>
+        <p>Coordinated training to restore proper communication between visual, vestibular, and proprioceptive systems for improved balance, spatial awareness, and movement confidence.</p>
+      </div>
 
-        <div class="benefit-card glass" data-animate="scale" data-animate-delay="600">
-          <div class="benefit-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-            </svg>
-          </div>
-          <h3>Sensory Integration</h3>
-          <p>Coordinated training to restore proper communication between visual, vestibular, and proprioceptive systems for improved balance, spatial awareness, and movement confidence.</p>
+      <div class="benefit-card" data-animate="fade-up" data-animate-delay="750">
+        <div class="benefit-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+          </svg>
         </div>
+        <h3>Cognitive-Motor Training</h3>
+        <p>Dual-task exercises that challenge both mental processing and physical coordination to rebuild neurological resilience and functional capacity.</p>
+      </div>
 
-        <div class="benefit-card glass" data-animate="fade-up" data-animate-delay="750">
-          <div class="benefit-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
-            </svg>
-          </div>
-          <h3>Cognitive-Motor Training</h3>
-          <p>Dual-task exercises that challenge both mental processing and physical coordination to rebuild neurological resilience and functional capacity.</p>
+      <div class="benefit-card" data-animate="scale" data-animate-delay="900">
+        <div class="benefit-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+            <polyline points="16 7 22 7 22 13"></polyline>
+          </svg>
         </div>
-
-        <div class="benefit-card glass" data-animate="scale" data-animate-delay="900">
-          <div class="benefit-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
-              <polyline points="16 7 22 7 22 13"></polyline>
-            </svg>
-          </div>
-          <h3>Graded Return Protocols</h3>
-          <p>Progressive activity guidelines for safely returning to work, exercise, sports, and daily tasks while monitoring symptoms and adjusting intensity appropriately.</p>
-        </div>
+        <h3>Graded Return Protocols</h3>
+        <p>Progressive activity guidelines for safely returning to work, exercise, sports, and daily tasks while monitoring symptoms and adjusting intensity appropriately.</p>
       </div>
     </div>
   </SectionWrapper>
 
-  <!-- Treatment Approach Section -->
-  <SectionWrapper>
-    <div class="container">
-      <div class="section-header" data-animate="fade-up">
-        <h2 class="section-title">Our Neurological Rehabilitation Approach</h2>
-        <p class="section-subtitle">Systematic, evidence-based recovery protocols</p>
+  <!-- Process Section -->
+  <SectionWrapper background="white" spacing="normal">
+    <div class="section__header" data-animate="fade-up">
+      <span class="section__eyebrow">Our Approach</span>
+      <h2 class="display-3">Our Neurological Rehabilitation Approach</h2>
+      <p class="text-large" style="max-width: 700px; margin: 0 auto;">Systematic, evidence-based recovery protocols.</p>
+    </div>
+
+    <div class="process-steps">
+      <div class="process-step" data-animate="fade-up" data-animate-delay="100">
+        <div class="process-step__number">1</div>
+        <div class="process-step__content">
+          <h3>Comprehensive Neuro Assessment</h3>
+          <p>We evaluate your neurological status including cognitive function, balance testing, visual tracking, vestibular function, cervical spine involvement, and symptom patterns. This assessment identifies specific deficits and guides your personalized treatment plan.</p>
+        </div>
       </div>
 
-      <div class="process-grid">
-        <div class="process-step" data-animate="fade-up">
-          <div class="step-number">1</div>
-          <div class="step-content">
-            <h3>Comprehensive Neuro Assessment</h3>
-            <p>We evaluate your neurological status including cognitive function, balance testing, visual tracking, vestibular function, cervical spine involvement, and symptom patterns. This assessment identifies specific deficits and guides your personalized treatment plan.</p>
-          </div>
+      <div class="process-step" data-animate="fade-up" data-animate-delay="200">
+        <div class="process-step__number">2</div>
+        <div class="process-step__content">
+          <h3>Targeted Rehabilitation Interventions</h3>
+          <p>Based on your assessment, we implement specific therapies including vestibular exercises, oculomotor training, cervical spine treatment, balance training, and sensory integration work. Each intervention is dosed carefully to challenge your system without exacerbating symptoms.</p>
         </div>
+      </div>
 
-        <div class="process-step" data-animate="fade-up">
-          <div class="step-number">2</div>
-          <div class="step-content">
-            <h3>Targeted Rehabilitation Interventions</h3>
-            <p>Based on your assessment, we implement specific therapies including vestibular exercises, oculomotor training, cervical spine treatment, balance training, and sensory integration work. Each intervention is dosed carefully to challenge your system without exacerbating symptoms.</p>
-          </div>
+      <div class="process-step" data-animate="fade-up" data-animate-delay="300">
+        <div class="process-step__number">3</div>
+        <div class="process-step__content">
+          <h3>Progressive Activity Integration</h3>
+          <p>As your nervous system adapts, we gradually increase complexity and intensity through cognitive-motor tasks, dynamic balance challenges, and functional movement patterns that prepare you for real-world demands.</p>
         </div>
+      </div>
 
-        <div class="process-step" data-animate="fade-up">
-          <div class="step-number">3</div>
-          <div class="step-content">
-            <h3>Progressive Activity Integration</h3>
-            <p>As your nervous system adapts, we gradually increase complexity and intensity through cognitive-motor tasks, dynamic balance challenges, and functional movement patterns that prepare you for real-world demands.</p>
-          </div>
-        </div>
-
-        <div class="process-step" data-animate="fade-up">
-          <div class="step-number">4</div>
-          <div class="step-content">
-            <h3>Monitoring and Optimization</h3>
-            <p>Recovery isn't linear. We continuously reassess your symptoms, functional capacity, and neurological markers, adjusting your program based on how your brain responds. This ensures steady progress while preventing setbacks or symptom flare-ups.</p>
-          </div>
+      <div class="process-step" data-animate="fade-up" data-animate-delay="400">
+        <div class="process-step__number">4</div>
+        <div class="process-step__content">
+          <h3>Monitoring and Optimization</h3>
+          <p>Recovery isn't linear. We continuously reassess your symptoms, functional capacity, and neurological markers, adjusting your program based on how your brain responds. This ensures steady progress while preventing setbacks or symptom flare-ups.</p>
         </div>
       </div>
     </div>
   </SectionWrapper>
 
-  <!-- Conditions Treated Section -->
-  <SectionWrapper background="light">
-    <div class="container">
-      <div class="section-header" data-animate="fade-up">
-        <h2 class="section-title">Conditions We Address</h2>
-        <p class="section-subtitle">Specialized care for neurological and vestibular disorders</p>
-      </div>
-
-      <ul class="conditions-list" data-animate="fade-up">
-        <li><strong>Concussion & Post-Concussion Syndrome</strong> — Recovery support for acute concussions and persistent symptoms including headaches, brain fog, light sensitivity, and difficulty concentrating.</li>
-        <li><strong>Vestibular Disorders</strong> — Treatment for dizziness, vertigo, BPPV, vestibular neuritis, and balance disturbances related to inner ear dysfunction.</li>
-        <li><strong>Visual-Vestibular Dysfunction</strong> — Rehabilitation for visual tracking problems, convergence insufficiency, motion sensitivity, and coordination between eye movements and balance.</li>
-        <li><strong>Cervicogenic Dizziness</strong> — Assessment and treatment of dizziness and balance problems originating from neck dysfunction, whiplash, or cervical spine issues.</li>
-        <li><strong>Balance & Coordination Deficits</strong> — Intervention for unsteadiness, poor coordination, spatial disorientation, and difficulty with dynamic or complex movements.</li>
-        <li><strong>Headaches & Migraines</strong> — Neurological approach to chronic headaches, vestibular migraines, and head pain related to brain injury or sensory dysfunction.</li>
-      </ul>
+  <!-- Conditions Treated -->
+  <SectionWrapper background="gray" spacing="normal">
+    <div class="section__header" data-animate="fade-up">
+      <span class="section__eyebrow">Conditions We Treat</span>
+      <h2 class="display-3">Conditions We Address</h2>
     </div>
+
+    <ul class="conditions-list" data-animate="fade-up">
+      <li><strong>Concussion & Post-Concussion Syndrome</strong> — Recovery support for acute concussions and persistent symptoms including headaches, brain fog, light sensitivity, and difficulty concentrating.</li>
+      <li><strong>Vestibular Disorders</strong> — Treatment for dizziness, vertigo, BPPV, vestibular neuritis, and balance disturbances related to inner ear dysfunction.</li>
+      <li><strong>Visual-Vestibular Dysfunction</strong> — Rehabilitation for visual tracking problems, convergence insufficiency, motion sensitivity, and coordination between eye movements and balance.</li>
+      <li><strong>Cervicogenic Dizziness</strong> — Assessment and treatment of dizziness and balance problems originating from neck dysfunction, whiplash, or cervical spine issues.</li>
+      <li><strong>Balance & Coordination Deficits</strong> — Intervention for unsteadiness, poor coordination, spatial disorientation, and difficulty with dynamic or complex movements.</li>
+      <li><strong>Headaches & Migraines</strong> — Neurological approach to chronic headaches, vestibular migraines, and head pain related to brain injury or sensory dysfunction.</li>
+    </ul>
   </SectionWrapper>
 
   <!-- FAQ Section -->
-  <SectionWrapper>
-    <div class="container faq-container">
-      <div class="section-header" data-animate="fade-up">
-        <h2 class="section-title">Frequently Asked Questions</h2>
-      </div>
+  <SectionWrapper background="white" spacing="normal" containerWidth="normal">
+    <div class="section__header" data-animate="fade-up">
+      <span class="section__eyebrow">Common Questions</span>
+      <h2 class="display-3">Neuro Rehabilitation FAQs</h2>
+    </div>
 
-      <div class="faq-list">
-        <details class="faq-item" data-animate="fade-up">
-          <summary class="faq-summary">
-            What conditions benefit from neuro rehabilitation?
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq-icon">
-              <path d="M6 9l6 6 6-6"/>
-            </svg>
-          </summary>
-          <div class="faq-content">
-            Neuro rehabilitation is effective for concussions, post-concussion syndrome, vestibular disorders (vertigo, BPPV), visual-vestibular dysfunction, cervicogenic dizziness, balance deficits, coordination problems, persistent headaches after brain injury, and other neurological conditions affecting movement, cognition, or sensory integration.
-          </div>
-        </details>
+    <div class="faq-grid">
+      <details class="faq-item" data-animate="fade-up">
+        <summary class="faq-summary">
+          What conditions benefit from neuro rehabilitation?
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq-icon">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </summary>
+        <div class="faq-content">
+          Neuro rehabilitation is effective for concussions, post-concussion syndrome, vestibular disorders (vertigo, BPPV), visual-vestibular dysfunction, cervicogenic dizziness, balance deficits, coordination problems, persistent headaches after brain injury, and other neurological conditions affecting movement, cognition, or sensory integration.
+        </div>
+      </details>
 
-        <details class="faq-item" data-animate="fade-up">
-          <summary class="faq-summary">
-            How long does concussion recovery take with neuro rehab?
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq-icon">
-              <path d="M6 9l6 6 6-6"/>
-            </svg>
-          </summary>
-          <div class="faq-content">
-            Recovery timelines vary based on injury severity, symptom complexity, and individual factors. Most people with acute concussions see significant improvement within 4-8 weeks with targeted rehab. Post-concussion syndrome (symptoms lasting beyond 3 months) typically requires more intensive, longer-term intervention. We monitor progress closely and adjust treatment based on your response.
-          </div>
-        </details>
+      <details class="faq-item" data-animate="fade-up">
+        <summary class="faq-summary">
+          How long does concussion recovery take with neuro rehab?
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq-icon">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </summary>
+        <div class="faq-content">
+          Recovery timelines vary based on injury severity, symptom complexity, and individual factors. Most people with acute concussions see significant improvement within 4-8 weeks with targeted rehab. Post-concussion syndrome (symptoms lasting beyond 3 months) typically requires more intensive, longer-term intervention. We monitor progress closely and adjust treatment based on your response.
+        </div>
+      </details>
 
-        <details class="faq-item" data-animate="fade-up">
-          <summary class="faq-summary">
-            Can neuro rehab help if my concussion was months or years ago?
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq-icon">
-              <path d="M6 9l6 6 6-6"/>
-            </svg>
-          </summary>
-          <div class="faq-content">
-            Yes. Even if symptoms have persisted for months or years, targeted neurological rehabilitation can still improve function. The nervous system retains plasticity and can adapt with the right interventions. We've successfully treated individuals with post-concussion syndrome lasting years by addressing vestibular, visual, cervical, and cognitive deficits that were never properly identified or treated.
-          </div>
-        </details>
+      <details class="faq-item" data-animate="fade-up">
+        <summary class="faq-summary">
+          Can neuro rehab help if my concussion was months or years ago?
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq-icon">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </summary>
+        <div class="faq-content">
+          Yes. Even if symptoms have persisted for months or years, targeted neurological rehabilitation can still improve function. The nervous system retains plasticity and can adapt with the right interventions. We've successfully treated individuals with post-concussion syndrome lasting years by addressing vestibular, visual, cervical, and cognitive deficits that were never properly identified or treated.
+        </div>
+      </details>
 
-        <details class="faq-item" data-animate="fade-up">
-          <summary class="faq-summary">
-            What happens during a neuro rehab assessment?
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq-icon">
-              <path d="M6 9l6 6 6-6"/>
-            </svg>
-          </summary>
-          <div class="faq-content">
-            Your assessment includes detailed symptom history, cognitive screening, balance testing (static and dynamic), visual tracking and oculomotor evaluation, vestibular function tests, cervical spine examination, and functional movement assessment. This comprehensive evaluation identifies specific neurological deficits and guides your personalized treatment plan. The assessment typically takes 45-60 minutes.
-          </div>
-        </details>
+      <details class="faq-item" data-animate="fade-up">
+        <summary class="faq-summary">
+          What happens during a neuro rehab assessment?
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq-icon">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </summary>
+        <div class="faq-content">
+          Your assessment includes detailed symptom history, cognitive screening, balance testing (static and dynamic), visual tracking and oculomotor evaluation, vestibular function tests, cervical spine examination, and functional movement assessment. This comprehensive evaluation identifies specific neurological deficits and guides your personalized treatment plan. The assessment typically takes 45-60 minutes.
+        </div>
+      </details>
 
-        <details class="faq-item" data-animate="fade-up">
-          <summary class="faq-summary">
-            Will neuro rehab exercises make my symptoms worse?
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq-icon">
-              <path d="M6 9l6 6 6-6"/>
-            </svg>
-          </summary>
-          <div class="faq-content">
-            Properly dosed rehabilitation should challenge your system without causing significant symptom exacerbation. Mild, temporary symptom increase during exercises is sometimes expected and indicates we're targeting the right systems. However, exercises are carefully progressed to avoid setbacks. We monitor your response closely and adjust intensity, frequency, and complexity based on how your nervous system tolerates each intervention.
-          </div>
-        </details>
+      <details class="faq-item" data-animate="fade-up">
+        <summary class="faq-summary">
+          Will neuro rehab exercises make my symptoms worse?
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq-icon">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </summary>
+        <div class="faq-content">
+          Properly dosed rehabilitation should challenge your system without causing significant symptom exacerbation. Mild, temporary symptom increase during exercises is sometimes expected and indicates we're targeting the right systems. However, exercises are carefully progressed to avoid setbacks. We monitor your response closely and adjust intensity, frequency, and complexity based on how your nervous system tolerates each intervention.
+        </div>
+      </details>
 
-        <details class="faq-item" data-animate="fade-up">
-          <summary class="faq-summary">
-            Do you work with athletes returning to sport after concussion?
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq-icon">
-              <path d="M6 9l6 6 6-6"/>
-            </svg>
-          </summary>
-          <div class="faq-content">
-            Yes. We implement evidence-based return-to-sport protocols that progressively increase physical and cognitive demands while monitoring symptoms. This includes graded aerobic exercise, sport-specific movement patterns, dual-task training, and coordination drills. Athletes are cleared for full participation only when they can handle game-intensity demands without symptom return, reducing re-injury risk.
-          </div>
-        </details>
-      </div>
+      <details class="faq-item" data-animate="fade-up">
+        <summary class="faq-summary">
+          Do you work with athletes returning to sport after concussion?
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq-icon">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </summary>
+        <div class="faq-content">
+          Yes. We implement evidence-based return-to-sport protocols that progressively increase physical and cognitive demands while monitoring symptoms. This includes graded aerobic exercise, sport-specific movement patterns, dual-task training, and coordination drills. Athletes are cleared for full participation only when they can handle game-intensity demands without symptom return, reducing re-injury risk.
+        </div>
+      </details>
     </div>
   </SectionWrapper>
 
-  <!-- Related Services Section -->
-  <SectionWrapper background="light">
-    <div class="container">
-      <div class="section-header" data-animate="fade-up">
-        <h2 class="section-title">Related Services</h2>
-        <p class="section-subtitle">Complementary care for comprehensive recovery</p>
-      </div>
+  <!-- Related Services -->
+  <SectionWrapper background="gray" spacing="normal">
+    <div class="section__header" data-animate="fade-up">
+      <span class="section__eyebrow">Complementary Care</span>
+      <h2 class="display-3">Services That Work Well Together</h2>
+    </div>
 
-      <ContentGrid columns={3}>
-        <a href="/services/fall-prevention-balance-training" class="service-link-card" data-animate="fade-up">
-          <div class="service-card-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="10"></circle>
-              <path d="M12 6v6l4 2"></path>
-            </svg>
-          </div>
-          <h3>Fall Prevention & Balance Training</h3>
-          <p>Specialized balance assessment and training to reduce fall risk and improve stability for all ages.</p>
-        </a>
+    <div class="related-services">
+      <a href="/services/fall-prevention-balance-training" class="related-service-card" data-animate="fade-up" data-animate-delay="100">
+        <h3>Fall Prevention & Balance Training</h3>
+        <p>Specialized balance assessment and training to reduce fall risk and improve stability</p>
+        <span class="related-service-arrow">→</span>
+      </a>
 
-        <a href="/services/chiropractic-adjustments" class="service-link-card" data-animate="fade-up">
-          <div class="service-card-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
-            </svg>
-          </div>
-          <h3>Chiropractic Adjustments</h3>
-          <p>Precise spinal and extremity adjustments to restore joint mobility and reduce nervous system irritation.</p>
-        </a>
+      <a href="/services/chiropractic-adjustments" class="related-service-card" data-animate="fade-up" data-animate-delay="200">
+        <h3>Chiropractic Adjustments</h3>
+        <p>Precise spinal and extremity adjustments to restore joint mobility and reduce nervous system irritation</p>
+        <span class="related-service-arrow">→</span>
+      </a>
 
-        <a href="/services/home-exercise-programs" class="service-link-card" data-animate="fade-up">
-          <div class="service-card-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-              <polyline points="9 22 9 12 15 12 15 22"></polyline>
-            </svg>
-          </div>
-          <h3>Home Exercise Programs</h3>
-          <p>Personalized exercises and activities to maintain progress and build resilience between visits.</p>
-        </a>
-      </ContentGrid>
+      <a href="/services/home-exercise-programs" class="related-service-card" data-animate="fade-up" data-animate-delay="300">
+        <h3>Home Exercise Programs</h3>
+        <p>Personalized exercises and activities to maintain progress and build resilience between visits</p>
+        <span class="related-service-arrow">→</span>
+      </a>
     </div>
   </SectionWrapper>
 
   <!-- CTA Section -->
-  <section class="cta-section">
-    <div class="cta-section__overlay"></div>
-    <video
-      class="cta-section__video"
-      autoplay
-      muted
-      loop
-      playsinline
-      poster="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1920&h=1080&fit=crop"
-    >
-      <source src="https://res.cloudinary.com/dku1gnuat/video/upload/v1772140186/professional-male-chiropractor-physiotherapist-tre-2025-12-17-11-25-49-utc_wkikq4.mov" type="video/mp4" />
-    </video>
-    <div class="cta-content container" data-animate="fade-up">
-      <h2>Ready to Support Your Neurological Recovery?</h2>
-      <p>Let's work together to restore function, reduce symptoms, and help you return to the activities that matter most.</p>
-      <div class="cta-buttons">
-        <a href="#" class="btn btn-primary" data-cal-link="sdbridgechiropractic/30min" data-cal-config='{"layout":"month_view"}'>Book a Visit</a>
-        <a href="tel:+16194685233" class="btn btn-secondary">Call (619) 468-5233</a>
+  <VideoBackground
+    videoUrl="https://res.cloudinary.com/dku1gnuat/video/upload/v1772140186/professional-male-chiropractor-physiotherapist-tre-2025-12-17-11-25-49-utc_wkikq4.mov"
+    posterImage="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1920&h=1080&fit=crop"
+    overlayOpacity={0.7}
+    class="cta-premium"
+  >
+    <div class="container container-narrow" data-animate="fade-up">
+      <h2 class="display-3" style="color: var(--color-white); margin-bottom: var(--space-lg);">
+        Ready to Support Your Recovery?
+      </h2>
+      <p class="text-large" style="color: rgba(255, 255, 255, 0.9); max-width: 700px; margin: 0 auto var(--space-2xl);">
+        Let's work together to restore function, reduce symptoms, and help you return to the activities that matter most.
+      </p>
+      <div style="display: flex; gap: var(--space-lg); justify-content: center; flex-wrap: wrap;">
+        <a href="#" class="btn btn--white btn--lg" data-cal-link="sdbridgechiropractic/30min" data-cal-config='{"layout":"month_view"}'>Book a Visit</a>
+        <a href="tel:8582777500" class="btn btn--outline-white btn--lg">
+          Call (858) 277-7500
+        </a>
       </div>
     </div>
-  </section>
+  </VideoBackground>
 </Layout>
 
 <style>
-  /* Overview Section */
-  .overview-section {
-    max-width: 900px;
-    margin: 0 auto;
+  /* Service Overview */
+  .service-overview {
+    text-align: center;
+  }
+
+  .overview-content {
+    margin-top: var(--space-2xl);
+    text-align: left;
   }
 
   .overview-content p {
-    margin-bottom: 1.5rem;
+    color: var(--color-gray-dark);
     line-height: 1.8;
+    font-size: 1.0625rem;
+    margin-bottom: var(--space-xl);
   }
 
-  .text-large {
+  .overview-content .text-large {
     font-size: 1.25rem;
-    font-weight: 500;
     color: var(--color-charcoal);
-    line-height: 1.7;
+    margin-bottom: var(--space-2xl);
   }
 
   /* Benefits Grid */
@@ -440,56 +415,45 @@ import OfferingCard from '../../components/OfferingCard.astro';
     font-weight: 400;
   }
 
-  /* Process Grid */
-  .process-grid {
+  /* Process Steps */
+  .process-steps {
     display: grid;
-    gap: 2rem;
-    max-width: 1000px;
-    margin: 3rem auto 0;
+    gap: var(--space-2xl);
+    max-width: 900px;
+    margin: var(--space-4xl) auto 0;
   }
 
   .process-step {
     display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 2rem;
-    padding: 2rem;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
+    grid-template-columns: 80px 1fr;
+    gap: var(--space-xl);
+    align-items: start;
   }
 
-  .process-step:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-    border-color: rgba(71, 128, 184, 0.3);
-  }
-
-  .step-number {
-    width: 60px;
-    height: 60px;
+  .process-step__number {
+    width: 80px;
+    height: 80px;
     background: var(--color-primary);
+    color: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 700;
-    color: #fff;
-    flex-shrink: 0;
+    box-shadow: 0 8px 24px rgba(71, 128, 184, 0.3);
   }
 
-  .step-content h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.75rem;
+  .process-step__content h3 {
+    font-size: 1.75rem;
+    margin-bottom: var(--space-md);
     color: var(--color-charcoal);
   }
 
-  .step-content p {
+  .process-step__content p {
     color: var(--color-gray-dark);
-    line-height: 1.7;
-    margin: 0;
+    line-height: 1.8;
+    font-size: 1.0625rem;
   }
 
   /* Conditions List */
@@ -526,47 +490,36 @@ import OfferingCard from '../../components/OfferingCard.astro';
     color: var(--color-charcoal);
   }
 
-  /* FAQ Section */
-  .faq-container {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  .faq-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-top: 3rem;
+  /* FAQ Grid */
+  .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-4xl);
   }
 
   .faq-item {
-    background: #fff;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 0 var(--space-lg);
     transition: all 0.3s ease;
   }
 
   .faq-item:hover {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  }
-
-  .faq-item[open] {
-    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   }
 
   .faq-summary {
-    padding: 1.5rem 2rem;
-    font-size: 1.15rem;
+    font-size: 1.125rem;
     font-weight: 600;
-    color: var(--color-charcoal);
+    padding: var(--space-lg) 0;
     cursor: pointer;
+    list-style: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 1rem;
-    user-select: none;
-    list-style: none;
+    gap: var(--space-md);
+    color: var(--color-charcoal);
   }
 
   .faq-summary::-webkit-details-marker {
@@ -584,217 +537,166 @@ import OfferingCard from '../../components/OfferingCard.astro';
   }
 
   .faq-content {
-    padding: 0 2rem 1.5rem;
+    padding: 0 0 var(--space-lg) 0;
     color: var(--color-gray-dark);
-    line-height: 1.7;
+    line-height: 1.8;
   }
 
   /* Related Services */
-  .service-link-card {
-    display: block;
-    padding: 2rem;
-    background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease;
-    text-decoration: none;
-    color: inherit;
+  .related-services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-xl);
+    margin-top: var(--space-4xl);
   }
 
-  .service-link-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-  }
-
-  .service-card-icon {
-    width: 64px;
-    height: 64px;
-    background: var(--color-primary);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1.5rem;
-  }
-
-  .service-card-icon svg {
-    color: #fff;
-  }
-
-  .service-link-card h3 {
-    font-size: 1.35rem;
-    margin-bottom: 0.75rem;
-    color: var(--color-charcoal);
-  }
-
-  .service-link-card p {
-    color: var(--color-gray-dark);
-    line-height: 1.6;
-    margin: 0;
-  }
-
-  /* CTA Section */
-  .cta-section {
+  .related-service-card {
     position: relative;
-    padding: 6rem 2rem;
-    text-align: center;
+    padding: var(--space-2xl);
+    border-radius: var(--radius-xl);
+    text-decoration: none;
+    transition: all 0.3s ease;
     overflow: hidden;
   }
 
-  .cta-section__video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
-    z-index: 0;
+  .related-service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-2xl);
   }
 
-  .cta-section__overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 1;
-  }
-
-  .cta-content {
-    position: relative;
-    z-index: 10;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  .cta-content h2 {
-    font-size: clamp(2rem, 4vw, 3rem);
-    color: #fff;
-    margin-bottom: 1rem;
-    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
-  }
-
-  .cta-content p {
-    font-size: 1.25rem;
-    color: rgba(255, 255, 255, 0.95);
-    margin-bottom: 2rem;
-    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
-  }
-
-  .cta-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  /* Section Styling */
-  .section-header {
-    text-align: center;
-    margin-bottom: 3rem;
-  }
-
-  .section-title {
-    font-size: clamp(2rem, 4vw, 2.75rem);
-    margin-bottom: 1rem;
+  .related-service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-md);
     color: var(--color-charcoal);
   }
 
-  .section-subtitle {
-    font-size: 1.2rem;
+  .related-service-card p {
     color: var(--color-gray-dark);
-    max-width: 700px;
-    margin: 0 auto;
+    line-height: 1.7;
+    margin-bottom: var(--space-lg);
   }
 
-  /* Buttons */
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 1rem 2rem;
-    font-size: 1.1rem;
-    font-weight: 600;
-    text-decoration: none;
-    border-radius: 50px;
-    transition: all 0.3s ease;
-    border: none;
-    cursor: pointer;
+  .related-service-arrow {
+    display: inline-block;
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    transition: transform 0.3s ease;
   }
 
-  .btn-primary {
-    background: var(--color-primary);
-    color: #fff;
-    box-shadow: 0 4px 20px rgba(71, 128, 184, 0.3);
-  }
-
-  .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(71, 128, 184, 0.4);
-  }
-
-  .btn-secondary {
-    background: rgba(255, 255, 255, 0.15);
-    color: #fff;
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 255, 255, 0.3);
-  }
-
-  .btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.25);
-    border-color: rgba(255, 255, 255, 0.5);
-    transform: translateY(-2px);
-  }
-
-  /* Animations */
-  [data-animate] {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-  }
-
-  [data-animate].animated {
-    opacity: 1;
-    transform: translateY(0);
+  .related-service-card:hover .related-service-arrow {
+    transform: translateX(8px);
   }
 
   /* Responsive */
   @media (max-width: 768px) {
-    .hero-content {
-      padding: 6rem 1.5rem 3rem;
-    }
-
     .benefits-grid {
       grid-template-columns: 1fr;
+      gap: var(--space-lg);
+      margin-top: var(--space-2xl);
+    }
+
+    .benefit-card {
+      padding: var(--space-xl);
+    }
+
+    .benefit-card:nth-child(even) {
+      margin-top: 0;
+    }
+
+    .benefit-icon {
+      width: 52px;
+      height: 52px;
+    }
+
+    .benefit-icon svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .benefit-card h3 {
+      font-size: 1.25rem;
+    }
+
+    .process-steps {
+      margin-top: var(--space-2xl);
+      gap: var(--space-xl);
     }
 
     .process-step {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
+      grid-template-columns: 56px 1fr;
+      gap: var(--space-md);
     }
 
-    .step-number {
-      width: 50px;
-      height: 50px;
+    .process-step__number {
+      width: 56px;
+      height: 56px;
+      font-size: 1.5rem;
+    }
+
+    .process-step__content h3 {
       font-size: 1.25rem;
+    }
+
+    .process-step__content p {
+      font-size: 1rem;
     }
 
     .conditions-list {
       columns: 1;
+      margin-top: var(--space-2xl);
+    }
+
+    .faq-grid {
+      grid-template-columns: 1fr;
+      margin-top: var(--space-2xl);
     }
 
     .faq-summary {
-      padding: 1.25rem 1.5rem;
-      font-size: 1.05rem;
+      font-size: 1rem;
+      padding: var(--space-md) 0;
     }
 
     .faq-content {
-      padding: 0 1.5rem 1.25rem;
+      font-size: 0.9375rem;
     }
 
-    .cta-section {
-      padding: 4rem 1.5rem;
+    .related-services {
+      grid-template-columns: 1fr;
+      margin-top: var(--space-2xl);
+    }
+
+    .related-service-card {
+      padding: var(--space-xl);
+    }
+
+    .overview-content {
+      margin-top: var(--space-xl);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .process-step {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    .process-step__number {
+      width: 48px;
+      height: 48px;
+      font-size: 1.25rem;
+      margin: 0 auto;
+    }
+
+    .benefit-card {
+      padding: var(--space-lg);
+    }
+
+    .faq-item {
+      padding: 0 var(--space-md);
+    }
+
+    .conditions-list li {
+      font-size: 0.9375rem;
     }
   }
 </style>
@@ -802,19 +704,19 @@ import OfferingCard from '../../components/OfferingCard.astro';
 <script>
   // Scroll-triggered animations
   const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
+    root: null,
+    rootMargin: '-80px',
+    threshold: 0.1
   };
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('animated');
+        observer.unobserve(entry.target);
       }
     });
   }, observerOptions);
 
-  document.querySelectorAll('[data-animate]').forEach(el => {
-    observer.observe(el);
-  });
+  document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
 </script>

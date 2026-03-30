@@ -1,7 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import SectionWrapper from '../components/SectionWrapper.astro';
-import ContentGrid from '../components/ContentGrid.astro';
 import VideoBackground from '../components/VideoBackground.astro';
 ---
 
@@ -13,7 +12,7 @@ import VideoBackground from '../components/VideoBackground.astro';
     <div class="hero-fullbleed__content">
       <span class="hero-fullbleed__eyebrow">Conditions We Treat</span>
       <h1 class="hero-fullbleed__title">Pain doesn't have to<br />run your life.</h1>
-      <p class="hero-fullbleed__subtitle">Whether it's back pain, neck stiffness, headaches, or balance issues — we find what's driving the problem and build a plan to fix it.</p>
+      <p class="hero-fullbleed__subtitle">Whether it's back pain, neck stiffness, headaches, or balance issues, we find what's driving the problem and build a plan to fix it.</p>
       <div class="hero-fullbleed__cta">
         <a href="#" class="btn btn--primary btn--lg" data-cal-link="sdbridgechiropractic/30min" data-cal-config='{"layout":"month_view"}'>Book Your Visit</a>
       </div>
@@ -27,67 +26,14 @@ import VideoBackground from '../components/VideoBackground.astro';
       <h2 class="display-3">Back & Neck Conditions</h2>
     </div>
 
-    <div class="condition-list mt-4xl">
-      <article class="condition-item" data-animate="fade-up">
-        <div class="condition-item__icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
-        </div>
-        <div class="condition-item__body">
-          <h3 class="condition-item__title">Low Back Pain</h3>
-          <p class="condition-item__desc">Whether from injury, poor posture, or degenerative changes, we address the root cause through adjustments, soft tissue work, and movement training.</p>
-        </div>
-      </article>
-
-      <article class="condition-item" data-animate="fade-up">
-        <div class="condition-item__icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
-        </div>
-        <div class="condition-item__body">
-          <h3 class="condition-item__title">Neck Pain & Stiffness</h3>
-          <p class="condition-item__desc">Office work, phone use, and daily stress create chronic neck tension. We restore mobility and reduce pain through gentle, targeted care.</p>
-        </div>
-      </article>
-
-      <article class="condition-item" data-animate="fade-up">
-        <div class="condition-item__icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-        </div>
-        <div class="condition-item__body">
-          <h3 class="condition-item__title">Sciatica</h3>
-          <p class="condition-item__desc">Radiating leg pain from nerve compression requires precise treatment. We identify the source and provide relief through comprehensive care.</p>
-        </div>
-      </article>
-
-      <article class="condition-item" data-animate="fade-up">
-        <div class="condition-item__icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
-        </div>
-        <div class="condition-item__body">
-          <h3 class="condition-item__title">Disc Problems</h3>
-          <p class="condition-item__desc">Herniated, bulging, or degenerative discs benefit from gentle decompression and stabilization exercises tailored to your condition.</p>
-        </div>
-      </article>
-
-      <article class="condition-item" data-animate="fade-up">
-        <div class="condition-item__icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
-        <div class="condition-item__body">
-          <h3 class="condition-item__title">Spinal Stenosis</h3>
-          <p class="condition-item__desc">Narrowing of the spinal canal causes pain and numbness. We help manage symptoms and improve function through conservative care.</p>
-        </div>
-      </article>
-
-      <article class="condition-item" data-animate="fade-up">
-        <div class="condition-item__icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-        </div>
-        <div class="condition-item__body">
-          <h3 class="condition-item__title">Scoliosis</h3>
-          <p class="condition-item__desc">Adult scoliosis can cause discomfort and imbalance. We provide supportive care to reduce pain and improve spinal function.</p>
-        </div>
-      </article>
-    </div>
+    <ul class="conditions-list mt-4xl" data-animate="fade-up">
+      <li><strong>Low Back Pain</strong> — Whether from injury, poor posture, or degenerative changes, we address the root cause through adjustments, soft tissue work, and movement training.</li>
+      <li><strong>Neck Pain & Stiffness</strong> — Office work, phone use, and daily stress create chronic neck tension. We restore mobility and reduce pain through gentle, targeted care.</li>
+      <li><strong>Sciatica</strong> — Radiating leg pain from nerve compression requires precise treatment. We identify the source and provide relief through comprehensive care.</li>
+      <li><strong>Disc Problems</strong> — Herniated, bulging, or degenerative discs benefit from gentle decompression and stabilization exercises tailored to your condition.</li>
+      <li><strong>Spinal Stenosis</strong> — Narrowing of the spinal canal causes pain and numbness. We help manage symptoms and improve function through conservative care.</li>
+      <li><strong>Scoliosis</strong> — Adult scoliosis can cause discomfort and imbalance. We provide supportive care to reduce pain and improve spinal function.</li>
+    </ul>
   </SectionWrapper>
 
   <!-- Joint & Extremity -->
@@ -147,31 +93,11 @@ import VideoBackground from '../components/VideoBackground.astro';
       <h2 class="display-3">Neurological & Other Conditions</h2>
     </div>
 
-    <ContentGrid columns={3} gap="xl" class="mt-4xl">
-      <div class="glass" style="padding: 40px; border-radius: 16px; text-align: center;">
-        <div style="width: 64px; height: 64px; background: var(--color-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
-        </div>
-        <h4 style="font-size: 1.25rem; margin-bottom: 12px; font-weight: 600;">Headaches & Migraines</h4>
-        <p style="font-size: 0.9375rem; color: var(--color-gray-dark); line-height: 1.6;">Tension and cervicogenic headaches often respond to spinal adjustments and soft tissue therapy.</p>
-      </div>
-
-      <div class="glass" style="padding: 40px; border-radius: 16px; text-align: center;">
-        <div style="width: 64px; height: 64px; background: var(--color-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-        </div>
-        <h4 style="font-size: 1.25rem; margin-bottom: 12px; font-weight: 600;">Balance & Dizziness</h4>
-        <p style="font-size: 0.9375rem; color: var(--color-gray-dark); line-height: 1.6;">Vestibular issues and proprioception problems benefit from our specialized neuro rehabilitation.</p>
-      </div>
-
-      <div class="glass" style="padding: 40px; border-radius: 16px; text-align: center;">
-        <div style="width: 64px; height: 64px; background: var(--color-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M18 20V10"></path><path d="M12 20V4"></path><path d="M6 20v-6"></path></svg>
-        </div>
-        <h4 style="font-size: 1.25rem; margin-bottom: 12px; font-weight: 600;">Posture Problems</h4>
-        <p style="font-size: 0.9375rem; color: var(--color-gray-dark); line-height: 1.6;">Forward head posture and rounded shoulders create chronic strain. We help you stand taller.</p>
-      </div>
-    </ContentGrid>
+    <ul class="conditions-list mt-4xl" data-animate="fade-up">
+      <li><strong>Headaches & Migraines</strong> — Tension and cervicogenic headaches often respond to spinal adjustments and soft tissue therapy.</li>
+      <li><strong>Balance & Dizziness</strong> — Vestibular issues and proprioception problems benefit from our specialized neuro rehabilitation.</li>
+      <li><strong>Posture Problems</strong> — Forward head posture and rounded shoulders create chronic strain. We help you stand taller and move better.</li>
+    </ul>
   </SectionWrapper>
 
   <!-- CTA -->
@@ -182,11 +108,11 @@ import VideoBackground from '../components/VideoBackground.astro';
     class="cta-premium"
   >
     <div class="container container-narrow" data-animate="fade-up">
-      <h2>Not Sure If We Can Help?</h2>
-      <p>Schedule a consultation to discuss your specific condition and discover if chiropractic care is right for you.</p>
-      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+      <h2 class="display-3" style="color: var(--color-white); margin-bottom: var(--space-lg);">Not Sure If We Can Help?</h2>
+      <p class="text-large" style="color: rgba(255, 255, 255, 0.9); max-width: 700px; margin: 0 auto var(--space-2xl);">Schedule a consultation to discuss your specific condition and discover if chiropractic care is right for you.</p>
+      <div style="display: flex; gap: var(--space-lg); justify-content: center; flex-wrap: wrap;">
         <a href="#" class="btn btn--white btn--lg" data-cal-link="sdbridgechiropractic/30min" data-cal-config='{"layout":"month_view"}'>Book Consultation</a>
-        <a href="tel:8582777500" class="btn btn--secondary btn--lg" style="background: transparent; border: 2px solid white; color: white;">Call (858) 277-7500</a>
+        <a href="tel:8582777500" class="btn btn--outline-white btn--lg">Call (858) 277-7500</a>
       </div>
     </div>
   </VideoBackground>
@@ -197,203 +123,40 @@ import VideoBackground from '../components/VideoBackground.astro';
     margin-top: 64px;
   }
 
-  /* Personalized Care Section */
-  .personalized-care-section {
+  /* Conditions List */
+  .conditions-list {
+    list-style: none;
+    padding: 0;
+    columns: 2;
+    column-gap: var(--space-2xl);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .conditions-list li {
+    padding: var(--space-sm) 0;
+    padding-left: var(--space-lg);
     position: relative;
-  }
-
-  .personalized-care-grid {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    gap: clamp(40px, 6vw, 80px);
-    align-items: start;
-  }
-
-  .personalized-care-main {
-    position: relative;
-  }
-
-  .badge-premium {
-    display: inline-block;
-    padding: 8px 20px;
-    background: rgba(71, 128, 184, 0.12);
-    border: 1px solid rgba(71, 128, 184, 0.2);
-    border-radius: var(--radius-full);
-    color: var(--color-primary);
-    font-size: 0.875rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 24px;
-  }
-
-  .care-features {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-  }
-
-  .care-feature-item {
-    display: flex;
-    gap: 20px;
-    align-items: flex-start;
-    padding: 24px;
-    background: var(--color-white);
-    border-radius: var(--radius-lg);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    border: 1px solid rgba(0, 0, 0, 0.04);
-  }
-
-  .care-feature-item:hover {
-    transform: translateX(8px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-    border-color: rgba(71, 128, 184, 0.2);
-  }
-
-  .care-feature-icon {
-    flex-shrink: 0;
-    width: 56px;
-    height: 56px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(71, 128, 184, 0.10);
-    border-radius: var(--radius-md);
-    transition: all 0.3s ease;
-  }
-
-  .care-feature-item:hover .care-feature-icon {
-    background: var(--color-primary);
-  }
-
-  .care-feature-item:hover .care-feature-icon svg {
-    stroke: white;
-  }
-
-  .care-feature-item h4 {
-    font-size: 1.125rem;
-    font-weight: 600;
-    color: var(--color-charcoal);
-    margin-bottom: 6px;
-  }
-
-  .care-feature-item p {
-    font-size: 0.9375rem;
     color: var(--color-gray-dark);
-    line-height: 1.6;
-    margin: 0;
-  }
-
-  /* Stats Sidebar */
-  .personalized-care-stats {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    position: sticky;
-    top: 100px;
-  }
-
-  .stat-card {
-    padding: 32px;
-    border-radius: var(--radius-xl);
-    text-align: center;
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-  }
-
-  .stat-card:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 16px 40px rgba(71, 128, 184, 0.2);
-  }
-
-  .stat-icon {
-    width: 72px;
-    height: 72px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 20px;
-    background: rgba(71, 128, 184, 0.12);
-    border-radius: var(--radius-lg);
-    transition: all 0.3s ease;
-  }
-
-  .stat-card:hover .stat-icon {
-    background: var(--color-primary);
-    transform: rotate(5deg) scale(1.1);
-  }
-
-  .stat-card:hover .stat-icon svg {
-    stroke: white;
-  }
-
-  .stat-number {
-    font-size: 2.5rem;
-    font-weight: 700;
-    font-family: var(--font-heading);
-    background: var(--color-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 8px;
-    line-height: 1;
-  }
-
-  .stat-label {
-    font-size: 0.9375rem;
-    color: var(--color-gray-dark);
-    font-weight: 500;
-    line-height: 1.4;
-  }
-
-  /* Spinal Condition List */
-  .condition-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-lg);
-  }
-
-  .condition-item {
-    display: flex;
-    gap: var(--space-lg);
-    align-items: flex-start;
-    padding: var(--space-xl);
-    background: var(--color-white);
-    border-radius: var(--radius-lg);
-    border: 1px solid rgba(0, 0, 0, 0.06);
-    transition: all 0.3s ease;
-  }
-
-  .condition-item:hover {
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
-    transform: translateY(-2px);
-  }
-
-  .condition-item__icon {
-    width: 44px;
-    height: 44px;
-    border-radius: var(--radius-md);
-    background: rgba(58, 114, 100, 0.08);
-    color: var(--color-primary);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-  }
-
-  .condition-item__title {
-    font-family: var(--font-heading);
     font-size: 1.0625rem;
-    font-weight: 700;
-    color: var(--color-charcoal);
-    margin-bottom: var(--space-xs);
+    line-height: 1.7;
+    break-inside: avoid;
   }
 
-  .condition-item__desc {
-    font-size: 0.875rem;
-    line-height: 1.65;
-    color: var(--color-gray-dark);
+  .conditions-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 8px;
+    height: 8px;
+    background: var(--color-primary);
+    border-radius: 50%;
+  }
+
+  .conditions-list li strong {
+    color: var(--color-charcoal);
   }
 
   /* Joint Cards Grid */
@@ -449,88 +212,28 @@ import VideoBackground from '../components/VideoBackground.astro';
     border-radius: var(--radius-full);
   }
 
-  /* Responsive Design */
-  @media (max-width: 1024px) {
-    .mt-4xl {
-      margin-top: 48px;
-    }
-
-    .personalized-care-grid {
-      grid-template-columns: 1fr;
-      gap: 48px;
-    }
-
-    .personalized-care-stats {
-      position: static;
-      flex-direction: row;
-      overflow-x: auto;
-      gap: 16px;
-      padding-bottom: 8px;
-    }
-
-    .stat-card {
-      min-width: 200px;
-      flex-shrink: 0;
-    }
-
-    .stat-number {
-      font-size: 3rem;
-    }
-  }
-
+  /* Responsive */
   @media (max-width: 768px) {
     .mt-4xl {
       margin-top: 32px;
     }
 
-    .care-feature-item {
-      flex-direction: column;
-      gap: 16px;
-      padding: 20px;
+    .conditions-list {
+      columns: 1;
     }
 
-    .care-feature-icon {
-      width: 48px;
-      height: 48px;
-    }
-
-    .stat-card {
-      padding: 24px;
-      min-width: 180px;
-    }
-
-    .stat-icon {
-      width: 60px;
-      height: 60px;
-      margin-bottom: 16px;
-    }
-
-    .stat-number {
-      font-size: 2.5rem;
-    }
-
-    .stat-label {
-      font-size: 0.875rem;
-    }
-
-    .condition-list,
     .joint-grid {
       grid-template-columns: 1fr;
+    }
+
+    .joint-card {
+      padding: var(--space-lg);
     }
   }
 
   @media (max-width: 480px) {
-    .care-feature-item:hover {
-      transform: none;
-    }
-
-    .personalized-care-stats {
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .stat-card {
-      min-width: 100%;
+    .conditions-list li {
+      font-size: 0.9375rem;
     }
   }
 </style>

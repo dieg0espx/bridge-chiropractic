@@ -1,0 +1,281 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SectionWrapper from '../../components/SectionWrapper.astro';
+---
+
+<Layout title="5 Daily Stretches to Improve Your Mobility | Bridge Chiropractic Blog" description="Simple, effective stretches you can do at home to maintain flexibility, reduce stiffness, and support your chiropractic care.">
+  <!-- Article Header -->
+  <section class="article-hero">
+    <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1400&h=600&fit=crop" alt="Person stretching outdoors" class="article-hero__image" />
+    <div class="article-hero__overlay"></div>
+    <a href="/blog" class="back-to-blog">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+      Blog
+    </a>
+    <div class="article-hero__content">
+      <span class="article-hero__category">Movement & Exercise</span>
+      <h1 class="article-hero__title">5 Daily Stretches to Improve Your Mobility</h1>
+      <div class="article-hero__meta">
+        <span>Dr. Nate Beyerl</span>
+        <span>&middot;</span>
+        <span>March 15, 2026</span>
+        <span>&middot;</span>
+        <span>5 min read</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article Body -->
+  <SectionWrapper background="white" spacing="normal" containerWidth="narrow">
+    <article class="article-body" data-animate="fade-up">
+      <p class="article-lead">Mobility isn't just about flexibility. It's about your joints having the range of motion they need to let you move without pain, compensation, or restriction. These five stretches target the areas I see most often in my practice, and they take less than 10 minutes.</p>
+
+      <h2>Why Daily Stretching Matters</h2>
+      <p>Most of the patients I see in San Diego share a common pattern: they sit too much, move too little, and their bodies have adapted to those positions. Tight hip flexors pull on the low back. Stiff thoracic spines round the shoulders forward. Locked-up ankles change how you walk.</p>
+      <p>Stretching won't fix structural problems on its own, but when combined with adjustments and soft tissue work, it helps your body hold corrections longer and recover faster between visits.</p>
+
+      <h2>1. Hip Flexor Stretch (Couch Stretch)</h2>
+      <p>Kneel with one knee on the floor and your back foot elevated on a couch or chair behind you. Keep your torso tall and squeeze the glute on the kneeling side. You should feel a deep stretch in the front of your hip. Hold for 60 seconds per side.</p>
+      <p><strong>Why it matters:</strong> Tight hip flexors are one of the most common contributors to low back pain, especially if you sit for long periods.</p>
+
+      <h2>2. Thoracic Spine Rotation</h2>
+      <p>Lie on your side with knees stacked and bent to 90 degrees. Extend your top arm straight out, then rotate your upper body to open your chest toward the ceiling. Follow your hand with your eyes. Return to start. Repeat 10 times per side.</p>
+      <p><strong>Why it matters:</strong> Your mid-back is designed to rotate. When it can't, your neck and low back pick up the slack, leading to pain in both areas.</p>
+
+      <h2>3. Cat-Cow (Spinal Segmentation)</h2>
+      <p>On hands and knees, slowly arch your back toward the ceiling (cat), then drop your belly toward the floor while lifting your head (cow). Move through the full range slowly, taking 3-4 seconds in each direction. Repeat 10 cycles.</p>
+      <p><strong>Why it matters:</strong> This wakes up every segment of your spine and promotes the fluid exchange that keeps discs healthy. It's the best 60-second warm-up that exists.</p>
+
+      <h2>4. World's Greatest Stretch</h2>
+      <p>Step into a deep lunge. Place your inside hand on the floor next to your front foot. Rotate your outside arm toward the ceiling, opening your chest. Hold for 5 seconds, then switch sides. Alternate for 5 reps per side.</p>
+      <p><strong>Why it matters:</strong> This one stretch hits your hip flexors, groin, thoracic spine, and hamstrings all at once. It's efficient and it works.</p>
+
+      <h2>5. Ankle Dorsiflexion Mobilization</h2>
+      <p>Stand facing a wall with one foot about 4 inches away. Drive your knee forward over your toes toward the wall, keeping your heel on the ground. Hold at end range for 2 seconds, then return. Repeat 15 times per side.</p>
+      <p><strong>Why it matters:</strong> Limited ankle mobility changes how you squat, walk, and absorb impact. It's an overlooked driver of knee pain, shin splints, and even low back issues.</p>
+
+      <h2>When to Do These</h2>
+      <p>Morning is ideal because it sets your body up for better movement all day. But honestly, any time is better than never. I'd rather you do 5 minutes before bed than skip it because you couldn't fit it in at 7am.</p>
+      <p>If any of these stretches cause sharp pain (not stretch discomfort), stop and let us know at your next visit. Pain during a stretch usually means something structural needs to be addressed first.</p>
+
+      <div class="article-cta">
+        <h3>Want a personalized mobility plan?</h3>
+        <p>These stretches are a great starting point, but every body is different. Book a visit and we'll assess your specific restrictions and build a plan that fits.</p>
+        <a href="#" class="btn btn--primary btn--lg" data-cal-link="sdbridgechiropractic/30min" data-cal-config='{"layout":"month_view"}'>Book a Visit</a>
+      </div>
+    </article>
+  </SectionWrapper>
+
+</Layout>
+
+<style>
+  /* Back to Blog */
+  .back-to-blog {
+    position: absolute;
+    top: 100px;
+    left: var(--space-xl);
+    z-index: 10;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: var(--radius-full);
+    color: #fff;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .back-to-blog:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateX(-2px);
+  }
+
+  /* Article Hero */
+  .article-hero {
+    position: relative;
+    height: 50vh;
+    min-height: 400px;
+    max-height: 550px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+  }
+
+  .article-hero__image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .article-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.1) 60%);
+  }
+
+  .article-hero__content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: var(--space-3xl) var(--space-2xl);
+    margin: 0 auto;
+    width: 100%;
+    color: white;
+  }
+
+  .article-hero__category {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-accent);
+    margin-bottom: var(--space-sm);
+    display: block;
+  }
+
+  .article-hero__title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 4vw, 2.75rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: var(--space-md);
+    color: #fff;
+  }
+
+  .article-hero__meta {
+    display: flex;
+    gap: var(--space-sm);
+    font-size: 0.9375rem;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  /* Article Body */
+  .article-body {
+    font-size: 1.0625rem;
+    line-height: 1.85;
+    color: var(--color-gray-dark);
+  }
+
+  .article-lead {
+    font-size: 1.25rem;
+    line-height: 1.75;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-2xl);
+  }
+
+  .article-body h2 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--color-charcoal);
+    margin-top: var(--space-2xl);
+    margin-bottom: var(--space-md);
+  }
+
+  .article-body p {
+    margin-bottom: var(--space-lg);
+  }
+
+  .article-cta {
+    margin-top: var(--space-3xl);
+    padding: var(--space-2xl);
+    background: rgba(71, 128, 184, 0.06);
+    border-radius: var(--radius-lg);
+    text-align: center;
+  }
+
+  .article-cta h3 {
+    font-family: var(--font-heading);
+    font-size: 1.375rem;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-sm);
+  }
+
+  .article-cta p {
+    color: var(--color-gray-dark);
+    margin-bottom: var(--space-xl);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .article-hero {
+      min-height: 300px;
+      height: 45vh;
+    }
+
+    .article-hero__content {
+      padding: var(--space-xl) var(--space-lg);
+    }
+
+    .article-hero__meta {
+      flex-wrap: wrap;
+      font-size: 0.8125rem;
+      gap: var(--space-xs);
+    }
+
+    .article-body {
+      font-size: 1rem;
+    }
+
+    .article-lead {
+      font-size: 1.0625rem;
+    }
+
+    .article-body h2 {
+      font-size: 1.25rem;
+      margin-top: var(--space-xl);
+    }
+
+    .article-body p {
+      margin-bottom: var(--space-md);
+    }
+
+    .article-cta {
+      padding: var(--space-xl);
+    }
+
+    .article-cta h3 {
+      font-size: 1.125rem;
+    }
+
+    .article-cta p {
+      font-size: 0.9375rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .article-hero {
+      min-height: 260px;
+      height: 40vh;
+    }
+
+    .article-hero__content {
+      padding: var(--space-lg) var(--space-md);
+    }
+
+    .article-cta {
+      padding: var(--space-lg);
+    }
+  }
+</style>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animated');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { root: null, rootMargin: '-80px', threshold: 0.1 });
+  document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
+</script>

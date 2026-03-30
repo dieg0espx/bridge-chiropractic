@@ -1,24 +1,23 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import SectionWrapper from '../components/SectionWrapper.astro';
-import ContentGrid from '../components/ContentGrid.astro';
 import VideoBackground from '../components/VideoBackground.astro';
 ---
 
 <Layout title="About" description="Meet Dr. Nathan Beyerl - San Diego chiropractor focused on education, autonomy, and sustainable improvement for adults seeking lasting wellness.">
-  <!-- Hero - About Story -->
+  <!-- Hero - Dr. Beyerl Profile -->
   <SectionWrapper spacing="normal" background="white">
     <div class="about-story" data-animate="fade-up">
       <div class="about-story__content">
-        <span class="section__eyebrow">About The Bridge Chiropractic</span>
-        <h1 class="display-3">Helping active adults stay strong, mobile, and independent.</h1>
+        <span class="section__eyebrow">Meet Dr. Nate Beyerl</span>
+        <h1 class="display-3">I treat people, not just symptoms.</h1>
         <div class="about-story__body">
-          <p class="text-large">You deserve healthcare that prioritizes how you want to function long term. Whether your goal is reducing pain, improving mobility, or staying active as you age, care should help you move with confidence and clarity.</p>
-          <p>At The Bridge Chiropractic, treatment is personalized for active adults who want more than short-term relief. Instead of a one-size-fits-all approach, your plan is tailored to how your body responds, integrating adjustments, soft tissue therapy, movement training, and balance work when appropriate.</p>
-          <p>Every visit focuses on reducing irritation, restoring movement, and building lasting resilience so you can continue doing what matters most. Care evolves with you, with clear guidance and thoughtful reassessment along the way.</p>
+          <p class="text-large">Most chiropractors adjust your spine and send you on your way. I take a different approach. Every visit combines adjustments, soft tissue work, and movement training, tailored to how your body actually responds.</p>
+          <p>I work with active adults in San Diego who want more than temporary relief. Whether you're dealing with chronic pain, recovering from an injury, or trying to stay strong and independent as you age, my goal is to help you understand what's happening in your body and give you the tools to stay ahead of it.</p>
+          <p>I don't believe in cookie-cutter protocols or keeping patients dependent on care. I want you moving better, feeling confident, and spending less time in my office, not more.</p>
 
           <div class="credentials-inline">
-            <h3 style="font-size: 1.25rem; font-weight: 600; color: var(--color-charcoal); margin-bottom: var(--space-md); margin-top: var(--space-2xl);">Education & Credentials</h3>
+            <h3 style="font-size: 1rem; font-weight: 600; color: var(--color-gray-dark); margin-bottom: var(--space-sm); margin-top: var(--space-xl); text-transform: uppercase; letter-spacing: 0.05em;">Education & Credentials</h3>
             <ul class="credentials-list-inline">
               <li>Doctor of Chiropractic, licensed in California</li>
               <li>Advanced training in neurological and balance rehabilitation</li>
@@ -36,7 +35,7 @@ import VideoBackground from '../components/VideoBackground.astro';
       <div class="about-story__image" data-animate="fade-left" data-animate-delay="200">
         <img
           src="/images/IMG_0954.JPG"
-          alt="Dr. Nathan Beyerl providing expert chiropractic care"
+          alt="Dr. Nathan Beyerl"
           loading="lazy"
         />
       </div>
@@ -64,44 +63,42 @@ import VideoBackground from '../components/VideoBackground.astro';
     </div>
   </div>
 
-  <!-- Philosophy Section -->
+  <!-- What Makes Me Different Section -->
   <SectionWrapper spacing="normal" background="white">
     <div class="section__header" data-animate="fade-up">
-      <span class="section__eyebrow">Philosophy</span>
-      <h2 class="display-3">How I practice</h2>
+      <span class="section__eyebrow">What Makes Me Different</span>
+      <h2 class="display-3">Three things happen every visit</h2>
     </div>
 
     <div class="philosophy-grid mt-4xl">
       <article class="philosophy-card" data-animate="fade-up">
         <div class="philosophy-card__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+            <path d="M18 20V10"></path><path d="M12 20V4"></path><path d="M6 20v-6"></path>
           </svg>
         </div>
-        <h3 class="philosophy-card__title">Education over dependency</h3>
-        <p class="philosophy-card__desc">I want you to understand your body. When you know why something hurts and how to prevent it, you're empowered to take control of your own health.</p>
+        <h3 class="philosophy-card__title">Adjustments matched to your body</h3>
+        <p class="philosophy-card__desc">Every adjustment is chosen based on how you respond, not a preset protocol. Traditional or low-force, the goal is restoring the movement your joints have lost.</p>
       </article>
 
       <article class="philosophy-card" data-animate="fade-up">
         <div class="philosophy-card__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
           </svg>
         </div>
-        <h3 class="philosophy-card__title">Sustainable improvement</h3>
-        <p class="philosophy-card__desc">Quick fixes rarely last. I focus on long-term solutions that help you stay active and pain-free for years to come — not just until your next appointment.</p>
+        <h3 class="philosophy-card__title">Soft tissue work built in</h3>
+        <p class="philosophy-card__desc">Tight muscles pull joints back out of place. Every visit includes hands-on soft tissue work to release the tension that caused the problem, not just the symptom.</p>
       </article>
 
       <article class="philosophy-card" data-animate="fade-up">
         <div class="philosophy-card__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-            <circle cx="12" cy="7" r="4"></circle>
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline>
           </svg>
         </div>
-        <h3 class="philosophy-card__title">Personalized care</h3>
-        <p class="philosophy-card__desc">No two patients are the same. I build individualized care plans designed around your body, your goals, and how you respond to treatment.</p>
+        <h3 class="philosophy-card__title">Biomechanics that prevent re-injury</h3>
+        <p class="philosophy-card__desc">Pain comes from how you move. I analyze your movement patterns and build a plan to fix the mechanics behind the issue, so you perform better and stay out of my office longer.</p>
       </article>
     </div>
   </SectionWrapper>
@@ -346,148 +343,6 @@ import VideoBackground from '../components/VideoBackground.astro';
   }
 
   /* ==========================================
-     TIMELINE LAYOUT
-     ========================================== */
-  .timeline {
-    max-width: 900px;
-    margin: var(--space-5xl) auto 0;
-    position: relative;
-  }
-
-  .timeline::before {
-    content: '';
-    position: absolute;
-    left: 32px;
-    top: 32px;
-    bottom: 32px;
-    width: 2px;
-    background: var(--color-primary);
-    opacity: 0.3;
-  }
-
-  .timeline-item {
-    display: grid;
-    grid-template-columns: 64px 1fr;
-    gap: var(--space-xl);
-    margin-bottom: var(--space-3xl);
-    position: relative;
-  }
-
-  .timeline-item:last-child {
-    margin-bottom: 0;
-  }
-
-  .timeline-item__marker {
-    position: relative;
-    z-index: 2;
-  }
-
-  .timeline-item__number {
-    width: 64px;
-    height: 64px;
-    background: var(--color-primary);
-    color: var(--color-white);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.75rem;
-    font-weight: 700;
-    font-family: var(--font-heading);
-    box-shadow: 0 4px 16px rgba(0, 71, 187, 0.3);
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  }
-
-  .timeline-item:hover .timeline-item__number {
-    transform: scale(1.1);
-    box-shadow: 0 8px 24px rgba(0, 71, 187, 0.4);
-  }
-
-  .timeline-item__content {
-    background: var(--color-white);
-    padding: var(--space-2xl);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  }
-
-  .timeline-item:hover .timeline-item__content {
-    transform: translateX(8px);
-    box-shadow: var(--shadow-lg);
-  }
-
-  .timeline-item__title {
-    font-size: 1.375rem;
-    font-weight: 600;
-    color: var(--color-charcoal);
-    margin-bottom: var(--space-md);
-    font-family: var(--font-heading);
-  }
-
-  .timeline-item__description {
-    color: var(--color-gray-dark);
-    line-height: 1.8;
-    font-size: 1.0625rem;
-  }
-
-  /* ==========================================
-     CREDENTIALS SECTION
-     ========================================== */
-  .credentials {
-    text-align: center;
-  }
-
-  .credentials-card {
-    padding: var(--space-4xl) var(--space-3xl);
-    border-radius: var(--radius-xl);
-    margin-top: var(--space-3xl);
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  }
-
-  .credentials-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-2xl);
-  }
-
-  .credentials-list {
-    list-style: none;
-    text-align: left;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-
-  .credentials-item {
-    display: flex;
-    align-items: center;
-    gap: var(--space-md);
-    padding: var(--space-lg) 0;
-    font-size: 1.125rem;
-    color: var(--color-gray-dark);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-    transition: all 0.3s ease;
-  }
-
-  .credentials-item:last-child {
-    border-bottom: none;
-  }
-
-  .credentials-item:hover {
-    color: var(--color-primary);
-    transform: translateX(8px);
-  }
-
-  .credentials-icon {
-    flex-shrink: 0;
-    stroke: var(--color-primary);
-    transition: all 0.3s ease;
-  }
-
-  .credentials-item:hover .credentials-icon {
-    stroke: var(--color-primary-dark);
-    transform: scale(1.1);
-  }
-
-  /* ==========================================
      CTA PREMIUM ENHANCEMENTS
      ========================================== */
   .cta-premium__title {
@@ -533,21 +388,6 @@ import VideoBackground from '../components/VideoBackground.astro';
     .about-story__image {
       min-height: 500px;
     }
-
-    .timeline::before {
-      left: 28px;
-    }
-
-    .timeline-item {
-      grid-template-columns: 56px 1fr;
-      gap: var(--space-lg);
-    }
-
-    .timeline-item__number {
-      width: 56px;
-      height: 56px;
-      font-size: 1.5rem;
-    }
   }
 
   /* Mobile */
@@ -579,51 +419,6 @@ import VideoBackground from '../components/VideoBackground.astro';
       display: none;
     }
 
-    .timeline {
-      margin-top: var(--space-3xl);
-    }
-
-    .timeline::before {
-      left: 24px;
-    }
-
-    .timeline-item {
-      grid-template-columns: 48px 1fr;
-      gap: var(--space-md);
-      margin-bottom: var(--space-2xl);
-    }
-
-    .timeline-item__number {
-      width: 48px;
-      height: 48px;
-      font-size: 1.25rem;
-    }
-
-    .timeline-item__content {
-      padding: var(--space-lg);
-    }
-
-    .timeline-item__title {
-      font-size: 1.375rem;
-    }
-
-    .timeline-item__description {
-      font-size: 1rem;
-    }
-
-    .timeline-item:hover .timeline-item__content {
-      transform: translateX(4px);
-    }
-
-    .credentials-card {
-      padding: var(--space-2xl) var(--space-lg);
-    }
-
-    .credentials-item {
-      font-size: 1rem;
-      padding: var(--space-md) 0;
-    }
-
     .cta-premium__actions {
       flex-direction: column;
       gap: var(--space-md);
@@ -639,29 +434,6 @@ import VideoBackground from '../components/VideoBackground.astro';
     .about-story__image {
       min-height: 320px;
     }
-
-    .timeline-item {
-      grid-template-columns: 40px 1fr;
-      gap: var(--space-sm);
-    }
-
-    .timeline-item__number {
-      width: 40px;
-      height: 40px;
-      font-size: 1.125rem;
-    }
-
-    .timeline-item__content {
-      padding: var(--space-md);
-    }
-
-    .timeline-item__title {
-      font-size: 1.25rem;
-    }
-
-    .credentials-item {
-      font-size: 0.9375rem;
-    }
   }
 
   /* ==========================================
@@ -671,32 +443,12 @@ import VideoBackground from '../components/VideoBackground.astro';
   /* Reduce motion for users who prefer it */
   @media (prefers-reduced-motion: reduce) {
     .about-story__image img,
-    .about-stats__item,
-    .timeline-item__number,
-    .timeline-item__content,
-    .credentials-card,
-    .credentials-item {
+    .about-stats__item {
       transition: none !important;
     }
 
-    .about-story__image:hover img,
-    .stat-card:hover,
-    .timeline-item:hover .timeline-item__number,
-    .timeline-item:hover .timeline-item__content,
-    .credentials-card:hover,
-    .credentials-item:hover {
+    .about-story__image:hover img {
       transform: none !important;
-    }
-  }
-
-  /* High contrast mode adjustments */
-  @media (prefers-contrast: high) {
-    .timeline::before {
-      opacity: 1;
-    }
-
-    .credentials-item {
-      border-bottom-width: 2px;
     }
   }
 </style>

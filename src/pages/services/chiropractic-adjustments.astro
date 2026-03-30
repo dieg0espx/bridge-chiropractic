@@ -57,7 +57,7 @@ import VideoBackground from '../../components/VideoBackground.astro';
     </div>
 
     <div class="benefits-grid">
-      <div class="benefit-card glass" data-animate="fade-up" data-animate-delay="150">
+      <div class="benefit-card" data-animate="fade-up" data-animate-delay="150">
         <div class="benefit-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
@@ -67,7 +67,7 @@ import VideoBackground from '../../components/VideoBackground.astro';
         <p>Reduce back pain, neck pain, headaches, and nerve irritation by addressing misalignments and restoring proper joint function.</p>
       </div>
 
-      <div class="benefit-card glass" data-animate="scale" data-animate-delay="300">
+      <div class="benefit-card" data-animate="scale" data-animate-delay="300">
         <div class="benefit-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <circle cx="12" cy="12" r="10"></circle>
@@ -80,7 +80,7 @@ import VideoBackground from '../../components/VideoBackground.astro';
         <p>Restore range of motion in stiff joints and tight muscles, making everyday movements easier and more comfortable.</p>
       </div>
 
-      <div class="benefit-card glass" data-animate="fade-up" data-animate-delay="450">
+      <div class="benefit-card" data-animate="fade-up" data-animate-delay="450">
         <div class="benefit-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
@@ -90,7 +90,7 @@ import VideoBackground from '../../components/VideoBackground.astro';
         <p>Maintain proper alignment and movement patterns to reduce the risk of future injuries and chronic issues.</p>
       </div>
 
-      <div class="benefit-card glass" data-animate="scale" data-animate-delay="600">
+      <div class="benefit-card" data-animate="scale" data-animate-delay="600">
         <div class="benefit-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
@@ -101,7 +101,7 @@ import VideoBackground from '../../components/VideoBackground.astro';
         <p>Address postural imbalances that contribute to discomfort, especially for desk workers and those with sedentary lifestyles.</p>
       </div>
 
-      <div class="benefit-card glass" data-animate="fade-up" data-animate-delay="750">
+      <div class="benefit-card" data-animate="fade-up" data-animate-delay="750">
         <div class="benefit-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
@@ -111,7 +111,7 @@ import VideoBackground from '../../components/VideoBackground.astro';
         <p>Optimize movement mechanics for better athletic performance and endurance in activities you love.</p>
       </div>
 
-      <div class="benefit-card glass" data-animate="scale" data-animate-delay="900">
+      <div class="benefit-card" data-animate="scale" data-animate-delay="900">
         <div class="benefit-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
@@ -276,19 +276,19 @@ import VideoBackground from '../../components/VideoBackground.astro';
     </div>
 
     <div class="related-services">
-      <a href="/services/soft-tissue-therapy" class="related-service-card glass" data-animate="fade-up" data-animate-delay="100">
+      <a href="/services/soft-tissue-therapy" class="related-service-card" data-animate="fade-up" data-animate-delay="100">
         <h3>Soft Tissue Therapy</h3>
         <p>Reduce muscle tension and improve adjustment results</p>
         <span class="related-service-arrow">→</span>
       </a>
 
-      <a href="/services/home-exercise-programs" class="related-service-card glass" data-animate="fade-up" data-animate-delay="200">
+      <a href="/services/home-exercise-programs" class="related-service-card" data-animate="fade-up" data-animate-delay="200">
         <h3>Home Exercise Programs</h3>
         <p>Maintain progress and prevent future issues</p>
         <span class="related-service-arrow">→</span>
       </a>
 
-      <a href="/services/posture-ergonomic-support" class="related-service-card glass" data-animate="fade-up" data-animate-delay="300">
+      <a href="/services/posture-ergonomic-support" class="related-service-card" data-animate="fade-up" data-animate-delay="300">
         <h3>Posture & Ergonomic Support</h3>
         <p>Address underlying postural causes of pain</p>
         <span class="related-service-arrow">→</span>
@@ -312,7 +312,7 @@ import VideoBackground from '../../components/VideoBackground.astro';
       </p>
       <div style="display: flex; gap: var(--space-lg); justify-content: center; flex-wrap: wrap;">
         <a href="#" class="btn btn--white btn--lg" data-cal-link="sdbridgechiropractic/30min" data-cal-config='{"layout":"month_view"}'>Book a Visit</a>
-        <a href="tel:8582777500" class="btn btn--secondary btn--lg" style="background: transparent; border: 2px solid white; color: white;">
+        <a href="tel:8582777500" class="btn btn--outline-white btn--lg">
           Call (858) 277-7500
         </a>
       </div>
@@ -601,29 +601,112 @@ import VideoBackground from '../../components/VideoBackground.astro';
   @media (max-width: 768px) {
     .benefits-grid {
       grid-template-columns: 1fr;
+      gap: var(--space-lg);
+      margin-top: var(--space-2xl);
+    }
+
+    .benefit-card {
+      padding: var(--space-xl);
+    }
+
+    .benefit-card:nth-child(even) {
+      margin-top: 0;
+    }
+
+    .benefit-icon {
+      width: 52px;
+      height: 52px;
+    }
+
+    .benefit-icon svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .benefit-card h3 {
+      font-size: 1.25rem;
+    }
+
+    .process-steps {
+      margin-top: var(--space-2xl);
+      gap: var(--space-xl);
     }
 
     .process-step {
-      grid-template-columns: 60px 1fr;
+      grid-template-columns: 56px 1fr;
       gap: var(--space-md);
     }
 
     .process-step__number {
-      width: 60px;
-      height: 60px;
+      width: 56px;
+      height: 56px;
       font-size: 1.5rem;
+    }
+
+    .process-step__content h3 {
+      font-size: 1.25rem;
+    }
+
+    .process-step__content p {
+      font-size: 1rem;
     }
 
     .conditions-list {
       columns: 1;
+      margin-top: var(--space-2xl);
     }
 
     .faq-grid {
       grid-template-columns: 1fr;
+      margin-top: var(--space-2xl);
+    }
+
+    .faq-summary {
+      font-size: 1rem;
+      padding: var(--space-md) 0;
+    }
+
+    .faq-content {
+      font-size: 0.9375rem;
     }
 
     .related-services {
       grid-template-columns: 1fr;
+      margin-top: var(--space-2xl);
+    }
+
+    .related-service-card {
+      padding: var(--space-xl);
+    }
+
+    .overview-content {
+      margin-top: var(--space-xl);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .process-step {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    .process-step__number {
+      width: 48px;
+      height: 48px;
+      font-size: 1.25rem;
+      margin: 0 auto;
+    }
+
+    .benefit-card {
+      padding: var(--space-lg);
+    }
+
+    .faq-item {
+      padding: 0 var(--space-md);
+    }
+
+    .conditions-list li {
+      font-size: 0.9375rem;
     }
   }
 </style>

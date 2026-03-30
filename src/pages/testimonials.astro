@@ -33,7 +33,7 @@ import VideoBackground from '../components/VideoBackground.astro';
     <div class="rating-bar__inner">
       <div class="rating-bar__stars">
         {[...Array(5)].map(() => (
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="var(--color-star, #F59E0B)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         ))}
       </div>
       <span class="rating-bar__score">5.0</span>
@@ -48,8 +48,8 @@ import VideoBackground from '../components/VideoBackground.astro';
 
   <!-- Reviews Grid -->
   <SectionWrapper spacing="normal" containerWidth="normal">
-    <div class="reviews-grid">
-      <article class="review-card" data-animate="fade-up">
+    <div class="reviews-grid" role="list" aria-label="Patient reviews">
+      <article class="review-card" role="listitem" data-animate="fade-up">
         <div class="review-card__stars" aria-label="5 stars">
           {[...Array(5)].map(() => (
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -60,7 +60,7 @@ import VideoBackground from '../components/VideoBackground.astro';
         <p class="review-card__tag">Back Pain</p>
       </article>
 
-      <article class="review-card" data-animate="fade-up">
+      <article class="review-card" role="listitem" data-animate="fade-up">
         <div class="review-card__stars" aria-label="5 stars">
           {[...Array(5)].map(() => (
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -71,7 +71,7 @@ import VideoBackground from '../components/VideoBackground.astro';
         <p class="review-card__tag">Migraines</p>
       </article>
 
-      <article class="review-card" data-animate="fade-up">
+      <article class="review-card" role="listitem" data-animate="fade-up">
         <div class="review-card__stars" aria-label="5 stars">
           {[...Array(5)].map(() => (
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -82,7 +82,7 @@ import VideoBackground from '../components/VideoBackground.astro';
         <p class="review-card__tag">Sports</p>
       </article>
 
-      <article class="review-card" data-animate="fade-up">
+      <article class="review-card" role="listitem" data-animate="fade-up">
         <div class="review-card__stars" aria-label="5 stars">
           {[...Array(5)].map(() => (
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -93,7 +93,7 @@ import VideoBackground from '../components/VideoBackground.astro';
         <p class="review-card__tag">General</p>
       </article>
 
-      <article class="review-card" data-animate="fade-up">
+      <article class="review-card" role="listitem" data-animate="fade-up">
         <div class="review-card__stars" aria-label="5 stars">
           {[...Array(5)].map(() => (
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -104,7 +104,7 @@ import VideoBackground from '../components/VideoBackground.astro';
         <p class="review-card__tag">Neck Pain</p>
       </article>
 
-      <article class="review-card" data-animate="fade-up">
+      <article class="review-card" role="listitem" data-animate="fade-up">
         <div class="review-card__stars" aria-label="5 stars">
           {[...Array(5)].map(() => (
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -115,7 +115,7 @@ import VideoBackground from '../components/VideoBackground.astro';
         <p class="review-card__tag">Auto Injury</p>
       </article>
 
-      <article class="review-card" data-animate="fade-up">
+      <article class="review-card" role="listitem" data-animate="fade-up">
         <div class="review-card__stars" aria-label="5 stars">
           {[...Array(5)].map(() => (
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -126,7 +126,7 @@ import VideoBackground from '../components/VideoBackground.astro';
         <p class="review-card__tag">General</p>
       </article>
 
-      <article class="review-card" data-animate="fade-up">
+      <article class="review-card" role="listitem" data-animate="fade-up">
         <div class="review-card__stars" aria-label="5 stars">
           {[...Array(5)].map(() => (
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -137,7 +137,7 @@ import VideoBackground from '../components/VideoBackground.astro';
         <p class="review-card__tag">First Timer</p>
       </article>
 
-      <article class="review-card" data-animate="fade-up">
+      <article class="review-card" role="listitem" data-animate="fade-up">
         <div class="review-card__stars" aria-label="5 stars">
           {[...Array(5)].map(() => (
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -148,7 +148,7 @@ import VideoBackground from '../components/VideoBackground.astro';
         <p class="review-card__tag">General</p>
       </article>
 
-      <article class="review-card" data-animate="fade-up">
+      <article class="review-card" role="listitem" data-animate="fade-up">
         <div class="review-card__stars" aria-label="5 stars">
           {[...Array(5)].map(() => (
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -159,7 +159,7 @@ import VideoBackground from '../components/VideoBackground.astro';
         <p class="review-card__tag">Sciatica</p>
       </article>
 
-      <article class="review-card" data-animate="fade-up">
+      <article class="review-card" role="listitem" data-animate="fade-up">
         <div class="review-card__stars" aria-label="5 stars">
           {[...Array(5)].map(() => (
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -170,7 +170,7 @@ import VideoBackground from '../components/VideoBackground.astro';
         <p class="review-card__tag">General</p>
       </article>
 
-      <article class="review-card" data-animate="fade-up">
+      <article class="review-card" role="listitem" data-animate="fade-up">
         <div class="review-card__stars" aria-label="5 stars">
           {[...Array(5)].map(() => (
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -195,7 +195,7 @@ import VideoBackground from '../components/VideoBackground.astro';
       <p style="color: rgba(255,255,255,0.85); max-width: 550px; margin: 0 auto var(--space-2xl); line-height: 1.7;">Schedule your first visit and find out what personalized chiropractic care can do for you.</p>
       <div style="display: flex; gap: var(--space-lg); justify-content: center; flex-wrap: wrap;">
         <a href="#" class="btn btn--white btn--lg" data-cal-link="sdbridgechiropractic/30min" data-cal-config='{"layout":"month_view"}'>Book Your Visit</a>
-        <a href="tel:8582777500" class="btn btn--secondary btn--lg" style="background: transparent; border: 2px solid white; color: white;">Call (858) 277-7500</a>
+        <a href="tel:8582777500" class="btn btn--outline-white btn--lg">Call (858) 277-7500</a>
       </div>
     </div>
   </VideoBackground>

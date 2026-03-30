@@ -1,0 +1,279 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SectionWrapper from '../../components/SectionWrapper.astro';
+---
+
+<Layout title="The Ultimate Guide to Desk Ergonomics | Bridge Chiropractic Blog" description="How to set up your workspace to prevent neck pain, back pain, and repetitive strain injuries. Practical ergonomic tips from Dr. Nate Beyerl.">
+  <!-- Article Header -->
+  <section class="article-hero">
+    <img src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=1400&h=600&fit=crop" alt="Modern ergonomic desk setup" class="article-hero__image" />
+    <div class="article-hero__overlay"></div>
+    <a href="/blog" class="back-to-blog">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+      Blog
+    </a>
+    <div class="article-hero__content">
+      <span class="article-hero__category">Posture & Ergonomics</span>
+      <h1 class="article-hero__title">The Ultimate Guide to Desk Ergonomics</h1>
+      <div class="article-hero__meta">
+        <span>Dr. Nate Beyerl</span>
+        <span>&middot;</span>
+        <span>February 28, 2026</span>
+        <span>&middot;</span>
+        <span>7 min read</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article Body -->
+  <SectionWrapper background="white" spacing="normal" containerWidth="narrow">
+    <article class="article-body" data-animate="fade-up">
+      <p class="article-lead">If you work at a desk, your workspace is either helping your body or slowly breaking it down. Most people don't notice the damage until it shows up as chronic neck pain, headaches, or low back stiffness that won't go away. Here's how to set things up so your body isn't fighting your environment every day.</p>
+
+      <h2>The Problem with "Just Sit Up Straight"</h2>
+      <p>You've heard it a hundred times. But willpower alone doesn't fix posture. If your monitor is too low, your chair doesn't support you, and your keyboard is in the wrong position, your body will compensate no matter how hard you try to sit tall. Eventually you fatigue, slump forward, and the cycle continues.</p>
+      <p>The real fix is setting up your environment so good posture is the default, not something you have to force.</p>
+
+      <h2>Monitor Height and Distance</h2>
+      <p>Your monitor should be at arm's length away, with the top of the screen at or slightly below eye level. This keeps your head in a neutral position instead of tilting forward or down, which adds 10-20 pounds of extra force on your cervical spine for every inch your head drifts forward.</p>
+      <p><strong>Quick fix:</strong> If you're on a laptop, get an external monitor or a laptop stand with a separate keyboard. Working directly on a laptop for 8 hours a day is one of the worst things you can do for your neck.</p>
+
+      <h2>Chair Setup</h2>
+      <p>Your feet should be flat on the floor with knees at roughly 90 degrees. The seat pan should support your thighs without pressing into the back of your knees. If your chair has lumbar support, adjust it so it fits the natural curve of your low back, not so it pushes you forward.</p>
+      <p><strong>Quick fix:</strong> If your chair is too high and your feet don't reach the floor, use a footrest. If it's too deep, put a small pillow behind your low back to bring you forward on the seat.</p>
+
+      <h2>Keyboard and Mouse Position</h2>
+      <p>Your elbows should be at roughly 90 degrees with your forearms parallel to the floor. Wrists should be neutral, not angled up or down. If your keyboard is on the desk surface and your desk is standard height (29-30 inches), your shoulders are probably shrugging up to compensate. That's where a lot of upper trap tension comes from.</p>
+      <p><strong>Quick fix:</strong> A keyboard tray that sits slightly below desk height solves this for most people. Keep your mouse close to your keyboard so you're not reaching out to the side.</p>
+
+      <h2>The 30-Minute Rule</h2>
+      <p>No matter how perfect your setup is, static positioning is the enemy. Your body is designed for movement, not for holding one position for hours. Set a timer and change positions every 30 minutes. Stand up, walk around, do a quick stretch. It doesn't need to be a workout. Just break the pattern.</p>
+      <p>If you have a sit-stand desk, alternate between sitting and standing every 30-60 minutes. Standing all day creates its own problems, so don't think of it as a replacement for sitting. Think of it as another position in your rotation.</p>
+
+      <h2>Dual Monitor Setup</h2>
+      <p>If you use two monitors, put the one you use most directly in front of you, not off to one side. If you use both equally, angle them in a slight V shape with the seam centered on your nose. A monitor that lives permanently to your left or right means your neck is rotated for hours. That creates asymmetric tension that's hard to undo.</p>
+
+      <h2>What Ergonomics Can't Fix</h2>
+      <p>A good setup reduces strain, but it can't reverse years of postural adaptation. If you already have joint restrictions, muscle adhesions, or structural changes, you need manual therapy to address those first. Then your ergonomic improvements actually hold.</p>
+      <p>That's why we combine chiropractic adjustments, soft tissue work, and ergonomic guidance as part of a single approach. Fixing the workspace without fixing the body (or vice versa) gives you half the result.</p>
+
+      <div class="article-cta">
+        <h3>Need help with your setup?</h3>
+        <p>Book a visit and we'll assess your posture, identify what's contributing to your pain, and give you specific recommendations for your workspace.</p>
+        <a href="#" class="btn btn--primary btn--lg" data-cal-link="sdbridgechiropractic/30min" data-cal-config='{"layout":"month_view"}'>Book a Visit</a>
+      </div>
+    </article>
+  </SectionWrapper>
+
+</Layout>
+
+<style>
+  /* Back to Blog */
+  .back-to-blog {
+    position: absolute;
+    top: 100px;
+    left: var(--space-xl);
+    z-index: 10;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: var(--radius-full);
+    color: #fff;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .back-to-blog:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateX(-2px);
+  }
+
+  /* Article Hero */
+  .article-hero {
+    position: relative;
+    height: 50vh;
+    min-height: 400px;
+    max-height: 550px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+  }
+
+  .article-hero__image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .article-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.1) 60%);
+  }
+
+  .article-hero__content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: var(--space-3xl) var(--space-2xl);
+    margin: 0 auto;
+    width: 100%;
+    color: white;
+  }
+
+  .article-hero__category {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-accent);
+    margin-bottom: var(--space-sm);
+    display: block;
+  }
+
+  .article-hero__title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 4vw, 2.75rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: var(--space-md);
+    color: #fff;
+  }
+
+  .article-hero__meta {
+    display: flex;
+    gap: var(--space-sm);
+    font-size: 0.9375rem;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  /* Article Body */
+  .article-body {
+    font-size: 1.0625rem;
+    line-height: 1.85;
+    color: var(--color-gray-dark);
+  }
+
+  .article-lead {
+    font-size: 1.25rem;
+    line-height: 1.75;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-2xl);
+  }
+
+  .article-body h2 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--color-charcoal);
+    margin-top: var(--space-2xl);
+    margin-bottom: var(--space-md);
+  }
+
+  .article-body p {
+    margin-bottom: var(--space-lg);
+  }
+
+  .article-cta {
+    margin-top: var(--space-3xl);
+    padding: var(--space-2xl);
+    background: rgba(71, 128, 184, 0.06);
+    border-radius: var(--radius-lg);
+    text-align: center;
+  }
+
+  .article-cta h3 {
+    font-family: var(--font-heading);
+    font-size: 1.375rem;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-sm);
+  }
+
+  .article-cta p {
+    color: var(--color-gray-dark);
+    margin-bottom: var(--space-xl);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (max-width: 768px) {
+    .article-hero {
+      min-height: 300px;
+      height: 45vh;
+    }
+
+    .article-hero__content {
+      padding: var(--space-xl) var(--space-lg);
+    }
+
+    .article-hero__meta {
+      flex-wrap: wrap;
+      font-size: 0.8125rem;
+      gap: var(--space-xs);
+    }
+
+    .article-body {
+      font-size: 1rem;
+    }
+
+    .article-lead {
+      font-size: 1.0625rem;
+    }
+
+    .article-body h2 {
+      font-size: 1.25rem;
+      margin-top: var(--space-xl);
+    }
+
+    .article-body p {
+      margin-bottom: var(--space-md);
+    }
+
+    .article-cta {
+      padding: var(--space-xl);
+    }
+
+    .article-cta h3 {
+      font-size: 1.125rem;
+    }
+
+    .article-cta p {
+      font-size: 0.9375rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .article-hero {
+      min-height: 260px;
+      height: 40vh;
+    }
+
+    .article-hero__content {
+      padding: var(--space-lg) var(--space-md);
+    }
+
+    .article-cta {
+      padding: var(--space-lg);
+    }
+  }
+</style>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animated');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { root: null, rootMargin: '-80px', threshold: 0.1 });
+  document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
+</script>

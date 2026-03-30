@@ -2,8 +2,6 @@
 import Layout from '../../layouts/Layout.astro';
 import SectionWrapper from '../../components/SectionWrapper.astro';
 import VideoBackground from '../../components/VideoBackground.astro';
-import ContentGrid from '../../components/ContentGrid.astro';
-import OfferingCard from '../../components/OfferingCard.astro';
 ---
 
 <Layout
@@ -33,338 +31,315 @@ import OfferingCard from '../../components/OfferingCard.astro';
   </section>
 
   <!-- Overview Section -->
-  <SectionWrapper>
-    <div class="overview-section container">
+  <SectionWrapper background="white" spacing="normal" containerWidth="narrow">
+    <div class="service-overview" data-animate="fade-up">
+      <span class="section__eyebrow">What Is Movement Guidance?</span>
+      <h2 class="display-3">Movement Quality Determines Longevity and Performance</h2>
+
       <div class="overview-content">
-        <h2 class="section-title" data-animate="fade-up">Movement Quality Determines Longevity and Performance</h2>
+        <p class="text-large">How you move matters more than how much you move. Poor movement patterns, compensations, asymmetries, and dysfunctional mechanics create chronic stress on joints, limit performance, and set the stage for injury. Whether you're an athlete, weekend warrior, or active adult, movement quality is the foundation of long-term function.</p>
 
-        <p class="text-large" data-animate="fade-up">
-          How you move matters more than how much you move. Poor movement patterns—compensations, asymmetries, and dysfunctional mechanics—create chronic stress on joints, limit performance, and set the stage for injury. Whether you're an athlete, weekend warrior, or active adult, movement quality is the foundation of long-term function.
-        </p>
+        <p>Mobility & Movement Guidance at The Bridge Chiropractic is a comprehensive approach to assessing and improving how your body moves. This isn't generic stretching or random mobility drills. It's a strategic evaluation of your movement patterns, identification of limitations and compensations, and targeted interventions to restore functional capacity.</p>
 
-        <p data-animate="fade-up">
-          Mobility & Movement Guidance at The Bridge Chiropractic is a comprehensive approach to assessing and improving how your body moves. This isn't generic stretching or random mobility drills—it's a strategic evaluation of your movement patterns, identification of limitations and compensations, and targeted interventions to restore functional capacity.
-        </p>
+        <p>We analyze fundamental movement patterns like squatting, hinging, lunging, pushing, pulling, and rotating to identify where you lose position, compensate, or lack control. These assessments reveal mobility restrictions, stability deficits, motor control issues, and faulty patterns that contribute to pain or limit performance.</p>
 
-        <p data-animate="fade-up">
-          We analyze fundamental movement patterns like squatting, hinging, lunging, pushing, pulling, and rotating to identify where you lose position, compensate, or lack control. These assessments reveal mobility restrictions, stability deficits, motor control issues, and faulty patterns that contribute to pain or limit performance.
-        </p>
-
-        <p data-animate="fade-up">
-          This service is ideal for anyone who wants to move better—whether you're returning from injury, preparing for a race or competition, dealing with chronic stiffness, or simply want to maintain independence and function as you age. Better movement reduces pain, improves performance, and keeps you doing what you love without limitations.
-        </p>
+        <p>This service is ideal for anyone who wants to move better, whether you're returning from injury, preparing for a race or competition, dealing with chronic stiffness, or simply want to maintain independence and function as you age. Better movement reduces pain, improves performance, and keeps you doing what you love without limitations.</p>
       </div>
     </div>
   </SectionWrapper>
 
-  <!-- Key Components Section -->
-  <SectionWrapper background="gray">
-    <div class="container">
-      <div class="section-header" data-animate="fade-up">
-        <h2 class="section-title">Comprehensive Movement Solutions</h2>
-        <p class="section-subtitle">Assessment, education, and targeted intervention</p>
+  <!-- Benefits Section -->
+  <SectionWrapper background="gray" spacing="normal">
+    <div class="section__header" data-animate="fade-up">
+      <span class="section__eyebrow">Benefits</span>
+      <h2 class="display-3">Comprehensive Movement Solutions</h2>
+      <p class="text-large" style="max-width: 700px; margin: 0 auto;">Assessment, education, and targeted intervention.</p>
+    </div>
+
+    <div class="benefits-grid">
+      <div class="benefit-card" data-animate="fade-up" data-animate-delay="150">
+        <div class="benefit-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+          </svg>
+        </div>
+        <h3>Movement Pattern Assessment</h3>
+        <p>Detailed analysis of fundamental movement patterns to identify compensations, asymmetries, mobility restrictions, and stability deficits affecting function.</p>
       </div>
 
-      <div class="benefits-grid">
-        <div class="benefit-card glass" data-animate="fade-up" data-animate-delay="150">
-          <div class="benefit-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-            </svg>
-          </div>
-          <h3>Movement Pattern Assessment</h3>
-          <p>Detailed analysis of fundamental movement patterns to identify compensations, asymmetries, mobility restrictions, and stability deficits affecting function.</p>
+      <div class="benefit-card" data-animate="scale" data-animate-delay="300">
+        <div class="benefit-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <circle cx="12" cy="12" r="6"></circle>
+            <circle cx="12" cy="12" r="2"></circle>
+          </svg>
         </div>
+        <h3>Joint Mobility Screening</h3>
+        <p>Evaluation of range of motion, end-feel, and joint mechanics to identify specific restrictions limiting movement quality and creating compensatory patterns.</p>
+      </div>
 
-        <div class="benefit-card glass" data-animate="scale" data-animate-delay="300">
-          <div class="benefit-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="10"></circle>
-              <circle cx="12" cy="12" r="6"></circle>
-              <circle cx="12" cy="12" r="2"></circle>
-            </svg>
-          </div>
-          <h3>Joint Mobility Screening</h3>
-          <p>Evaluation of range of motion, end-feel, and joint mechanics to identify specific restrictions limiting movement quality and creating compensatory patterns.</p>
+      <div class="benefit-card" data-animate="fade-up" data-animate-delay="450">
+        <div class="benefit-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+          </svg>
         </div>
+        <h3>Motor Control Training</h3>
+        <p>Coaching to improve body awareness, movement coordination, and neuromuscular control for better efficiency and reduced injury risk.</p>
+      </div>
 
-        <div class="benefit-card glass" data-animate="fade-up" data-animate-delay="450">
-          <div class="benefit-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
-            </svg>
-          </div>
-          <h3>Motor Control Training</h3>
-          <p>Coaching to improve body awareness, movement coordination, and neuromuscular control for better efficiency and reduced injury risk.</p>
+      <div class="benefit-card" data-animate="scale" data-animate-delay="600">
+        <div class="benefit-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+          </svg>
         </div>
+        <h3>Corrective Movement Strategies</h3>
+        <p>Targeted exercises and cues to address faulty patterns, restore proper sequencing, and reinforce functional movement mechanics.</p>
+      </div>
 
-        <div class="benefit-card glass" data-animate="scale" data-animate-delay="600">
-          <div class="benefit-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="10"></circle>
-              <line x1="12" y1="16" x2="12" y2="12"></line>
-              <line x1="12" y1="8" x2="12.01" y2="8"></line>
-            </svg>
-          </div>
-          <h3>Corrective Movement Strategies</h3>
-          <p>Targeted exercises and cues to address faulty patterns, restore proper sequencing, and reinforce functional movement mechanics.</p>
+      <div class="benefit-card" data-animate="fade-up" data-animate-delay="750">
+        <div class="benefit-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+            <polyline points="16 7 22 7 22 13"></polyline>
+          </svg>
         </div>
+        <h3>Sport-Specific Movement Prep</h3>
+        <p>Analysis and optimization of movement patterns specific to your sport or activity to enhance performance and reduce sport-related injury risk.</p>
+      </div>
 
-        <div class="benefit-card glass" data-animate="fade-up" data-animate-delay="750">
-          <div class="benefit-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
-              <polyline points="16 7 22 7 22 13"></polyline>
-            </svg>
-          </div>
-          <h3>Sport-Specific Movement Prep</h3>
-          <p>Analysis and optimization of movement patterns specific to your sport or activity to enhance performance and reduce sport-related injury risk.</p>
+      <div class="benefit-card" data-animate="scale" data-animate-delay="900">
+        <div class="benefit-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
         </div>
-
-        <div class="benefit-card glass" data-animate="scale" data-animate-delay="900">
-          <div class="benefit-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-            </svg>
-          </div>
-          <h3>Injury Prevention Coaching</h3>
-          <p>Education on movement strategies, load management, and recovery practices to reduce injury risk and maintain long-term resilience.</p>
-        </div>
+        <h3>Injury Prevention Coaching</h3>
+        <p>Education on movement strategies, load management, and recovery practices to reduce injury risk and maintain long-term resilience.</p>
       </div>
     </div>
   </SectionWrapper>
 
-  <!-- Treatment Approach Section -->
-  <SectionWrapper>
-    <div class="container">
-      <div class="section-header" data-animate="fade-up">
-        <h2 class="section-title">Our Movement Assessment Process</h2>
-        <p class="section-subtitle">Systematic evaluation and personalized coaching</p>
+  <!-- Process Section -->
+  <SectionWrapper background="white" spacing="normal">
+    <div class="section__header" data-animate="fade-up">
+      <span class="section__eyebrow">Our Approach</span>
+      <h2 class="display-3">Our Movement Assessment Process</h2>
+      <p class="text-large" style="max-width: 700px; margin: 0 auto;">Systematic evaluation and personalized coaching.</p>
+    </div>
+
+    <div class="process-steps">
+      <div class="process-step" data-animate="fade-up" data-animate-delay="100">
+        <div class="process-step__number">1</div>
+        <div class="process-step__content">
+          <h3>Comprehensive Movement Screen</h3>
+          <p>We assess fundamental movement patterns including squat, hinge, lunge, push, pull, and rotation. We observe how you move, where you compensate, and what limitations or asymmetries exist. This provides a roadmap for targeted intervention.</p>
+        </div>
       </div>
 
-      <div class="process-grid">
-        <div class="process-step" data-animate="fade-up">
-          <div class="step-number">1</div>
-          <div class="step-content">
-            <h3>Comprehensive Movement Screen</h3>
-            <p>We assess fundamental movement patterns including squat, hinge, lunge, push, pull, and rotation. We observe how you move, where you compensate, and what limitations or asymmetries exist. This provides a roadmap for targeted intervention.</p>
-          </div>
+      <div class="process-step" data-animate="fade-up" data-animate-delay="200">
+        <div class="process-step__number">2</div>
+        <div class="process-step__content">
+          <h3>Identify Root Limitations</h3>
+          <p>We differentiate between mobility restrictions (can't access a position), stability deficits (can't control a position), and motor control issues (don't know how to move efficiently). This determines whether you need joint work, strength training, or movement re-education.</p>
         </div>
+      </div>
 
-        <div class="process-step" data-animate="fade-up">
-          <div class="step-number">2</div>
-          <div class="step-content">
-            <h3>Identify Root Limitations</h3>
-            <p>We differentiate between mobility restrictions (can't access a position), stability deficits (can't control a position), and motor control issues (don't know how to move efficiently). This determines whether you need joint work, strength training, or movement re-education.</p>
-          </div>
+      <div class="process-step" data-animate="fade-up" data-animate-delay="300">
+        <div class="process-step__number">3</div>
+        <div class="process-step__content">
+          <h3>Address Structural Barriers</h3>
+          <p>If joint restrictions, soft tissue adhesions, or pain limit your movement, we use chiropractic adjustments and manual therapy to restore mobility first. You can't train out of a structural restriction. You have to address it directly.</p>
         </div>
+      </div>
 
-        <div class="process-step" data-animate="fade-up">
-          <div class="step-number">3</div>
-          <div class="step-content">
-            <h3>Address Structural Barriers</h3>
-            <p>If joint restrictions, soft tissue adhesions, or pain limit your movement, we use chiropractic adjustments and manual therapy to restore mobility first. You can't train out of a structural restriction—you have to address it directly.</p>
-          </div>
-        </div>
-
-        <div class="process-step" data-animate="fade-up">
-          <div class="step-number">4</div>
-          <div class="step-content">
-            <h3>Reinforce Better Patterns</h3>
-            <p>We teach corrective exercises, movement cues, and coaching strategies to retrain your nervous system. Better movement becomes automatic through repetition and reinforcement, not just awareness. We give you the tools to sustain improvement long-term.</p>
-          </div>
+      <div class="process-step" data-animate="fade-up" data-animate-delay="400">
+        <div class="process-step__number">4</div>
+        <div class="process-step__content">
+          <h3>Reinforce Better Patterns</h3>
+          <p>We teach corrective exercises, movement cues, and coaching strategies to retrain your nervous system. Better movement becomes automatic through repetition and reinforcement, not just awareness. We give you the tools to sustain improvement long-term.</p>
         </div>
       </div>
     </div>
   </SectionWrapper>
 
   <!-- Who Benefits Section -->
-  <SectionWrapper background="light">
-    <div class="container">
-      <div class="section-header" data-animate="fade-up">
-        <h2 class="section-title">Who Benefits from Movement Guidance?</h2>
-        <p class="section-subtitle">Movement optimization for diverse needs and goals</p>
-      </div>
-
-      <ul class="conditions-list" data-animate="fade-up">
-        <li><strong>Athletes & Active Adults</strong> — Improve performance, reduce injury risk, and address sport-specific movement limitations through targeted mobility and motor control training.</li>
-        <li><strong>Post-Injury Recovery</strong> — Restore proper movement mechanics after injury, address compensatory patterns, and rebuild confidence in functional movements.</li>
-        <li><strong>Chronic Pain Sufferers</strong> — Identify and correct faulty movement patterns that perpetuate pain cycles, reduce joint stress, and improve movement efficiency.</li>
-        <li><strong>Aging Adults</strong> — Maintain functional independence through improved mobility, balance, and movement quality to support daily activities and reduce fall risk.</li>
-        <li><strong>Desk Workers</strong> — Address movement restrictions and postural adaptations from prolonged sitting, restore functional capacity, and prevent chronic dysfunction.</li>
-        <li><strong>Weekend Warriors</strong> — Prepare your body for sporadic high-intensity activity, reduce injury risk from inadequate movement preparation, and optimize recovery.</li>
-      </ul>
+  <SectionWrapper background="gray" spacing="normal">
+    <div class="section__header" data-animate="fade-up">
+      <span class="section__eyebrow">Who Benefits</span>
+      <h2 class="display-3">Who Benefits from Movement Guidance?</h2>
     </div>
+
+    <ul class="conditions-list" data-animate="fade-up">
+      <li><strong>Athletes & Active Adults</strong> — Improve performance, reduce injury risk, and address sport-specific movement limitations through targeted mobility and motor control training.</li>
+      <li><strong>Post-Injury Recovery</strong> — Restore proper movement mechanics after injury, address compensatory patterns, and rebuild confidence in functional movements.</li>
+      <li><strong>Chronic Pain Sufferers</strong> — Identify and correct faulty movement patterns that perpetuate pain cycles, reduce joint stress, and improve movement efficiency.</li>
+      <li><strong>Aging Adults</strong> — Maintain functional independence through improved mobility, balance, and movement quality to support daily activities and reduce fall risk.</li>
+      <li><strong>Desk Workers</strong> — Address movement restrictions and postural adaptations from prolonged sitting, restore functional capacity, and prevent chronic dysfunction.</li>
+      <li><strong>Weekend Warriors</strong> — Prepare your body for sporadic high-intensity activity, reduce injury risk from inadequate movement preparation, and optimize recovery.</li>
+    </ul>
   </SectionWrapper>
 
   <!-- FAQ Section -->
-  <SectionWrapper>
-    <div class="container faq-container">
-      <div class="section-header" data-animate="fade-up">
-        <h2 class="section-title">Frequently Asked Questions</h2>
-      </div>
+  <SectionWrapper background="white" spacing="normal" containerWidth="normal">
+    <div class="section__header" data-animate="fade-up">
+      <span class="section__eyebrow">Common Questions</span>
+      <h2 class="display-3">Mobility & Movement FAQs</h2>
+    </div>
 
-      <div class="faq-list">
-        <details class="faq-item" data-animate="fade-up">
-          <summary class="faq-summary">
-            What is a movement assessment and why do I need one?
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq-icon">
-              <path d="M6 9l6 6 6-6"/>
-            </svg>
-          </summary>
-          <div class="faq-content">
-            A movement assessment evaluates fundamental movement patterns to identify compensations, restrictions, and dysfunctions that limit performance or contribute to pain. Most people have movement limitations they're not aware of—compensations that feel normal but create long-term problems. A movement assessment reveals these issues before they cause injury or chronic dysfunction, allowing us to address them proactively.
-          </div>
-        </details>
+    <div class="faq-grid">
+      <details class="faq-item" data-animate="fade-up">
+        <summary class="faq-summary">
+          What is a movement assessment and why do I need one?
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq-icon">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </summary>
+        <div class="faq-content">
+          A movement assessment evaluates fundamental movement patterns to identify compensations, restrictions, and dysfunctions that limit performance or contribute to pain. Most people have movement limitations they're not aware of. Compensations that feel normal but create long-term problems. A movement assessment reveals these issues before they cause injury or chronic dysfunction, allowing us to address them proactively.
+        </div>
+      </details>
 
-        <details class="faq-item" data-animate="fade-up">
-          <summary class="faq-summary">
-            How is this different from physical therapy?
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq-icon">
-              <path d="M6 9l6 6 6-6"/>
-            </svg>
-          </summary>
-          <div class="faq-content">
-            There's overlap in goals but differences in approach. Physical therapy is typically post-injury rehabilitation focused on returning to baseline function. Movement guidance is proactive optimization—improving how you move whether you're injured or not. We integrate chiropractic care to address joint restrictions that limit movement, which isn't part of traditional PT. The focus is on long-term movement quality and performance, not just recovery from injury.
-          </div>
-        </details>
+      <details class="faq-item" data-animate="fade-up">
+        <summary class="faq-summary">
+          How is this different from physical therapy?
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq-icon">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </summary>
+        <div class="faq-content">
+          There's overlap in goals but differences in approach. Physical therapy is typically post-injury rehabilitation focused on returning to baseline function. Movement guidance is proactive optimization, improving how you move whether you're injured or not. We integrate chiropractic care to address joint restrictions that limit movement, which isn't part of traditional PT. The focus is on long-term movement quality and performance, not just recovery from injury.
+        </div>
+      </details>
 
-        <details class="faq-item" data-animate="fade-up">
-          <summary class="faq-summary">
-            I'm not an athlete—do I still need movement training?
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq-icon">
-              <path d="M6 9l6 6 6-6"/>
-            </svg>
-          </summary>
-          <div class="faq-content">
-            Absolutely. Movement quality matters for everyone—getting out of a chair, lifting groceries, playing with kids or grandkids, gardening, walking stairs. Poor movement patterns contribute to chronic pain, limit functional independence, and increase injury risk during everyday activities. Better movement means less pain, more confidence, and sustained ability to do what you want without limitation.
-          </div>
-        </details>
+      <details class="faq-item" data-animate="fade-up">
+        <summary class="faq-summary">
+          I'm not an athlete. Do I still need movement training?
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq-icon">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </summary>
+        <div class="faq-content">
+          Absolutely. Movement quality matters for everyone. Getting out of a chair, lifting groceries, playing with kids or grandkids, gardening, walking stairs. Poor movement patterns contribute to chronic pain, limit functional independence, and increase injury risk during everyday activities. Better movement means less pain, more confidence, and sustained ability to do what you want without limitation.
+        </div>
+      </details>
 
-        <details class="faq-item" data-animate="fade-up">
-          <summary class="faq-summary">
-            Can you help with sport-specific movement?
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq-icon">
-              <path d="M6 9l6 6 6-6"/>
-            </svg>
-          </summary>
-          <div class="faq-content">
-            Yes. We assess and address movement patterns specific to your sport or activity—running mechanics, golf swing, tennis serve, cycling position, lifting technique, etc. We identify limitations that affect performance or increase injury risk, then implement targeted interventions to improve efficiency and reduce strain. Sport-specific movement training complements general movement quality work.
-          </div>
-        </details>
+      <details class="faq-item" data-animate="fade-up">
+        <summary class="faq-summary">
+          Can you help with sport-specific movement?
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq-icon">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </summary>
+        <div class="faq-content">
+          Yes. We assess and address movement patterns specific to your sport or activity. Running mechanics, golf swing, tennis serve, cycling position, lifting technique, etc. We identify limitations that affect performance or increase injury risk, then implement targeted interventions to improve efficiency and reduce strain. Sport-specific movement training complements general movement quality work.
+        </div>
+      </details>
 
-        <details class="faq-item" data-animate="fade-up">
-          <summary class="faq-summary">
-            How long does it take to improve movement patterns?
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq-icon">
-              <path d="M6 9l6 6 6-6"/>
-            </svg>
-          </summary>
-          <div class="faq-content">
-            It depends on what's limiting your movement. If joint restrictions are the primary issue, you may see immediate improvement after adjustments. Motor control and pattern retraining take longer—typically 4-8 weeks of consistent practice to create new neural pathways and make better movement automatic. Long-standing compensations require more time to unlearn. The key is addressing structural limitations first, then reinforcing better patterns through repetition.
-          </div>
-        </details>
+      <details class="faq-item" data-animate="fade-up">
+        <summary class="faq-summary">
+          How long does it take to improve movement patterns?
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq-icon">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </summary>
+        <div class="faq-content">
+          It depends on what's limiting your movement. If joint restrictions are the primary issue, you may see immediate improvement after adjustments. Motor control and pattern retraining take longer, typically 4-8 weeks of consistent practice to create new neural pathways and make better movement automatic. Long-standing compensations require more time to unlearn. The key is addressing structural limitations first, then reinforcing better patterns through repetition.
+        </div>
+      </details>
 
-        <details class="faq-item" data-animate="fade-up">
-          <summary class="faq-summary">
-            Will I need special equipment for movement training?
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq-icon">
-              <path d="M6 9l6 6 6-6"/>
-            </svg>
-          </summary>
-          <div class="faq-content">
-            Not necessarily. Many movement improvements can be achieved with bodyweight exercises and minimal equipment. We may recommend simple tools like resistance bands, foam rollers, or mobility aids if they significantly enhance your program, but most interventions are accessible and practical for home implementation. The focus is on sustainable, effective movement strategies you can maintain long-term.
-          </div>
-        </details>
-      </div>
+      <details class="faq-item" data-animate="fade-up">
+        <summary class="faq-summary">
+          Will I need special equipment for movement training?
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq-icon">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </summary>
+        <div class="faq-content">
+          Not necessarily. Many movement improvements can be achieved with bodyweight exercises and minimal equipment. We may recommend simple tools like resistance bands, foam rollers, or mobility aids if they significantly enhance your program, but most interventions are accessible and practical for home implementation. The focus is on sustainable, effective movement strategies you can maintain long-term.
+        </div>
+      </details>
     </div>
   </SectionWrapper>
 
-  <!-- Related Services Section -->
-  <SectionWrapper background="light">
-    <div class="container">
-      <div class="section-header" data-animate="fade-up">
-        <h2 class="section-title">Related Services</h2>
-        <p class="section-subtitle">Integrated care for optimal movement function</p>
-      </div>
+  <!-- Related Services -->
+  <SectionWrapper background="gray" spacing="normal">
+    <div class="section__header" data-animate="fade-up">
+      <span class="section__eyebrow">Complementary Care</span>
+      <h2 class="display-3">Services That Work Well Together</h2>
+    </div>
 
-      <ContentGrid columns={3}>
-        <a href="/services/chiropractic-adjustments" class="service-link-card" data-animate="fade-up">
-          <div class="service-card-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
-            </svg>
-          </div>
-          <h3>Chiropractic Adjustments</h3>
-          <p>Restore joint mobility and remove structural restrictions that limit your movement capacity.</p>
-        </a>
+    <div class="related-services">
+      <a href="/services/chiropractic-adjustments" class="related-service-card" data-animate="fade-up" data-animate-delay="100">
+        <h3>Chiropractic Adjustments</h3>
+        <p>Restore joint mobility and remove structural restrictions that limit your movement capacity</p>
+        <span class="related-service-arrow">→</span>
+      </a>
 
-        <a href="/services/soft-tissue-therapy" class="service-link-card" data-animate="fade-up">
-          <div class="service-card-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="3"></circle>
-              <path d="M12 1v6m0 6v6m5.2-13.2l-4.2 4.2m0 6l4.2 4.2M23 12h-6m-6 0H5m13.2 5.2l-4.2-4.2m0-6l4.2-4.2"></path>
-            </svg>
-          </div>
-          <h3>Soft Tissue Therapy</h3>
-          <p>Address muscle tension, adhesions, and tissue restrictions that impair movement quality.</p>
-        </a>
+      <a href="/services/soft-tissue-therapy" class="related-service-card" data-animate="fade-up" data-animate-delay="200">
+        <h3>Soft Tissue Therapy</h3>
+        <p>Address muscle tension, adhesions, and tissue restrictions that impair movement quality</p>
+        <span class="related-service-arrow">→</span>
+      </a>
 
-        <a href="/services/home-exercise-programs" class="service-link-card" data-animate="fade-up">
-          <div class="service-card-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-              <polyline points="9 22 9 12 15 12 15 22"></polyline>
-            </svg>
-          </div>
-          <h3>Home Exercise Programs</h3>
-          <p>Personalized movement drills and exercises to reinforce better patterns between visits.</p>
-        </a>
-      </ContentGrid>
+      <a href="/services/home-exercise-programs" class="related-service-card" data-animate="fade-up" data-animate-delay="300">
+        <h3>Home Exercise Programs</h3>
+        <p>Personalized movement drills and exercises to reinforce better patterns between visits</p>
+        <span class="related-service-arrow">→</span>
+      </a>
     </div>
   </SectionWrapper>
 
   <!-- CTA Section -->
-  <section class="cta-section">
-    <div class="cta-section__overlay"></div>
-    <video
-      class="cta-section__video"
-      autoplay
-      muted
-      loop
-      playsinline
-      poster="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1920&h=1080&fit=crop"
-    >
-      <source src="https://res.cloudinary.com/dku1gnuat/video/upload/v1773678669/copy_C8C8BA7D-35C3-4286-85F6-927425408BE0_q174of.mp4" type="video/mp4" />
-    </video>
-    <div class="cta-content container" data-animate="fade-up">
-      <h2>Ready to Move Better and Feel Stronger?</h2>
-      <p>Let's assess your movement, identify limitations, and create a plan to improve function and reduce injury risk.</p>
-      <div class="cta-buttons">
-        <a href="#" class="btn btn-primary" data-cal-link="sdbridgechiropractic/30min" data-cal-config='{"layout":"month_view"}'>Book a Visit</a>
-        <a href="tel:+16194685233" class="btn btn-secondary">Call (619) 468-5233</a>
+  <VideoBackground
+    videoUrl="https://res.cloudinary.com/dku1gnuat/video/upload/v1773678669/copy_C8C8BA7D-35C3-4286-85F6-927425408BE0_q174of.mp4"
+    posterImage="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1920&h=1080&fit=crop"
+    overlayOpacity={0.7}
+    class="cta-premium"
+  >
+    <div class="container container-narrow" data-animate="fade-up">
+      <h2 class="display-3" style="color: var(--color-white); margin-bottom: var(--space-lg);">
+        Ready to Move Better?
+      </h2>
+      <p class="text-large" style="color: rgba(255, 255, 255, 0.9); max-width: 700px; margin: 0 auto var(--space-2xl);">
+        Let's assess your movement, identify limitations, and create a plan to improve function and reduce injury risk.
+      </p>
+      <div style="display: flex; gap: var(--space-lg); justify-content: center; flex-wrap: wrap;">
+        <a href="#" class="btn btn--white btn--lg" data-cal-link="sdbridgechiropractic/30min" data-cal-config='{"layout":"month_view"}'>Book a Visit</a>
+        <a href="tel:8582777500" class="btn btn--outline-white btn--lg">
+          Call (858) 277-7500
+        </a>
       </div>
     </div>
-  </section>
+  </VideoBackground>
 </Layout>
 
 <style>
-  /* Overview Section */
-  .overview-section {
-    max-width: 900px;
-    margin: 0 auto;
+  /* Service Overview */
+  .service-overview {
+    text-align: center;
+  }
+
+  .overview-content {
+    margin-top: var(--space-2xl);
+    text-align: left;
   }
 
   .overview-content p {
-    margin-bottom: 1.5rem;
+    color: var(--color-gray-dark);
     line-height: 1.8;
+    font-size: 1.0625rem;
+    margin-bottom: var(--space-xl);
   }
 
-  .text-large {
+  .overview-content .text-large {
     font-size: 1.25rem;
-    font-weight: 500;
     color: var(--color-charcoal);
-    line-height: 1.7;
+    margin-bottom: var(--space-2xl);
   }
 
   /* Benefits Grid */
@@ -448,56 +423,45 @@ import OfferingCard from '../../components/OfferingCard.astro';
     font-weight: 400;
   }
 
-  /* Process Grid */
-  .process-grid {
+  /* Process Steps */
+  .process-steps {
     display: grid;
-    gap: 2rem;
-    max-width: 1000px;
-    margin: 3rem auto 0;
+    gap: var(--space-2xl);
+    max-width: 900px;
+    margin: var(--space-4xl) auto 0;
   }
 
   .process-step {
     display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 2rem;
-    padding: 2rem;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
+    grid-template-columns: 80px 1fr;
+    gap: var(--space-xl);
+    align-items: start;
   }
 
-  .process-step:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-    border-color: rgba(71, 128, 184, 0.3);
-  }
-
-  .step-number {
-    width: 60px;
-    height: 60px;
+  .process-step__number {
+    width: 80px;
+    height: 80px;
     background: var(--color-primary);
+    color: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 700;
-    color: #fff;
-    flex-shrink: 0;
+    box-shadow: 0 8px 24px rgba(71, 128, 184, 0.3);
   }
 
-  .step-content h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.75rem;
+  .process-step__content h3 {
+    font-size: 1.75rem;
+    margin-bottom: var(--space-md);
     color: var(--color-charcoal);
   }
 
-  .step-content p {
+  .process-step__content p {
     color: var(--color-gray-dark);
-    line-height: 1.7;
-    margin: 0;
+    line-height: 1.8;
+    font-size: 1.0625rem;
   }
 
   /* Conditions List */
@@ -534,47 +498,36 @@ import OfferingCard from '../../components/OfferingCard.astro';
     color: var(--color-charcoal);
   }
 
-  /* FAQ Section */
-  .faq-container {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  .faq-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-top: 3rem;
+  /* FAQ Grid */
+  .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-4xl);
   }
 
   .faq-item {
-    background: #fff;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 0 var(--space-lg);
     transition: all 0.3s ease;
   }
 
   .faq-item:hover {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  }
-
-  .faq-item[open] {
-    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   }
 
   .faq-summary {
-    padding: 1.5rem 2rem;
-    font-size: 1.15rem;
+    font-size: 1.125rem;
     font-weight: 600;
-    color: var(--color-charcoal);
+    padding: var(--space-lg) 0;
     cursor: pointer;
+    list-style: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 1rem;
-    user-select: none;
-    list-style: none;
+    gap: var(--space-md);
+    color: var(--color-charcoal);
   }
 
   .faq-summary::-webkit-details-marker {
@@ -592,217 +545,166 @@ import OfferingCard from '../../components/OfferingCard.astro';
   }
 
   .faq-content {
-    padding: 0 2rem 1.5rem;
+    padding: 0 0 var(--space-lg) 0;
     color: var(--color-gray-dark);
-    line-height: 1.7;
+    line-height: 1.8;
   }
 
   /* Related Services */
-  .service-link-card {
-    display: block;
-    padding: 2rem;
-    background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease;
-    text-decoration: none;
-    color: inherit;
+  .related-services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-xl);
+    margin-top: var(--space-4xl);
   }
 
-  .service-link-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-  }
-
-  .service-card-icon {
-    width: 64px;
-    height: 64px;
-    background: var(--color-primary);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1.5rem;
-  }
-
-  .service-card-icon svg {
-    color: #fff;
-  }
-
-  .service-link-card h3 {
-    font-size: 1.35rem;
-    margin-bottom: 0.75rem;
-    color: var(--color-charcoal);
-  }
-
-  .service-link-card p {
-    color: var(--color-gray-dark);
-    line-height: 1.6;
-    margin: 0;
-  }
-
-  /* CTA Section */
-  .cta-section {
+  .related-service-card {
     position: relative;
-    padding: 6rem 2rem;
-    text-align: center;
+    padding: var(--space-2xl);
+    border-radius: var(--radius-xl);
+    text-decoration: none;
+    transition: all 0.3s ease;
     overflow: hidden;
   }
 
-  .cta-section__video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
-    z-index: 0;
+  .related-service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-2xl);
   }
 
-  .cta-section__overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 1;
-  }
-
-  .cta-content {
-    position: relative;
-    z-index: 2;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  .cta-content h2 {
-    font-size: clamp(2rem, 4vw, 3rem);
-    color: #fff;
-    margin-bottom: 1rem;
-    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
-  }
-
-  .cta-content p {
-    font-size: 1.25rem;
-    color: rgba(255, 255, 255, 0.95);
-    margin-bottom: 2rem;
-    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
-  }
-
-  .cta-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  /* Section Styling */
-  .section-header {
-    text-align: center;
-    margin-bottom: 3rem;
-  }
-
-  .section-title {
-    font-size: clamp(2rem, 4vw, 2.75rem);
-    margin-bottom: 1rem;
+  .related-service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-md);
     color: var(--color-charcoal);
   }
 
-  .section-subtitle {
-    font-size: 1.2rem;
+  .related-service-card p {
     color: var(--color-gray-dark);
-    max-width: 700px;
-    margin: 0 auto;
+    line-height: 1.7;
+    margin-bottom: var(--space-lg);
   }
 
-  /* Buttons */
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 1rem 2rem;
-    font-size: 1.1rem;
-    font-weight: 600;
-    text-decoration: none;
-    border-radius: 50px;
-    transition: all 0.3s ease;
-    border: none;
-    cursor: pointer;
+  .related-service-arrow {
+    display: inline-block;
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    transition: transform 0.3s ease;
   }
 
-  .btn-primary {
-    background: var(--color-primary);
-    color: #fff;
-    box-shadow: 0 4px 20px rgba(71, 128, 184, 0.3);
-  }
-
-  .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(71, 128, 184, 0.4);
-  }
-
-  .btn-secondary {
-    background: rgba(255, 255, 255, 0.15);
-    color: #fff;
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 255, 255, 0.3);
-  }
-
-  .btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.25);
-    border-color: rgba(255, 255, 255, 0.5);
-    transform: translateY(-2px);
-  }
-
-  /* Animations */
-  [data-animate] {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-  }
-
-  [data-animate].animated {
-    opacity: 1;
-    transform: translateY(0);
+  .related-service-card:hover .related-service-arrow {
+    transform: translateX(8px);
   }
 
   /* Responsive */
   @media (max-width: 768px) {
-    .hero-content {
-      padding: 6rem 1.5rem 3rem;
-    }
-
     .benefits-grid {
       grid-template-columns: 1fr;
+      gap: var(--space-lg);
+      margin-top: var(--space-2xl);
+    }
+
+    .benefit-card {
+      padding: var(--space-xl);
+    }
+
+    .benefit-card:nth-child(even) {
+      margin-top: 0;
+    }
+
+    .benefit-icon {
+      width: 52px;
+      height: 52px;
+    }
+
+    .benefit-icon svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .benefit-card h3 {
+      font-size: 1.25rem;
+    }
+
+    .process-steps {
+      margin-top: var(--space-2xl);
+      gap: var(--space-xl);
     }
 
     .process-step {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
+      grid-template-columns: 56px 1fr;
+      gap: var(--space-md);
     }
 
-    .step-number {
-      width: 50px;
-      height: 50px;
+    .process-step__number {
+      width: 56px;
+      height: 56px;
+      font-size: 1.5rem;
+    }
+
+    .process-step__content h3 {
       font-size: 1.25rem;
+    }
+
+    .process-step__content p {
+      font-size: 1rem;
     }
 
     .conditions-list {
       columns: 1;
+      margin-top: var(--space-2xl);
+    }
+
+    .faq-grid {
+      grid-template-columns: 1fr;
+      margin-top: var(--space-2xl);
     }
 
     .faq-summary {
-      padding: 1.25rem 1.5rem;
-      font-size: 1.05rem;
+      font-size: 1rem;
+      padding: var(--space-md) 0;
     }
 
     .faq-content {
-      padding: 0 1.5rem 1.25rem;
+      font-size: 0.9375rem;
     }
 
-    .cta-section {
-      padding: 4rem 1.5rem;
+    .related-services {
+      grid-template-columns: 1fr;
+      margin-top: var(--space-2xl);
+    }
+
+    .related-service-card {
+      padding: var(--space-xl);
+    }
+
+    .overview-content {
+      margin-top: var(--space-xl);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .process-step {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    .process-step__number {
+      width: 48px;
+      height: 48px;
+      font-size: 1.25rem;
+      margin: 0 auto;
+    }
+
+    .benefit-card {
+      padding: var(--space-lg);
+    }
+
+    .faq-item {
+      padding: 0 var(--space-md);
+    }
+
+    .conditions-list li {
+      font-size: 0.9375rem;
     }
   }
 </style>
@@ -810,19 +712,19 @@ import OfferingCard from '../../components/OfferingCard.astro';
 <script>
   // Scroll-triggered animations
   const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
+    root: null,
+    rootMargin: '-80px',
+    threshold: 0.1
   };
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('animated');
+        observer.unobserve(entry.target);
       }
     });
   }, observerOptions);
 
-  document.querySelectorAll('[data-animate]').forEach(el => {
-    observer.observe(el);
-  });
+  document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
 </script>
