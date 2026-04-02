@@ -2,9 +2,288 @@
 import Layout from '../layouts/Layout.astro';
 import SectionWrapper from '../components/SectionWrapper.astro';
 import VideoBackground from '../components/VideoBackground.astro';
+
+const GMB_REVIEW_URL = "https://www.google.com/maps?cid=2402560187786235962";
+const GMB_PROFILE_URL = "https://www.google.com/maps?cid=2402560187786235962";
+
+interface Review {
+  name: string;
+  text: string;
+  stars: number;
+  date: string;
+  badge?: string;
+}
+
+// Real reviews from Google Business Profile — update this array to sync with GMB
+const reviews: Review[] = [
+  {
+    name: "Joshua Stevens",
+    text: "Dr. Nate was PHENOMENAL! I personally have never done anything with chiropractic care so I was a little anxious at first but Dr. Nate explained everything he was going to be doing and made sure that my comfort was priority number one. He created such a warm environment and did great! I highly recommend Dr. Nate for your chiropractic needs! He is such a kind guy.",
+    stars: 5,
+    date: "3 weeks ago",
+  },
+  {
+    name: "Stefani Woll",
+    text: "This was my first time visiting a chiropractor and I was a little nervous, but Dr. Nate made sure I felt comfortable with the entire process and walked me through each step. He also personalized my experience exactly to the type of pain I was having! Highly recommend for anyone in search of a great chiropractor!",
+    stars: 5,
+    date: "4 weeks ago",
+  },
+  {
+    name: "Andrew Tierney",
+    text: "I just had an intro assessment with Dr. Nathan Beyerl and he immediately impressed me. He took the time to really understand what was going on with my lower back and explained everything in a clear, straightforward way. The adjustment and treatment he did made an instant difference — walked out feeling noticeably better. On top of that, he's just a great guy. Easy to talk to, welcoming, and genuinely focused on helping you feel better. Highly recommend The Bridge Chiropractic!",
+    stars: 5,
+    date: "2 months ago",
+    badge: "Local Guide",
+  },
+  {
+    name: "Danae Hoeman",
+    text: "Nathan has been a huge help in treating my back pain! He knows what he's doing and guides you through the process step-by-step to understand the treatment process. Highly recommend!",
+    stars: 5,
+    date: "4 weeks ago",
+  },
+  {
+    name: "J Good",
+    text: "I was able to see Nate about a month ago when I was having pain and mobility issues with my neck. Nate showed great professionalism and also helped to identify the areas surrounding my neck using one of the cupping techniques and adjustments that helped lower my pain level and help me move forward with substantial improvement in my neck mobility. My neck pain significantly decreased and I've regained full mobility. Nate will be the first person I see if something ever happens like this again.",
+    stars: 5,
+    date: "4 months ago",
+  },
+  {
+    name: "L Wang",
+    text: "Great experience! Going to be my new chiropractor from now on! Uses a unique cupping technique that's really effective. Strong enough to do adjustments where some other chiropractors haven't been.",
+    stars: 5,
+    date: "2 months ago",
+    badge: "Local Guide",
+  },
+  {
+    name: "Sarah Waddell",
+    text: "I can't say enough good things about Dr. Nathan at Bridge Chiropractic. He is absolutely incredible and truly gifted at what he does. I've always had a fear of chiropractors, but Dr. Nate completely changed my perspective. I came to him with a level 2 MCL injury, and thanks to his expertise, care, and guidance, I'm now able to function and go about my daily activities with ease — something I honestly didn't think would be possible so soon.",
+    stars: 5,
+    date: "9 months ago",
+  },
+  {
+    name: "Jena Willard",
+    text: "I'm not someone who typically writes reviews, but this truly needs to be said. I've seen many different chiropractors over the years, but my first consultation with Nate at Bridge Chiropractic gave me more relief than I've experienced in the last six months combined. Beyond that, he took the time to uncover and explain root issues that no one had ever addressed before. I walked away not only feeling physically better, but also empowered and educated about what's really going on in my body.",
+    stars: 5,
+    date: "9 months ago",
+  },
+  {
+    name: "Isaiah Strode",
+    text: "Dr. Nate takes care of his patients extremely well and is very knowledgeable in his field. If you want someone who can work with you through any physical issues you have he is the guy to see! He has helped me understand my body better and been a great guide! 10/10 would recommend!!!",
+    stars: 5,
+    date: "6 months ago",
+  },
+  {
+    name: "Jonathan Haddad",
+    text: "Dr. Nate is super knowledgeable about holistic health overall, not just chiropractic care, which makes a huge difference. He doesn't just focus on adjustments, he really looks at the bigger picture and can guide you in ways that support your health outside the office too. Every adjustment feels really targeted, and I notice relief right away instead of just temporary fixes.",
+    stars: 5,
+    date: "7 months ago",
+  },
+  {
+    name: "Ryan G",
+    text: "Very detailed assessment and treatment by this knowledgeable and friendly doctor. He is giving me a plan for muscle strengthening and stretching to help to address my issue. My wife and I are both satisfied patients.",
+    stars: 5,
+    date: "1 month ago",
+    badge: "Local Guide",
+  },
+  {
+    name: "Madison Shepherd",
+    text: "Dr. Nate is fantastic! I highly recommend him. I came in with a stiff neck and back pain, and his soft-tissue work made a noticeable difference in reducing the discomfort and tightness.",
+    stars: 5,
+    date: "4 months ago",
+    badge: "Local Guide",
+  },
+  {
+    name: "Mary Fifield",
+    text: "Dr. Nate is a knowledgeable practitioner and a great communicator. I've had a lot of chiropractic work in my life, but Dr. Nate is the first person to put me on a path toward long term systemic healing, combining adjustments with stretching exercises and eventually strengthening. I highly recommend him.",
+    stars: 5,
+    date: "7 months ago",
+    badge: "Local Guide",
+  },
+  {
+    name: "Brenda Wilson",
+    text: "I was very impressed with this chiropractor. He took the time to figure out the root cause of my pain. Deep tissue work too. I highly recommend him.",
+    stars: 5,
+    date: "3 months ago",
+  },
+  {
+    name: "y K",
+    text: "Great experience! The care was informative and professional. It's clear Dr. Beyerl cares about his patients and wants to get them feeling right again! First visit and I'm already feeling relief!",
+    stars: 5,
+    date: "3 months ago",
+  },
+  {
+    name: "Lauren Werner",
+    text: "Dr. Nate Beyerl is amazing! He helped me with a knee injury I sustained years ago and occasionally still get pain from. Within a few minutes of manual adjusting, I was feeling more stable walking on it and less pain. Not to mention his kind and gentle demeanor as he explains what is going on and gives tips on how to continue to care for it when home.",
+    stars: 5,
+    date: "9 months ago",
+  },
+  {
+    name: "Evan Bryan",
+    text: "I really appreciate Dr. Nate's holistic approach to chiropractic care! He doesn't just offer a generic schedule of neck cracking, but gives an awesome wellness examination.",
+    stars: 5,
+    date: "6 months ago",
+    badge: "Local Guide",
+  },
+  {
+    name: "Allison Larson",
+    text: "Nate is very welcoming, kind, and knowledgeable. He was able to loosen up many areas in my body that were experiencing extreme tightness. He also showed me a few things that I can do at home to help with these issues. I highly recommend!",
+    stars: 5,
+    date: "7 months ago",
+  },
+  {
+    name: "Samantha Byrne",
+    text: "I'm super grateful to have met and received treatment with Dr Nate! He is very knowledgeable and kind. I have felt a lot of relief from pain secondary to a foot injury. I would definitely recommend him to anyone looking for a chiropractor or looking to improve their overall health!",
+    stars: 5,
+    date: "8 months ago",
+  },
+  {
+    name: "Russell Woo",
+    text: "Nate Beyerl is a great chiropractor! He really wanted to know what my problems were and dug deep into possibilities. When he came to conclusions of what my problems may be, he gave me exercises and stretches that I could prevent/maintain my own alignment and strength. I really appreciated the genuine care that he showed.",
+    stars: 5,
+    date: "11 months ago",
+    badge: "Local Guide",
+  },
+  {
+    name: "Casey McKee",
+    text: "Dr Nate was great. I did the new patient consultation and it was very beneficial. We worked through mobility and an adjustment and it was very beneficial. I definitely would recommend Dr. Nate!",
+    stars: 5,
+    date: "5 months ago",
+  },
+  {
+    name: "Daphne Johnson",
+    text: "Nate was very knowledgeable and professional and really helped relieve some tightness and pain. I highly recommend!",
+    stars: 5,
+    date: "3 months ago",
+  },
+  {
+    name: "Donna Black",
+    text: "This is my very first chiropractic adjustment! Dr. Nathan Beyerl is awesome! Why suffer when he is the answer? Don't be afraid to get adjusted. Your pain will persuade you otherwise so run, don't walk to get his help!",
+    stars: 5,
+    date: "9 months ago",
+  },
+  {
+    name: "Mark Tumbaga",
+    text: "Dr Nate knows his stuff, is personable, and does a great job with adjustments for me and my wife and even now offers services for children, so the whole family! The office is a family friendly environment!",
+    stars: 5,
+    date: "7 months ago",
+  },
+  {
+    name: "Annika Lile",
+    text: "I wouldn't trust any other person to help me with any chiropractic needs! Nate is so knowledgeable and kind!",
+    stars: 5,
+    date: "2 months ago",
+  },
+  {
+    name: "Cynthia Weyrens",
+    text: "Dr. Nate is an excellent resource for athletes, those with active lifestyles, and senior citizens alike. He helps to bring his clients back from injuries, prevent future injuries, and see them through post surgical rehabilitation. I highly recommend Dr. Nate!",
+    stars: 5,
+    date: "10 months ago",
+    badge: "Local Guide",
+  },
+  {
+    name: "Jared Holden",
+    text: "Dr Nate has a comprehensive and thorough process that has fixed some stubborn shoulder pain. I couldn't recommend Dr Nate enough to those who are needing relief from pain. He has given me some helpful exercises to rehabilitate my rotator cuff which has made exercising more enjoyable again!",
+    stars: 5,
+    date: "11 months ago",
+  },
+  {
+    name: "Suzanne St Clair",
+    text: "Dr Nate is awesome. He works on you as a whole person. Not only does he adjust your spine but also works your joints for you to get the best mobility you can. He's great!",
+    stars: 5,
+    date: "9 months ago",
+    badge: "Local Guide",
+  },
+  {
+    name: "Erick Armenta",
+    text: "This has easily been the best chiropractic experience I have ever had. Dr. Beyerl truly took the time to sit down with me and explain the process as we were going through my session. It's easily recognizable that Dr. Beyerl is a true expert in his career. I will absolutely 100% be back.",
+    stars: 5,
+    date: "1 year ago",
+    badge: "Local Guide",
+  },
+  {
+    name: "Katelynn McWeeny",
+    text: "The Bridge Chiropractic is great! Dr. Beyerl took the time to thoroughly understand my concerns and explained the treatment process in a way that made it easy to follow. I especially appreciated how he takes a holistic approach, not just treating symptoms but working to improve my overall well-being.",
+    stars: 5,
+    date: "1 year ago",
+  },
+  {
+    name: "Lauren Olds",
+    text: "Great experience! Went in with a ton of neck tension and a headache and left feeling looser and in much less discomfort. I'll be back!",
+    stars: 5,
+    date: "4 months ago",
+  },
+  {
+    name: "Zakary Goodmanson",
+    text: "Most chiropractors just crack your back and send you on your way with a ridiculous bill. Dr. Beyerl listens to the actual problem and solves it at the root. Big thanks for reaffirming my confidence in chiropractors.",
+    stars: 5,
+    date: "11 months ago",
+  },
+  {
+    name: "Luay Marmarchi",
+    text: "Must come over here and get adjusted by this awesome doctor. Amazing treatment and customer service.",
+    stars: 5,
+    date: "2 months ago",
+    badge: "Local Guide",
+  },
+  {
+    name: "Andrew Whatley",
+    text: "10/10 Highly recommend! Has been helping not just with adjustments but some mobility work as well, appreciate the help and intentionality!",
+    stars: 5,
+    date: "7 months ago",
+  },
+  {
+    name: "Loan Nguyen",
+    text: "Dr. is very good at diagnosis. He helped me improve my back pain. I have pain in my leg. I am very pleased with my treatment.",
+    stars: 5,
+    date: "7 months ago",
+  },
+  {
+    name: "Daniel Amaya",
+    text: "He is great, my neck feels better and the exercises that he recommended help me get better.",
+    stars: 5,
+    date: "4 months ago",
+  },
+  {
+    name: "Kelly Oeltjenbruns",
+    text: "Nate is professional and helped me with strategies to increase mobility. 5 stars!",
+    stars: 5,
+    date: "1 month ago",
+  },
+  {
+    name: "Chadwick L",
+    text: "Dr. Nate was awesome, super friendly and really cares for his patients, you can tell.",
+    stars: 5,
+    date: "2 months ago",
+  },
+  {
+    name: "J E",
+    text: "I was skeptical about Chiro before getting an appointment with Dr. Beyerl but I'm not anymore!! He was educational on what was being adjusted and what form of fix an adjustment would be. Overall, I plan to visit whenever I have any issues with my shoulder again!",
+    stars: 5,
+    date: "1 year ago",
+    badge: "Local Guide",
+  },
+  {
+    name: "Anthony Lapierre",
+    text: "If you want to see someone competent who truly cares about your well-being, Dr. Beyerl is the person to see! He is very personable and has a passion for serving his community!",
+    stars: 5,
+    date: "1 year ago",
+  },
+  {
+    name: "Mark Vasat",
+    text: "Super knowledgeable adjustment with Dr. Beyerl. I have had recurring problems with tightness in between my shoulder blades, and he identified the problem and a treatment solution. I'll be back!",
+    stars: 5,
+    date: "1 year ago",
+  },
+];
+
+// GMB stats — update these when syncing
+const ratingScore = 4.9;
+const totalReviews = 96;
+const fullStars = Math.floor(ratingScore);
+const hasHalfStar = ratingScore % 1 >= 0.25;
 ---
 
-<Layout title="Testimonials" description="Read what patients say about their experience at The Bridge Chiropractic. Real reviews from San Diego patients who found relief through Dr. Nathan Beyerl's care.">
+<Layout title="Reviews" description="Read what patients say about their experience at The Bridge Chiropractic. Real Google reviews from San Diego patients who found relief through Dr. Nathan Beyerl's care.">
   <!-- Hero -->
   <section class="hero-fullbleed">
     <video
@@ -19,11 +298,12 @@ import VideoBackground from '../components/VideoBackground.astro';
     </video>
     <div class="hero-fullbleed__overlay" aria-hidden="true"></div>
     <div class="hero-fullbleed__content">
-      <span class="hero-fullbleed__eyebrow">Patient Stories</span>
+      <span class="hero-fullbleed__eyebrow">Google Reviews</span>
       <h1 class="hero-fullbleed__title">Real people.<br />Real results.</h1>
-      <p class="hero-fullbleed__subtitle">Hear from patients who came in with pain and left with a plan that actually worked.</p>
+      <p class="hero-fullbleed__subtitle">See why {totalReviews}+ patients rated us {ratingScore} stars on Google.</p>
       <div class="hero-fullbleed__cta">
-        <a href="#" class="btn btn--primary btn--lg" data-cal-link="sdbridgechiropractic/30min" data-cal-config='{"layout":"month_view"}'>Book Your Visit</a>
+        <a href={GMB_REVIEW_URL} target="_blank" rel="noopener" class="btn btn--primary btn--lg">Write a Review</a>
+        <a href="#" class="btn btn--outline-white btn--lg" data-cal-link="sdbridgechiropractic/30min" data-cal-config='{"layout":"month_view"}'>Book Your Visit</a>
       </div>
     </div>
   </section>
@@ -31,15 +311,34 @@ import VideoBackground from '../components/VideoBackground.astro';
   <!-- Google Rating Bar -->
   <div class="rating-bar">
     <div class="rating-bar__inner">
+      <a href={GMB_PROFILE_URL} target="_blank" rel="noopener" class="rating-bar__google" aria-label="View on Google">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 48 48">
+          <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/>
+          <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/>
+          <path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/>
+          <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/>
+        </svg>
+      </a>
       <div class="rating-bar__stars">
-        {[...Array(5)].map(() => (
+        {[...Array(fullStars)].map(() => (
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="var(--color-star, #F59E0B)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         ))}
+        {hasHalfStar && (
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+            <defs>
+              <linearGradient id="halfStar">
+                <stop offset="50%" stop-color="#F59E0B" />
+                <stop offset="50%" stop-color="#D1D5DB" />
+              </linearGradient>
+            </defs>
+            <path fill="url(#halfStar)" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+          </svg>
+        )}
       </div>
-      <span class="rating-bar__score">5.0</span>
+      <span class="rating-bar__score">{ratingScore}</span>
       <span class="rating-bar__sep" aria-hidden="true"></span>
-      <span class="rating-bar__text">200+ Google Reviews</span>
-      <a href="https://g.page/r/bridgechiropracticsd/review" target="_blank" rel="noopener" class="rating-bar__link">
+      <span class="rating-bar__text">{totalReviews} Google Reviews</span>
+      <a href={GMB_REVIEW_URL} target="_blank" rel="noopener" class="rating-bar__link">
         Write a review
         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
       </a>
@@ -48,138 +347,38 @@ import VideoBackground from '../components/VideoBackground.astro';
 
   <!-- Reviews Grid -->
   <SectionWrapper spacing="normal" containerWidth="normal">
-    <div class="reviews-grid" role="list" aria-label="Patient reviews">
-      <article class="review-card" role="listitem" data-animate="fade-up">
-        <div class="review-card__stars" aria-label="5 stars">
-          {[...Array(5)].map(() => (
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          ))}
-        </div>
-        <blockquote class="review-card__text">"Dr. Beyerl transformed my chronic back pain into a thing of the past. His approach and genuine care made all the difference. I can finally enjoy hiking again!"</blockquote>
-        <p class="review-card__author">Sarah M.</p>
-        <p class="review-card__tag">Back Pain</p>
-      </article>
+    <div class="reviews-grid" role="list" aria-label="Patient reviews from Google">
+      {reviews.map((review) => (
+        <article class="review-card" role="listitem" data-animate="fade-up">
+          <div class="review-card__header">
+            <div class="review-card__avatar" aria-hidden="true">
+              {review.name.charAt(0)}
+            </div>
+            <div>
+              <p class="review-card__author">{review.name}</p>
+              <div class="review-card__meta">
+                {review.badge && <span class="review-card__badge">{review.badge}</span>}
+                <span class="review-card__date">{review.date}</span>
+              </div>
+            </div>
+          </div>
+          <div class="review-card__stars" aria-label={`${review.stars} stars`}>
+            {[...Array(review.stars)].map(() => (
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            ))}
+          </div>
+          <blockquote class="review-card__text">"{review.text}"</blockquote>
+        </article>
+      ))}
+    </div>
 
-      <article class="review-card" role="listitem" data-animate="fade-up">
-        <div class="review-card__stars" aria-label="5 stars">
-          {[...Array(5)].map(() => (
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          ))}
-        </div>
-        <blockquote class="review-card__text">"After years of migraines, I finally found relief. The team here truly cares about their patients and it shows in every visit. Highly recommend!"</blockquote>
-        <p class="review-card__author">Michael T.</p>
-        <p class="review-card__tag">Migraines</p>
-      </article>
-
-      <article class="review-card" role="listitem" data-animate="fade-up">
-        <div class="review-card__stars" aria-label="5 stars">
-          {[...Array(5)].map(() => (
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          ))}
-        </div>
-        <blockquote class="review-card__text">"As an active runner, I need to stay in peak condition. Dr. Beyerl keeps me running strong and injury-free."</blockquote>
-        <p class="review-card__author">Jennifer L.</p>
-        <p class="review-card__tag">Sports</p>
-      </article>
-
-      <article class="review-card" role="listitem" data-animate="fade-up">
-        <div class="review-card__stars" aria-label="5 stars">
-          {[...Array(5)].map(() => (
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          ))}
-        </div>
-        <blockquote class="review-card__text">"Professional, knowledgeable, and caring. The office is clean and welcoming. I always leave feeling better than when I arrived."</blockquote>
-        <p class="review-card__author">David K.</p>
-        <p class="review-card__tag">General</p>
-      </article>
-
-      <article class="review-card" role="listitem" data-animate="fade-up">
-        <div class="review-card__stars" aria-label="5 stars">
-          {[...Array(5)].map(() => (
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          ))}
-        </div>
-        <blockquote class="review-card__text">"My posture has improved dramatically and my neck pain is gone. Dr. Beyerl explained everything clearly and gave me exercises to do at home. Life-changing!"</blockquote>
-        <p class="review-card__author">Lisa R.</p>
-        <p class="review-card__tag">Neck Pain</p>
-      </article>
-
-      <article class="review-card" role="listitem" data-animate="fade-up">
-        <div class="review-card__stars" aria-label="5 stars">
-          {[...Array(5)].map(() => (
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          ))}
-        </div>
-        <blockquote class="review-card__text">"Best chiropractor in San Diego! Helped me recover from a car accident when I thought I'd be in pain forever."</blockquote>
-        <p class="review-card__author">Robert P.</p>
-        <p class="review-card__tag">Auto Injury</p>
-      </article>
-
-      <article class="review-card" role="listitem" data-animate="fade-up">
-        <div class="review-card__stars" aria-label="5 stars">
-          {[...Array(5)].map(() => (
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          ))}
-        </div>
-        <blockquote class="review-card__text">"Exceptional care and attention to detail. Dr. Beyerl takes time to listen and understand your concerns. I wouldn't trust anyone else."</blockquote>
-        <p class="review-card__author">Emily S.</p>
-        <p class="review-card__tag">General</p>
-      </article>
-
-      <article class="review-card" role="listitem" data-animate="fade-up">
-        <div class="review-card__stars" aria-label="5 stars">
-          {[...Array(5)].map(() => (
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          ))}
-        </div>
-        <blockquote class="review-card__text">"I was skeptical about chiropractic care, but Dr. Beyerl changed my mind. His evidence-based approach and patient education made me a believer."</blockquote>
-        <p class="review-card__author">James W.</p>
-        <p class="review-card__tag">First Timer</p>
-      </article>
-
-      <article class="review-card" role="listitem" data-animate="fade-up">
-        <div class="review-card__stars" aria-label="5 stars">
-          {[...Array(5)].map(() => (
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          ))}
-        </div>
-        <blockquote class="review-card__text">"From my first visit, I felt heard and understood. The treatment plan was personalized and effective. My quality of life has improved tremendously."</blockquote>
-        <p class="review-card__author">Maria G.</p>
-        <p class="review-card__tag">General</p>
-      </article>
-
-      <article class="review-card" role="listitem" data-animate="fade-up">
-        <div class="review-card__stars" aria-label="5 stars">
-          {[...Array(5)].map(() => (
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          ))}
-        </div>
-        <blockquote class="review-card__text">"Dr. Beyerl's treatments have been nothing short of miraculous for my sciatica. The office environment is calming and professional."</blockquote>
-        <p class="review-card__author">Thomas B.</p>
-        <p class="review-card__tag">Sciatica</p>
-      </article>
-
-      <article class="review-card" role="listitem" data-animate="fade-up">
-        <div class="review-card__stars" aria-label="5 stars">
-          {[...Array(5)].map(() => (
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          ))}
-        </div>
-        <blockquote class="review-card__text">"I've been to several chiropractors, but Dr. Beyerl stands out with his thorough assessments and personalized care plans."</blockquote>
-        <p class="review-card__author">Angela H.</p>
-        <p class="review-card__tag">General</p>
-      </article>
-
-      <article class="review-card" role="listitem" data-animate="fade-up">
-        <div class="review-card__stars" aria-label="5 stars">
-          {[...Array(5)].map(() => (
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          ))}
-        </div>
-        <blockquote class="review-card__text">"My shoulder mobility has returned to normal after just a few sessions. Dr. Beyerl's expertise in sports injuries is unmatched."</blockquote>
-        <p class="review-card__author">Kevin P.</p>
-        <p class="review-card__tag">Shoulder</p>
-      </article>
+    <!-- Write a Review CTA -->
+    <div class="reviews-cta" data-animate="fade-up">
+      <p class="reviews-cta__text">Had a great experience? Share it on Google!</p>
+      <a href={GMB_REVIEW_URL} target="_blank" rel="noopener" class="btn btn--primary btn--lg">
+        Write a Review
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
     </div>
   </SectionWrapper>
 
@@ -217,6 +416,17 @@ import VideoBackground from '../components/VideoBackground.astro';
     justify-content: center;
     gap: var(--space-md);
     flex-wrap: wrap;
+  }
+
+  .rating-bar__google {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+  }
+
+  .rating-bar__google:hover {
+    opacity: 0.8;
   }
 
   .rating-bar__stars {
@@ -279,6 +489,55 @@ import VideoBackground from '../components/VideoBackground.astro';
     transform: translateY(-2px);
   }
 
+  .review-card__header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-md);
+  }
+
+  .review-card__avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .review-card__author {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin: 0;
+    line-height: 1.3;
+  }
+
+  .review-card__meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    margin-top: 2px;
+  }
+
+  .review-card__badge {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    background: rgba(58, 114, 100, 0.08);
+    padding: 1px 8px;
+    border-radius: var(--radius-full);
+  }
+
+  .review-card__date {
+    font-size: 0.75rem;
+    color: var(--color-gray);
+  }
 
   .review-card__stars {
     display: flex;
@@ -291,24 +550,25 @@ import VideoBackground from '../components/VideoBackground.astro';
     font-size: 0.9375rem;
     line-height: 1.7;
     color: var(--color-gray-dark);
-    margin: 0 0 var(--space-lg) 0;
+    margin: 0;
   }
 
-  .review-card__author {
-    font-size: 0.875rem;
-    font-weight: 700;
-    color: var(--color-charcoal);
-    margin: 0 0 var(--space-xs) 0;
+  /* Write a Review CTA */
+  .reviews-cta {
+    text-align: center;
+    padding: var(--space-3xl) 0 var(--space-xl);
   }
 
-  .review-card__tag {
-    display: inline-block;
-    font-size: 0.75rem;
-    font-weight: 500;
-    color: var(--color-primary);
-    background: rgba(58, 114, 100, 0.08);
-    padding: 2px 10px;
-    border-radius: var(--radius-full);
+  .reviews-cta__text {
+    font-size: 1.125rem;
+    color: var(--color-gray-dark);
+    margin-bottom: var(--space-lg);
+  }
+
+  .reviews-cta .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
   }
 
   @media (max-width: 1024px) {
