@@ -82,7 +82,7 @@ import SectionWrapper from '../components/SectionWrapper.astro';
   </SectionWrapper>
 
   <!-- Cal.com Inline Booking -->
-  <SectionWrapper spacing="normal">
+  <SectionWrapper spacing="compact">
     <div class="cal-wrapper" data-animate="fade-up">
       <h2 class="display-3" style="margin-bottom: 16px; text-align: center;">Schedule Your Visit</h2>
       <p style="color: var(--color-gray-dark); font-size: 1.125rem; margin-bottom: 48px; line-height: 1.7; text-align: center;">Pick a time that works for you and book your appointment instantly.</p>
@@ -97,13 +97,15 @@ import SectionWrapper from '../components/SectionWrapper.astro';
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
-    align-items: start;
+    align-items: stretch;
   }
 
   /* Info Card */
   .info-card {
     padding: 48px;
-    margin-bottom: 32px;
+    margin-bottom: 0;
+    height: 100%;
+    box-sizing: border-box;
   }
 
   .info-item {
